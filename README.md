@@ -6,7 +6,7 @@
 ## Clone 源代码
 
 ```shell
- git clone git@github.com:SJQAzhang/banBank.git
+ git clone git@github.com:banbanBank/banBank.git
 ```
 
 ## 说明
