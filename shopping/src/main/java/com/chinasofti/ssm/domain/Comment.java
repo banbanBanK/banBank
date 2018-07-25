@@ -1,8 +1,9 @@
 package com.chinasofti.ssm.domain;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
-public class Comment {
+public class Comment implements Serializable{
 	private Integer   Id;
 	private String    Comment;
 	private Integer   Evaluation;

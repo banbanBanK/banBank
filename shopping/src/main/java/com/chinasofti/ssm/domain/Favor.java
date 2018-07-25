@@ -1,6 +1,8 @@
 package com.chinasofti.ssm.domain;
 
-public class Favor {
+import java.io.Serializable;
+
+public class Favor implements Serializable{
 	private Integer Id;
 	private Integer FavorLevel;
 	private Customer customer ;

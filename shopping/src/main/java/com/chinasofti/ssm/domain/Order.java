@@ -1,8 +1,9 @@
 package com.chinasofti.ssm.domain;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
-public class Order {
+public class Order implements Serializable{
 	private Integer Id;
 	private double GoodPrice;
 	private Integer GoodNum;
