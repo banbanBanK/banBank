@@ -7,6 +7,7 @@ public class User implements Serializable{
 	private Integer Id;
 	private String UserId;
 	private String UserName;
+	private Integer UserGender;
 	private String UserPassword;
 	private String UserPhone;
 	private String UserTel;
@@ -14,12 +15,11 @@ public class User implements Serializable{
 	private String UserAddress;
 	private String DeleteStatus;
 	
-	
-	
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
 	public Integer getId() {
 		return Id;
 	}
@@ -37,6 +37,12 @@ public class User implements Serializable{
 	}
 	public void setUserName(String userName) {
 		UserName = userName;
+	}
+	public Integer getUserGender() {
+		return UserGender;
+	}
+	public void setUserGender(Integer userGender) {
+		UserGender = userGender;
 	}
 	public String getUserPassword() {
 		return UserPassword;
