@@ -1,8 +1,9 @@
 package com.chinasofti.ssm.domain;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
-public class ViewAction {
+public class ViewAction implements Serializable{
 	private Integer Id;
 	private Timestamp ClickTime;
 	private Timestamp EndTime;

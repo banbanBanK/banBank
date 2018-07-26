@@ -7,14 +7,11 @@
 <mapper namespace="com.chinasofti.ssm.dao.UserDao">
 
 	<resultMap id="UserResultMap" type="com.chinasofti.ssm.domain.User" autoMapping="true">
-
-
-
 	</resultMap>
 
 	<select id="findById" parameterType="int" resultMap="UserResultMap">
 		select *
 		from users
-		where Id = #{Id}
+		where Id = #{Id} and DeleteStatus = 1
 	</select>
 </mapper>

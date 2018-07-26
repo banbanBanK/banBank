@@ -1,6 +1,8 @@
 package com.chinasofti.ssm.domain;
 
-public class Card {
+import java.io.Serializable;
+
+public class Card implements Serializable{
 	private Integer Id;
 	private String  CardId;
 	private double  Account;

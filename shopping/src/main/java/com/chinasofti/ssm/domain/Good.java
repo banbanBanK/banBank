@@ -1,9 +1,10 @@
 package com.chinasofti.ssm.domain;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Good {
+public class Good implements Serializable{
 	private Integer Id;
 	private String GoodId;
 	private String GoodName;
