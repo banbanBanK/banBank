@@ -6,22 +6,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.chinasofti.ssm.biz.UserBiz;
-import com.chinasofti.ssm.dao.UserDao;
-import com.chinasofti.ssm.domain.User;
+import com.chinasofti.ssm.biz.GoodBiz;
+import com.chinasofti.ssm.domain.Good;
 
 @ContextConfiguration(locations = {"classpath:applicationContext.xml"})
 @RunWith(SpringJUnit4ClassRunner.class)
-public class TestUserBiz {
+public class TestGoodBiz{
 	@Autowired
-	private UserBiz userBiz;
+	private GoodBiz GoodBiz;
 	@Test
 	public void testFindById() {
-		Integer a= 3;
-		User user = userBiz.findById(a);
-		if(user != null)
-			System.out.println("Hello"+ user.getUserName());
-		else
-			System.out.println("error appear");
+		Integer a= 1 ;
+		Good good = GoodBiz.findById(a);
+		System.out.println("Hello"+ good.getGoodName());
 	}
 }
