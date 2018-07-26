@@ -903,7 +903,10 @@ h4.title {
 }
 /*--statistics--*/
 .stats-info.widget {
-    padding: 1em;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
     background-color: #fff;
 }
 .stats-info ul li {
@@ -969,6 +972,10 @@ h4.title {
 /*--social-media--*/
 .social-media {
     padding: 0;
+    padding-left:1em;
+    padding-top:1em;
+     padding-bottom:1em;
+    padding-right:1em;
     margin-left: 2%;
     width: 31.3%;
 }
