@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
+@SuppressWarnings("serial")
 public class Good implements Serializable{
 	private Integer Id;
 	private String GoodId;
@@ -16,7 +17,7 @@ public class Good implements Serializable{
 	private Set<Comment> comments = new HashSet<Comment>();
 	private Type type;
 	private Provider provider;
-	private Set<ViewAction >viewActions = new HashSet<ViewAction>()£»
+	private Set<ViewAction >viewActions = new HashSet<ViewAction>();
 	private Set<Order> orders = new HashSet<Order>();
 	public Good() {
 		super();
