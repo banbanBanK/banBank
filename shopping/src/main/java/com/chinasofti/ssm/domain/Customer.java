@@ -1,11 +1,12 @@
 package com.chinasofti.ssm.domain;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
 import org.aspectj.weaver.ast.Or;
 
-public class Customer {
+public class Customer implements Serializable{
 	private Integer Id;
 	private String  CustomerId;
 	private String  CustomerName;

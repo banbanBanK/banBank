@@ -1,9 +1,10 @@
 package com.chinasofti.ssm.domain;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Type {
+public class Type implements Serializable{
 	private Integer Id;
 	private String TypeId;
 	private String TypeName;

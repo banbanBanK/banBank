@@ -1,6 +1,8 @@
 package com.chinasofti.ssm.domain;
 
-public class Admin {
+import java.io.Serializable;
+
+public class Admin implements Serializable{
 	private Integer Id;
 	private String  AdminId;
 	private String  AdminName;

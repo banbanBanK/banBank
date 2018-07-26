@@ -18,8 +18,9 @@ public class UserController {
 	
 	@RequestMapping("/findById")
 	public String findById(@RequestParam int Id,HttpServletRequest request) {
-		
+
 		User user = userBiz.findById(Id);
+
 		System.out.println("Id=" + user.getUserName());
 		request.setAttribute("user", user);
 		return "info";

@@ -1,6 +1,8 @@
 package com.chinasofti.ssm.domain;
 
-public class Address {
+import java.io.Serializable;
+
+public class Address implements Serializable {
 	private Integer Id;
 	private String  AddressId;
 	private String 	AddressName;

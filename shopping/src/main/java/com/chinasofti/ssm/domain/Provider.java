@@ -1,6 +1,8 @@
 package com.chinasofti.ssm.domain;
 
-public class Provider {
+import java.io.Serializable;
+
+public class Provider implements Serializable{
 	private Integer Id;
 	private String ProviderId;
 	private String ProviderName;
