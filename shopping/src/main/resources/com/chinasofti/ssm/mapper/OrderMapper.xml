@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.chinasofti.ssm.dao.OrderDao">
+
+    <select id="getCustomerByCustomerId" parameterType="String" resultType="com.chinasofti.ssm.domain.Customer">
+        select *
+        from customers
+        where CustomerId=#{CustomerId}
+    </select>
+
+    <select id="getGoodByGoodId" parameterType="String" resultType="com.chinasofti.ssm.domain.Good">
+        select *
+        from goods
+        where GoodId=#{GoodId}
+    </select>
+    <resultMap id="OrderResultMap" type="com.chinasofti.ssm.domain.Order" autoMapping="true">
+        <association property="customer" column="CustomerId" select="getCustomerByCustomerId"></association>
+        <association property="good" column="GoodId" select="getGoodByGoodId"></association>
+    </resultMap>
+
+    <select id="findById" parameterType="Int" resultMap="OrderResultMap">
+        select *
+        from orders
+        where Id=#{id} and DeleteStatus = 1;
+    </select>
+    <select id="findAll" resultMap="OrderResultMap">
+		select *
+		from orders
+		where DeleteStatus = 1
+	</select>
+
+    <select id="findByCustomerId" parameterType="String" resultMap="OrderResultMap">
+        select *
+        from orders
+        where CustomerId=#{CustomerId}
+    </select>
+
+    <select id="findByIsDone" parameterType="Integer" resultMap="OrderResultMap">
+        select *
+        from orders
+        where IsDone = #{IsDone}
+    </select>
+
+    <select id="findByCreateTime" parameterType="Date" resultMap="OrderResultMap">
+        select *
+        from orders
+        where CreateTime=#{CreateTime}
+    </select>
+
+    <insert id="insert" parameterType="com.chinasofti.ssm.domain.Order">
+        insert into orders values('',#{CustomerId},#{GoodId},#{GoodPrice},#{GoodNum},#{CreateTime},#{DeleteStatus},#{IsDone})
+    </insert>
+
+    <delete id="delete" parameterType="Integer">
+       update orders
+       set DeleteStatus = 0
+       where Id = #{Id} and DeleteStatus = 1
+    </delete>
+
+    <update id="update" parameterType="com.chinasofti.ssm.domain.Order">
+        update orders
+        set CusetomerId=#{CusetomerId},GoodId=#{GoodId},GoodPrice=#{GoodPrice},GoodNum=#{GoodNum},CreateTime=#{CreateTime},DeleteStatus=#{DeleteStatus},IsDone=#{IsDone}
+        where Id=#{Id}
+    </update>
+</mapper>
