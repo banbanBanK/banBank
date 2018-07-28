@@ -11,8 +11,13 @@
 <title>Insert title here</title>
 </head>
 <body>
+<<<<<<< HEAD
 <% User user = (User) request.getAttribute("user"); %>
 	<h1>Hello!<%=user.getUserName() %></h1>
+=======
+<%--<% User user = (User) request.getAttribute("user"); %>--%>
+	<%--<h1>Hello!<%=user.getUserName() %></h1>--%>
+>>>>>>> a9e039e3340c05bfe77af85a0712cd5b0969a233
 <% Good good = (Good) request.getAttribute("good"); %>
 <h1>Hello!<%=good.getGoodName() %></h1>
 </body>

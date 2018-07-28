@@ -10,7 +10,7 @@ public class Customer implements Serializable{
 	private Integer Id;
 	private String  CustomerId;
 	private String  CustomerName;
-	private String  CustomerGender;
+	private String CustomerGender;
 	private Integer CustomerAge;
 	private String  CustomerTel;
 	private String  CustomerPhone;

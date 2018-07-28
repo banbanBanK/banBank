@@ -1,19 +1,19 @@
-package com.chinasofti.ssm.dao;
+package com.chinasofti.ssm.biz;
 
 import com.chinasofti.ssm.domain.Order;
 
 import java.sql.Date;
 import java.util.List;
 
-public interface OrderDao extends GenericDao<Order, Integer> {
+public interface OrderBiz {
     List<Order> findAll();
     Order findById(Integer Id);
     List<Order> findByCustomerId(String CustomerId);
     List<Order> findByIsDone(Integer IsDone);
     List<Order> findByCreateTime(Date CreateTime);
 
-    int insert(Order order);
-    int update(Order order);
-    int delete(Order order);
-    int delete(Integer Id);
+    boolean insert(Order order);
+    boolean update(Order order);
+    boolean delete(Order order);
+    boolean delete(Integer Id);
 }
