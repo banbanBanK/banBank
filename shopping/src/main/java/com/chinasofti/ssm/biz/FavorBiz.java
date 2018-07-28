@@ -8,6 +8,7 @@ import java.util.List;
 
 public interface FavorBiz {
     public List<Favor> findAll();
+    public Favor findById(Integer Id);
     public List<Favor> findByCustomerId(String customerId);
     public List<Favor> findByTypeId(String typeId);
     public List<Favor> findByLevel(Integer level);

@@ -23,6 +23,11 @@
         from cards
         where DeleteStatus = 1
     </select>
+    <select id="findById" parameterType="Integer" resultMap="CardResultMap">
+        select *
+        from cards
+        where Id = #{Id} and DeleteStatus = 1
+    </select>
     <select id="findByCustomerId" parameterType="String" resultMap="CardResultMap">
         select *
         from cards

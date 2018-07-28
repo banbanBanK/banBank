@@ -29,6 +29,11 @@
         from favor
         where DeleteStatus = 1
     </select>
+    <select id="findById" parameterType="Integer" resultMap="FavorResultMap">
+        select *
+        from favor
+        where Id = #{Id} and DeleteStatus = 1
+    </select>
     <select id="findByCustomerId" parameterType="String" resultMap="FavorResultMap">
         select *
         from favor

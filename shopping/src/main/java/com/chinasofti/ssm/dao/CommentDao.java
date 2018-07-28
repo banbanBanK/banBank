@@ -8,7 +8,6 @@ import java.sql.Timestamp;
 import java.util.List;
 
 public interface CommentDao extends GenericDao<Comment, Integer> {
-    public List<Comment> findAll();
     public List<Comment> findByCreateTime(Timestamp createTime);
     public List<Comment> findByGoodId(String goodId);
     public List<Comment> findByCustomerId(String customerId);

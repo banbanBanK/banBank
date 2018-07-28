@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface CardBiz {
     public List<Card> findAll();
+    public Card findById(Integer Id);
     public Card findByCardId(String cardId);
     public List<Card> findByCustomerId(String customerId);
 
