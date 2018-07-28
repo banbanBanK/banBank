@@ -17,8 +17,11 @@ public class TestUserBiz {
 	private UserBiz userBiz;
 	@Test
 	public void testFindById() {
-		Integer a=new Integer(1);
+		Integer a= 1;
 		User user = userBiz.findById(a);
-		System.out.println("Hello"+ user.getUserName());
+		if(user != null)
+			System.out.println("Hello"+ user.getUserName());
+		else
+			System.out.println("error appear");
 	}
 }
