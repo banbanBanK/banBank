@@ -10,7 +10,7 @@ public class Customer implements Serializable{
 	private Integer Id;
 	private String  CustomerId;
 	private String  CustomerName;
-	private String CustomerGender;
+	private Integer CustomerGender;
 	private Integer CustomerAge;
 	private String  CustomerTel;
 	private String  CustomerPhone;
@@ -47,10 +47,10 @@ public class Customer implements Serializable{
 	public void setCustomerName(String customerName) {
 		CustomerName = customerName;
 	}
-	public String getCustomerGender() {
+	public Integer getCustomerGender() {
 		return CustomerGender;
 	}
-	public void setCustomerGender(String customerGender) {
+	public void setCustomerGender(Integer customerGender) {
 		CustomerGender = customerGender;
 	}
 	public Integer getCustomerAge() {

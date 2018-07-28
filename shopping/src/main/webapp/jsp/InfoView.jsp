@@ -72,6 +72,27 @@
                         <!-- //nav-second-level -->
                     </li>
                     <li>
+                        <a href="comment1.jsp" style="font-family:'楷体'"><i class="fa fa-book nav_icon"></i>客户评价<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse" style="font-family:'楷体'">
+                            <li>
+                                <a href="comment1.jsp">1星评价</a>
+                            </li>
+                            <li>
+                                <a href="comment2.jsp">2星评价</a>
+                            </li>
+                            <li>
+                                <a href="comment3.jsp">3星评价</a>
+                            </li>
+                            <li>
+                                <a href="comment4.jsp">4星评价</a>
+                            </li>
+                            <li>
+                                <a href="comment5.jsp">5星评价</a>
+                            </li>
+                        </ul>
+                        <!-- /nav-second-level -->
+                    </li>
+                    <li>
                         <a href="AdminInfo.jsp" style="font-family:'楷体"><i class="fa fa-check-square-o nav_icon"></i>我的信息<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse" style="font-family:'楷体">
                             <li>
