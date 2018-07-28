@@ -35,26 +35,46 @@
 	<select id="findByName" resultMap="GoodResultMap">
 		select *
 		from goods
+<<<<<<< HEAD
+		where GoodName = #{GoodName}
+=======
 		where GoodName = #{GoodName} and DeleteStatus = 1
+>>>>>>> a9e039e3340c05bfe77af85a0712cd5b0969a233
 	</select>
 	<select id="findByPrice" resultMap="GoodResultMap">
 		select *
 		from goods
+<<<<<<< HEAD
+		where GoodPrice = #{GoodPrice}
+=======
 		where GoodPrice = #{GoodPrice} and DeleteStatus = 1
+>>>>>>> a9e039e3340c05bfe77af85a0712cd5b0969a233
 	</select>
 	<select id="findByType" resultMap="GoodResultMap">
 		select *
 		from goods
+<<<<<<< HEAD
+		where TypeId = #{TypeId}
+=======
 		where TypeId = #{TypeId} and DeleteStatus = 1
+>>>>>>> a9e039e3340c05bfe77af85a0712cd5b0969a233
 	</select>
 	<select id="findByProvider" resultMap="GoodResultMap">
 		select *
 		from goods
+<<<<<<< HEAD
+		where ProviderId = #{ProviderId}
+=======
 		where ProviderId = #{ProviderId} and DeleteStatus = 1
+>>>>>>> a9e039e3340c05bfe77af85a0712cd5b0969a233
 	</select>
 	<select id="findByGoodId" resultMap="GoodResultMap">
 		select *
 		from goods
+<<<<<<< HEAD
+		where GoodId = #{GoodId}
+	</select>
+=======
 		where GoodId = #{GoodId} and DeleteStatus = 1
 	</select>
 	<insert id="insert" parameterType="com.chinasofti.ssm.domain.Good">
@@ -71,4 +91,5 @@
 		set DeleteStatus = 0
 		where Id=#{Id} and DeleteStatus = 1
 	</delete>
+>>>>>>> a9e039e3340c05bfe77af85a0712cd5b0969a233
 </mapper>
