@@ -57,4 +57,10 @@
 		from goods
 		where GoodId = #{GoodId}
 	</select>
+<<<<<<< HEAD
+=======
+	<insert id="insert" parameterType="com.chinasofti.ssm.domain.Good">
+		insert into goods(Id,GoodId,GoodName,) values (#{})
+	</insert>
+>>>>>>> a9e039e3340c05bfe77af85a0712cd5b0969a233
 </mapper>
