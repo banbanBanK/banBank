@@ -63,7 +63,7 @@
 
     <update id="update" parameterType="com.chinasofti.ssm.domain.Order">
         update orders
-        set CusetomerId=#{CusetomerId},GoodId=#{GoodId},GoodPrice=#{GoodPrice},GoodNum=#{GoodNum},CreateTime=#{CreateTime},DeleteStatus=#{DeleteStatus},IsDone=#{IsDone}
+        set CustomerId=#{customer.CustomerId},GoodId=#{good.GoodId},GoodPrice=#{GoodPrice},GoodNum=#{GoodNum},CreateTime=#{CreateTime},DeleteStatus=#{DeleteStatus},IsDone=#{IsDone}
         where Id=#{Id}
     </update>
 </mapper>
