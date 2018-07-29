@@ -87,7 +87,7 @@
 
         <li><a href="products.jsp">Products</a></li>
         <li><a href="product-details.jsp">Product Details</a></li>
-        <li><a href="../jsp/about.jsp">About</a></li>
+        <li><a href="about.jsp">About</a></li>
         <li><a href="blog.jsp">Blog</a></li>
         <li><a href="blog-post.jsp">Blog Post</a></li>
         <li><a href="contact.jsp">Contact</a></li>

@@ -35,18 +35,18 @@
 
 <!-- Left menu -->
 <div class="menu-left hidden-xs">
-    <a href="../jspFront/index.jsp" class="logo-left">
+    <a href="index.jsp" class="logo-left">
         <img src="../img/logo.png" alt="" />
     </a>
 
     <div class="nav-item">
-        <a href="../jspFront/login.jsp" class="text-primary">
+        <a href="login.jsp" class="text-primary">
             <i class="fas fa-user-circle fa-2x"></i>
         </a>
     </div>
 
     <div class="nav-item">
-        <a href="../jspFront/cart.jsp" class="text-primary">
+        <a href="cart.jsp" class="text-primary">
             <i class="fas fa-shopping-bag fa-2x"></i>
             <span class="badge">3</span>
         </a>
@@ -71,34 +71,34 @@
     </div>
 
     <div class="cart-side-btn visible-xs">
-        <a href="../jspFront/cart.jsp">
+        <a href="cart.jsp">
             <i class="fas fa-shopping-bag"></i>
             <span class="badge">3</span>
         </a>
     </div>
 
     <div class="account-side-btn visible-xs">
-        <a href="../jspFront/login.jsp"><i class="fas fa-user-circle"></i></a>
+        <a href="login.jsp"><i class="fas fa-user-circle"></i></a>
     </div>
 
     <div class="home-side-btn visible-xs">
-        <a href="../jspFront/index.jsp"><i class="fas fa-desktop"></i></a>
+        <a href="index.jsp"><i class="fas fa-desktop"></i></a>
     </div>
 
     <ul>
-        <li><a href="../jspFront/products.jsp">Over-ear <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
-        <li><a href="../jspFront/products.jsp">On-ear <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
-        <li><a href="../jspFront/products.jsp">Accessories <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
-        <li><a href="../jspFront/products.jsp">In-ear <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
+        <li><a href="products.jsp">Over-ear <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
+        <li><a href="products.jsp">On-ear <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
+        <li><a href="products.jsp">Accessories <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
+        <li><a href="products.jsp">In-ear <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
 
         <li><hr class="m-tb-30" /></li>
 
-        <li><a href="../jspFront/products.jsp">Products</a></li>
-        <li><a href="../jspFront/proguct-details.jsp">Product Details</a></li>
+        <li><a href="products.jsp">Products</a></li>
+        <li><a href="proguct-details.jsp">Product Details</a></li>
         <li><a href="about.jsp">About</a></li>
-        <li><a href="../jspFront/blog.jsp">Blog</a></li>
-        <li><a href="../jspFront/blog-post.jsp">Blog Post</a></li>
-        <li><a href="../jspFront/contact.jsp">Contact</a></li>
+        <li><a href="blog.jsp">Blog</a></li>
+        <li><a href="blog-post.jsp">Blog Post</a></li>
+        <li><a href="contact.jsp">Contact</a></li>
     </ul>
 
     <div class="social-media-box">
