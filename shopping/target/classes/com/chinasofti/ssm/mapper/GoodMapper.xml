@@ -35,26 +35,61 @@
 	<select id="findByName" resultMap="GoodResultMap">
 		select *
 		from goods
+<<<<<<< HEAD
 		where GoodName = #{GoodName}
+=======
+		where GoodName = #{GoodName} and DeleteStatus = 1
+>>>>>>> f7e20f859d59c2dbd405aa986dcb31c1de7f8a7b
 	</select>
 	<select id="findByPrice" resultMap="GoodResultMap">
 		select *
 		from goods
+<<<<<<< HEAD
 		where GoodPrice = #{GoodPrice}
+=======
+		where GoodPrice = #{GoodPrice} and DeleteStatus = 1
+>>>>>>> f7e20f859d59c2dbd405aa986dcb31c1de7f8a7b
 	</select>
 	<select id="findByType" resultMap="GoodResultMap">
 		select *
 		from goods
+<<<<<<< HEAD
 		where TypeId = #{TypeId}
+=======
+		where TypeId = #{TypeId} and DeleteStatus = 1
+>>>>>>> f7e20f859d59c2dbd405aa986dcb31c1de7f8a7b
 	</select>
 	<select id="findByProvider" resultMap="GoodResultMap">
 		select *
 		from goods
+<<<<<<< HEAD
 		where ProviderId = #{ProviderId}
+=======
+		where ProviderId = #{ProviderId} and DeleteStatus = 1
+>>>>>>> f7e20f859d59c2dbd405aa986dcb31c1de7f8a7b
 	</select>
 	<select id="findByGoodId" resultMap="GoodResultMap">
 		select *
 		from goods
+<<<<<<< HEAD
 		where GoodId = #{GoodId}
 	</select>
+=======
+		where GoodId = #{GoodId} and DeleteStatus = 1
+	</select>
+	<insert id="insert" parameterType="com.chinasofti.ssm.domain.Good">
+		insert into goods(GoodId,GoodName,GoodPrice,GoodImage,GoodStock,GoodSaleSum,ProviderId,TypeId,DeleteStatus)
+		 values (#{GoodId},#{GoodName},#{GoodPrice}, #{GoodImage}, #{GoodStock}, #{GoodSaleSum},#{provider.ProviderId},#{type.TypeId},#{DeleteStatus})
+	</insert>
+	<update id="update" parameterType="com.chinasofti.ssm.domain.Good">
+		update goods
+		set GoodId=#{GoodId},GoodName=#{GoodName},GoodPrice = #{GoodPrice},GoodImage = #{GoodImage},GoodStock=#{GoodStock},GoodSaleSum=#{GoodSaleSum},GoodComment=#{GoodComment},ProviderId=#{ProviderId},TypeId=#{TypeId},DeleteStatus=1
+		where Id = #{Id} and DeleteStatus=1
+	</update>
+	<delete id="delete" parameterType="Integer">
+		update goods
+		set DeleteStatus = 0
+		where Id=#{Id} and DeleteStatus = 1
+	</delete>
+>>>>>>> f7e20f859d59c2dbd405aa986dcb31c1de7f8a7b
 </mapper>

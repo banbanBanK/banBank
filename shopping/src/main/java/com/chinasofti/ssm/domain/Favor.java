@@ -7,9 +7,16 @@ public class Favor implements Serializable{
 	private Integer FavorLevel;
 	private Customer customer ;
 	private Type type;
+	private Integer DeleteStatus;
 	public Favor() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+	public Integer getDeleteStatus() {
+		return DeleteStatus;
+	}
+	public void setDeleteStatus(Integer deleteStatus) {
+		DeleteStatus = deleteStatus;
 	}
 	public Integer getId() {
 		return Id;

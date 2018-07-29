@@ -9,7 +9,122 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ca6caf0-c4a6-4638-8f0e-b927a50c62ce" name="Default" comment="" />
+    <list default="true" id="2ca6caf0-c4a6-4638-8f0e-b927a50c62ce" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/ic-helpers.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/stylefront.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/about.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/about1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/about2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/about3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/award1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/award2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/award3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/award4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/award5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/award6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/blog-last-post1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/blog-last-post2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/blog-last-post3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/blog1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/blog2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/blog3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/blog4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/face1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/face2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/face3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/footer-line.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/icon-headphones.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/insta-feed1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/insta-feed2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/insta-feed3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/insta-feed4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/insta-feed5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/insta-feed6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/insta-feed7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/insta-feed8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/insta-feed9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/pin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/products/banner1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/products/banner2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/products/product-details1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/products/product-details2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/products/product-details3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/products/product-details4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/products/product-sale.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/products/product-style1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/products/product1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/products/product10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/products/product2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/products/product3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/products/product4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/products/product5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/products/product6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/products/product7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/products/product8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/products/product9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/separator1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/separator2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/separator3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/slider/slide1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/slider/slide2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/slider/slide3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/team1-hover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/team1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/team2-hover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/team2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/team3-hover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/team3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/team4-hover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/team4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/team5-hover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/team5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/team6-hover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/team6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/team7-hover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/team7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/team8-hover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/team8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/global.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/CusotmerDetail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/about.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/blog-post.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/blog.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/cart.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/contact.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/products.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/proguct-details.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/plugins/bootstrap/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/plugins/bootstrap/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/plugins/bxslider/bxslider.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/plugins/bxslider/bxslider.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/plugins/bxslider/images/bx_loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/plugins/font-awesome/css/all.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/plugins/font-awesome/webfonts/fa-brands-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/plugins/font-awesome/webfonts/fa-brands-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/plugins/font-awesome/webfonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/plugins/font-awesome/webfonts/fa-brands-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/plugins/font-awesome/webfonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/plugins/font-awesome/webfonts/fa-regular-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/plugins/font-awesome/webfonts/fa-regular-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/plugins/font-awesome/webfonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/plugins/font-awesome/webfonts/fa-regular-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/plugins/font-awesome/webfonts/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/plugins/font-awesome/webfonts/fa-solid-900.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/plugins/font-awesome/webfonts/fa-solid-900.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/plugins/font-awesome/webfonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/plugins/font-awesome/webfonts/fa-solid-900.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/plugins/font-awesome/webfonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/plugins/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/plugins/owl-carousel/owl.carousel.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/plugins/owl-carousel/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/plugins/owl-carousel/owl.theme.default.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -138,6 +253,9 @@
       <find>page</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -181,6 +299,21 @@
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/InfoView.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/getgood.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/front.jsp" />
+        <option value="$PROJECT_DIR$/src/test/java/test/chinasofti/ssm/biz/TestGoodBiz.java" />
+        <option value="$PROJECT_DIR$/src/test/java/test/chinasofti/ssm/biz/TestCardBiz.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/domain/Favor.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/FavorMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/CommentMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/CardMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/FavorBiz.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/CommentBiz.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/dao/CommentDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/dao/CardDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/dao/FavorDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/CardBiz.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/impl/CardBizImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/impl/FavorBizImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/impl/CommentBizImpl.java" />
       </list>
     </option>
   </component>
@@ -234,6 +367,8 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -320,6 +455,13 @@
       <recent name="E:\shopping\src\main" />
     </key>
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="L:\cpfile\Git\Bank\banBank\shopping\src\main\webapp\js" />
+      <recent name="L:\cpfile\Git\Bank\banBank\shopping\src\main\webapp\css" />
+      <recent name="L:\cpfile\Git\Bank\banBank\shopping\src\main\webapp" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -333,20 +475,97 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.front.jsp (1)">
+  <component name="RunManager" selected="JUnit.TestGoodBiz.testFindByPrice">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
+    <configuration name="TestGoodBiz.testFindById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shopping" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.chinasofti.ssm.biz.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="test.chinasofti.ssm.biz" />
+      <option name="MAIN_CLASS_NAME" value="test.chinasofti.ssm.biz.TestGoodBiz" />
+      <option name="METHOD_NAME" value="testFindById" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TestGoodBiz.testFindByPrice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shopping" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.chinasofti.ssm.biz.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test.chinasofti.ssm.biz" />
+      <option name="MAIN_CLASS_NAME" value="test.chinasofti.ssm.biz.TestGoodBiz" />
+      <option name="METHOD_NAME" value="testFindByPrice" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TestGoodBiz.testInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shopping" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.chinasofti.ssm.biz.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test.chinasofti.ssm.biz" />
+      <option name="MAIN_CLASS_NAME" value="test.chinasofti.ssm.biz.TestGoodBiz" />
+      <option name="METHOD_NAME" value="testInsert" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TestOrderBiz.testUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shopping" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.chinasofti.ssm.biz.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test.chinasofti.ssm.biz" />
+      <option name="MAIN_CLASS_NAME" value="test.chinasofti.ssm.biz.TestOrderBiz" />
+      <option name="METHOD_NAME" value="testUpdate" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <option name="PASS_PARENT_ENVS" value="true" />
@@ -733,6 +952,12 @@
     <history-entry file="TestGoodBiz_testFindById - 2018.07.26 at 20h 09m 32s.xml">
       <configuration name="TestGoodBiz.testFindById" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestGoodBiz_testFindById - 2018.07.28 at 14h 52m 48s.xml">
+      <configuration name="TestGoodBiz.testFindById" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGoodBiz_testFindByPrice - 2018.07.28 at 14h 53m 45s.xml">
+      <configuration name="TestGoodBiz.testFindByPrice" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="42859000" />
@@ -770,6 +995,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32876712" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
@@ -869,7 +1095,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/dao/AdminDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/dao/OrderDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
