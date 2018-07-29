@@ -6,7 +6,6 @@ import com.chinasofti.ssm.domain.Customer;
 import java.util.List;
 
 public interface CardDao extends GenericDao<Card, Integer> {
-    public List<Card> findAll();
     public Card findByCardId(String cardId);
     public List<Card> findByCustomerId(String customerId);
 

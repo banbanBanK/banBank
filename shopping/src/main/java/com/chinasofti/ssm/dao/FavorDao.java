@@ -7,7 +7,6 @@ import com.chinasofti.ssm.domain.Type;
 import java.util.List;
 
 public interface FavorDao extends GenericDao<Favor, Integer> {
-    public List<Favor> findAll();
     public List<Favor> findByCustomerId(String customerId);
     public List<Favor> findByTypeId(String typeId);
     public List<Favor> findByLevel(Integer level);

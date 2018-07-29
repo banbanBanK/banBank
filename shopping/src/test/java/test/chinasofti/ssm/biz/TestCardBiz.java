@@ -21,7 +21,7 @@ public class TestCardBiz {
 //        findAll();
 //        findByCardId();
 //        findByCustomerId();
-        insert();
+//        insert();
 //        update();
 //        delete();
     }

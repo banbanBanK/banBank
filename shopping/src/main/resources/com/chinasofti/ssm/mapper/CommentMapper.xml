@@ -29,6 +29,11 @@
         from comments
         where DeleteStatus = 1
     </select>
+    <select id="findById" parameterType="Integer" resultMap="CommentResultMap">
+        select *
+        from comments
+        where Id = #{Id} and DeleteStatus = 1
+    </select>
     <select id="findByCustomerId" parameterType="String" resultMap="CommentResultMap">
         select *
         from comments
