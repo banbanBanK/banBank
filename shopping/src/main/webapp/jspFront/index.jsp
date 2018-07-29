@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 该读过
-  Date: 2018/7/28
-  Time: 14:31
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
@@ -17,16 +10,16 @@
     <meta name="author" content="IntelCoder, www.intelcoder.com" />
     <meta name="description" content="Staro is a clean and light HTML5 theme for showing your products in a simple and elegant way. It's a fully responsive e-commerce template that was built with customers in mind." />
 
-    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <link rel="icon" href="../img/favicon.png" type="image/png" />
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600" />
 
-    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="plugins/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="${pageContext.Request.}plugins/bootstrap/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../plugins/font-awesome/css/all.css" type="text/css"/>
 
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/ic-helpers.min.css" />
+    <link rel="stylesheet" href="../css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/responsive.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/ic-helpers.min.css" type="text/css"/>
 </head>
 <body>
 
@@ -34,18 +27,18 @@
 
 <!-- Left menu -->
 <div class="menu-left hidden-xs">
-    <a href="index.html" class="logo-left">
-        <img src="img/logo.png" alt="" />
+    <a href="index.jsp" class="logo-left">
+        <img src="../img/logo.png" alt="" />
     </a>
 
     <div class="nav-item">
-        <a href="CustomerDetail.html" class="text-primary">
+        <a href="CustomerDetail.jsp" class="text-primary">
             <i class="fas fa-user-circle fa-2x"></i>
         </a>
     </div>
 
     <div class="nav-item">
-        <a href="cart.html" class="text-primary">
+        <a href="cart.jsp" class="text-primary">
             <i class="fas fa-shopping-bag fa-2x"></i>
             <span class="badge">3</span>
         </a>
@@ -70,34 +63,34 @@
     </div>
 
     <div class="cart-side-btn visible-xs">
-        <a href="cart.html">
+        <a href="cart.jsp">
             <i class="fas fa-shopping-bag"></i>
             <span class="badge">3</span>
         </a>
     </div>
 
     <div class="account-side-btn visible-xs">
-        <a href="login.html"><i class="fas fa-user-circle"></i></a>
+        <a href="login.jsp"><i class="fas fa-user-circle"></i></a>
     </div>
 
     <div class="home-side-btn visible-xs">
-        <a href="index.html"><i class="fas fa-desktop"></i></a>
+        <a href="index.jsp"><i class="fas fa-desktop"></i></a>
     </div>
 
     <ul>
-        <li><a href="products.html">Over-ear <img src="img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
-        <li><a href="products.html">On-ear <img src="img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
-        <li><a href="products.html">In-ear <img src="img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
-        <li><a href="products.html">Accessories <img src="img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
+        <li><a href="products.jsp">Over-ear <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
+        <li><a href="products.jsp">On-ear <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
+        <li><a href="products.jsp">In-ear <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
+        <li><a href="products.jsp">Accessories <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
 
         <li><hr class="m-tb-30" /></li>
 
-        <li><a href="products.html">Products</a></li>
-        <li><a href="product-details.html">Product Details</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="blog-post.html">Blog Post</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="products.jsp">Products</a></li>
+        <li><a href="product-details.jsp">Product Details</a></li>
+        <li><a href="about.jsp">About</a></li>
+        <li><a href="blog.jsp">Blog</a></li>
+        <li><a href="blog-post.jsp">Blog Post</a></li>
+        <li><a href="contact.jsp">Contact</a></li>
     </ul>
 
     <div class="social-media-box">
@@ -128,7 +121,7 @@
         <!-- Slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item">
-                <img src="img/slider/slide1.jpg" alt="" />
+                <img src="../img/slider/slide1.jpg" alt="" />
 
                 <div class="carousel-caption text-xs-center text-sm-center text-md-center text-left">
                     <h1>Staroudio</h1>
@@ -145,19 +138,19 @@
             </div>
 
             <div class="item">
-                <img src="img/slider/slide2.jpg" alt="" />
+                <img src="../img/slider/slide2.jpg" alt="" />
 
                 <div class="carousel-caption text-xs-center text-sm-center text-md-center text-left">
                     <h1>Gaming Collection</h1>
 
                     <p class="text-primary m-b-80">Checkout our gaming collection</p>
 
-                    <a href="products.html" class="btn btn-success"><i class="fas fa-rocket"></i>&nbsp; Explore</a>
+                    <a href="products.jsp" class="btn btn-success"><i class="fas fa-rocket"></i>&nbsp; Explore</a>
                 </div>
             </div>
 
             <div class="item">
-                <img src="img/slider/slide3.jpg" alt="" />
+                <img src="../img/slider/slide3.jpg" alt="" />
 
                 <div class="carousel-caption text-xs-center text-sm-center text-md-center text-left">
                     <h1>Wireless Collection</h1>
@@ -225,7 +218,7 @@
             <div class="col-sm-4 col-md-4 result-box text-sm-center">
                 <div class="col-md-6">
                     <a href="#">
-                        <img src="img/products/product8.png" class="img-responsive" alt="" />
+                        <img src="../img/products/product8.png" class="img-responsive" alt="" />
                     </a>
                 </div>
 
@@ -243,7 +236,7 @@
             <div class="col-sm-4 col-md-4 result-box text-sm-center">
                 <div class="col-md-6">
                     <a href="#">
-                        <img src="img/products/product9.png" class="img-responsive" alt="" />
+                        <img src="../img/products/product9.png" class="img-responsive" alt="" />
                     </a>
                 </div>
 
@@ -261,7 +254,7 @@
             <div class="col-sm-4 col-md-4 result-box text-sm-center">
                 <div class="col-md-6">
                     <a href="#">
-                        <img src="img/products/product10.png" class="img-responsive" alt="" />
+                        <img src="../img/products/product10.png" class="img-responsive" alt="" />
                     </a>
                 </div>
 
@@ -281,7 +274,7 @@
             <div class="col-sm-4 col-md-4 result-box text-sm-center">
                 <div class="col-md-6">
                     <a href="#">
-                        <img src="img/products/product3.png" class="img-responsive" alt="" />
+                        <img src="../img/products/product3.png" class="img-responsive" alt="" />
                     </a>
                 </div>
 
@@ -299,7 +292,7 @@
             <div class="col-sm-4 col-md-4 result-box text-sm-center">
                 <div class="col-md-6">
                     <a href="#">
-                        <img src="img/products/product2.png" class="img-responsive" alt="" />
+                        <img src="../img/products/product2.png" class="img-responsive" alt="" />
                     </a>
                 </div>
 
@@ -317,7 +310,7 @@
             <div class="col-sm-4 col-md-4 result-box text-sm-center">
                 <div class="col-md-6">
                     <a href="#">
-                        <img src="img/products/product1.png" class="img-responsive" alt="" />
+                        <img src="../img/products/product1.png" class="img-responsive" alt="" />
                     </a>
                 </div>
 
@@ -337,7 +330,7 @@
             <div class="col-sm-4 col-md-4 result-box text-sm-center">
                 <div class="col-md-6">
                     <a href="#">
-                        <img src="img/products/product4.png" class="img-responsive" alt="" />
+                        <img src="../img/products/product4.png" class="img-responsive" alt="" />
                     </a>
                 </div>
 
@@ -355,7 +348,7 @@
             <div class="col-sm-4 col-md-4 result-box text-sm-center">
                 <div class="col-md-6">
                     <a href="#">
-                        <img src="img/products/product6.png" class="img-responsive" alt="" />
+                        <img src="../img/products/product6.png" class="img-responsive" alt="" />
                     </a>
                 </div>
 
@@ -373,7 +366,7 @@
             <div class="col-sm-4 col-md-4 result-box text-sm-center">
                 <div class="col-md-6">
                     <a href="#">
-                        <img src="img/products/product7.png" class="img-responsive" alt="" />
+                        <img src="../img/products/product7.png" class="img-responsive" alt="" />
                     </a>
                 </div>
 
@@ -398,10 +391,10 @@
 </div>
 <!-- Search overlay -->
 
-<script src="plugins/jquery.min.js"></script>
-<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<script src="../plugins/jquery.min.js"></script>
+<script src="../plugins/bootstrap/bootstrap.min.js"></script>
 
-<script src="js/global.js"></script>
+<script src="../js/global.js"></script>
 </body>
 </html>
 

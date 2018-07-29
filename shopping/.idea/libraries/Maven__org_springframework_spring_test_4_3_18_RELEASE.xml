@@ -1,8 +1,5 @@
 <component name="libraryTable">
   <library name="Maven: org.springframework:spring-test:4.3.18.RELEASE">
-    <ANNOTATIONS>
-      <root url="file://$PROJECT_DIR$" />
-    </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$USER_HOME$/.m2/repository/org/springframework/spring-test/4.3.18.RELEASE/spring-test-4.3.18.RELEASE.jar!/" />
     </CLASSES>

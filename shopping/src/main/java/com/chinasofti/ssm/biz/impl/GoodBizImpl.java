@@ -19,10 +19,10 @@ public class GoodBizImpl implements GoodBiz {
 		return goodDao.findByName(GoodName);
 	}
 
-	public List<Good> findByPrice(double lowPrice, double highPrice) {
-		// TODO Auto-generated method stub
-		return goodDao.findByPrice(lowPrice, highPrice);
+	public List<Good> findByPrice(double GoodPrice) {
+		return goodDao.findByPrice(GoodPrice);
 	}
+
 
 	public List<Good> findByType(Integer TypeId) {
 		// TODO Auto-generated method stub
@@ -47,6 +47,22 @@ public class GoodBizImpl implements GoodBiz {
 	public List<Good> findAll() {
 		// TODO Auto-generated method stub
 		return goodDao.findAll();
+	}
+
+	public boolean insert(Good good) {
+		return goodDao.insert(good)==1;
+	}
+
+	public boolean delete(Integer Id) {
+		return goodDao.delete(Id)==1;
+	}
+
+	public boolean delete(Good good) {
+		return goodDao.delete(good)==1;
+	}
+
+	public boolean update(Good good) {
+		return goodDao.update(good)==1;
 	}
 
 }

@@ -1,13 +1,20 @@
 package com.chinasofti.ssm.dao;
 
 import com.chinasofti.ssm.domain.Comment;
+import com.chinasofti.ssm.domain.Customer;
+import com.chinasofti.ssm.domain.Good;
+
+import java.sql.Timestamp;
+import java.util.List;
 
 public interface CommentDao extends GenericDao<Comment, Integer> {
-<<<<<<< HEAD
-=======
     public List<Comment> findByCreateTime(Timestamp createTime);
     public List<Comment> findByGoodId(String goodId);
     public List<Comment> findByCustomerId(String customerId);
->>>>>>> f7e20f859d59c2dbd405aa986dcb31c1de7f8a7b
 
+    public int insert(Comment comment);
+    public int update(Comment comment);
+    public int deleteById(int id);
+//    public boolean deleteForCustomer(Customer customer);
+//    public boolean deleteForGood(Good good);
 }
