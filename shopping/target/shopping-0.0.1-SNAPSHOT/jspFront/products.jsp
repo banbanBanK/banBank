@@ -17,34 +17,34 @@
     <meta name="author" content="IntelCoder, www.intelcoder.com" />
     <meta name="description" content="Staro is a clean and light HTML5 theme for showing your products in a simple and elegant way. It's a fully responsive e-commerce template that was built with customers in mind." />
 
-    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <link rel="icon" href="../img/favicon.png" type="image/png" />
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600" />
 
-    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="plugins/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="../plugins/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../plugins/font-awesome/css/all.css" />
 
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/ic-helpers.min.css" />
+    <link rel="stylesheet" href="../css2/style.css" />
+    <link rel="stylesheet" href="../css2/responsive.css" />
+    <link rel="stylesheet" href="../css2/ic-helpers.min.css" />
 </head>
 <body>
 
 
 <!-- Left menu -->
 <div class="menu-left hidden-xs">
-    <a href="index.html" class="logo-left">
-        <img src="img/logo.png" alt="" />
+    <a href="index.jsp" class="logo-left">
+        <img src="../img/logo.png" alt="" />
     </a>
 
     <div class="nav-item">
-        <a href="login.html" class="text-primary">
+        <a href="login.jsp" class="text-primary">
             <i class="fas fa-user-circle fa-2x"></i>
         </a>
     </div>
 
     <div class="nav-item">
-        <a href="cart.html" class="text-primary">
+        <a href="cart.jsp" class="text-primary">
             <i class="fas fa-shopping-bag fa-2x"></i>
             <span class="badge">3</span>
         </a>
@@ -69,34 +69,34 @@
     </div>
 
     <div class="cart-side-btn visible-xs">
-        <a href="cart.html">
+        <a href="cart.jsp">
             <i class="fas fa-shopping-bag"></i>
             <span class="badge">3</span>
         </a>
     </div>
 
     <div class="account-side-btn visible-xs">
-        <a href="login.html"><i class="fas fa-user-circle"></i></a>
+        <a href="login.jsp"><i class="fas fa-user-circle"></i></a>
     </div>
 
     <div class="home-side-btn visible-xs">
-        <a href="index.html"><i class="fas fa-desktop"></i></a>
+        <a href="index.jsp"><i class="fas fa-desktop"></i></a>
     </div>
 
     <ul>
-        <li><a href="products.html">Over-ear <img src="img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
-        <li><a href="products.html">On-ear <img src="img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
-        <li><a href="products.html">In-ear <img src="img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
-        <li><a href="products.html">Accessories <img src="img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
+        <li><a href="products.jsp">Over-ear <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
+        <li><a href="products.jsp">On-ear <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
+        <li><a href="products.jsp">In-ear <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
+        <li><a href="products.jsp">Accessories <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
 
         <li><hr class="m-tb-30" /></li>
 
-        <li><a href="products.html">Products</a></li>
-        <li><a href="product-details.html">Product Details</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="blog-post.html">Blog Post</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="products.jsp">Products</a></li>
+        <li><a href="product-details.jsp">Product Details</a></li>
+        <li><a href="about.jsp">About</a></li>
+        <li><a href="blog.jsp">Blog</a></li>
+        <li><a href="blog-post.jsp">Blog Post</a></li>
+        <li><a href="contact.jsp">Contact</a></li>
     </ul>
 
     <div class="social-media-box">
@@ -122,7 +122,7 @@
             </div>
 
             <div class="col-sm-4">
-                <h5 class="m-t-10 text-xs-center text-right text-gray">Over-ear <img src="img/icon-headphones.png" class="h-30 align-text-bottom m-l-20" alt="" /></h5>
+                <h5 class="m-t-10 text-xs-center text-right text-gray">Over-ear <img src="../img/icon-headphones.png" class="h-30 align-text-bottom m-l-20" alt="" /></h5>
             </div>
 
             <div class="clearfix"></div>
@@ -150,11 +150,11 @@
                     <div class="panel-body p-t-30 p-b-30 text-center">
                         <div class="badge-sale-primary">Sale</div>
 
-                        <a href="product-details.html" class="product-item">
-                            <img src="img/products/product8.png" class="img-responsive center-block" alt="" />
+                        <a href="product-details.jsp" class="product-item">
+                            <img src="../img/products/product8.png" class="img-responsive center-block" alt="" />
                         </a>
 
-                        <a href="product-details.html">
+                        <a href="product-details.jsp">
                             <h5 class="m-tb-20">Staro-One S1000</h5>
                         </a>
 
@@ -168,11 +168,11 @@
                     <div class="panel-body p-t-30 p-b-30 text-center">
                         <div class="badge-sale-primary">-10%</div>
 
-                        <a href="product-details.html" class="product-item">
-                            <img src="img/products/product9.png" class="img-responsive center-block" alt="" />
+                        <a href="product-details.jsp" class="product-item">
+                            <img src="../img/products/product9.png" class="img-responsive center-block" alt="" />
                         </a>
 
-                        <a href="product-details.html">
+                        <a href="product-details.jsp">
                             <h5 class="m-tb-20">Staro-One S2000</h5>
                         </a>
 
@@ -184,11 +184,11 @@
             <div class="col-xs-12 col-sm-4 col-md-4">
                 <div class="panel">
                     <div class="panel-body p-t-30 p-b-30 text-center">
-                        <a href="product-details.html" class="product-item">
-                            <img src="img/products/product10.png" class="img-responsive center-block" alt="" />
+                        <a href="product-details.jsp" class="product-item">
+                            <img src="../img/products/product10.png" class="img-responsive center-block" alt="" />
                         </a>
 
-                        <a href="product-details.html">
+                        <a href="product-details.jsp">
                             <h5 class="m-tb-20">Staro-One S3000</h5>
                         </a>
 
@@ -202,11 +202,11 @@
             <div class="col-xs-12 col-sm-4 col-md-4">
                 <div class="panel">
                     <div class="panel-body p-t-30 p-b-30 text-center">
-                        <a href="product-details.html" class="product-item">
-                            <img src="img/products/product1.png" class="img-responsive center-block" alt="" />
+                        <a href="product-details.jsp" class="product-item">
+                            <img src="../img/products/product1.png" class="img-responsive center-block" alt="" />
                         </a>
 
-                        <a href="product-details.html">
+                        <a href="product-details.jsp">
                             <h5 class="m-tb-20">Staro-Two A100</h5>
                         </a>
 
@@ -218,11 +218,11 @@
             <div class="col-xs-12 col-sm-4 col-md-4">
                 <div class="panel">
                     <div class="panel-body p-t-30 p-b-30 text-center">
-                        <a href="product-details.html" class="product-item">
-                            <img src="img/products/product2.png" class="img-responsive center-block" alt="" />
+                        <a href="product-details.jsp" class="product-item">
+                            <img src="../img/products/product2.png" class="img-responsive center-block" alt="" />
                         </a>
 
-                        <a href="product-details.html">
+                        <a href="product-details.jsp">
                             <h5 class="m-tb-20">Staro-Two A100</h5>
                         </a>
 
@@ -234,11 +234,11 @@
             <div class="col-xs-12 col-sm-4 col-md-4">
                 <div class="panel">
                     <div class="panel-body p-t-30 p-b-30 text-center">
-                        <a href="product-details.html" class="product-item">
-                            <img src="img/products/product3.png" class="img-responsive center-block" alt="" />
+                        <a href="product-details.jsp" class="product-item">
+                            <img src="../img/products/product3.png" class="img-responsive center-block" alt="" />
                         </a>
 
-                        <a href="product-details.html">
+                        <a href="product-details.jsp">
                             <h5 class="m-tb-20">Staro-Two A100</h5>
                         </a>
 
@@ -252,11 +252,11 @@
             <div class="col-xs-12 col-sm-3 col-md-3">
                 <div class="panel">
                     <div class="panel-body p-t-30 p-b-30 text-center">
-                        <a href="product-details.html" class="product-item">
-                            <img src="img/products/product4.png" class="img-responsive center-block" alt="" />
+                        <a href="product-details.jsp" class="product-item">
+                            <img src="../img/products/product4.png" class="img-responsive center-block" alt="" />
                         </a>
 
-                        <a href="product-details.html">
+                        <a href="product-details.jsp">
                             <h5 class="m-tb-20">Staro-Four M200</h5>
                         </a>
 
@@ -268,11 +268,11 @@
             <div class="col-xs-12 col-sm-3 col-md-3">
                 <div class="panel">
                     <div class="panel-body p-t-30 p-b-30 text-center">
-                        <a href="product-details.html" class="product-item">
-                            <img src="img/products/product5.png" class="img-responsive center-block" alt="" />
+                        <a href="product-details.jsp" class="product-item">
+                            <img src="../img/products/product5.png" class="img-responsive center-block" alt="" />
                         </a>
 
-                        <a href="product-details.html">
+                        <a href="product-details.jsp">
                             <h5 class="m-tb-20">Staro-Four M200</h5>
                         </a>
 
@@ -284,11 +284,11 @@
             <div class="col-xs-12 col-sm-3 col-md-3">
                 <div class="panel">
                     <div class="panel-body p-t-30 p-b-30 text-center">
-                        <a href="product-details.html" class="product-item">
-                            <img src="img/products/product6.png" class="img-responsive center-block" alt="" />
+                        <a href="product-details.jsp" class="product-item">
+                            <img src="../img/products/product6.png" class="img-responsive center-block" alt="" />
                         </a>
 
-                        <a href="product-details.html">
+                        <a href="product-details.jsp">
                             <h5 class="m-tb-20">Staro-Four M200</h5>
                         </a>
 
@@ -300,11 +300,11 @@
             <div class="col-xs-12 col-sm-3 col-md-3">
                 <div class="panel">
                     <div class="panel-body p-t-30 p-b-30 text-center">
-                        <a href="product-details.html" class="product-item">
-                            <img src="img/products/product7.png" class="img-responsive center-block" alt="" />
+                        <a href="product-details.jsp" class="product-item">
+                            <img src="../img/products/product7.png" class="img-responsive center-block" alt="" />
                         </a>
 
-                        <a href="product-details.html">
+                        <a href="product-details.jsp">
                             <h5 class="m-tb-20">Staro-Four M200</h5>
                         </a>
 
@@ -326,11 +326,11 @@
                     <div class="panel-body p-t-30 p-b-30 text-center">
                         <div class="badge-sale-secondary">New</div>
 
-                        <a href="product-details.html" class="product-item">
-                            <img src="img/products/product-sale.png" class="h-150 center-block" alt="" />
+                        <a href="product-details.jsp" class="product-item">
+                            <img src="../img/products/product-sale.png" class="h-150 center-block" alt="" />
                         </a>
 
-                        <a href="product-details.html">
+                        <a href="product-details.jsp">
                             <h5 class="text-white m-tb-20">Staro-Four M200</h5>
                         </a>
 
@@ -340,7 +340,7 @@
             </div>
 
             <div class="col-xs-12 col-sm-8 col-md-8">
-                <img src="img/products/banner2.jpg" class="img-responsive" alt="" />
+                <img src="../img/products/banner2.jpg" class="img-responsive" alt="" />
             </div>
         </div>
     </div>
@@ -543,7 +543,7 @@
             <div class="col-sm-4 col-md-4 result-box text-sm-center">
                 <div class="col-md-6">
                     <a href="#">
-                        <img src="img/products/product9.png" class="img-responsive" alt="" />
+                        <img src="../img/products/product9.png" class="img-responsive" alt="" />
                     </a>
                 </div>
 
@@ -561,7 +561,7 @@
             <div class="col-sm-4 col-md-4 result-box text-sm-center">
                 <div class="col-md-6">
                     <a href="#">
-                        <img src="img/products/product10.png" class="img-responsive" alt="" />
+                        <img src="../img/products/product10.png" class="img-responsive" alt="" />
                     </a>
                 </div>
 
@@ -581,7 +581,7 @@
             <div class="col-sm-4 col-md-4 result-box text-sm-center">
                 <div class="col-md-6">
                     <a href="#">
-                        <img src="img/products/product3.png" class="img-responsive" alt="" />
+                        <img src="../img/products/product3.png" class="img-responsive" alt="" />
                     </a>
                 </div>
 
@@ -599,7 +599,7 @@
             <div class="col-sm-4 col-md-4 result-box text-sm-center">
                 <div class="col-md-6">
                     <a href="#">
-                        <img src="img/products/product2.png" class="img-responsive" alt="" />
+                        <img src="../img/products/product2.png" class="img-responsive" alt="" />
                     </a>
                 </div>
 
@@ -617,7 +617,7 @@
             <div class="col-sm-4 col-md-4 result-box text-sm-center">
                 <div class="col-md-6">
                     <a href="#">
-                        <img src="img/products/product1.png" class="img-responsive" alt="" />
+                        <img src="../img/products/product1.png" class="img-responsive" alt="" />
                     </a>
                 </div>
 
@@ -637,7 +637,7 @@
             <div class="col-sm-4 col-md-4 result-box text-sm-center">
                 <div class="col-md-6">
                     <a href="#">
-                        <img src="img/products/product4.png" class="img-responsive" alt="" />
+                        <img src="../img/products/product4.png" class="img-responsive" alt="" />
                     </a>
                 </div>
 
@@ -655,7 +655,7 @@
             <div class="col-sm-4 col-md-4 result-box text-sm-center">
                 <div class="col-md-6">
                     <a href="#">
-                        <img src="img/products/product6.png" class="img-responsive" alt="" />
+                        <img src="../img/products/product6.png" class="img-responsive" alt="" />
                     </a>
                 </div>
 
@@ -673,7 +673,7 @@
             <div class="col-sm-4 col-md-4 result-box text-sm-center">
                 <div class="col-md-6">
                     <a href="#">
-                        <img src="img/products/product7.png" class="img-responsive" alt="" />
+                        <img src="../img/products/product7.png" class="img-responsive" alt="" />
                     </a>
                 </div>
 
@@ -698,10 +698,10 @@
 </div>
 <!-- Search overlay -->
 
-<script src="plugins/jquery.min.js"></script>
-<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<script src="../plugins/jquery.min.js"></script>
+<script src="../plugins/bootstrap/bootstrap.min.js"></script>
 
-<script src="js/global.js"></script>
+<script src="../js/global.js"></script>
 </body>
 </html>
 
