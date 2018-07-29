@@ -1,12 +1,17 @@
 package com.chinasofti.ssm.dao;
 
 import com.chinasofti.ssm.domain.Card;
+import com.chinasofti.ssm.domain.Customer;
+
+import java.util.List;
 
 public interface CardDao extends GenericDao<Card, Integer> {
-<<<<<<< HEAD
-=======
     public Card findByCardId(String cardId);
     public List<Card> findByCustomerId(String customerId);
->>>>>>> f7e20f859d59c2dbd405aa986dcb31c1de7f8a7b
 
+    public int insert(Card card);
+    public int update(Card card);
+    public int deleteById(int id);
+//    public int deleteByCardId(String cardId);
+//    public boolean deleteForCustomer(Customer customer);
 }
