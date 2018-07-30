@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 @Controller
 public class GoodController {
@@ -15,10 +16,32 @@ public class GoodController {
     @Autowired
     private GoodBiz goodBiz;
 
+    @RequestMapping("/GoodFindAll")
+    public String goodFindAll(HttpServletRequest request){
+        List<Good> goods = goodBiz.findAll();
+
+        if(goods!=null){
+            request.setAttribute("goods",goods);
+            return "info";
+        }else
+            return "";
+    }
+    @RequestMapping("/GoodFindByTypeId")
+    public String goodFindByTypeId(@RequestParam int id, HttpServletRequest request){
+            List<Good> goods = goodBiz.findByType(id);
+
+        if(goods!=null){
+            request.setAttribute("goods",goods);
+            return "info";
+        }else
+            return "";
+    }
+
+
     @RequestMapping("/GoodFindById")
-    public String GoodFindById(@RequestParam int Id, HttpServletRequest request){
+    public String goodFindById(@RequestParam int id, HttpServletRequest request){
         Good good;
-        good = goodBiz.findById(Id);
+        good = goodBiz.findById(id);
 
         if(good!=null){
             request.setAttribute("good",good);
