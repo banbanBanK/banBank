@@ -2,74 +2,68 @@ package com.chinasofti.ssm.domain;
 
 import java.io.Serializable;
 
-public class Admin implements Serializable{
-	private Integer Id;
-	private String  AdminId;
-	private String  AdminName;
-	private Integer AdminGender;
-	private String  AdminTel;
-	private String  AdminPhone;
-	private String  AdminEmail;
-	private String  AdminPassword;
-	private Integer DeleteStatus;
-	
+public class Admin implements Serializable {
+
+	private Integer id;
+	private String adminId;
+	private String adminName;
+	private String adminTel;
+	private String adminPhone;
+	private String adminEmail;
+	private String adminPassword;
+	private Integer deleteStatus;
 	public Admin() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
 	public Integer getId() {
-		return Id;
+		return id;
 	}
 	public void setId(Integer id) {
-		Id = id;
+		this.id = id;
 	}
 	public String getAdminId() {
-		return AdminId;
+		return adminId;
 	}
 	public void setAdminId(String adminId) {
-		AdminId = adminId;
-	}
-	public Integer getAdminGender() {
-		return AdminGender;
-	}
-	public void setAdminGender(Integer adminGender) {
-		AdminGender = adminGender;
+		this.adminId = adminId;
 	}
 	public String getAdminName() {
-		return AdminName;
+		return adminName;
 	}
 	public void setAdminName(String adminName) {
-		AdminName = adminName;
+		this.adminName = adminName;
 	}
 	public String getAdminTel() {
-		return AdminTel;
+		return adminTel;
 	}
 	public void setAdminTel(String adminTel) {
-		AdminTel = adminTel;
+		this.adminTel = adminTel;
 	}
 	public String getAdminPhone() {
-		return AdminPhone;
+		return adminPhone;
 	}
 	public void setAdminPhone(String adminPhone) {
-		AdminPhone = adminPhone;
+		this.adminPhone = adminPhone;
 	}
 	public String getAdminEmail() {
-		return AdminEmail;
+		return adminEmail;
 	}
 	public void setAdminEmail(String adminEmail) {
-		AdminEmail = adminEmail;
+		this.adminEmail = adminEmail;
 	}
 	public String getAdminPassword() {
-		return AdminPassword;
+		return adminPassword;
 	}
 	public void setAdminPassword(String adminPassword) {
-		AdminPassword = adminPassword;
+		this.adminPassword = adminPassword;
 	}
 	public Integer getDeleteStatus() {
-		return DeleteStatus;
+		return deleteStatus;
 	}
 	public void setDeleteStatus(Integer deleteStatus) {
-		DeleteStatus = deleteStatus;
+		this.deleteStatus = deleteStatus;
 	}
+	
+	
 }
