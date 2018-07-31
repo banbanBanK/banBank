@@ -73,7 +73,7 @@
                     <li>
                         <a href="getgood.jsp" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>进货计划<span class="nav-badge">03</span></a>
                     </li>
-                    <li>
+                    li>
                         <a href="comment1.jsp" style="font-family:'楷体'"><i class="fa fa-book nav_icon"></i>客户评价<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse" style="font-family:'楷体'">
                             <li>

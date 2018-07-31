@@ -26,9 +26,9 @@
     <link rel="stylesheet" href="../plugins/owl-carousel/owl.carousel.min.css" />
     <link rel="stylesheet" href="../plugins/owl-carousel/owl.theme.default.min.css" />
 
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/responsive.css" />
-    <link rel="stylesheet" href="../css/ic-helpers.min.css" />
+    <link rel="stylesheet" href="../css2/style.css" />
+    <link rel="stylesheet" href="../css2/responsive.css" />
+    <link rel="stylesheet" href="../css2/ic-helpers.min.css" />
 </head>
 <body>
 
@@ -94,7 +94,7 @@
         <li><hr class="m-tb-30" /></li>
 
         <li><a href="products.jsp">Products</a></li>
-        <li><a href="proguct-details.jsp">Product Details</a></li>
+        <li><a href="product-details.jsp">Product Details</a></li>
         <li><a href="about.jsp">About</a></li>
         <li><a href="blog.jsp">Blog</a></li>
         <li><a href="blog-post.jsp">Blog Post</a></li>

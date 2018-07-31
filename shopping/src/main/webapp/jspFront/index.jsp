@@ -14,12 +14,12 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600" />
 
-    <link rel="stylesheet" href="${pageContext.Request.}plugins/bootstrap/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../plugins/bootstrap/bootstrap.min.css" type="text/css"/>
     <link rel="stylesheet" href="../plugins/font-awesome/css/all.css" type="text/css"/>
 
-    <link rel="stylesheet" href="../css/style.css" type="text/css"/>
-    <link rel="stylesheet" href="../css/responsive.css" type="text/css"/>
-    <link rel="stylesheet" href="../css/ic-helpers.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../css2/style.css" type="text/css"/>
+    <link rel="stylesheet" href="../css2/responsive.css" type="text/css"/>
+    <link rel="stylesheet" href="../css2/ic-helpers.min.css" type="text/css"/>
 </head>
 <body>
 
