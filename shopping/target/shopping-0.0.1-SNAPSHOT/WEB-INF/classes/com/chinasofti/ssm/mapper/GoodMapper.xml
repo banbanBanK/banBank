@@ -35,40 +35,26 @@
 	<select id="findByName" resultMap="GoodResultMap">
 		select *
 		from goods
-		where GoodName = #{GoodName} and DeleteStatus = 1
+		where GoodName = #{GoodName}
 	</select>
 	<select id="findByPrice" resultMap="GoodResultMap">
 		select *
 		from goods
-		where GoodPrice = #{GoodPrice} and DeleteStatus = 1
+		where GoodPrice = #{GoodPrice}
 	</select>
 	<select id="findByType" resultMap="GoodResultMap">
 		select *
 		from goods
-		where TypeId = #{TypeId} and DeleteStatus = 1
+		where TypeId = #{TypeId}
 	</select>
 	<select id="findByProvider" resultMap="GoodResultMap">
 		select *
 		from goods
-		where ProviderId = #{ProviderId} and DeleteStatus = 1
+		where ProviderId = #{ProviderId}
 	</select>
 	<select id="findByGoodId" resultMap="GoodResultMap">
 		select *
 		from goods
-		where GoodId = #{GoodId} and DeleteStatus = 1
+		where GoodId = #{GoodId}
 	</select>
-	<insert id="insert" parameterType="com.chinasofti.ssm.domain.Good">
-		insert into goods(GoodId,GoodName,GoodPrice,GoodImage,GoodStock,GoodSaleSum,ProviderId,TypeId,DeleteStatus)
-		 values (#{GoodId},#{GoodName},#{GoodPrice}, #{GoodImage}, #{GoodStock}, #{GoodSaleSum},#{provider.ProviderId},#{type.TypeId},#{DeleteStatus})
-	</insert>
-	<update id="update" parameterType="com.chinasofti.ssm.domain.Good">
-		update goods
-		set GoodId=#{GoodId},GoodName=#{GoodName},GoodPrice = #{GoodPrice},GoodImage = #{GoodImage},GoodStock=#{GoodStock},GoodSaleSum=#{GoodSaleSum},GoodComment=#{GoodComment},ProviderId=#{ProviderId},TypeId=#{TypeId},DeleteStatus=1
-		where Id = #{Id} and DeleteStatus=1
-	</update>
-	<delete id="delete" parameterType="Integer">
-		update goods
-		set DeleteStatus = 0
-		where Id=#{Id} and DeleteStatus = 1
-	</delete>
 </mapper>

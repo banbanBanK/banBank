@@ -12,7 +12,8 @@ public class Admin implements Serializable{
 	private String  AdminEmail;
 	private String  AdminPassword;
 	private Integer DeleteStatus;
-	
+	private String  AdminMessage;
+	private String  AdminTitle;
 	public Admin() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -72,4 +73,12 @@ public class Admin implements Serializable{
 	public void setDeleteStatus(Integer deleteStatus) {
 		DeleteStatus = deleteStatus;
 	}
+	public String getAdminMessage() {
+		return AdminMessage;
+	}
+	public void setAdminMessage(String adminMessage) {
+		AdminMessage = adminMessage;
+	}
+	public String getAdminTitle() { return AdminTitle; }
+	public void setAdminTitle(String adminTitle) { AdminTitle = adminTitle; }
 }
