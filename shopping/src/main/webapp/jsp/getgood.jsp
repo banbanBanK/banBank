@@ -48,21 +48,6 @@
                         <a href="getgood.jsp" class="active" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>进货计划<span class="nav-badge">03</span></a>
                     </li>
                     <li>
-                        <a  href="type1.jsp" style="font-family:'楷体'"><i class="fa fa-file-text-o nav_icon"></i>价格调整<span class="nav-badge-btm">02</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse" style="font-family:'楷体'">
-                            <li>
-                                <a href="type1.jsp">类型1</a>
-                            </li>
-                            <li>
-                                <a href="type2.jsp">类型2</a>
-                            </li>
-                            <li>
-                                <a href="type3.jsp">类型3</a>
-                            </li>
-                        </ul>
-                        <!-- //nav-second-level -->
-                    </li>
-                    <li>
                         <a href="comment1.jsp" style="font-family:'楷体'"><i class="fa fa-book nav_icon"></i>客户评价<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse" style="font-family:'楷体'">
                             <li>
