@@ -17,16 +17,16 @@ public class ProviderBizImpl implements ProviderBiz {
         return providerDao.findAll();
     }
 
-    public Provider findById(Integer Id) {
-        return providerDao.findById(Id);
+    public Provider findById(Integer id) {
+        return providerDao.findById(id);
     }
 
-    public List<Provider> findByName(String ProviderName) {
-        return providerDao.findByName(ProviderName);
+    public List<Provider> findByName(String providerName) {
+        return providerDao.findByName(providerName);
     }
 
-    public List<Provider> findByAddress(String Address) {
-        return providerDao.findByAddress(Address);
+    public List<Provider> findByAddress(String address) {
+        return providerDao.findByAddress(address);
     }
 
     public boolean insert(Provider provider) {

@@ -19,21 +19,13 @@ public class TestCommentBiz {
     @Autowired
     private CommentBiz commentBiz;
     @Test
-    public void run(){
-//        findAll();
-//        findByCreateTime();
-//        findByCustomerId();
-//        findByGoodId();
-//        insert();
-//        update();
-//        delete();
-    }
     public void findAll(){
         List<Comment> comments = commentBiz.findAll();
         for(Comment comment : comments) {
             System.out.println("findAll " + comment.getComment());
         }
     }
+    @Test
     public void findByCreateTime(){
         Timestamp timestamp =Timestamp.valueOf("2018-07-27 22:57:21");//3:hellow
         List<Comment> comments = commentBiz.findByCreateTime(timestamp);
@@ -41,18 +33,21 @@ public class TestCommentBiz {
             System.out.println("findByCreateTime " + comment.getComment());
         }
     }
+    @Test
     public void findByCustomerId(){
         List<Comment> comments = commentBiz.findByCustomerId("3");
         for(Comment comment : comments) {
             System.out.println("findByCustomerId " + comment.getComment());
         }
     }
+    @Test
     public void findByGoodId(){
         List<Comment> comments = commentBiz.findByGoodId("4");
         for(Comment comment : comments) {
             System.out.println("findByGoodId " + comment.getComment());
         }
     }
+    @Test
     public void insert(){
         Comment comment = new Comment();
         Customer customer = new Customer();
@@ -66,6 +61,7 @@ public class TestCommentBiz {
 
         commentBiz.insert(comment);
     }
+    @Test
     public void update(){
         Comment comment = new Comment();
         Customer customer = new Customer();
@@ -80,6 +76,7 @@ public class TestCommentBiz {
 
         commentBiz.update(comment);
     }
+    @Test
     public void delete(){
         commentBiz.deleteById(1);
     }

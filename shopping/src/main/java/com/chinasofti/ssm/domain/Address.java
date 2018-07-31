@@ -3,59 +3,57 @@ package com.chinasofti.ssm.domain;
 import java.io.Serializable;
 
 public class Address implements Serializable {
-	private Integer Id;
-	private String  AddressId;
-	private String 	AddressName;
-	private String 	AddressArea;
-	private Integer EconomicLevel;
-	private Integer DeleteStatus;
+	private Integer id;
+	private String  addressId;
+	private String 	addressName;
+	private String 	addressArea;
+	private Integer economicLevel;
+	private Integer deleteStatus;
 	private Customer customer;	
 	public Address() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	public Integer getIdInteger() {
-		return Id;
+		return id;
 	}
 	public void setIdInteger(Integer id) {
-		this.Id = id;
+		this.id = id;
 	}
 	public String getAddressId() {
-		return AddressId;
+		return addressId;
 	}
 	public void setAddressId(String addressId) {
-		AddressId = addressId;
+		this.addressId = addressId;
 	}
 	public String getAddressName() {
-		return AddressName;
+		return addressName;
 	}
 	public void setAddressName(String addressName) {
-		AddressName = addressName;
+		this.addressName = addressName;
 	}
 	public String getAddressArea() {
-		return AddressArea;
+		return addressArea;
 	}
 	public void setAddressArea(String addressArea) {
-		AddressArea = addressArea;
+		this.addressArea = addressArea;
 	}
 	public Integer getEconomicLevel() {
-		return EconomicLevel;
+		return economicLevel;
 	}
 	public void setEconomicLevel(Integer economicLevel) {
-		EconomicLevel = economicLevel;
+		this.economicLevel = economicLevel;
 	}
 	public Integer getDeleteStatus() {
-		return DeleteStatus;
+		return deleteStatus;
 	}
 	public void setDeleteStatus(Integer deleteStatus) {
-		DeleteStatus = deleteStatus;
+		this.deleteStatus = deleteStatus;
 	}
-
 	public Customer getCustomer() {
 		return customer;
 	}
-
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
 	}

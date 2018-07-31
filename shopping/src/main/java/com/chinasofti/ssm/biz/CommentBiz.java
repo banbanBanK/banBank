@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface CommentBiz {
     public List<Comment> findAll();
-    public Comment findById(Integer Id);
+    public Comment findById(Integer id);
     public List<Comment> findByCreateTime(Timestamp createTime);
     public List<Comment> findByGoodId(String goodId);
     public List<Comment> findByCustomerId(String customerId);

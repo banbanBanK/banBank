@@ -1,3 +1,5 @@
+<%@ page import="com.chinasofti.ssm.domain.Type" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
@@ -78,11 +80,20 @@
     </div>
 
     <ul>
-        <li><a href="products.jsp">Over-ear <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
-        <li><a href="products.jsp">On-ear <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
-        <li><a href="products.jsp">In-ear <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
-        <li><a href="products.jsp">Accessories <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
-
+        <%
+            List<Type> types = (List<Type>)request.getAttribute("types");
+            if(types != null){
+                for(Type type : types){
+        %>
+        <li>
+            <a href="../GoodFindByTypeId?id=<%=type.getTypeId() %>"><%=type.getTypeName() %>
+                <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" />
+            </a>
+        </li>
+        <%
+                }
+            }
+        %>
         <li><hr class="m-tb-30" /></li>
 
         <li><a href="products.jsp">Products</a></li>
@@ -92,18 +103,6 @@
         <li><a href="blog-post.jsp">Blog Post</a></li>
         <li><a href="contact.jsp">Contact</a></li>
     </ul>
-
-    <div class="social-media-box">
-        <hr />
-
-        <a href="#" class="text-primary" target="_blank"><i class="fab fa-facebook-square"></i></a>
-        <a href="#" class="text-primary" target="_blank"><i class="fab fa-google-plus-square"></i></a>
-        <a href="#" class="text-primary" target="_blank"><i class="fab fa-twitter-square"></i></a>
-        <a href="#" class="text-primary" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="text-primary" target="_blank"><i class="fab fa-pinterest-square"></i></a>
-        <a href="#" class="text-primary" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="#" class="text-primary" target="_blank"><i class="fab fa-youtube-square"></i></a>
-    </div>
 </div>
 <!-- Right menu -->
 

@@ -4,11 +4,11 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 public class Comment implements Serializable{
-	private Integer   Id;
-	private String    Comment;
-	private Integer   Evaluation;
-	private Timestamp CreateTime;
-	private Integer   DeleteStatus;
+	private Integer   id;
+	private String    comment;
+	private Integer   evaluation;
+	private Timestamp createTime;
+	private Integer   deleteStatus;
 	private Good      good;
 	private Customer  customer;
 	
@@ -17,34 +17,34 @@ public class Comment implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 	public Integer getId() {
-		return Id;
+		return id;
 	}
 	public void setId(Integer id) {
-		Id = id;
+		this.id = id;
 	}
 	public String getComment() {
-		return Comment;
+		return comment;
 	}
 	public void setComment(String comment) {
-		Comment = comment;
+		this.comment = comment;
 	}
 	public Integer getEvaluation() {
-		return Evaluation;
+		return evaluation;
 	}
 	public void setEvaluation(Integer evaluation) {
-		Evaluation = evaluation;
+		this.evaluation = evaluation;
 	}
 	public Timestamp getCreateTime() {
-		return CreateTime;
+		return createTime;
 	}
 	public void setCreateTime(Timestamp createTime) {
-		CreateTime = createTime;
+		this.createTime = createTime;
 	}
 	public Integer getDeleteStatus() {
-		return DeleteStatus;
+		return deleteStatus;
 	}
 	public void setDeleteStatus(Integer deleteStatus) {
-		DeleteStatus = deleteStatus;
+		this.deleteStatus = deleteStatus;
 	}
 	public Good getGood() {
 		return good;

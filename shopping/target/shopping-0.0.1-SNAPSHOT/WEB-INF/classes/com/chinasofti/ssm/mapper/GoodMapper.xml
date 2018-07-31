@@ -42,7 +42,7 @@
 		from goods
 		where GoodPrice = #{GoodPrice} and DeleteStatus = 1
 	</select>
-	<select id="findByType" resultMap="GoodResultMap">
+	<select id="findByTypeId" resultMap="GoodResultMap">
 		select *
 		from goods
 		where TypeId = #{TypeId} and DeleteStatus = 1

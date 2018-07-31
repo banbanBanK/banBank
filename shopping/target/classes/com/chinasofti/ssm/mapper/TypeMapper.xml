@@ -10,34 +10,50 @@
 
     </resultMap>
 
+    <select id="findAll" resultMap="TypeResultMap">
+		select *
+		from types
+	</select>
     <select id="findById" parameterType="int" resultMap="TypeResultMap">
 		select *
 		from types
-		where Id = #{Id}
+		where Id = #{id}
 	</select>
 
     <select id="findByTypeId" parameterType="String" resultMap="TypeResultMap">
         select *
         from types
-        where TypeId=#{TypeId}
+        where TypeId=#{typeId}
     </select>
 
     <select id="findByName" parameterType="String" resultMap="TypeResultMap">
-        select * from types where TypeName=#{TypeName};
+        select *
+        from types
+        where TypeName like '%${_parameter}%';
+    </select>
+
+    <select id="findChildren" parameterType="String" resultMap="TypeResultMap">
+        select *
+        from types
+        where FatherTypeId=#{fatherTypeId};
     </select>
 
     <insert id="insert" parameterType="com.chinasofti.ssm.domain.Type">
-        insert into types values(null,#{TypeId},#{TypeName})
+        insert
+        into types
+        values(null,#{typeId},#{typeName},null)
     </insert>
 
     <delete id="delete" parameterType="Integer">
-        delete from types where Id=#{Id}
+        delete *
+        from types
+        where Id=#{id}
     </delete>
 
     <update id="update" parameterType="com.chinasofti.ssm.domain.Type">
         update types
-        set TypeId=#{TypeId},TypeName=#{TypeName}
-        where Id = #{Id}
+        set TypeId=#{typeId},TypeName=#{typeName}
+        where Id = #{id}
     </update>
 
 

@@ -7,18 +7,18 @@ import java.util.Set;
 import org.aspectj.weaver.ast.Or;
 
 public class Customer implements Serializable{
-	private Integer Id;
-	private String  CustomerId;
-	private String  CustomerName;
-	private String CustomerGender;
-	private Integer CustomerAge;
-	private String  CustomerTel;
-	private String  CustomerPhone;
-	private String  CustomerZipCode;
-	private String  CustomerPassword;
-	private String  CustomerIdCard;
-	private String  CustomerBirthday;
-	private Integer DeleteStatus;
+	private Integer id;
+	private String  customerId;
+	private String  customerName;
+	private String customerGender;
+	private Integer customerAge;
+	private String  customerTel;
+	private String  customerPhone;
+	private String  customerZipCode;
+	private String  customerPassword;
+	private String  customerIdCard;
+	private String  customerBirthday;
+	private Integer deleteStatus;
 	private Address address;
 	private Set<ViewAction>viewActions = new HashSet<ViewAction>();
 	private Set<Order> orders = new HashSet<Order>();
@@ -30,76 +30,76 @@ public class Customer implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 	public Integer getId() {
-		return Id;
+		return id;
 	}
 	public void setId(Integer id) {
-		Id = id;
+		this.id = id;
 	}
 	public String getCustomerId() {
-		return CustomerId;
+		return customerId;
 	}
 	public void setCustomerId(String customerId) {
-		CustomerId = customerId;
+		this.customerId = customerId;
 	}
 	public String getCustomerName() {
-		return CustomerName;
+		return customerName;
 	}
 	public void setCustomerName(String customerName) {
-		CustomerName = customerName;
+		this.customerName = customerName;
 	}
 	public String getCustomerGender() {
-		return CustomerGender;
+		return customerGender;
 	}
 	public void setCustomerGender(String customerGender) {
-		CustomerGender = customerGender;
+		this.customerGender = customerGender;
 	}
 	public Integer getCustomerAge() {
-		return CustomerAge;
+		return customerAge;
 	}
 	public void setCustomerAge(Integer customerAge) {
-		CustomerAge = customerAge;
+		this.customerAge = customerAge;
 	}
 	public String getCustomerTel() {
-		return CustomerTel;
+		return customerTel;
 	}
 	public void setCustomerTel(String customerTel) {
-		CustomerTel = customerTel;
+		this.customerTel = customerTel;
 	}
 	public String getCustomerPhone() {
-		return CustomerPhone;
+		return customerPhone;
 	}
 	public void setCustomerPhone(String customerPhone) {
-		CustomerPhone = customerPhone;
+		this.customerPhone = customerPhone;
 	}
 	public String getCustomerZipCode() {
-		return CustomerZipCode;
+		return customerZipCode;
 	}
 	public void setCustomerZipCode(String customerZipCode) {
-		CustomerZipCode = customerZipCode;
+		this.customerZipCode = customerZipCode;
 	}
 	public String getCustomerPassword() {
-		return CustomerPassword;
+		return customerPassword;
 	}
 	public void setCustomerPassword(String customerPassword) {
-		CustomerPassword = customerPassword;
+		this.customerPassword = customerPassword;
 	}
 	public String getCustomerIdCard() {
-		return CustomerIdCard;
+		return customerIdCard;
 	}
 	public void setCustomerIdCard(String customerIdCard) {
-		CustomerIdCard = customerIdCard;
+		this.customerIdCard = customerIdCard;
 	}
 	public String getCustomerBirthday() {
-		return CustomerBirthday;
+		return customerBirthday;
 	}
 	public void setCustomerBirthday(String customerBirthday) {
-		CustomerBirthday = customerBirthday;
+		this.customerBirthday = customerBirthday;
 	}
 	public Integer getDeleteStatus() {
-		return DeleteStatus;
+		return deleteStatus;
 	}
 	public void setDeleteStatus(Integer deleteStatus) {
-		DeleteStatus = deleteStatus;
+		this.deleteStatus = deleteStatus;
 	}
 	public Address getAddress() {
 		return address;

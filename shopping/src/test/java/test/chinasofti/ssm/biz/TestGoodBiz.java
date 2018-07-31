@@ -24,13 +24,13 @@ public class TestGoodBiz{
 	@Test
 	public void testFindById() {
 		Integer a= 1 ;
-		Good good = GoodBiz.findById(a);
+		Good good = GoodBiz.findById(2);
 		System.out.println("Hello"+ good.getGoodName());
 	}
 
 	@Test
 	public void testFindByName(){
-		List<Good> goods = GoodBiz.findByName("A");
+		List<Good> goods = GoodBiz.findByName("联想");
 
 		for (Good good : goods) {
 			System.out.println("name = " + good.getGoodName());
@@ -47,7 +47,7 @@ public class TestGoodBiz{
 
 	@Test
 	public void testFindByType(){
-		List<Good> goods = GoodBiz.findByType(5);
+		List<Good> goods = GoodBiz.findByTypeId(5);
 		for (Good good : goods){
 			System.out.println("name = " + good.getGoodName());
 		}

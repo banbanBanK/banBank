@@ -5,17 +5,17 @@ import java.util.List;
 import com.chinasofti.ssm.domain.Good;
 
 public interface GoodBiz {
-	List<Good> findByName(String GoodName);
-	List<Good> findByPrice(double GoodPrice);
-	List<Good> findByType(Integer TypeId);
-	List<Good> findByProvider(Integer ProviderId);
-	Good findByGoodId(String GoodId);
+	List<Good> findByName(String goodName);
+	List<Good> findByPrice(double goodPrice);
+	List<Good> findByTypeId(Integer typeId);
+	List<Good> findByProvider(Integer providerId);
+	Good findByGoodId(String goodId);
 	
-	Good findById(Integer Id);
+	Good findById(Integer id);
 	List<Good> findAll();
 
 	boolean insert(Good good);
-	boolean delete(Integer Id);
+	boolean delete(Integer id);
 	boolean delete(Good good);
 	boolean update(Good good);
 }

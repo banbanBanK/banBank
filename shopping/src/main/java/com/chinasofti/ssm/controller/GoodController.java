@@ -1,7 +1,9 @@
 package com.chinasofti.ssm.controller;
 
 import com.chinasofti.ssm.biz.GoodBiz;
+import com.chinasofti.ssm.biz.TypeBiz;
 import com.chinasofti.ssm.domain.Good;
+import com.chinasofti.ssm.domain.Type;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +17,8 @@ public class GoodController {
 
     @Autowired
     private GoodBiz goodBiz;
+    @Autowired
+    private TypeBiz typeBiz;
 
     @RequestMapping("/GoodFindAll")
     public String goodFindAll(HttpServletRequest request){
@@ -22,17 +26,19 @@ public class GoodController {
 
         if(goods!=null){
             request.setAttribute("goods",goods);
-            return "info";
+            return "../jspFront/products";
         }else
             return "";
     }
     @RequestMapping("/GoodFindByTypeId")
     public String goodFindByTypeId(@RequestParam int id, HttpServletRequest request){
-            List<Good> goods = goodBiz.findByType(id);
+        List<Type> types = typeBiz.findAll();
+        request.setAttribute("types",types);
 
+        List<Good> goods = goodBiz.findByTypeId(id);
         if(goods!=null){
             request.setAttribute("goods",goods);
-            return "info";
+            return "../jspFront/products";
         }else
             return "";
     }

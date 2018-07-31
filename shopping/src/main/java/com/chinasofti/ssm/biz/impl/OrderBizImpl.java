@@ -18,12 +18,12 @@ public class OrderBizImpl implements OrderBiz {
         return orderDao.findAll();
     }
 
-    public Order findById(Integer Id) {
-        return orderDao.findById(Id);
+    public Order findById(Integer id) {
+        return orderDao.findById(id);
     }
 
-    public boolean delete(Integer Id) {
-        return orderDao.delete(Id) == 1;
+    public boolean delete(Integer id) {
+        return orderDao.delete(id) == 1;
     }
 
     public boolean insert(Order order) {
@@ -38,15 +38,15 @@ public class OrderBizImpl implements OrderBiz {
         return orderDao.delete(order)==1;
     }
 
-    public List<Order> findByCreateTime(Date CreateTime) {
-        return orderDao.findByCreateTime(CreateTime);
+    public List<Order> findByCreateTime(Date createTime) {
+        return orderDao.findByCreateTime(createTime);
     }
 
-    public List<Order> findByCustomerId(String CustomerId) {
-        return orderDao.findByCustomerId(CustomerId);
+    public List<Order> findByCustomerId(String customerId) {
+        return orderDao.findByCustomerId(customerId);
     }
 
-    public List<Order> findByIsDone(Integer IsDone) {
-        return orderDao.findByIsDone(IsDone);
+    public List<Order> findByIsDone(Integer isDone) {
+        return orderDao.findByIsDone(isDone);
     }
 }

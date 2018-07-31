@@ -18,39 +18,34 @@ public class TestFavorBiz {
     @Autowired
     private FavorBiz favorBiz;
     @Test
-    public void run(){
-//        findAll();
-//        findByLevel();
-//        findByCustomerId();
-//        findByTypeId();
-//        insert();
-//        update();
-//        delete();
-    }
     public void findAll(){
         List<Favor> favors = favorBiz.findAll();
         for(Favor favor : favors){
             System.out.println("findAll "+ favor.getCustomer().getCustomerName());
         }
     }
+    @Test
     public void findByLevel(){
         List<Favor> favors = favorBiz.findByLevel(3);
         for(Favor favor : favors) {
             System.out.println("findByLevel " + favor.getId());
         }
     }
+    @Test
     public void findByCustomerId(){
         List<Favor> favors = favorBiz.findByCustomerId("3");
         for(Favor favor : favors) {
             System.out.println("findByCustomerId " + favor.getId());
         }
     }
+    @Test
     public void findByTypeId(){
         List<Favor> favors = favorBiz.findByTypeId("3");
         for(Favor favor : favors) {
             System.out.println("findByTypeId " + favor.getId());
         }
     }
+    @Test
     public void insert(){
         Favor favor = new Favor();
         Customer customer = new Customer();
@@ -63,6 +58,7 @@ public class TestFavorBiz {
 
         favorBiz.insert(favor);
     }
+    @Test
     public void update(){
         Favor favor = new Favor();
         Customer customer = new Customer();
@@ -76,6 +72,7 @@ public class TestFavorBiz {
 
         favorBiz.update(favor);
     }
+    @Test
     public void delete(){
         favorBiz.deleteById(1);
     }

@@ -4,12 +4,12 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 public class Order implements Serializable{
-	private Integer Id;
-	private double GoodPrice;
-	private Integer GoodNum;
-	private Timestamp CreateTime;
-	private Integer DeleteStatus;
-	private Integer IsDone;
+	private Integer id;
+	private double goodPrice;
+	private Integer goodNum;
+	private Timestamp createTime;
+	private Integer deleteStatus;
+	private Integer isDone;
 	private Customer customer ;
 	private Good good ;
 	public Order() {
@@ -17,40 +17,40 @@ public class Order implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 	public Integer getId() {
-		return Id;
+		return id;
 	}
 	public void setId(Integer id) {
-		this.Id = id;
+		this.id = id;
 	}
 	public double getGoodPrice() {
-		return GoodPrice;
+		return goodPrice;
 	}
 	public void setGoodPrice(double goodPrice) {
-		GoodPrice = goodPrice;
+		this.goodPrice = goodPrice;
 	}
 	public Integer getGoodNum() {
-		return GoodNum;
+		return goodNum;
 	}
 	public void setGoodNum(Integer goodNum) {
-		GoodNum = goodNum;
+		this.goodNum = goodNum;
 	}
 	public Timestamp getCreateTime() {
-		return CreateTime;
+		return createTime;
 	}
 	public void setCreateTime(Timestamp createTime) {
-		CreateTime = createTime;
+		this.createTime = createTime;
 	}
 	public Integer getDeleteStatus() {
-		return DeleteStatus;
+		return deleteStatus;
 	}
 	public void setDeleteStatus(Integer deleteStatus) {
-		DeleteStatus = deleteStatus;
+		this.deleteStatus = deleteStatus;
 	}
 	public Integer getIsDone() {
-		return IsDone;
+		return isDone;
 	}
 	public void setIsDone(Integer isDone) {
-		IsDone = isDone;
+		this.isDone = isDone;
 	}
 	public Customer getCustomer() {
 		return customer;

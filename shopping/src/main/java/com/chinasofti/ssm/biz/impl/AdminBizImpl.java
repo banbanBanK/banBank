@@ -11,7 +11,7 @@ public class AdminBizImpl implements AdminBiz {
     @Autowired
     private AdminDao adminDao;
 
-    public Admin findById(Integer Id){
-        return adminDao.findById(Id);
+    public Admin findById(Integer id){
+        return adminDao.findById(id);
     }
 }

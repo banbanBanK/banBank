@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface ProviderDao extends GenericDao<Provider, Integer> {
     List<Provider> findAll();
-    Provider findById(Integer Id);
-    List<Provider> findByName(String ProviderName);
-    List<Provider> findByAddress(String Address);
+    Provider findById(Integer id);
+    List<Provider> findByName(String providerName);
+    List<Provider> findByAddress(String address);
 
     int insert(Provider provider);
     int update(Provider provider);

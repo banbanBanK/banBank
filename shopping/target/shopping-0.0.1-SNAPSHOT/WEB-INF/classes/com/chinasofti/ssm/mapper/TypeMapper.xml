@@ -10,6 +10,10 @@
 
     </resultMap>
 
+    <select id="findAll" resultMap="TypeResultMap">
+		select *
+		from types
+	</select>
     <select id="findById" parameterType="int" resultMap="TypeResultMap">
 		select *
 		from types

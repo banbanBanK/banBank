@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface ProviderBiz {
     List<Provider> findAll();
-    Provider findById(Integer Id);
-    List<Provider> findByName(String ProviderName);
-    List<Provider> findByAddress(String Address);
+    Provider findById(Integer id);
+    List<Provider> findByName(String providerName);
+    List<Provider> findByAddress(String address);
 
     boolean insert(Provider provider);
     boolean update(Provider provider);

@@ -32,7 +32,7 @@
     <select id="findById" parameterType="Integer" resultMap="CommentResultMap">
         select *
         from comments
-        where Id = #{Id} and DeleteStatus = 1
+        where Id = #{id} and DeleteStatus = 1
     </select>
     <select id="findByCustomerId" parameterType="String" resultMap="CommentResultMap">
         select *
@@ -52,12 +52,12 @@
 
     <insert id="insert" parameterType="com.chinasofti.ssm.domain.Comment" useGeneratedKeys="true" keyProperty="Id">
 		insert into comments
-		values(null,#{good.GoodId},#{customer.CustomerId},#{Comment},#{Evaluation},#{CreateTime},#{DeleteStatus})
+		values(null,#{good.goodId},#{customer.customerId},#{comment},#{evaluation},#{createTime},#{deleteStatus})
 	</insert>
     <update id="update" parameterType="com.chinasofti.ssm.domain.Comment">
 		update comments
-		set GoodId = #{good.GoodId}, CustomerId = #{customer.CustomerId}, Comment = #{Comment}, Evaluation = #{Evaluation}, CreateTime = #{CreateTime}, DeleteStatus=#{DeleteStatus}
-		where Id = #{Id}
+		set GoodId = #{good.goodId}, CustomerId = #{customer.customerId}, Comment = #{comment}, Evaluation = #{evaluation}, CreateTime = #{createTime}, DeleteStatus=#{deleteStatus}
+		where Id = #{id}
 	</update>
     <delete id="deleteById" parameterType="int">
 		update comments

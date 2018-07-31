@@ -15,13 +15,12 @@ public class CardBizImpl implements CardBiz {
     public List<Card> findAll() {
         return cardDao.findAll();
     }
-    public Card findById(Integer Id){
-        return cardDao.findById(Id);
+    public Card findById(Integer id){
+        return cardDao.findById(id);
     }
     public Card findByCardId(String cardId) {
         return cardDao.findByCardId(cardId);
     }
-
     public List<Card> findByCustomerId(String customerId) {
         return cardDao.findByCustomerId(customerId);
     }

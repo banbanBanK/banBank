@@ -13,7 +13,7 @@
 <title>Info</title>
 </head>
 <body>
-GoodFindAll:<br/>
+Info:<br/>
 <%--<% User user = (User) request.getAttribute("user"); %>--%>
 	<%--<h1>Hello!<%=user.getUserName() %></h1>--%>
 <%--<% Good good = (Good) request.getAttribute("good"); %>

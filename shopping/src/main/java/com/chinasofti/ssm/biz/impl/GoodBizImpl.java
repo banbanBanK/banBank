@@ -14,34 +14,34 @@ public class GoodBizImpl implements GoodBiz {
 	@Autowired
 	private GoodDao goodDao;
 	
-	public List<Good> findByName(String GoodName) {
+	public List<Good> findByName(String goodName) {
 		// TODO Auto-generated method stub
-		return goodDao.findByName(GoodName);
+		return goodDao.findByName(goodName);
 	}
 
-	public List<Good> findByPrice(double GoodPrice) {
-		return goodDao.findByPrice(GoodPrice);
+	public List<Good> findByPrice(double goodPrice) {
+		return goodDao.findByPrice(goodPrice);
 	}
 
 
-	public List<Good> findByType(Integer TypeId) {
+	public List<Good> findByTypeId(Integer typeId) {
 		// TODO Auto-generated method stub
-		return goodDao.findByType(TypeId);
+		return goodDao.findByTypeId(typeId);
 	}
 
-	public List<Good> findByProvider(Integer ProviderId) {
+	public List<Good> findByProvider(Integer providerId) {
 		// TODO Auto-generated method stub
-		return goodDao.findByProvider(ProviderId);
+		return goodDao.findByProvider(providerId);
 	}
 
-	public Good findByGoodId(String GoodId) {
+	public Good findByGoodId(String goodId) {
 		// TODO Auto-generated method stub
-		return goodDao.findByGoodId(GoodId);
+		return goodDao.findByGoodId(goodId);
 	}
 
-	public Good findById(Integer Id) {
+	public Good findById(Integer id) {
 		// TODO Auto-generated method stub
-		return goodDao.findById(Id);
+		return goodDao.findById(id);
 	}
 
 	public List<Good> findAll() {
@@ -53,8 +53,8 @@ public class GoodBizImpl implements GoodBiz {
 		return goodDao.insert(good)==1;
 	}
 
-	public boolean delete(Integer Id) {
-		return goodDao.delete(Id)==1;
+	public boolean delete(Integer id) {
+		return goodDao.delete(id)==1;
 	}
 
 	public boolean delete(Good good) {

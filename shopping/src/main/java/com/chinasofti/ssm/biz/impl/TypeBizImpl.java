@@ -16,16 +16,20 @@ public class TypeBizImpl implements TypeBiz {
         return typeDao.findAll();
     }
 
-    public Type findById(Integer Id) {
-        return typeDao.findById(Id);
+    public Type findById(Integer id) {
+        return typeDao.findById(id);
     }
 
-    public Type findByTypeId(String TypeId) {
-        return typeDao.findByTypeId(TypeId);
+    public Type findByTypeId(String typeId) {
+        return typeDao.findByTypeId(typeId);
     }
 
-    public Type findByName(String TypeName) {
-        return typeDao.findByName(TypeName);
+    public List<Type> findByName(String typeName) {
+        return typeDao.findByName(typeName);
+    }
+
+    public List<Type> findChildren(String fatherTypeId) {
+        return typeDao.findChildren(fatherTypeId);
     }
 
     public boolean insert(Type type) {

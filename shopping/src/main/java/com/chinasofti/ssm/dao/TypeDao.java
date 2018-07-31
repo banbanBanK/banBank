@@ -5,12 +5,12 @@ import com.chinasofti.ssm.domain.Type;
 import java.util.List;
 
 public interface TypeDao extends GenericDao<Type, Integer> {
-    List<Type> findAll();
-    Type findById(Integer Id);
-    Type findByTypeId(String TypeId);
-    Type findByName(String TypeName);
+    Type findById(Integer id);
+    Type findByTypeId(String typeId);
+    List<Type> findByName(String typeName);
+    List<Type> findChildren(String fatherTypeId);
 
     int insert (Type type);
     int update(Type type);
-    int delete(Integer Id);
+    int delete(Integer id);
 }

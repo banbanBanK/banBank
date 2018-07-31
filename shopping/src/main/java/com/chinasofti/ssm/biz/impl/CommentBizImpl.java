@@ -16,8 +16,8 @@ public class CommentBizImpl implements CommentBiz {
         return commentDao.findAll();
     }
 
-    public Comment findById(Integer Id) {
-        return commentDao.findById(Id);
+    public Comment findById(Integer id) {
+        return commentDao.findById(id);
     }
 
     public List<Comment> findByCreateTime(Timestamp createTime) {
