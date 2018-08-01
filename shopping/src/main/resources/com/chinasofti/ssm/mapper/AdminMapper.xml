@@ -5,7 +5,7 @@
         <resultMap type="Admin" id="resultAdmin" autoMapping="true">
           <id property="id" column="id"/>
         </resultMap>
-        <select id="fingByAdminId" parameterType="String" resultMap="resultAdmin">
+        <select id="findByAdminId" parameterType="String" resultMap="resultAdmin">
              select *
              from admin
              where adminId=#{adminId}
@@ -21,8 +21,8 @@
         </select>
         <insert id="insert" parameterType="Admin">
             insert into admin
-            (id,adminId,adminName,adminTel,adminPhone,adminEmail,adminPassword,deleteStatus)
-            values(#{id},#{adminId},#{adminName},#{adminTel},#{adminPhone},#{adminEmail},#{adminPassword},#{deleteStatus})
+            (id,adminId,adminName,adminTel,adminPhone,adminEmail,adminPassword,deleteStatus,adminMessage,adminTtile)
+            values(#{id},#{adminId},#{adminName},#{adminTel},#{adminPhone},#{adminEmail},#{adminPassword},#{deleteStatus},#{amindMessage},#{adminTitle})
         </insert>
         <update id="uodate" parameterType="Admin">
             update admin set
@@ -32,7 +32,9 @@
                       adminPhone=#{adminPhone},
                       adminEmail=#{adminEmail},
                       adminPassword=#{adminPassword},
-                      deleteStatus=#{deleteStatus};
+                      deleteStatus=#{deleteStatus},
+                      adminMessage=#{adminMessage}.
+                      adminTitle=#{adminTitle};
              where id=#{id}
         </update>
         <delete id="delete" parameterType="String">

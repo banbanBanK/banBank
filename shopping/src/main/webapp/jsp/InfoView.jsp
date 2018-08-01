@@ -51,40 +51,49 @@
             <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="InfoView.jsp" class="active" style="font-family:'楷体"><i class="fa fa-home nav_icon"></i>信息汇总</a>
+                        <a href="InfoView.jsp" class="active" style="font-family:'楷体'"><i class="fa fa-home nav_icon"></i>信息汇总</a>
                     </li>
                     <li>
-                        <a href="getgood.jsp" style="font-family:'楷体"><i class="fa fa-table nav_icon"></i>进货计划<span class="nav-badge">03</span></a>
+                        <a href="getgood.jsp" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>进货计划<span class="nav-badge">03</span></a>
                     </li>
                     <li>
-                        <a  href="type1.jsp" style="font-family:'楷体"><i class="fa fa-file-text-o nav_icon"></i>价格调整<span class="nav-badge-btm">02</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse" style="font-family:'楷体">
+                        <a href="comment1.jsp" style="font-family:'楷体'"><i class="fa fa-book nav_icon"></i>客户评价<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse" style="font-family:'楷体'">
                             <li>
-                                <a href="type1.jsp">类型1</a>
+                                <a href="comment1.jsp">1星评价</a>
                             </li>
                             <li>
-                                <a href="type2.jsp">类型2</a>
+                                <a href="comment2.jsp">2星评价</a>
                             </li>
                             <li>
-                                <a href="type3.jsp">类型3</a>
+                                <a href="comment3.jsp">3星评价</a>
+                            </li>
+                            <li>
+                                <a href="comment4.jsp">4星评价</a>
+                            </li>
+                            <li>
+                                <a href="comment5.jsp">5星评价</a>
                             </li>
                         </ul>
-                        <!-- //nav-second-level -->
+                        <!-- /nav-second-level -->
                     </li>
                     <li>
-                        <a href="AdminInfo.jsp" style="font-family:'楷体"><i class="fa fa-check-square-o nav_icon"></i>我的信息<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse" style="font-family:'楷体">
+                        <a href="CustomerView.jsp"  style="font-family:'楷体'"><i class="fa fa-bar-chart nav_icon"></i>客户总览</a>
+                    </li>
+                    <li>
+                        <a href="/AdminInfo" style="font-family:'楷体'"><i class="fa fa-check-square-o nav_icon"></i>我的信息<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse" style="font-family:'楷体'">
                             <li>
-                                <a href="AdminInfo.jsp">查看</a>
+                                <a href="/AdminInfo">查看</a>
                             </li>
                             <li>
-                                <a href="PwdModify.jsp">密码修改</a>
+                                <a href="/PwdModify">密码修改</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="grids.jsp" style="font-family:'楷体"><i class="fa fa-cogs nav_icon" ></i>设置<span class="nav-badge">12</span> <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse" style="font-family:'楷体">
+                        <a href="grids.jsp" style="font-family:'楷体'"><i class="fa fa-cogs nav_icon" ></i>设置<span class="nav-badge">12</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse" style="font-family:'楷体'">
                             <li>
                                 <a href="grids.jsp">菜单设置</a>
                             </li>
@@ -107,7 +116,7 @@
             <button id="showLeftPush"><i class="fa fa-bars"></i></button>
             <!--toggle button end-->
             <!--logo -->
-            <div class="logo">
+            <div class="logo" style="width:230px">
                 <a href="index.jsp">
                     <h1><font style="font-family:'calisto mt';font-style: italic;">NKUTT</font></h1>
                     <span><font style="font-family:'calisto mt';font-style: italic;">Adminpannel</font></span>
@@ -130,45 +139,6 @@
         <div class="header-right">
             <div class="profile_details_left"><!--notifications of menu start -->
                 <ul class="nofitications-dropdown">
-                    <li class="dropdown head-dpdn">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-envelope"></i><span class="badge">3</span></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <div class="notification_header">
-                                    <h3>You have 3 new messages</h3>
-                                </div>
-                            </li>
-                            <li><a href="#">
-                                <div class="user_img"><img src="../images/1.png" alt=""></div>
-                                <div class="notification_desc">
-                                    <p>Lorem ipsum dolor amet</p>
-                                    <p><span>1 hour ago</span></p>
-                                </div>
-                                <div class="clearfix"></div>
-                            </a></li>
-                            <li class="odd"><a href="#">
-                                <div class="user_img"><img src="../images/2.png" alt=""></div>
-                                <div class="notification_desc">
-                                    <p>Lorem ipsum dolor amet </p>
-                                    <p><span>1 hour ago</span></p>
-                                </div>
-                                <div class="clearfix"></div>
-                            </a></li>
-                            <li><a href="#">
-                                <div class="user_img"><img src="../images/3.png" alt=""></div>
-                                <div class="notification_desc">
-                                    <p>Lorem ipsum dolor amet </p>
-                                    <p><span>1 hour ago</span></p>
-                                </div>
-                                <div class="clearfix"></div>
-                            </a></li>
-                            <li>
-                                <div class="notification_bottom">
-                                    <a href="#">See all messages</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
                     <li class="dropdown head-dpdn">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bell"></i><span class="badge blue">3</span></a>
                         <ul class="dropdown-menu">
@@ -204,57 +174,6 @@
                             <li>
                                 <div class="notification_bottom">
                                     <a href="#">See all notifications</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown head-dpdn">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-tasks"></i><span class="badge blue1">15</span></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <div class="notification_header">
-                                    <h3>You have 8 pending task</h3>
-                                </div>
-                            </li>
-                            <li><a href="#">
-                                <div class="task-info">
-                                    <span class="task-desc">Database update</span><span class="percentage">40%</span>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="progress progress-striped active">
-                                    <div class="bar yellow" style="width:40%;"></div>
-                                </div>
-                            </a></li>
-                            <li><a href="#">
-                                <div class="task-info">
-                                    <span class="task-desc">Dashboard done</span><span class="percentage">90%</span>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="progress progress-striped active">
-                                    <div class="bar green" style="width:90%;"></div>
-                                </div>
-                            </a></li>
-                            <li><a href="#">
-                                <div class="task-info">
-                                    <span class="task-desc">Mobile App</span><span class="percentage">33%</span>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="progress progress-striped active">
-                                    <div class="bar red" style="width: 33%;"></div>
-                                </div>
-                            </a></li>
-                            <li><a href="#">
-                                <div class="task-info">
-                                    <span class="task-desc">Issues fixed</span><span class="percentage">80%</span>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="progress progress-striped active">
-                                    <div class="bar  blue" style="width: 80%;"></div>
-                                </div>
-                            </a></li>
-                            <li>
-                                <div class="notification_bottom">
-                                    <a href="#">See all pending tasks</a>
                                 </div>
                             </li>
                         </ul>
