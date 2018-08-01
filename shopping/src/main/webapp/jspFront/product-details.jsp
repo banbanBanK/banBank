@@ -1,4 +1,5 @@
-<%--
+<%@ page import="com.chinasofti.ssm.domain.Type" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: 该读过
   Date: 2018/7/28
@@ -86,32 +87,59 @@
     </div>
 
     <ul>
-        <li><a href="products.jsp">Over-ear <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
-        <li><a href="products.jsp">On-ear <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
-        <li><a href="products.jsp">In-ear <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
-        <li><a href="products.jsp">Accessories <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
+        <%
+            List<Type> types_parents = (List<Type>)request.getAttribute("types_parents");
+            if(types_parents != null && types_parents.size() != 0){
+                for(Type type_parents : types_parents){
+        %>
+        <li>
+            <a href="../TypeWithChildren?fatherTypeId=<%=type_parents.getTypeId() %>"><%=type_parents.getTypeName() %>
+                <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" />
+            </a>
+        </li>
+        <ul>
+            <%
+                List<Type> types_children = (List<Type>) request.getAttribute("types_children");
+                if(types_children != null && types_children.size() != 0 && type_parents.getTypeId().equals(types_children.get(0).getFatherTypeId())){
+                    for(Type type_children : types_children){
+            %>
+            <li>
+                <a href="../GoodFindByTypeId?typeId=<%=type_children.getTypeId() %>&fatherTypeId=<%=type_parents.getTypeId() %>"><%=type_children.getTypeName() %>
+                    <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" />
+                </a>
+            </li>
+            <%
+                    }
+                }
+            %>
+        </ul>
+        <%
+                }
+            }
+        %>
 
+        <%
+            List<Type> types_singleRoots = (List<Type>)request.getAttribute("types_singleRoots");
+            if(types_singleRoots != null && types_singleRoots.size() != 0){
+                for(Type type_singleRoots : types_singleRoots){
+        %>
+        <li>
+            <a href="../GoodFindByTypeId?typeId=<%=type_singleRoots.getTypeId() %>&fatherTypeId=<%=type_singleRoots.getTypeId() %>"><%=type_singleRoots.getTypeName() %>
+                <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" />
+            </a>
+        </li>
+        <%
+                }
+            }
+        %>
         <li><hr class="m-tb-30" /></li>
 
-        <li><a href="products.jsp">Products</a></li>
-        <li><a href="product-details.jsp">Product Details</a></li>
+        <li><a href="../GoodFindAll">Products</a></li>
         <li><a href="about.jsp">About</a></li>
         <li><a href="blog.jsp">Blog</a></li>
         <li><a href="blog-post.jsp">Blog Post</a></li>
         <li><a href="contact.jsp">Contact</a></li>
     </ul>
-
-    <div class="social-media-box">
-        <hr />
-
-        <a href="#" class="text-primary" target="_blank"><i class="fab fa-facebook-square"></i></a>
-        <a href="#" class="text-primary" target="_blank"><i class="fab fa-google-plus-square"></i></a>
-        <a href="#" class="text-primary" target="_blank"><i class="fab fa-twitter-square"></i></a>
-        <a href="#" class="text-primary" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="text-primary" target="_blank"><i class="fab fa-pinterest-square"></i></a>
-        <a href="#" class="text-primary" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="#" class="text-primary" target="_blank"><i class="fab fa-youtube-square"></i></a>
-    </div>
 </div>
 <!-- Right menu -->
 

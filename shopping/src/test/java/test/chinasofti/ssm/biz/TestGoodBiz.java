@@ -47,7 +47,7 @@ public class TestGoodBiz{
 
 	@Test
 	public void testFindByType(){
-		List<Good> goods = GoodBiz.findByTypeId(5);
+		List<Good> goods = GoodBiz.findByTypeId(6);
 		for (Good good : goods){
 			System.out.println("name = " + good.getGoodName());
 		}

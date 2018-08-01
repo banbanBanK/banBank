@@ -14,6 +14,20 @@
 		select *
 		from types
 	</select>
+    <select id="findParents" resultMap="TypeResultMap">
+		select *
+		from types
+		where TypeId in(select FatherTypeId
+		                  from types
+		                )
+	</select>
+    <select id="findSingleRoots" resultMap="TypeResultMap">
+		select *
+		from types
+		where FatherTypeId = 0 and TypeId not in(select FatherTypeId
+		                  from types
+		                )
+	</select>
     <select id="findById" parameterType="int" resultMap="TypeResultMap">
 		select *
 		from types

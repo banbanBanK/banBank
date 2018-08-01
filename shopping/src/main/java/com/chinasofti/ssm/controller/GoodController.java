@@ -24,23 +24,28 @@ public class GoodController {
     public String goodFindAll(HttpServletRequest request){
         List<Good> goods = goodBiz.findAll();
 
-        if(goods!=null){
+        if(goods!=null)
             request.setAttribute("goods",goods);
+
             return "../jspFront/products";
-        }else
-            return "";
     }
     @RequestMapping("/GoodFindByTypeId")
-    public String goodFindByTypeId(@RequestParam int id, HttpServletRequest request){
-        List<Type> types = typeBiz.findAll();
-        request.setAttribute("types",types);
-
-        List<Good> goods = goodBiz.findByTypeId(id);
-        if(goods!=null){
+    public String goodFindByTypeId(@RequestParam int typeId, @RequestParam String fatherTypeId, HttpServletRequest request){
+        List<Type> types_parents = typeBiz.findParents();
+        List<Type> types_singleRoots = typeBiz.findSingleRoots();
+        List<Type> types_children = typeBiz.findChildren(fatherTypeId);
+        System.out.println(fatherTypeId);
+        List<Good> goods = goodBiz.findByTypeId(typeId);
+        if(types_children != null)
+            request.setAttribute("types_children",types_children);
+        if(types_parents != null)
+            request.setAttribute("types_parents",types_parents);
+        if(types_singleRoots != null)
+            request.setAttribute("types_singleRoots",types_singleRoots);
+        if(goods!=null)
             request.setAttribute("goods",goods);
-            return "../jspFront/products";
-        }else
-            return "";
+
+        return "../jspFront/products";
     }
 
 

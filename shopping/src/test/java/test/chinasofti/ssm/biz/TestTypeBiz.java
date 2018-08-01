@@ -24,6 +24,20 @@ public class TestTypeBiz {
         }
     }
     @Test
+    public void findParents(){
+        List<Type> types = typeBiz.findParents();
+        for(Type type : types){
+            System.out.println("type=" + type.getTypeName());
+        }
+    }
+    @Test
+    public void findSingleRoots(){
+        List<Type> types = typeBiz.findSingleRoots();
+        for(Type type : types){
+            System.out.println("type=" + type.getTypeName());
+        }
+    }
+    @Test
     public void testFindById(){
         Type type = typeBiz.findById(1);
         System.out.println("type=" + type.getTypeName());

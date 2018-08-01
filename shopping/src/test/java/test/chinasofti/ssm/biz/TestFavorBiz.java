@@ -20,6 +20,7 @@ public class TestFavorBiz {
     @Test
     public void findAll(){
         List<Favor> favors = favorBiz.findAll();
+        if(favors != null)System.out.println(favors.size());
         for(Favor favor : favors){
             System.out.println("findAll "+ favor.getCustomer().getCustomerName());
         }

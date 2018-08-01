@@ -32,6 +32,14 @@ public class TypeBizImpl implements TypeBiz {
         return typeDao.findChildren(fatherTypeId);
     }
 
+    public List<Type> findParents() {
+        return typeDao.findParents();
+    }
+
+    public List<Type> findSingleRoots() {
+        return typeDao.findSingleRoots();
+    }
+
     public boolean insert(Type type) {
         return typeDao.insert(type)==1;
     }

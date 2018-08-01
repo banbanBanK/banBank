@@ -10,6 +10,8 @@ public interface TypeBiz {
     Type findByTypeId(String typeId);
     List<Type> findByName(String typeName);
     List<Type> findChildren(String fatherTypeId);
+    List<Type> findParents();
+    List<Type> findSingleRoots();
 
     boolean insert (Type type);
     boolean update(Type type);

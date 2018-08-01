@@ -88,12 +88,43 @@
 
     <ul>
         <%
-            List<Type> types = (List<Type>)request.getAttribute("types");
-            if(types != null){
-                for(Type type : types){
+            List<Type> types_parents = (List<Type>)request.getAttribute("types_parents");
+            if(types_parents != null && types_parents.size() != 0){
+                for(Type type_parents : types_parents){
         %>
         <li>
-            <a href="../GoodFindByTypeId?id=<%=type.getTypeId() %>"><%=type.getTypeName() %>
+            <a href="../TypeWithChildren?fatherTypeId=<%=type_parents.getTypeId() %>"><%=type_parents.getTypeName() %>
+                <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" />
+            </a>
+        </li>
+        <ul>
+            <%
+                List<Type> types_children = (List<Type>) request.getAttribute("types_children");
+                if(types_children != null && types_children.size() != 0 && type_parents.getTypeId().equals(types_children.get(0).getFatherTypeId())){
+                    for(Type type_children : types_children){
+            %>
+            <li>
+                <a href="../GoodFindByTypeId?typeId=<%=type_children.getTypeId() %>&fatherTypeId=<%=type_parents.getTypeId() %>"><%=type_children.getTypeName() %>
+                    <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" />
+                </a>
+            </li>
+            <%
+                    }
+                }
+            %>
+        </ul>
+        <%
+                }
+            }
+        %>
+
+        <%
+            List<Type> types_singleRoots = (List<Type>)request.getAttribute("types_singleRoots");
+            if(types_singleRoots != null && types_singleRoots.size() != 0){
+                for(Type type_singleRoots : types_singleRoots){
+        %>
+        <li>
+            <a href="../GoodFindByTypeId?typeId=<%=type_singleRoots.getTypeId() %>&fatherTypeId=<%=type_singleRoots.getTypeId() %>"><%=type_singleRoots.getTypeName() %>
                 <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" />
             </a>
         </li>
@@ -103,8 +134,7 @@
         %>
         <li><hr class="m-tb-30" /></li>
 
-        <li><a href="products.jsp">Products</a></li>
-        <li><a href="product-details.jsp">Product Details</a></li>
+        <li><a href="../GoodFindAll">Products</a></li>
         <li><a href="about.jsp">About</a></li>
         <li><a href="blog.jsp">Blog</a></li>
         <li><a href="blog-post.jsp">Blog Post</a></li>
@@ -147,13 +177,14 @@
 
         <%
             List<Good> goods = (List<Good>) request.getAttribute("goods");
-            for(int i=0;i<3;i++){
+            if(goods.size() != 0){
+                for(int i=0;i<3;i++){
 
         %>
         <div class="row">
             <%
-                for(int k = 4 * i;k < 4 + 4 * i;k++){
-                    Good good = goods.get(k);
+                    for(int k = 4 * i;k < 4 + 4 * i;k++){
+                        Good good = goods.get(k);
             %>
             <div class="col-xs-12 col-sm-3 col-md-3">
                 <div class="panel">
@@ -175,6 +206,7 @@
             %>
         </div>
         <%
+                }
             }
         %>
 

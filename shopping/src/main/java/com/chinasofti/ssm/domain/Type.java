@@ -38,10 +38,10 @@ public class Type implements Serializable{
 	public void setFavors(Set<Favor> favors) {
 		this.favors = favors;
 	}
-	public String getFatherId() {
+	public String getFatherTypeId() {
 		return fatherTypeId;
 	}
-	public void setFatherId(String fatherId) {
+	public void setFatherTypeId(String fatherId) {
 		this.fatherTypeId = fatherId;
 	}
 }

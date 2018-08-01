@@ -9,6 +9,8 @@ public interface TypeDao extends GenericDao<Type, Integer> {
     Type findByTypeId(String typeId);
     List<Type> findByName(String typeName);
     List<Type> findChildren(String fatherTypeId);
+    List<Type> findParents();
+    List<Type> findSingleRoots();
 
     int insert (Type type);
     int update(Type type);
