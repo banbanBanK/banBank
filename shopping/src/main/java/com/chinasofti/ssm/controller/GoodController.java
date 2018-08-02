@@ -56,15 +56,10 @@ public class GoodController {
             return "";
     }
 
-    @RequestMapping("/GetGood")
+    @RequestMapping("/getgood")
     public String getGood(HttpServletRequest request){
         List<Good> goods = goodBiz.findAll();
         request.setAttribute("goods",goods);
-        //String adminId = request.getParameter("");
-        //Admin admin1 = adminBiz.findByAdminId(adminId);
-        HttpSession session = request.getSession();
-        Admin admin = adminBiz.findByAdminId("1");
-        session.setAttribute("admin",admin);
         return "getgood";
     }
 }

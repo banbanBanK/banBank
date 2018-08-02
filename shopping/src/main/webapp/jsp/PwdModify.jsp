@@ -46,10 +46,10 @@
             <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="InfoView.jsp" style="font-family:'楷体'"><i class="fa fa-home nav_icon"></i>信息汇总</a>
+                        <a href="/InfoView" style="font-family:'楷体'"><i class="fa fa-home nav_icon"></i>信息汇总</a>
                     </li>
                     <li>
-                        <a href="getgood.jsp" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>进货计划<span class="nav-badge">03</span></a>
+                        <a href="/getgood" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>进货计划<span class="nav-badge">03</span></a>
                     </li>
                     <li>
                         <a href="comment1.jsp" style="font-family:'楷体'"><i class="fa fa-book nav_icon"></i>客户评价<span class="fa arrow"></span></a>
@@ -208,7 +208,7 @@
     <!-- main content start-->
     <div id="page-wrapper">
         <div class="main-page">
-            <div style="display:none"></div><form id="msform">
+            <div style="display:none"></div><form id="msform" >
             <!-- progressbar -->
             <ul id="progressbar" style="font-family: '楷体'">
                 <li class="active" >确认身份</li>
@@ -226,10 +226,10 @@
             <fieldset>
                 <h2 class="fs-title">请设置新密码</h2>
                 <h3 class="fs-subtitle">我们不会向他人透露该信息</h3>
-                <input type="password" name="pass" id="pass1" placeholder="Password" />
-                <input type="password" name="cpass" id="cpass1" placeholder="Confirm Password" />
+                <input type="password" name="pass1" id="pass1" placeholder="Password" />
+                <input type="password" name="cpass1" id="cpass1" placeholder="Confirm Password" />
                 <input type="button" name="previous" class="previous action-button" value="Previous" />
-                <input type="submit" name="submit2" class="submit2 action-button" value="Submit" />
+                <input type="button" name="submit2" class="submit2 action-button" value="Submit" />
             </fieldset>
             <fieldset>
                 <h2 class="fs-title">Congratulations!</h2>
@@ -255,7 +255,7 @@
 
 <script>
     <%
-        Admin admin = (Admin) session.getAttribute("admin");
+        String pwd = (String) session.getAttribute("pwd");
     %>
     //jQuery time
     var current_fs, next_fs, previous_fs; //fieldsets
@@ -309,7 +309,7 @@
         var v1 = s1.value;
         var v2 = s2.value;
         if(v1 == v2) {
-            if(v1 == <%=admin.getAdminPassword()%>){
+            if(v1 == <%=pwd%>){
                 //activate next step on progressbar using the index of next_fs
                 $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
 
@@ -349,13 +349,21 @@
         current_fs = $(this).parent();
         next_fs = $(this).parent().next();
 
-        if (document.getElementById("pass1").val() == document.getElementById("cpass1").val()) {
+        var ss1 = document.getElementById("pass1");
+        var ss2 = document.getElementById("cpass1");
+        var vv1 = ss1.value;
+        var vv2 = ss2.value;
+        if (vv1 == vv2) {
             $.ajax({
-                    url:'../PwdModify',
+                    url:'/PwdModify1',
                     type:'POST',
-                    data:{adminPassword:document.getElementById("pass1").val()},
+                    data:{adminPassword:vv1},
+                    dataType:"json",
+                    success: function a(){
+                        window.location.reload();
+                    }
                 }
-            )
+            );
 
             //activate next step on progressbar using the index of next_fs
             $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");

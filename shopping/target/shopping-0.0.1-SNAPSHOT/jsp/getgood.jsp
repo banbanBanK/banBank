@@ -51,10 +51,10 @@
             <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="InfoView.jsp"  style="font-family:'楷体'"><i class="fa fa-home nav_icon"></i>信息汇总</a>
+                        <a href="/InfoView"  style="font-family:'楷体'"><i class="fa fa-home nav_icon"></i>信息汇总</a>
                     </li>
                     <li>
-                        <a href="getgood.jsp" class="active" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>进货计划<span class="nav-badge">03</span></a>
+                        <a href="/getgood" class="active" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>进货计划<span class="nav-badge">03</span></a>
                     </li>
                     <li>
                         <a href="comment1.jsp" style="font-family:'楷体'"><i class="fa fa-book nav_icon"></i>客户评价<span class="fa arrow"></span></a>
@@ -236,17 +236,15 @@
                             if(goods != null && goods.size()!=0){
                                 for(Good good : goods){
                         %>
-                            <%--<c:forEach var="good" items="${goods}" varStatus="status">--%>
                                 <tr>
                                     <td><%=good.getGoodId()%></td>
-                                    <td><%=good.getGoodId()%></td>
-                                    <td><%=good.getGoodId()%></td>
-                                    <td><%=good.getGoodId()%></td>
+                                    <td><%=good.getGoodName()%></td>
+                                    <td><%=good.getGoodPrice()%></td>
+                                    <td><%=good.getProvider().getProviderName()%></td>
                                     <td><input type="text" name="num" style="border: none;background-color: rgba(255, 255, 255, 0.15);width: 70px">
                                         <input type="submit" name="submit" value="submit" style="border:none;width: 65px;background-color: rgba(255, 255, 255, 0.15)" >
                                     </td>
                                 </tr>
-                           <%-- </c:forEach>--%>
                         <%
                             }
                             }

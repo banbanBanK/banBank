@@ -43,7 +43,8 @@
             where id = #{id}
         </update>
         <delete id="delete" parameterType="String">
-            delete from admin
+            delete
+            from admin
             where adminId=#{adminId} 
         </delete>
         

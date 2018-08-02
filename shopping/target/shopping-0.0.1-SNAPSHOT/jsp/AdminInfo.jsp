@@ -70,10 +70,10 @@
             <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="InfoView.jsp" class="active" style="font-family:'楷体'"><i class="fa fa-home nav_icon"></i>信息汇总</a>
+                        <a href="/InfoView" class="active" style="font-family:'楷体'"><i class="fa fa-home nav_icon"></i>信息汇总</a>
                     </li>
                     <li>
-                        <a href="getgood.jsp" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>进货计划<span class="nav-badge">03</span></a>
+                        <a href="/getgood" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>进货计划<span class="nav-badge">03</span></a>
                     </li>
                     <li>
                         <a href="comment1.jsp" style="font-family:'楷体'"><i class="fa fa-book nav_icon"></i>客户评价<span class="fa arrow"></span></a>
@@ -323,7 +323,7 @@
                         <h3 style="font-family:'calisto mt'">Contact Me</h3>
                     </div>
                     <div class="contact-form">
-                        <form action="/UpdateAdmin" method="post">
+                        <form action="#" method="post">
                             <div class="fields-grid">
                                 <div class="styled-input agile-styled-input-top">
                                     <input type="text" name="adminName" value="<%=admin.getAdminName()%>" required="">
@@ -352,7 +352,7 @@
                                 <label>我的个性简介</label>
                                 <span></span>
                             </div>
-                            <input type="submit" value="SEND">
+                            <input type="button" value="SEND" href="../UpdateAdmin">
                         </form>
                     </div>
                 </div>

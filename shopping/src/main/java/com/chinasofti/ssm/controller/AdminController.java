@@ -46,12 +46,24 @@ public class AdminController {
 	public String modify(HttpServletRequest request){
 		//String adminId = request.getParameter("");
 		//Admin admin1 = adminBiz.findByAdminId(adminId);
-		Admin admin = adminBiz.findByAdminId("1");
 		HttpSession session = request.getSession();
-		session.setAttribute("admin",admin);
-		admin.setAdminPassword((String)request.getAttribute("adminPassword"));
-		adminBiz.modifypwd(admin);
+		Admin admin = adminBiz.findByAdminId("1");
+		session.setAttribute("pwd",admin.getAdminPassword());
 		return "PwdModify";
 	}
 
+	@RequestMapping("/PwdModify1")
+	public String modify1(HttpServletRequest request){
+		//String adminId = request.getParameter("");
+		//Admin admin1 = adminBiz.findByAdminId(adminId);
+		HttpSession session = request.getSession();
+		Admin admin = adminBiz.findByAdminId("1");
+		admin.setAdminPassword((String)request.getParameter("adminPassword"));
+		adminBiz.modifypwd(admin);
+		return "InfoView";
+	}
+	@RequestMapping("/InfoView")
+	public String first(HttpServletRequest request){
+		return "InfoView";
+	}
 }
