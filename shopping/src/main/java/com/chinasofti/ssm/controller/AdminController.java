@@ -49,4 +49,12 @@ public class AdminController {
 		return "PwdModify";
 	}
 
+    @RequestMapping(value = "/jsp/adminLogin")
+    public String adminLogin(String id,String password){
+       Boolean flag=adminBiz.login(id,password);
+       if(flag)
+           return "";
+       else
+           return "";
+    }
 }

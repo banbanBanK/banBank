@@ -256,11 +256,6 @@
 <script>
     <%
         Admin admin = (Admin) session.getAttribute("admin");
-        if(admin == null){
-    %>
-    alert("123");
-    <%
-        }else{
     %>
     //jQuery time
     var current_fs, next_fs, previous_fs; //fieldsets
@@ -393,9 +388,6 @@
             return false;
         }
     })
-    <%
-        }
-    %>
 </script>
 
 
