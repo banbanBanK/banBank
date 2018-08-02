@@ -239,9 +239,9 @@
                             <%--<c:forEach var="good" items="${goods}" varStatus="status">--%>
                                 <tr>
                                     <td><%=good.getGoodId()%></td>
-                                    <td><%=good.getGoodId()%></td>
-                                    <td><%=good.getGoodId()%></td>
-                                    <td><%=good.getGoodId()%></td>
+                                    <td><%=good.getGoodName()%></td>
+                                    <td><%=good.getGoodPrice()%></td>
+                                    <td><%=good.getProvider().getProviderName()%></td>
                                     <td><input type="text" name="num" style="border: none;background-color: rgba(255, 255, 255, 0.15);width: 70px">
                                         <input type="submit" name="submit" value="submit" style="border:none;width: 65px;background-color: rgba(255, 255, 255, 0.15)" >
                                     </td>

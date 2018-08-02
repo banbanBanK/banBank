@@ -10,64 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ca6caf0-c4a6-4638-8f0e-b927a50c62ce" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/AdminBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/AdminBiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/GoodBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/GoodBiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/ProviderBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/ProviderBiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/TypeBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/TypeBiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/impl/AdminBizImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/impl/AdminBizImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/impl/GoodBizImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/impl/GoodBizImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/impl/ProviderBizImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/impl/ProviderBizImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/impl/TypeBizImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/impl/TypeBizImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/GoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/GoodController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/dao/AdminDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/dao/AdminDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/dao/GoodDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/dao/GoodDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/dao/ProviderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/dao/ProviderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/dao/TypeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/dao/TypeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/domain/Good.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/domain/Good.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/domain/Provider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/domain/Provider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/domain/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/domain/Type.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/AdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/AdminMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/GoodMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/GoodMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/ProviderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/ProviderMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cssyqw/css.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cssyqw/css.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/AdminInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/AdminInfo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/InfoView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/InfoView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/PwdModify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/PwdModify.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/getgood.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/getgood.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsyqw/jQuery.time.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/chinasofti/ssm/biz/TestGoodBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/chinasofti/ssm/biz/TestGoodBiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/GoodBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/GoodBiz.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/ProviderBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/ProviderBiz.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/GoodBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/GoodBizImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/ProviderBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/ProviderBizImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/GoodController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/GoodController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/GoodDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/GoodDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/ProviderDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/ProviderDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/mapper/AdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/mapper/AdminMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/mapper/GoodMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/mapper/GoodMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/mapper/ProviderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/mapper/ProviderMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/GoodBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/GoodBiz.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/ProviderBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/ProviderBiz.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/GoodBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/GoodBizImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/ProviderBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/ProviderBizImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/controller/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/controller/GoodController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/controller/GoodController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/GoodDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/GoodDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/ProviderDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/ProviderDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/mapper/AdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/mapper/AdminMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/mapper/GoodMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/mapper/GoodMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/mapper/ProviderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/mapper/ProviderMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/cssyqw/css.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/cssyqw/css.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/AdminInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/AdminInfo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/InfoView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/InfoView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/PwdModify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/PwdModify.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/getgood.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/getgood.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsyqw/jQuery.time.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/TestGoodBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/TestGoodBiz.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -107,7 +51,7 @@
           <entry key="css" value="7" />
           <entry key="java" value="76" />
           <entry key="js" value="9" />
-          <entry key="jsp" value="33" />
+          <entry key="jsp" value="35" />
           <entry key="xml" value="21" />
         </counts>
       </usages-collector>
@@ -116,7 +60,7 @@
           <entry key="CLASS" value="2" />
           <entry key="CSS" value="7" />
           <entry key="JAVA" value="76" />
-          <entry key="JSP" value="33" />
+          <entry key="JSP" value="35" />
           <entry key="JavaScript" value="9" />
           <entry key="XML" value="21" />
         </counts>
@@ -124,17 +68,17 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="35" />
-          <entry key="java" value="2349" />
+          <entry key="java" value="2421" />
           <entry key="js" value="395" />
-          <entry key="jsp" value="3064" />
+          <entry key="jsp" value="3088" />
           <entry key="xml" value="737" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="35" />
-          <entry key="JAVA" value="2349" />
-          <entry key="JSP" value="3064" />
+          <entry key="JAVA" value="2421" />
+          <entry key="JSP" value="3088" />
           <entry key="JavaScript" value="395" />
           <entry key="SQL" value="11" />
           <entry key="XML" value="726" />
@@ -147,11 +91,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/AdminController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="49" column="5" lean-forward="true" selection-start-line="48" selection-start-column="27" selection-end-line="49" selection-end-column="5" />
+            <state relative-caret-position="293">
+              <caret line="40" column="31" lean-forward="true" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/getgood.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="409">
+              <caret line="244" column="147" lean-forward="true" selection-start-line="244" selection-start-column="147" selection-end-line="244" selection-end-column="147" />
             </state>
           </provider>
         </entry>
@@ -172,17 +125,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/AdminMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
+            <state relative-caret-position="293">
               <caret line="43" column="17" lean-forward="true" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/GoodController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="65" column="50" lean-forward="true" selection-start-line="65" selection-start-column="50" selection-end-line="65" selection-end-column="50" />
+            <state relative-caret-position="337">
+              <caret line="66" column="44" lean-forward="true" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -194,11 +147,20 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/PwdModify.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
-              <caret line="264" column="36" lean-forward="true" selection-start-line="264" selection-start-column="36" selection-end-line="264" selection-end-column="36" />
+              <caret line="267" lean-forward="true" selection-start-line="267" selection-end-line="267" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#ul#0;n#form#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/AdminInfo.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-13">
+              <caret line="328" column="70" lean-forward="true" selection-start-line="328" selection-start-column="70" selection-end-line="328" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -290,14 +252,14 @@
         <option value="$PROJECT_DIR$/src/main/webapp/jsyqw/jQuery.time.js" />
         <option value="$PROJECT_DIR$/src/test/java/test/chinasofti/ssm/biz/TestGoodBiz.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/AdminInfo.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/getgood.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/GoodController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/AdminMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/dao/AdminDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/AdminBiz.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/impl/AdminBizImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/AdminController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/PwdModify.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/AdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/getgood.jsp" />
       </list>
     </option>
   </component>
@@ -327,7 +289,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="670" />
     <option name="width" value="703" />
     <option name="height" value="735" />
@@ -497,7 +459,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533202204859" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533210416758" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../banBank/shopping" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -898,7 +860,7 @@
       <workItem from="1532930365542" duration="2190000" />
       <workItem from="1533090808242" duration="225000" />
       <workItem from="1533091376642" duration="15793000" />
-      <workItem from="1533171751675" duration="26721000" />
+      <workItem from="1533171751675" duration="29202000" />
     </task>
     <servers />
   </component>
@@ -935,13 +897,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101648000" />
+    <option name="totallyTimeSpent" value="104129000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1860817" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1860817" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -951,7 +913,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329653" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1379,20 +1341,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/AdminInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6753">
-          <caret line="350" column="101" selection-start-line="350" selection-start-column="101" selection-end-line="350" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/getgood.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="235" column="46" selection-start-line="235" selection-start-column="46" selection-end-line="235" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/test/chinasofti/ssm/biz/TestAdminBiz.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -1449,27 +1397,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/AdminMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="43" column="17" lean-forward="true" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="49" column="5" lean-forward="true" selection-start-line="48" selection-start-column="27" selection-end-line="49" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/PwdModify.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
-          <caret line="264" column="36" lean-forward="true" selection-start-line="264" selection-start-column="36" selection-end-line="264" selection-end-column="36" />
+          <caret line="267" lean-forward="true" selection-start-line="267" selection-end-line="267" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#form#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1477,13 +1408,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/AdminMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="43" column="17" lean-forward="true" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/GoodController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="65" column="50" lean-forward="true" selection-start-line="65" selection-start-column="50" selection-end-line="65" selection-end-column="50" />
+        <state relative-caret-position="337">
+          <caret line="66" column="44" lean-forward="true" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/AdminInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13">
+          <caret line="328" column="70" lean-forward="true" selection-start-line="328" selection-start-column="70" selection-end-line="328" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="40" column="31" lean-forward="true" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/getgood.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="244" column="147" lean-forward="true" selection-start-line="244" selection-start-column="147" selection-end-line="244" selection-end-column="147" />
         </state>
       </provider>
     </entry>

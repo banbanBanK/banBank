@@ -33,6 +33,11 @@ public class AdminController {
 		//String adminId = request.getParameter("");
 		//Admin admin1 = adminBiz.findByAdminId(adminId);
 		Admin admin = adminBiz.findByAdminId("1");
+		admin.setAdminName(request.getParameter("adminName"));
+		admin.setAdminTel(request.getParameter("adminTel"));
+		admin.setAdminGender(request.getParameter("adminGender"));
+		admin.setAdminEmail(request.getParameter("adminEmail"));
+		admin.setAdminMessage(request.getParameter("adminMessage"));
 		adminBiz.update(admin);
 		return "AdminInfo";
 	}
