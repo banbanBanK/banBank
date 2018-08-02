@@ -227,14 +227,11 @@
                                                    window.location.reload();
                                                }
                                            });
-                                       }else{
-                                           alert("已取消购买！");
                                        }
                                     }
                                     function deleteOrder(orderId) {
                                         var se = confirm("确认删除？");
                                         if (se !== true) {
-                                            alert("已取消！");
                                         } else {
                                             var param = "DeleteOrder?id=" + orderId;
                                             $.ajax({
@@ -659,8 +656,6 @@
                  for(var i = 0; i < (result.length - result.length % 3)/3; i++)
                  document.getElementById('panel').innerHTML += format(
                      String(function(){/*!
-
-
         <div class="row m-b-20">
             <div class="col-sm-4 col-md-4 result-box text-sm-center">
                 <div class="col-md-6">
