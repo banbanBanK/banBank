@@ -1,52 +1,54 @@
+﻿<%@ page import="java.util.List" %>
+<%@ page import="com.chinasofti.ssm.domain.Comment" %>
+<%@ page import="java.text.SimpleDateFormat" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<html lang="en">
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+		 pageEncoding="UTF-8"%>
+<html class=" js " lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>Staro - Contact</title>
+	<title>Staro - Cart</title>
 
-	<meta name="author" content="IntelCoder, www.intelcoder.com" />
-	<meta name="description" content="Staro is a clean and light HTML5 theme for showing your products in a simple and elegant way. It's a fully responsive e-commerce template that was built with customers in mind." />
+	<meta name="author" content="IntelCoder, www.intelcoder.com">
+	<meta name="description" content="Staro is a clean and light HTML5 theme for showing your products in a simple and elegant way. It's a fully responsive e-commerce template that was built with customers in mind.">
 
-	<link rel="icon" href="../img/favicon.png" type="image/png" />
+<link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<link href="../css/font-awesome.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css">
+<link href="../css/animate.css" rel="stylesheet" type="text/css" media="all">
+<link href="../css/custom.css" rel="stylesheet">
 
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600" />
+	<link rel="icon" href="../img/favicon.png" type="image/png">
 
-	<link rel="stylesheet" href="../plugins/bootstrap/bootstrap.min.css" />
-	<link rel="stylesheet" href="../plugins/font-awesome/css/all.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600">
 
-	<link rel="stylesheet" href="../css2/style.css" />
-	<link rel="stylesheet" href="../css2/responsive.css" />
-	<link rel="stylesheet" href="../css2/ic-helpers.min.css" />
-	
-	<script src="../plugins/jquery.min.js"></script>
-	<script src="../plugins/bootstrap/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="../plugins/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="../plugins/font-awesome/css/all.css">
 
-	<script src="../js/global.js"></script>
+	<link rel="stylesheet" href="../css2/style.css">
+	<link rel="stylesheet" href="../css2/responsive.css">
+	<link rel="stylesheet" href="../css2/ic-helpers.min.css">
+	<link href="../css/admin-login.css" rel="stylesheet">
 
-	
-	<script type="text/javascript" src="../js/signup.js"></script>
 </head>
 <body>
-
-
 	<!-- Left menu -->
 	<div class="menu-left hidden-xs">
-		<a href="index.jsp" class="logo-left">
-			<img src="../img/logo.png" alt="" />
+		<a href="index.html" class="logo-left">
+			<img src="../img/logo.png" alt="">
 		</a>
 
 		<div class="nav-item">
-			<a href="login.jsp" class="text-primary">
+			<a href="login.html" class="text-primary">
 				<i class="fas fa-user-circle fa-2x"></i>
 			</a>
 		</div>
 
 		<div class="nav-item">
-			<a href="cart.jsp" class="text-primary">
+			<a href="cart.html" class="text-primary">
 				<i class="fas fa-shopping-bag fa-2x"></i>
 				<span class="badge">3</span>
 			</a>
@@ -67,42 +69,42 @@
 
 	<div id="sidenav" class="side-nav">
 		<div class="close-side-btn hidden-xs">
-			<a href="javascript:void(0);" onclick="closeNav();">&times;</a>
+			<a href="javascript:void(0);" onclick="closeNav();">×</a>
 		</div>
 
 		<div class="cart-side-btn visible-xs">
-			<a href="cart.jsp">
+			<a href="cart.html">
 				<i class="fas fa-shopping-bag"></i>
 				<span class="badge">3</span>
 			</a>
 		</div>
 
 		<div class="account-side-btn visible-xs">
-			<a href="login.jsp"><i class="fas fa-user-circle"></i></a>
+			<a href="login.html"><i class="fas fa-user-circle"></i></a>
 		</div>
 
 		<div class="home-side-btn visible-xs">
-			<a href="index.jsp"><i class="fas fa-desktop"></i></a>
+			<a href="index.html"><i class="fas fa-desktop"></i></a>
 		</div>
 
 		<ul>
-			<li><a href="products.jsp">Over-ear <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
-			<li><a href="products.jsp">On-ear <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
-			<li><a href="products.jsp">In-ear <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
-			<li><a href="products.jsp">Accessories <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
+			<li><a href="products.html">Over-ear <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt=""></a></li>
+			<li><a href="products.html">On-ear <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt=""></a></li>
+			<li><a href="products.html">In-ear <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt=""></a></li>
+			<li><a href="products.html">Accessories <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt=""></a></li>
 
-			<li><hr class="m-tb-30" /></li>
+			<li><hr class="m-tb-30"></li>
 
-			<li><a href="products.jsp">Products</a></li>
-			<li><a href="product-details.jsp">Product Details</a></li>
-			<li><a href="about.jsp">About</a></li>
-			<li><a href="blog.jsp">Blog</a></li>
-			<li><a href="blog-post.jsp">Blog Post</a></li>
-			<li><a href="contact.jsp">Contact</a></li>
+			<li><a href="products.html">Products</a></li>
+			<li><a href="product-details.html">Product Details</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="blog.html">Blog</a></li>
+			<li><a href="blog-post.html">Blog Post</a></li>
+			<li><a href="contact.html">Contact</a></li>
 		</ul>
 
 		<div class="social-media-box">
-			<hr />
+			<hr>
 
 			<a href="#" class="text-primary" target="_blank"><i class="fab fa-facebook-square"></i></a>
 			<a href="#" class="text-primary" target="_blank"><i class="fab fa-google-plus-square"></i></a>
@@ -116,179 +118,104 @@
 	<!-- Right menu -->
 
 	<!-- Content -->
-	<div class="content-right">
+	<div id="content-right" class="content-right">
 		<div class="container m-t-100 m-b-100">
 			<div class="row">
 				<div class="col-sm-12">
-					<h1 class="text-xs-center">用户注册</h1>
+					<h1 class="text-xs-center">评论列表</h1>
+
+					<div class="separator-one"></div>
 				</div>
 
-<!--				<div class="col-sm-12 m-t-70">
-					<div id="map" class="block-map" data-lat="38.880464" data-lng="-77.133318" data-zoom="16" data-marker="img/pin.png" data-string="
-				&nbsp;<i class='fas fa-map-marker' style='font-size:15px;'></i>&nbsp; <span style='font-weight:bold;'>Staro Theme</span><br><br>
-				<i class='fas fa-location-arrow' style='font-size:15px;'></i>&nbsp; 12 Rock Rd, VA 22066, USA<br><br>
-				<i class='fas fa-mobile-alt' style='font-size:15px;'></i>&nbsp; <a href=''>+1 0123-456.789</a><br><br>
-				<i class='fas fa-envelope' style='font-size:15px;'></i>&nbsp; <a href='#'>office@company.com</a><br><br>"></div>
-				</div>-->
+		<div id="page-wrapper" style="min-height: 128px;">
+			<div class="main-page">
+				<h3 id="comments-h3">最新评论</h3>
+				<div class="inbox-page">
+						<%
+							List<Comment> list=(List<Comment>)request.getAttribute("list");
+							if(list!=null){
+							    int i=0;
+							    for(Comment item:list){
+							        if(i++>2)
+							            break;
+							        String cur_href="#collapse"+i;
+							        String cur_id="collapse"+i;
 
-<!--				<div class="col-sm-12 text-center m-t-70">
-					<p>Aorem ipsum dolor sit amet consecter adipsicing elit sed usm tempor incididunt ut reitad dolore magna aliqua ut enim beniaps quis nostrual exercitationullamco laboris sed bcea lorem ipsum dolor comoda lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-				</div>-->
-			</div>
+						%>
+						<div class="inbox-row widget-shadow" id="accordion" role="tablist" aria-multiselectable="true">
+							<div class="mail"><img src="../images/i1.png" alt=""></div>
+							<div class="mail mail-name"> <h6><%=item.getCustomer().getCustomerId()%></h6> </div>
+							<a role="button" data-toggle="collapse" data-parent="#accordion" href=<%=cur_href%> aria-expanded="true" aria-controls="collapseOne" class="">
+								<div class="mail"><p><%=item.getGood().getGoodName()%></p></div>
+							</a>
+							<div class="mail-right" title="评价：<%=item.getEvaluation()%>星">
+                                <div id="bg" style="position: relative" >
+                                <div id="over" style="width: <% float num=item.getEvaluation();
+                                                            float legth=num/5;%><%=legth*150%>; position:absolute">
+                                </div>
+                                </div>
+							</div>
+							<div class="mail-right"><p><% SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd HH:mm");
+								                          String time=format.format(item.getCreateTime());
+							                               %><%=time%></p></div>
+							<div class="clearfix"> </div>
+							<div id=<%=cur_id%> class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true" style="">
+								<div class="mail-body">
+									<p><%=item.getComment()%></p>
 
-			<div class="row m-t-100">
-				<div class="col-sm-12 col-md-4">
-<!--					<div class="contact-info text-xs-center">
-						<h3>Office</h3>
+								</div>
+							</div>
+						</div>
+						<%
+										}
+									}
+									%>
 
-						<p><i class="far fa-building"></i>&nbsp; 12 Rock Rd, VA 22066, USA</p>
-						<p><i class="fas fa-mobile-alt"></i>&nbsp; +1 0123-456.789</p>
-						<p><i class="fas fa-mobile-alt"></i>&nbsp; +1 0123-789.456</p>
-						<p><i class="far fa-envelope"></i>&nbsp; <a href="mailto:sales@company.com">sales@company.com</a></p>
-						<p><i class="far fa-envelope"></i>&nbsp; <a href="mailto:support@company.com">support@company.com</a></p>
-					</div>-->
-
-					<div class="contact-info text-xs-center">
-						<h3>Follow Us</h3>
-
-						<ul class="contact-sm">
-							<li>
-								<a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
-							</li>
-							<li>
-								<a href="#"><i class="fab fa-google-plus-square fa-2x"></i></a>
-							</li>
-							<li>
-								<a href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
-							</li>
-							<li>
-								<a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-							</li>
-							<li>
-								<a href="#"><i class="fab fa-pinterest-square fa-2x"></i></a>
-							</li>
-							<li>
-								<a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
-							</li>
-							<li>
-								<a href="#"><i class="fab fa-youtube-square fa-2x"></i></a>
-							</li>
-						</ul>
-					</div>
 				</div>
-                
-				<div class="col-xs-12 col-sm-12 col-md-7 pull-right">
-					<form method="post" id="signup" action=" ../jsp/signup.do">
-						<div class="row">
-							<div class="col-sm-6">
-								<label><h4>注册信息</h4></label>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-6">
-								<div class="form-group form-group-default required">
-								    <label>用户名</label>
-								    <input type="text" id="customerId" name="customerId" class="form-control"  required>
-								</div>
-							</div>
-							<div id="customerIdNext">
-								
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-6">
-								<div class="form-group form-group-default required">
-								    <label>用户密码</label>
-								    <input type="password" id="password" name="password" class="form-control" required>
-								   
-							    </div>
-							</div>
-							<div id="passwordNext">
-								
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-6">
-								<div class="form-group form-group-default required">
-								    <label>确认密码</label>
-								    <input type="password" id="rPassword" name="rPassword" class="form-control" required>
-								  
-								</div>
-							</div>
-							<div id="rPasswordNext">
-								
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-6">
-								<label><h4>个人信息</h4></label>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-6">
-								<div class="form-group form-group-default ">
-									<label>姓名</label>
-									<input type="text" name="name" class="form-control"  />
-								</div>
-							</div>
-
-							<div class="col-sm-6">
-								<div class="form-group form-group-default ">
-									<label>性别</label>
-									<select name="gender" class="form-control">  
-											<option selected="selected" disabled="disabled">请选择性别</option>
-											<option value="male">男</option>
-											<option value="female">女</option>
-									</select>
-								</div>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-sm-6">
-								<div class="form-group form-group-default ">
-									<label>邮箱</label>
-									<input type="email" name="email" class="form-control"  />
-								</div>
-							</div>
-							
-							<div class="col-sm-6">
-								<div class="form-group form-group-default ">
-									<label>生日</label>
-									<input type="date" name="birthday" class="form-control" />
-								</div>
-							</div>
-						</div>
-						<div class="row">														
-							<div class="col-sm-6">
-								<div class="form-group form-group-default ">
-									<label>联系电话</label>
-									<input type="phone" name="phone" class="form-control" />
-								</div>
-							</div>
-						</div>
-						<div class="row">														
-							<div class="col-sm-6">
-						        <div class="form-group form-group-default ">
-									 <label>地址</label><br>
-									 <select id="province" name="province" class="form-control">
-									 	<option selected="selected" disabled="disabled">请选择省份</option>
-									 </select>
-								</div>
-							</div>
-						</div>
+				<h3 id="comments-h3">全部评论</h3>
+				<div class="inbox-page">
+					<%
+						List<Comment> list1=(List<Comment>)request.getAttribute("list");
+						if(list!=null){
+							int i=0;
+							for(Comment item:list1){
+							    i++;
+							    String cur_href="#collapseall"+i;
+								String cur_id="collapseall"+i;
+					%>
+					<div class="inbox-row widget-shadow">
 						
-						<div class="form-group form-group-default ">
-							<label>详细地址</label>
-							<input type="text" name="address" class="form-control" />
+						<div class="mail"><img src="../images/i2.png" alt=""></div>
+						<div class="mail mail-name"><h6><%=item.getCustomer().getCustomerId()%></h6></div>
+						<a role="button" data-toggle="collapse" data-parent="#accordion" href=<%=cur_href%> aria-expanded="false" aria-controls="collapseFive" class="collapsed">
+							<div class="mail"><p><%=item.getGood().getGoodName()%></p></div>
+						</a>
+						<div class="mail-right" title="评价：<%=item.getEvaluation()%>星">
+                            <div id="bgall" style="position: relative" >
+                                <div id="overall" style="width: <% float num=item.getEvaluation();
+                                                            float legth=num/5;%><%=legth*150%>; position:absolute">
+                                </div>
+                            </div>
 						</div>
-
-
-						<div class="form-group text-center">
-							<button type="button" id="signupBtn" class="btn btn-success"><i class="fas fa-paper-plane"></i>&nbsp; 注册</button>
+						<div class="mail-right"><p><% SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd HH:mm");
+							                       String time=format.format(item.getCreateTime());
+						                           %><%=time%></p></div>
+						<div class="clearfix"> </div>
+						<div id=<%=cur_id%> class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive" style="height: 0px;" aria-expanded="false">
+							<div class="mail-body">
+								<p><%=item.getComment()%></p>
+							</div>
 						</div>
-					</form>
+					</div>
+					<%
+							}
+						}
+					%>
+
+					
 				</div>
+			</div>
+		</div>
 			</div>
 		</div>
 
@@ -301,7 +228,7 @@
 							<div class="col-xs-12 col-sm-6 col-md-5 m-b-40 text-xs-center">
 								<h5>Support</h5>
 
-								<p class="m-b-20">Our goal is to offer you a level of support that<br />matches the attention to detail of our products.</p>
+								<p class="m-b-20">Our goal is to offer you a level of support that<br>matches the attention to detail of our products.</p>
 
 								<ul class="footer-menu">
 									<li>
@@ -355,13 +282,13 @@
 										<i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="#">Payments</a>
 									</li>
 									<li>
-										<i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="#">Shipping & Returns</a>
+										<i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="#">Shipping &amp; Returns</a>
 									</li>
 									<li>
 										<i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="#">Privacy Policy</a>
 									</li>
 									<li>
-										<i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="#">Terms & Conditions</a>
+										<i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="#">Terms &amp; Conditions</a>
 									</li>
 								</ul>
 							</div>
@@ -373,7 +300,7 @@
 
 								<form class="form-inline">
 									<div class="form-group">
-										<input type="text" name="subscribe" class="form-control" placeholder="Email" />
+										<input name="subscribe" class="form-control" placeholder="Email" type="text">
 									</div>
 
 									<button type="submit" class="btn btn-success btn-square">Join Us</button>
@@ -413,7 +340,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-xs-12 col-sm-6 text-xs-center">
-								<p>&copy; 2018 <a href="#">Staro</a>. All rights reserved.</p>
+								<p>© 2018 <a href="#">Staro</a>. All rights reserved.</p>
 							</div>
 
 							<div class="col-xs-12 col-sm-6 text-xs-center">
@@ -438,7 +365,7 @@
 	<!-- Search overlay -->
 	<div id="searchoverlay" class="overlay hidden-xs">
 		<div class="search-close-btn">
-			<a href="javascript:void(0);" onclick="closeSearch();">&times;</a>
+			<a href="javascript:void(0);" onclick="closeSearch();">×</a>
 		</div>
 
 		<div class="container m-t-100 m-b-100">
@@ -448,7 +375,7 @@
 						<div class="form-group">
 							<div class="col-sm-11 center-block">
 								<div class="input-group">
-									<input type="text" class="form-control search-input" placeholder="Start typing..." />
+									<input class="form-control search-input" placeholder="Start typing..." type="text">
 
 									<span class="input-group-btn">
 										<button type="submit" class="btn btn-primary search-button">Go!</button>
@@ -458,7 +385,7 @@
 						</div>
 					</form>
 
-					<hr />
+					<hr>
 				</div>
 			</div>
 
@@ -472,7 +399,7 @@
 				<div class="col-sm-4 col-md-4 result-box text-sm-center">
 					<div class="col-md-6">
 						<a href="#">
-							<img src="../img/products/product8.png" class="img-responsive" alt="" />
+							<img src="../img/products/product8.png" class="img-responsive" alt="">
 						</a>
 					</div>
 
@@ -490,7 +417,7 @@
 				<div class="col-sm-4 col-md-4 result-box text-sm-center">
 					<div class="col-md-6">
 						<a href="#">
-							<img src="../img/products/product9.png" class="img-responsive" alt="" />
+							<img src="../img/products/product9.png" class="img-responsive" alt="">
 						</a>
 					</div>
 
@@ -508,7 +435,7 @@
 				<div class="col-sm-4 col-md-4 result-box text-sm-center">
 					<div class="col-md-6">
 						<a href="#">
-							<img src="../img/products/product10.png" class="img-responsive" alt="" />
+							<img src="../img/products/product10.png" class="img-responsive" alt="">
 						</a>
 					</div>
 
@@ -528,7 +455,7 @@
 				<div class="col-sm-4 col-md-4 result-box text-sm-center">
 					<div class="col-md-6">
 						<a href="#">
-							<img src="../img/products/product3.png" class="img-responsive" alt="" />
+							<img src="../img/products/product3.png" class="img-responsive" alt="">
 						</a>
 					</div>
 
@@ -546,7 +473,7 @@
 				<div class="col-sm-4 col-md-4 result-box text-sm-center">
 					<div class="col-md-6">
 						<a href="#">
-							<img src="../img/products/product2.png" class="img-responsive" alt="" />
+							<img src="../img/products/product2.png" class="img-responsive" alt="">
 						</a>
 					</div>
 
@@ -564,7 +491,7 @@
 				<div class="col-sm-4 col-md-4 result-box text-sm-center">
 					<div class="col-md-6">
 						<a href="#">
-							<img src="../img/products/product1.png" class="img-responsive" alt="" />
+							<img src="../img/products/product1.png" class="img-responsive" alt="">
 						</a>
 					</div>
 
@@ -584,7 +511,7 @@
 				<div class="col-sm-4 col-md-4 result-box text-sm-center">
 					<div class="col-md-6">
 						<a href="#">
-							<img src="../img/products/product4.png" class="img-responsive" alt="" />
+							<img src="../img/products/product4.png" class="img-responsive" alt="">
 						</a>
 					</div>
 
@@ -602,7 +529,7 @@
 				<div class="col-sm-4 col-md-4 result-box text-sm-center">
 					<div class="col-md-6">
 						<a href="#">
-							<img src="../img/products/product6.png" class="img-responsive" alt="" />
+							<img src="../img/products/product6.png" class="img-responsive" alt="">
 						</a>
 					</div>
 
@@ -620,7 +547,7 @@
 				<div class="col-sm-4 col-md-4 result-box text-sm-center">
 					<div class="col-md-6">
 						<a href="#">
-							<img src="../img/products/product7.png" class="img-responsive" alt="" />
+							<img src="../img/products/product7.png" class="img-responsive" alt="">
 						</a>
 					</div>
 
@@ -643,6 +570,21 @@
 			</div>
 		</div>
 	</div>
+	<!-- Search overlay -->
+
+	<script src="../plugins/jquery.min.js"></script>
+	<script src="../plugins/bootstrap/bootstrap.min.js"></script>
+	<script src="../js/global.js"></script>
 	
+	<script src="../js/modernizr.custom.js"></script>
+	<script src="../js/wow.min.js"></script>
+	<script>
+		 new WOW().init();
+	</script>
+	<script src="../js/metisMenu.min.js"></script>
+    <script src="../js/custom.js"></script>
+    
+
+
 </body>
 </html>
