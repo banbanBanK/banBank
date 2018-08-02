@@ -86,7 +86,7 @@
                 for(Type type_parents : types_parents){
         %>
         <li>
-            <a href="../TypeWithChildren?fatherTypeId=<%=type_parents.getTypeId() %>"><%=type_parents.getTypeName() %>
+            <a href="../GoodFindByRootTypeId?fatherTypeId=<%=type_parents.getTypeId() %>"><%=type_parents.getTypeName() %>
                 <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" />
             </a>
         </li>
@@ -97,7 +97,7 @@
                         for(Type type_children : types_children){
                 %>
                 <li>
-                    <a href="../GoodFindByTypeId?typeId=<%=type_children.getTypeId() %>&fatherTypeId=<%=type_parents.getTypeId() %>"><%=type_children.getTypeName() %>
+                    <a href="../GoodFindByChildrenTypeId?typeId=<%=type_children.getTypeId() %>&fatherTypeId=<%=type_parents.getTypeId() %>"><%=type_children.getTypeName() %>
                         <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" />
                     </a>
                 </li>
@@ -117,7 +117,7 @@
                 for(Type type_singleRoots : types_singleRoots){
         %>
         <li>
-            <a href="../GoodFindByTypeId?typeId=<%=type_singleRoots.getTypeId() %>&fatherTypeId=<%=type_singleRoots.getTypeId() %>"><%=type_singleRoots.getTypeName() %>
+            <a href="../GoodFindByChildrenTypeId?typeId=<%=type_singleRoots.getTypeId() %>&fatherTypeId=<%=type_singleRoots.getTypeId() %>"><%=type_singleRoots.getTypeName() %>
                 <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" />
             </a>
         </li>

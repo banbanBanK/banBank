@@ -23,13 +23,16 @@ public class GoodBizImpl implements GoodBiz {
 		return goodDao.findByPrice(goodPrice);
 	}
 
-
-	public List<Good> findByTypeId(Integer typeId) {
-		// TODO Auto-generated method stub
-		return goodDao.findByTypeId(typeId);
+	public List<Good> findByChildrenTypeId(String typeId) {
+		return goodDao.findByChildrenTypeId(typeId);
 	}
 
-	public List<Good> findByProvider(Integer providerId) {
+	public List<Good> findByRootTypeId(String typeId) {
+		return goodDao.findByRootTypeId(typeId);
+	}
+
+
+	public List<Good> findByProvider(String providerId) {
 		// TODO Auto-generated method stub
 		return goodDao.findByProvider(providerId);
 	}

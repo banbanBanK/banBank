@@ -7,8 +7,9 @@ import com.chinasofti.ssm.domain.Good;
 public interface GoodBiz {
 	List<Good> findByName(String goodName);
 	List<Good> findByPrice(double goodPrice);
-	List<Good> findByTypeId(Integer typeId);
-	List<Good> findByProvider(Integer providerId);
+	List<Good> findByChildrenTypeId(String typeId);
+	List<Good> findByRootTypeId(String typeId);
+	List<Good> findByProvider(String providerId);
 	Good findByGoodId(String goodId);
 	
 	Good findById(Integer id);

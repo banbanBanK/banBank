@@ -42,7 +42,16 @@
 		from goods
 		where GoodPrice = #{goodPrice} and DeleteStatus = 1
 	</select>
-	<select id="findByTypeId" resultMap="GoodResultMap">
+	<select id="findByRootTypeId" resultMap="GoodResultMap">
+		select *
+		from goods
+		where DeleteStatus = 1 and TypeId in (
+												select TypeId
+												from types
+												where FatherTypeId = #{typeId}
+												)
+	</select>
+	<select id="findByChildrenTypeId" resultMap="GoodResultMap">
 		select *
 		from goods
 		where TypeId = #{typeId} and DeleteStatus = 1

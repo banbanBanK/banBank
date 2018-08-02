@@ -1,6 +1,7 @@
 package com.chinasofti.ssm.domain;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 
 public class ProductDetails implements Serializable {
     private Integer id;
@@ -9,12 +10,23 @@ public class ProductDetails implements Serializable {
     private String productPosition;
     private String productType;
     private String timeToMarket;
+    private String packingList;
     private String cpu;
     private String ram;
     private String hardDisk;
+    private String screenType;
     private String screenSize;
+    private String battery;
+    private String resolution;
     private String graphicsCard;
-    private String packingList;
+    private String adorn;
+    private String microphone;
+    private String sensitivity;
+    private String earphoneFeature;
+    private String sensorType;
+    private String sensorSize;
+    private String pixel;
+    private String os;
     private Good good;
 
     public ProductDetails() {
@@ -123,5 +135,93 @@ public class ProductDetails implements Serializable {
 
     public void setGood(Good good) {
         this.good = good;
+    }
+
+    public String getScreenType() {
+        return screenType;
+    }
+
+    public void setScreenType(String screenType) {
+        this.screenType = screenType;
+    }
+
+    public String getBattery() {
+        return battery;
+    }
+
+    public void setBattery(String battery) {
+        this.battery = battery;
+    }
+
+    public String getResolution() {
+        return resolution;
+    }
+
+    public void setResolution(String resolution) {
+        this.resolution = resolution;
+    }
+
+    public String getAdorn() {
+        return adorn;
+    }
+
+    public void setAdorn(String adorn) {
+        this.adorn = adorn;
+    }
+
+    public String getMicrophone() {
+        return microphone;
+    }
+
+    public void setMicrophone(String microphone) {
+        this.microphone = microphone;
+    }
+
+    public String getSensitivity() {
+        return sensitivity;
+    }
+
+    public void setSensitivity(String sensitivity) {
+        this.sensitivity = sensitivity;
+    }
+
+    public String getEarphoneFeature() {
+        return earphoneFeature;
+    }
+
+    public void setEarphoneFeature(String earphoneFeature) {
+        this.earphoneFeature = earphoneFeature;
+    }
+
+    public String getSensorType() {
+        return sensorType;
+    }
+
+    public void setSensorType(String sensorType) {
+        this.sensorType = sensorType;
+    }
+
+    public String getSensorSize() {
+        return sensorSize;
+    }
+
+    public void setSensorSize(String sensorSize) {
+        this.sensorSize = sensorSize;
+    }
+
+    public String getPixel() {
+        return pixel;
+    }
+
+    public void setPixel(String pixel) {
+        this.pixel = pixel;
+    }
+
+    public String getOs() {
+        return os;
+    }
+
+    public void setOs(String os) {
+        this.os = os;
     }
 }

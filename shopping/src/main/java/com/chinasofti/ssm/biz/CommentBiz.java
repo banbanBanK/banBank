@@ -8,13 +8,13 @@ import java.sql.Timestamp;
 import java.util.List;
 
 public interface CommentBiz {
-    public List<Comment> findAll();
-    public Comment findById(Integer id);
-    public List<Comment> findByCreateTime(Timestamp createTime);
-    public List<Comment> findByGoodId(String goodId);
-    public List<Comment> findByCustomerId(String customerId);
+    List<Comment> findAll();
+    Comment findById(Integer id);
+    List<Comment> findByCreateTime(Timestamp createTime);
+    List<Comment> findByGoodId(String goodId);
+    List<Comment> findByCustomerId(String customerId);
 
-    public boolean insert(Comment comment);
-    public boolean update(Comment comment);
-    public boolean deleteById(int id);
+    boolean insert(Comment comment);
+    boolean update(Comment comment);
+    boolean deleteById(int id);
 }

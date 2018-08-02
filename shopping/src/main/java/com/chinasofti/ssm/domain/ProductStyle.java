@@ -7,6 +7,9 @@ public class ProductStyle implements Serializable {
     private Integer deleteStatus;
     private String color;
     private Good good;
+    private Good relation;
+    private String relatedColor;
+    private int relationPlace;
 
     public ProductStyle() {
         super();
@@ -42,5 +45,29 @@ public class ProductStyle implements Serializable {
 
     public void setGood(Good good) {
         this.good = good;
+    }
+
+    public Good getRelation() {
+        return relation;
+    }
+
+    public void setRelation(Good relation) {
+        this.relation = relation;
+    }
+
+    public String getRelatedColor() {
+        return relatedColor;
+    }
+
+    public void setRelatedColor(String relatedColor) {
+        this.relatedColor = relatedColor;
+    }
+
+    public int getRelationPlace() {
+        return relationPlace;
+    }
+
+    public void setRelationPlace(int relationPlace) {
+        this.relationPlace = relationPlace;
     }
 }

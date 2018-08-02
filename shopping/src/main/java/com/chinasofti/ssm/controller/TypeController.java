@@ -26,18 +26,4 @@ public class TypeController {
 
         return "../jspFront/index";
     }
-    @RequestMapping("/TypeWithChildren")
-    public String typeFindChildren(@RequestParam String fatherTypeId, HttpServletRequest request){
-        List<Type> types_parents = typeBiz.findParents();
-        List<Type> types_singleRoots = typeBiz.findSingleRoots();
-        List<Type> types_children = typeBiz.findChildren(fatherTypeId);
-        if(types_children != null)
-            request.setAttribute("types_children",types_children);
-        if(types_parents != null)
-            request.setAttribute("types_parents",types_parents);
-        if(types_singleRoots != null)
-            request.setAttribute("types_singleRoots",types_singleRoots);
-
-        return "../jspFront/index";
-    }
 }

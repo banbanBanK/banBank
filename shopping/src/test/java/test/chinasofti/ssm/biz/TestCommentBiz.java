@@ -1,6 +1,8 @@
 package test.chinasofti.ssm.biz;
 
 import com.chinasofti.ssm.biz.CommentBiz;
+import com.chinasofti.ssm.biz.CustomerBiz;
+import com.chinasofti.ssm.biz.GoodBiz;
 import com.chinasofti.ssm.domain.Comment;
 import com.chinasofti.ssm.domain.Customer;
 import com.chinasofti.ssm.domain.Good;
@@ -18,6 +20,10 @@ import java.util.List;
 public class TestCommentBiz {
     @Autowired
     private CommentBiz commentBiz;
+    @Autowired
+    private GoodBiz goodBiz;
+    @Autowired
+    private CustomerBiz customerBiz;
     @Test
     public void findAll(){
         List<Comment> comments = commentBiz.findAll();
@@ -49,14 +55,13 @@ public class TestCommentBiz {
     }
     @Test
     public void insert(){
+        Good good = goodBiz.findById(1);
         Comment comment = new Comment();
-        Customer customer = new Customer();
-        customer.setCustomerId("5");
+        Customer customer = customerBiz.findByCustomerId("1");
         comment.setCustomer(customer);
-        Good good = new Good();
-        good.setGoodId("5");
-        comment.setEvaluation(2);
         comment.setGood(good);
+        comment.setComment("s");
+        comment.setEvaluation(2);
         comment.setDeleteStatus(1);
 
         commentBiz.insert(comment);

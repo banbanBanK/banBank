@@ -20,17 +20,17 @@ import java.util.Set;
 @RunWith(SpringJUnit4ClassRunner.class)
 public class TestGoodBiz{
 	@Autowired
-	private GoodBiz GoodBiz;
+	private GoodBiz goodBiz;
 	@Test
 	public void testFindById() {
 		Integer a= 1 ;
-		Good good = GoodBiz.findById(2);
+		Good good = goodBiz.findById(10);
 		System.out.println("Hello"+ good.getGoodName());
 	}
 
 	@Test
 	public void testFindByName(){
-		List<Good> goods = GoodBiz.findByName("联想");
+		List<Good> goods = goodBiz.findByName("联想");
 
 		for (Good good : goods) {
 			System.out.println("name = " + good.getGoodName());
@@ -39,15 +39,23 @@ public class TestGoodBiz{
 
 	@Test
 	public void testFindByPrice(){
-		List<Good> goods = GoodBiz.findByPrice(10);
+		List<Good> goods = goodBiz.findByPrice(10);
 		for (Good good : goods){
 			System.out.println("name = " + good.getGoodName());
 		}
 	}
 
 	@Test
-	public void testFindByType(){
-		List<Good> goods = GoodBiz.findByTypeId(6);
+	public void testFindByChildrenType(){
+		List<Good> goods = goodBiz.findByChildrenTypeId("5");
+		for (Good good : goods){
+			System.out.println("name = " + good.getGoodName());
+		}
+	}
+
+	@Test
+	public void testFindByRootType(){
+		List<Good> goods = goodBiz.findByRootTypeId("1");
 		for (Good good : goods){
 			System.out.println("name = " + good.getGoodName());
 		}
@@ -55,7 +63,7 @@ public class TestGoodBiz{
 
 	@Test
 	public void testFindByProvider(){
-		List<Good> goods = GoodBiz.findByProvider(2);
+		List<Good> goods = goodBiz.findByProvider("2");
 		for (Good good : goods){
 			System.out.println("name = " + good.getGoodName());
 		}
@@ -63,7 +71,7 @@ public class TestGoodBiz{
 
 	@Test
 	public void testFindByGoodId(){
-		Good good = GoodBiz.findByGoodId("1");
+		Good good = goodBiz.findByGoodId("1");
 		System.out.println("name = " + good.getGoodName());
 	}
 
@@ -81,13 +89,13 @@ public class TestGoodBiz{
 		good.setGoodStock(10);
 		good.setGoodSaleSum(0);
 		good.setType(type);
-		boolean a = GoodBiz.insert(good);
+		boolean a = goodBiz.insert(good);
 		System.out.println(a);
 	}
 
 	@Test
 	public void testDelete(){
-		boolean a = GoodBiz.delete(1);
+		boolean a = goodBiz.delete(1);
 		System.out.println(a);
 	}
 

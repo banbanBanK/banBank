@@ -52,7 +52,7 @@
 
     <insert id="insert" parameterType="com.chinasofti.ssm.domain.Comment" useGeneratedKeys="true" keyProperty="Id">
 		insert into comments
-		values(null,#{good.goodId},#{customer.customerId},#{comment},#{evaluation},#{createTime},#{deleteStatus})
+		values(null,#{good.goodId},#{customer.customerId},#{comment},#{evaluation},null,#{deleteStatus})
 	</insert>
     <update id="update" parameterType="com.chinasofti.ssm.domain.Comment">
 		update comments
