@@ -2,24 +2,20 @@ package com.chinasofti.ssm.domain;
 
 import java.io.Serializable;
 
-public class Admin implements Serializable{
-	private Integer id;
-	private String  adminId;
-	private String  adminName;
-	private Integer adminGender;
-	private String  adminTel;
-	private String  adminPhone;
-	private String  adminEmail;
-	private String  adminPassword;
-	private Integer deleteStatus;
-	private String adminMessage;
-	private String adminTitle;
+public class Admin implements Serializable {
 
+	private Integer id;
+	private String adminId;
+	private String adminName;
+	private String adminTel;
+	private String adminPhone;
+	private String adminEmail;
+	private String adminPassword;
+	private Integer deleteStatus;
 	public Admin() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
 	public Integer getId() {
 		return id;
 	}
@@ -31,12 +27,6 @@ public class Admin implements Serializable{
 	}
 	public void setAdminId(String adminId) {
 		this.adminId = adminId;
-	}
-	public Integer getAdminGender() {
-		return adminGender;
-	}
-	public void setAdminGender(Integer adminGender) {
-		this.adminGender = adminGender;
 	}
 	public String getAdminName() {
 		return adminName;
@@ -74,16 +64,6 @@ public class Admin implements Serializable{
 	public void setDeleteStatus(Integer deleteStatus) {
 		this.deleteStatus = deleteStatus;
 	}
-	public String getAdminMessage() {
-		return adminMessage;
-	}
-	public void setAdminMessage(String adminMessage) {
-		this.adminMessage = adminMessage;
-	}
-	public String getAdminTitle() {
-		return adminTitle;
-	}
-	public void setAdminTitle(String adminTitle) {
-		this.adminTitle = adminTitle;
-	}
+	
+	
 }

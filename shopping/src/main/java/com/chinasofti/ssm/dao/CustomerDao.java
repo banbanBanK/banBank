@@ -1,5 +1,7 @@
 package com.chinasofti.ssm.dao;
 
+import java.util.Set;
+
 import com.chinasofti.ssm.domain.Customer;
 
 import java.util.Set;

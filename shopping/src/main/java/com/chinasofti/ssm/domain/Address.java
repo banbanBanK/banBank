@@ -2,23 +2,22 @@ package com.chinasofti.ssm.domain;
 
 import java.io.Serializable;
 
-public class Address implements Serializable {
+public class Address implements Serializable{
 	private Integer id;
-	private String  addressId;
-	private String 	addressName;
-	private String 	addressArea;
+	private String addressId;
+	private String addressName;
+	private String addressArea;
 	private Integer economicLevel;
 	private Integer deleteStatus;
-	private Customer customer;	
+	
 	public Address() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-	public Integer getIdInteger() {
+	public Integer getId() {
 		return id;
 	}
-	public void setIdInteger(Integer id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getAddressId() {
@@ -50,6 +49,7 @@ public class Address implements Serializable {
 	}
 	public void setDeleteStatus(Integer deleteStatus) {
 		this.deleteStatus = deleteStatus;
+<<<<<<< HEAD
 	}
 	public Customer getCustomer() {
 		return customer;
@@ -57,4 +57,10 @@ public class Address implements Serializable {
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
 	}
+=======
+	}
+	
+	
+
+>>>>>>> 7af4b23398edcfda6ea744208eb027a6a5bac2db
 }
