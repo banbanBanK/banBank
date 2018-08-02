@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
-"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.chinasofti.ssm.dao.GoodDao">
 	<select id="getTypeByTypeId" parameterType="String" resultType="com.chinasofti.ssm.domain.Type">
@@ -28,7 +28,7 @@
 		where Id = #{Id} and DeleteStatus = 1
 	</select>
 	<select id="findAll" resultMap="GoodResultMap">
-		select * 
+		select *
 		from goods
 		where DeleteStatus = 1
 	</select>
@@ -47,7 +47,7 @@
 		from goods
 		where TypeId = #{TypeId} and DeleteStatus = 1
 	</select>
-	<select id="findByProvider" resultMap="GoodResultMap">
+	<select id="findByProviderId" resultMap="GoodResultMap">
 		select *
 		from goods
 		where ProviderId = #{ProviderId} and DeleteStatus = 1
@@ -71,4 +71,10 @@
 		set DeleteStatus = 0
 		where Id=#{Id} and DeleteStatus = 1
 	</delete>
+
+	<select id="findProviderIdByGoodId" parameterType="String" resultType="String">
+		select ProviderId
+		from goods
+		where GoodId = #{GoodId}
+	</select>
 </mapper>

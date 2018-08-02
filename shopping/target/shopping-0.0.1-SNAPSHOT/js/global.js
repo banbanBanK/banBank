@@ -73,6 +73,19 @@ $(document).ready(function()
 			// Otherwise put a 1 there
 			$(fieldName).val(1);
 		}
+        var num = document.getElementsByName("quantity");
+        var price = document.getElementsByClassName("goodPrice");
+
+        var total = 0;
+        for(var i = 0; i< num.length; i++){
+            for(var j= 0 ;j<price.length; j++){
+                if(i===j){
+                    total += parseFloat(num[i].value)* parseFloat(price[j].innerHTML);
+                    console.log(num[i].value,price[i].innerHTML,total);
+                }
+            }
+        }
+        document.getElementById("totalPrice").innerText = "总价：￥"+ total.toString() ;
 	});
 
 	// This button will decrement the value till 1
@@ -97,6 +110,20 @@ $(document).ready(function()
 			// Otherwise put a 1 there
 			$(fieldName).val(1);
 		}
+
+        var num = document.getElementsByName("quantity");
+        var price = document.getElementsByClassName("goodPrice");
+
+        var total = 0;
+        for(var i = 0; i< num.length; i++){
+            for(var j= 0 ;j<price.length; j++){
+                if(i===j){
+                    total += parseFloat(num[i].value)* parseFloat(price[j].innerHTML);
+                    console.log(num[i].value,price[i].innerHTML,total);
+                }
+            }
+        }
+        document.getElementById("totalPrice").innerText = "总价：￥"+ total.toString() ;
 	});
 
 	// Hide billing details row

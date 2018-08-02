@@ -1,6 +1,9 @@
 package com.chinasofti.ssm.controller;
 
+import com.chinasofti.ssm.biz.AdminBiz;
 import com.chinasofti.ssm.biz.GoodBiz;
+import com.chinasofti.ssm.biz.ProviderBiz;
+import com.chinasofti.ssm.domain.Admin;
 import com.chinasofti.ssm.domain.Good;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -15,6 +19,8 @@ public class GoodController {
 
     @Autowired
     private GoodBiz goodBiz;
+    @Autowired
+    private AdminBiz adminBiz;
 
     @RequestMapping("/GoodFindAll")
     public String goodFindAll(HttpServletRequest request){
@@ -48,5 +54,17 @@ public class GoodController {
             return "info";
         }else
             return "";
+    }
+
+    @RequestMapping("/GetGood")
+    public String getGood(HttpServletRequest request){
+        List<Good> goods = goodBiz.findAll();
+        request.setAttribute("goods",goods);
+        //String adminId = request.getParameter("");
+        //Admin admin1 = adminBiz.findByAdminId(adminId);
+        HttpSession session = request.getSession();
+        Admin admin = adminBiz.findByAdminId("1");
+        session.setAttribute("admin",admin);
+        return "getgood";
     }
 }

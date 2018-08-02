@@ -21,10 +21,10 @@
         </select>
         <insert id="insert" parameterType="Admin">
             insert into admin
-            (id,adminId,adminName,adminTel,adminPhone,adminEmail,adminPassword,deleteStatus)
-            values(#{id},#{adminId},#{adminName},#{adminTel},#{adminPhone},#{adminEmail},#{adminPassword},#{deleteStatus})
+            (id,adminId,adminName,adminTel,adminPhone,adminEmail,adminPassword,deleteStatus,adminMessage,adminTtile)
+            values(#{id},#{adminId},#{adminName},#{adminTel},#{adminPhone},#{adminEmail},#{adminPassword},#{deleteStatus},#{amindMessage},#{adminTitle})
         </insert>
-        <update id="uodate" parameterType="Admin">
+        <update id="update" parameterType="Admin">
             update admin set
                       adminId=#{adminId},
                       adminName=#{adminName},
@@ -32,8 +32,15 @@
                       adminPhone=#{adminPhone},
                       adminEmail=#{adminEmail},
                       adminPassword=#{adminPassword},
-                      deleteStatus=#{deleteStatus};
+                      deleteStatus=#{deleteStatus},
+                      adminMessage=#{adminMessage}.
+                      adminTitle=#{adminTitle}
              where id=#{id}
+        </update>
+        <update id="modifypwd" parameterType="Admin">
+            update admin set
+            adminPassword = #{adminPassword}
+            where id = #{id}
         </update>
         <delete id="delete" parameterType="String">
             delete from admin

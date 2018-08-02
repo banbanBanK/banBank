@@ -16,4 +16,5 @@ public interface OrderDao extends GenericDao<Order, Integer> {
     int update(Order order);
     int delete(Order order);
     int delete(Integer Id);
+    int doneOrder(String customerId);
 }
