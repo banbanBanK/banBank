@@ -37,24 +37,30 @@ $(function() {
             
             customerId.bind("blur", function() {
   	//ajax后台验证--userCode是否已存在
-  	
-  	$.ajax({
-  		type: "POST", //请求类型
-  		url: "../jsp/customer-add.do", //请求的url
-  		data:{customerId:customerId.val()}, //请求参数
-  		dataType: "json", //ajax接口（请求url）返回的数据类型
-  		success: function(data) { //data：返回数据（json对象）
-  			if(data) { //账号已存在，错误提示
-  				validateTip(customerIdNext, {
-  					"color": "red"
-  				}, imgNo + " 该账号已存在", false);
-  			} else { //账号可用，正确提示
-  				validateTip(customerIdNext, {
-  					"color": "green"
-  				}, imgYes+"账号可用", true);
-  			}
-  		},
-  	});
+				if(customerId.val().length>0){
+                    $.ajax({
+                        type: "POST", //请求类型
+                        url: "../jsp/customer-add.do", //请求的url
+                        data: {customerId: customerId.val()}, //请求参数
+                        dataType: "json", //ajax接口（请求url）返回的数据类型
+                        success: function (data) { //data：返回数据（json对象）
+                            if (data) { //账号已存在，错误提示
+                                validateTip(customerIdNext, {
+                                    "color": "red"
+                                }, imgNo + " 该账号已存在", false);
+                            } else { //账号可用，正确提示
+                                validateTip(customerIdNext, {
+                                    "color": "green"
+                                }, imgYes + "账号可用", true);
+                            }
+                        },
+                    });
+                }
+                else{
+                    validateTip(customerIdNext, {
+                        "color": "red"
+                    }, imgNo + "账号不能为空", false);
+				}
 
   }).bind("focus", function() {
   	//显示友情提示
@@ -96,6 +102,9 @@ $(function() {
 			});
 			
 			signupBtn.bind("click", function() {
+                if(customerIdNext.attr("validateStatus") != "true") {
+                    customerId.blur();}
+                    else
 		    if(passwordNext.attr("validateStatus") != "true") {
 				password.blur();
 			} else if(rPasswordNext.attr("validateStatus") != "true") {
@@ -106,6 +115,7 @@ $(function() {
 				
 			}
 			});
+
 			province.bind("focus",function(){
 			$.ajax({
 	type: "POST",

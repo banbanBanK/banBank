@@ -5,7 +5,7 @@
         <resultMap type="Admin" id="resultAdmin" autoMapping="true">
           <id property="id" column="id"/>
         </resultMap>
-        <select id="fingByAdminId" parameterType="String" resultMap="resultAdmin">
+        <select id="findByAdminId" parameterType="String" resultMap="resultAdmin">
              select *
              from admin
              where adminId=#{adminId}

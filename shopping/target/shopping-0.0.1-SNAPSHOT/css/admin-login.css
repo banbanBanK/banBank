@@ -1,0 +1,39 @@
+div#page-wrapper-login {
+    margin: 0em 0 0 0em;
+	transition:.5s all;
+	-webkit-transition:.5s all;
+	-moz-transition:.5s all;
+	padding:7em 2em 2.5em;
+	background-color: #F1F1F1;
+	min-height: 246px;
+}
+#page-wrapper-login .login-page {
+    width: 36%;
+}
+#comments-h3{
+    font-size: 2em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    color: black;
+}
+#content-right {
+    background-color: #F0F0F0;
+}
+#bg{
+    height: 28px;
+    width: 150px;
+    background: url("../images/stars-white.jpg") no-repeat;
+}
+#over{
+    height: 28px;
+    background:url("../images/stars-choosed.jpg") no-repeat;
+}
+#bgall{
+    height: 28px;
+    width: 150px;
+    background: url("../images/stars-white.jpg") no-repeat;
+}
+#overall{
+    height: 28px;
+    background:url("../images/stars-choosed.jpg") no-repeat;
+}
