@@ -70,5 +70,5 @@ public class Provider implements Serializable{
 	public void setGood(Good good) {
 		this.good = good;
 	}
-	
+
 }

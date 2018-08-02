@@ -2,15 +2,16 @@ package com.chinasofti.ssm.biz;
 
 import java.util.List;
 
-import com.chinasofti.ssm.domain.Good;
+		import com.chinasofti.ssm.domain.Good;
 
 public interface GoodBiz {
 	List<Good> findByName(String GoodName);
 	List<Good> findByPrice(double GoodPrice);
 	List<Good> findByType(Integer TypeId);
-	List<Good> findByProvider(Integer ProviderId);
+	List<Good> findByProviderId(String ProviderId);
 	Good findByGoodId(String GoodId);
-	
+	String findProviderIdByGoodId(String GoodId);
+
 	Good findById(Integer Id);
 	List<Good> findAll();
 

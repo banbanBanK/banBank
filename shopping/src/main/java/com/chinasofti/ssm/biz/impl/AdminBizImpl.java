@@ -39,4 +39,8 @@ public class AdminBizImpl implements AdminBiz {
 		return adminDao.delete(adminId);
 	}
 
+	public int modifypwd(Admin admin) {
+		return adminDao.modifypwd(admin);
+	}
+
 }
