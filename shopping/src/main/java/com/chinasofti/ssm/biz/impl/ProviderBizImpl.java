@@ -29,6 +29,10 @@ public class ProviderBizImpl implements ProviderBiz {
         return providerDao.findByAddress(Address);
     }
 
+    public Provider findByProviderId(String providerId) {
+        return providerDao.findByProviderId(providerId);
+    }
+
     public boolean insert(Provider provider) {
         return providerDao.insert(provider)==1;
     }
