@@ -95,4 +95,11 @@ public class TestGoodBiz{
 	public void testUpdate(){
 
 	}
+	@Test
+	public void tets1(){
+		List<Good> goods = GoodBiz.findAll();
+		String s = goods.get(1).getGoodName();
+		System.out.println(s);
+	}
+
 }
