@@ -28,8 +28,25 @@ public class AdminController {
 		return "AdminInfo";
 	}
 
+	@RequestMapping("/UpdateAdmin")
+	public String updateadmin(HttpServletRequest request){
+		//String adminId = request.getParameter("");
+		//Admin admin1 = adminBiz.findByAdminId(adminId);
+		Admin admin = adminBiz.findByAdminId("1");
+		adminBiz.update(admin);
+		return "AdminInfo";
+	}
+
 	@RequestMapping("/PwdModify")
 	public String modify(HttpServletRequest request){
+		//String adminId = request.getParameter("");
+		//Admin admin1 = adminBiz.findByAdminId(adminId);
+		Admin admin = adminBiz.findByAdminId("1");
+		HttpSession session = request.getSession();
+		session.setAttribute("admin",admin);
+		admin.setAdminPassword((String)request.getAttribute("adminPassword"));
+		adminBiz.modifypwd(admin);
 		return "PwdModify";
 	}
+
 }

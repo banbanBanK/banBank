@@ -37,5 +37,5 @@ public class Type implements Serializable{
 	public void setFavors(Set<Favor> favors) {
 		this.favors = favors;
 	}
-	
+
 }

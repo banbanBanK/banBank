@@ -9,4 +9,5 @@ public interface AdminBiz {
 	public int insert(Admin admin);
 	public int update(Admin admin);
 	public int delete(String adminId);
+	public int modifypwd(Admin admin);
 }

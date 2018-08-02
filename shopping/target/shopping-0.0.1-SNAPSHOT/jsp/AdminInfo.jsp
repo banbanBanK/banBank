@@ -63,7 +63,7 @@
     <!--//Metis Menu -->
 </head>
 <body class="cbp-spmenu-push" style="font-family:'calisto mt'">
-<div class="main-content">
+<div class="main-content" onload="getData()">
     <!--left-fixed -navigation-->
     <div class=" sidebar" role="navigation">
         <div class="navbar-collapse">
@@ -323,36 +323,36 @@
                         <h3 style="font-family:'calisto mt'">Contact Me</h3>
                     </div>
                     <div class="contact-form">
-                        <form action="#" method="post">
+                        <form action="/UpdateAdmin" method="post">
                             <div class="fields-grid">
                                 <div class="styled-input agile-styled-input-top">
-                                    <input type="text" name="Full Name" required="">
+                                    <input type="text" name="adminName" value="<%=admin.getAdminName()%>" required="">
                                     <label>我的昵称*</label>
                                     <span></span>
                                 </div>
                                 <div class="styled-input agile-styled-input-top">
-                                    <input type="text" name="Phone" required="">
+                                    <input type="text" name="adminTel" value="<%=admin.getAdminTel()%>" required="">
                                     <label>我的电话*</label>
                                     <span></span>
                                 </div>
                                 <div class="styled-input">
-                                    <input type="text" name="Email" required="">
+                                    <input type="text" name="adminEmail" value="<%=admin.getAdminEmail()%>" required="">
                                     <label>我的邮件*</label>
                                     <span></span>
                                 </div>
                                 <div class="styled-input">
-                                    <input type="text" name="Gender" required="">
+                                    <input type="text" name="adminGender" value="<%=admin.getAdminGender()%>" required="">
                                     <label>我的性别*</label>
                                     <span></span>
                                 </div>
                                 <div class="clearfix"> </div>
                             </div>
                             <div class="styled-input textarea-grid">
-                                <textarea name="Message" required></textarea>
+                                <textarea name="adminMessage"   required><%=admin.getAdminMessage()%></textarea>
                                 <label>我的个性简介</label>
                                 <span></span>
                             </div>
-                            <input type="submit" value="SEND" onclick="submit()">
+                            <input type="submit" value="SEND">
                         </form>
                     </div>
                 </div>
@@ -370,17 +370,6 @@
 <!--  contact me 更新部分的script代码  -->
 <script src="../js/bars.js"></script>
 <script src="../js/owl.carousel.js"></script>
-<script>
-    <% Admin proadmin = (Admin) session.getAttribute("admin");%>
-    document.getElementById('Full Name').value = <%=proadmin.getAdminName()%>;
-    document.getElementById('Phone').value = <%=proadmin.getAdminTel()%>;
-    document.getElementById('Email').value = <%=proadmin.getAdminEmail()%>;
-    document.getElementById('Gender').value = <%=proadmin.getAdminGender()%>;
-    document.getElementById('Message').value = <%=proadmin.getAdminMessage()%>;
-    function submit() {
-
-    }
-</script>
 <!-- //contact -->
 
 <!-- Classie -->

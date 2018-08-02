@@ -24,7 +24,7 @@
             (id,adminId,adminName,adminTel,adminPhone,adminEmail,adminPassword,deleteStatus,adminMessage,adminTtile)
             values(#{id},#{adminId},#{adminName},#{adminTel},#{adminPhone},#{adminEmail},#{adminPassword},#{deleteStatus},#{amindMessage},#{adminTitle})
         </insert>
-        <update id="uodate" parameterType="Admin">
+        <update id="update" parameterType="Admin">
             update admin set
                       adminId=#{adminId},
                       adminName=#{adminName},
@@ -34,8 +34,13 @@
                       adminPassword=#{adminPassword},
                       deleteStatus=#{deleteStatus},
                       adminMessage=#{adminMessage}.
-                      adminTitle=#{adminTitle};
+                      adminTitle=#{adminTitle}
              where id=#{id}
+        </update>
+        <update id="modifypwd" parameterType="Admin">
+            update admin set
+            adminPassword = #{adminPassword}
+            where id = #{id}
         </update>
         <delete id="delete" parameterType="String">
             delete from admin

@@ -13,7 +13,7 @@ public class GoodBizImpl implements GoodBiz {
 
 	@Autowired
 	private GoodDao goodDao;
-	
+
 	public List<Good> findByName(String GoodName) {
 		// TODO Auto-generated method stub
 		return goodDao.findByName(GoodName);
@@ -29,14 +29,18 @@ public class GoodBizImpl implements GoodBiz {
 		return goodDao.findByType(TypeId);
 	}
 
-	public List<Good> findByProvider(Integer ProviderId) {
+	public List<Good> findByProviderId(String ProviderId) {
 		// TODO Auto-generated method stub
-		return goodDao.findByProvider(ProviderId);
+		return goodDao.findByProviderId(ProviderId);
 	}
 
 	public Good findByGoodId(String GoodId) {
 		// TODO Auto-generated method stub
 		return goodDao.findByGoodId(GoodId);
+	}
+
+	public String findProviderIdByGoodId(String GoodId) {
+		return goodDao.findProviderIdByGoodId(GoodId);
 	}
 
 	public Good findById(Integer Id) {

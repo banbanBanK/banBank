@@ -1,3 +1,4 @@
+<%@ page import="com.chinasofti.ssm.domain.Admin" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -207,7 +208,6 @@
     <!-- main content start-->
     <div id="page-wrapper">
         <div class="main-page">
-
             <div style="display:none"></div><form id="msform">
             <!-- progressbar -->
             <ul id="progressbar" style="font-family: '楷体'">
@@ -219,17 +219,17 @@
             <fieldset>
                 <h2 class="fs-title">请进行身份验证</h2>
                 <h3 class="fs-subtitle">这是步骤1</h3>
-                <input type="password" name="pass" placeholder="Password" />
-                <input type="password" name="cpass" placeholder="Confirm Password" />
-                <input type="button" name="next" class="next action-button" value="Next" />
+                <input type="password" name="pass" id="pass" placeholder="Password" />
+                <input type="password" name="cpass" id="cpass" placeholder="Confirm Password" />
+                <input type="button" name="submit1" class="submit1 action-button" value="Submit" />
             </fieldset>
             <fieldset>
                 <h2 class="fs-title">请设置新密码</h2>
                 <h3 class="fs-subtitle">我们不会向他人透露该信息</h3>
-                <input type="password" name="pass" placeholder="Password" />
-                <input type="password" name="cpass" placeholder="Confirm Password" />
+                <input type="password" name="pass" id="pass1" placeholder="Password" />
+                <input type="password" name="cpass" id="cpass1" placeholder="Confirm Password" />
                 <input type="button" name="previous" class="previous action-button" value="Previous" />
-                <input type="submit" name="submit" class="submit action-button" value="Submit" />
+                <input type="submit" name="submit2" class="submit2 action-button" value="Submit" />
             </fieldset>
             <fieldset>
                 <h2 class="fs-title">Congratulations!</h2>
@@ -240,7 +240,6 @@
             </fieldset>
         </form>
             <script src="../jsyqw/jquery.easing.min.js" type="text/javascript"></script>
-            <script src="../jsyqw/jQuery.time.js" type="text/javascript"></script>
             <br><br><br><br><br><br><br><br><br><br>
             <br><br><br><br><br><br><br><br><br><br>
 
@@ -253,6 +252,145 @@
     </div>
     <!--//footer-->
 </div>
+
+<script>
+    <%
+        Admin admin = (Admin) session.getAttribute("admin");
+    %>
+    //jQuery time
+    var current_fs, next_fs, previous_fs; //fieldsets
+    var left, opacity, scale; //fieldset properties which we will animate
+    var animating; //flag to prevent quick multi-click glitches
+
+    $(".previous").click(function(){
+        if(animating) return false;
+        animating = true;
+
+        current_fs = $(this).parent();
+        previous_fs = $(this).parent().prev();
+
+        //de-activate current step on progressbar
+        $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+        //show the previous fieldset
+        previous_fs.show();
+        //hide the current fieldset with style
+        current_fs.animate({opacity: 0}, {
+            step: function(now, mx) {
+                //as the opacity of current_fs reduces to 0 - stored in "now"
+                //1. scale previous_fs from 80% to 100%
+                scale = 0.8 + (1 - now) * 0.2;
+                //2. take current_fs to the right(50%) - from 0%
+                left = ((1-now) * 50)+"%";
+                //3. increase opacity of previous_fs to 1 as it moves in
+                opacity = 1 - now;
+                current_fs.css({'left': left});
+                previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+            },
+            duration: 800,
+            complete: function(){
+                current_fs.hide();
+                animating = false;
+            },
+            //this comes from the custom easing plugin
+            easing: 'easeInOutBack'
+        });
+    });
+
+    $(".submit1").click(function(){
+        if(animating) return false;
+        animating = true;
+
+        current_fs = $(this).parent();
+        next_fs = $(this).parent().next();
+
+        var s1 = document.getElementById("pass");
+        var s2 = document.getElementById("cpass");
+        var v1 = s1.value;
+        var v2 = s2.value;
+        if(v1 == v2) {
+            if(v1 == <%=admin.getAdminPassword()%>){
+                //activate next step on progressbar using the index of next_fs
+                $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+                //show the next fieldset
+                next_fs.show();
+                //hide the current fieldset with style
+                current_fs.animate({opacity: 0}, {
+                    step: function(now, mx) {
+                        //as the opacity of current_fs reduces to 0 - stored in "now"
+                        //1. scale current_fs down to 80%
+                        scale = 1 - (1 - now) * 0.2;
+                        //2. bring next_fs from the right(50%)
+                        left = (now * 50)+"%";
+                        //3. increase opacity of next_fs to 1 as it moves in
+                        opacity = 1 - now;
+                        current_fs.css({'transform': 'scale('+scale+')'});
+                        next_fs.css({'left': left, 'opacity': opacity});
+                    },
+                    duration: 800,
+                    complete: function(){
+                        current_fs.hide();
+                        animating = false;
+                    },
+                    //this comes from the custom easing plugin
+                    easing: 'easeInOutBack'
+                });
+            }
+        }else{
+            return false;
+        }
+    });
+
+    $(".submit2").click(function () {
+        if (animating) return false;
+        animating = true;
+
+        current_fs = $(this).parent();
+        next_fs = $(this).parent().next();
+
+        if (document.getElementById("pass1").val() == document.getElementById("cpass1").val()) {
+            $.ajax({
+                    url:'../PwdModify',
+                    type:'POST',
+                    data:{adminPassword:document.getElementById("pass1").val()},
+                }
+            )
+
+            //activate next step on progressbar using the index of next_fs
+            $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+            //show the next fieldset
+            next_fs.show();
+            //hide the current fieldset with style
+            current_fs.animate({opacity: 0}, {
+                step: function(now, mx) {
+                    //as the opacity of current_fs reduces to 0 - stored in "now"
+                    //1. scale current_fs down to 80%
+                    scale = 1 - (1 - now) * 0.2;
+                    //2. bring next_fs from the right(50%)
+                    left = (now * 50)+"%";
+                    //3. increase opacity of next_fs to 1 as it moves in
+                    opacity = 1 - now;
+                    current_fs.css({'transform': 'scale('+scale+')'});
+                    next_fs.css({'left': left, 'opacity': opacity});
+                },
+                duration: 800,
+                complete: function(){
+                    current_fs.hide();
+                    animating = false;
+                },
+                //this comes from the custom easing plugin
+                easing: 'easeInOutBack'
+            });
+        }
+        else {
+            return false;
+        }
+    })
+</script>
+
+
 <!-- Classie -->
 <script src="../js/classie.js"></script>
 <script>
