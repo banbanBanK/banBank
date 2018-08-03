@@ -26,7 +26,7 @@
     <select id="findById" parameterType="Integer" resultMap="CardResultMap">
         select *
         from cards
-        where Id = #{Id} and DeleteStatus = 1
+        where Id = #{id} and DeleteStatus = 1
     </select>
     <select id="findByCustomerId" parameterType="String" resultMap="CardResultMap">
         select *
@@ -41,12 +41,12 @@
 
     <insert id="insert" parameterType="com.chinasofti.ssm.domain.Card" useGeneratedKeys="true" keyProperty="Id">
 		insert into cards
-		values(null,#{CardId},#{customer.CustomerId},#{Account},#{DeleteStatus})
+		values(null,#{cardId},#{customer.customerId},#{account},#{deleteStatus})
 	</insert>
     <update id="update" parameterType="com.chinasofti.ssm.domain.Card">
 		update cards
-		set CardId =#{CardId}, CustomerId = #{customer.CustomerId}, Account = #{Account}, DeleteStatus = #{DeleteStatus}
-		where Id = #{Id}
+		set CardId =#{cardId}, CustomerId = #{customer.customerId}, Account = #{account}, DeleteStatus = #{deleteStatus}
+		where Id = #{id}
 	</update>
     <delete id="deleteById" parameterType="int">
 		update cards

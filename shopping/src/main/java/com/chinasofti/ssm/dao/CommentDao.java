@@ -8,13 +8,13 @@ import java.sql.Timestamp;
 import java.util.List;
 
 public interface CommentDao extends GenericDao<Comment, Integer> {
-    public List<Comment> findByCreateTime(Timestamp createTime);
-    public List<Comment> findByGoodId(String goodId);
-    public List<Comment> findByCustomerId(String customerId);
+    List<Comment> findByCreateTime(Timestamp createTime);
+    List<Comment> findByGoodId(String goodId);
+    List<Comment> findByCustomerId(String customerId);
 
-    public int insert(Comment comment);
-    public int update(Comment comment);
-    public int deleteById(int id);
-//    public boolean deleteForCustomer(Customer customer);
-//    public boolean deleteForGood(Good good);
+    int insert(Comment comment);
+    int update(Comment comment);
+    int deleteById(int id);
+//    boolean deleteForCustomer(Customer customer);
+//    boolean deleteForGood(Good good);
 }

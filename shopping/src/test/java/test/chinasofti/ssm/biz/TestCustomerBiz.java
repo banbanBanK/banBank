@@ -17,7 +17,7 @@ public class TestCustomerBiz {
     private CustomerBiz customerBiz;
     @Test
     public void findByCustomerId(){
-        Customer customer = customerBiz.findByCustomerId("happy");
+        Customer customer = customerBiz.findByCustomerId("1");
         System.out.println(customer.getCustomerName());
     }
 }

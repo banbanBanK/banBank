@@ -6,14 +6,14 @@ import java.util.Set;
 
 @SuppressWarnings("serial")
 public class Good implements Serializable{
-	private Integer Id;
-	private String GoodId;
-	private String GoodName;
-	private double GoodPrice;
-	private String GoodImage;
-	private Integer GoodStock;
-	private Integer GoodSaleSum;
-	private Integer DeleteStatus;
+	private Integer id;
+	private String goodId;
+	private String goodName;
+	private double goodPrice;
+	private String goodImage;
+	private Integer goodStock;
+	private Integer goodSaleSum;
+	private Integer deleteStatus;
 	private Set<Comment> comments = new HashSet<Comment>();
 	private Type type;
 	private Provider provider;
@@ -24,52 +24,52 @@ public class Good implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 	public Integer getId() {
-		return Id;
+		return id;
 	}
 	public void setId(Integer id) {
-		Id = id;
+		this.id = id;
 	}
 	public String getGoodId() {
-		return GoodId;
+		return goodId;
 	}
 	public void setGoodId(String goodId) {
-		GoodId = goodId;
+		this.goodId = goodId;
 	}
 	public String getGoodName() {
-		return GoodName;
+		return goodName;
 	}
 	public void setGoodName(String goodName) {
-		GoodName = goodName;
+		this.goodName = goodName;
 	}
 	public double getGoodPrice() {
-		return GoodPrice;
+		return goodPrice;
 	}
 	public void setGoodPrice(double goodPrice) {
-		GoodPrice = goodPrice;
+		this.goodPrice = goodPrice;
 	}
 	public String getGoodImage() {
-		return GoodImage;
+		return goodImage;
 	}
 	public void setGoodImage(String goodImage) {
-		GoodImage = goodImage;
+		this.goodImage = goodImage;
 	}
 	public Integer getGoodStock() {
-		return GoodStock;
+		return goodStock;
 	}
 	public void setGoodStock(Integer goodStock) {
-		GoodStock = goodStock;
+		this.goodStock = goodStock;
 	}
 	public Integer getGoodSaleSum() {
-		return GoodSaleSum;
+		return goodSaleSum;
 	}
 	public void setGoodSaleSum(Integer goodSaleSum) {
-		GoodSaleSum = goodSaleSum;
+		this.goodSaleSum = goodSaleSum;
 	}
 	public Integer getDeleteStatus() {
-		return DeleteStatus;
+		return deleteStatus;
 	}
 	public void setDeleteStatus(Integer deleteStatus) {
-		DeleteStatus = deleteStatus;
+		this.deleteStatus = deleteStatus;
 	}
 	public Set<Comment> getComments() {
 		return comments;
