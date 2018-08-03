@@ -28,7 +28,7 @@ public class AdminController {
 		return "AdminInfo";
 	}
 
-	@RequestMapping("/UpdateAdmin")
+	@RequestMapping("/updateadmin")
 	public String updateadmin(HttpServletRequest request){
 		//String adminId = request.getParameter("");
 		//Admin admin1 = adminBiz.findByAdminId(adminId);

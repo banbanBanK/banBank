@@ -70,7 +70,7 @@
             <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="/InfoView" class="active" style="font-family:'楷体'"><i class="fa fa-home nav_icon"></i>信息汇总</a>
+                        <a href="/InfoView"  style="font-family:'楷体'"><i class="fa fa-home nav_icon"></i>信息汇总</a>
                     </li>
                     <li>
                         <a href="/getgood" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>进货计划<span class="nav-badge">03</span></a>
@@ -323,36 +323,36 @@
                         <h3 style="font-family:'calisto mt'">Contact Me</h3>
                     </div>
                     <div class="contact-form">
-                        <form action="#" method="post">
+                        <form action="/updateadmin" method="post">
                             <div class="fields-grid">
                                 <div class="styled-input agile-styled-input-top">
-                                    <input type="text" name="adminName" value="<%=admin.getAdminName()%>" required="">
+                                    <input type="text" id="adminName" name="adminName" value="<%=admin.getAdminName()%>" required="">
                                     <label>我的昵称*</label>
                                     <span></span>
                                 </div>
                                 <div class="styled-input agile-styled-input-top">
-                                    <input type="text" name="adminTel" value="<%=admin.getAdminTel()%>" required="">
+                                    <input type="text" id="adminTel" name="adminTel" value="<%=admin.getAdminTel()%>" required="">
                                     <label>我的电话*</label>
                                     <span></span>
                                 </div>
                                 <div class="styled-input">
-                                    <input type="text" name="adminEmail" value="<%=admin.getAdminEmail()%>" required="">
+                                    <input type="text" id="adminEmail" name="adminEmail" value="<%=admin.getAdminEmail()%>" required="">
                                     <label>我的邮件*</label>
                                     <span></span>
                                 </div>
                                 <div class="styled-input">
-                                    <input type="text" name="adminGender" value="<%=admin.getAdminGender()%>" required="">
+                                    <input type="text" id="adminGender" name="adminGender" value="<%=admin.getAdminGender()%>" required="">
                                     <label>我的性别*</label>
                                     <span></span>
                                 </div>
                                 <div class="clearfix"> </div>
                             </div>
                             <div class="styled-input textarea-grid">
-                                <textarea name="adminMessage"   required><%=admin.getAdminMessage()%></textarea>
+                                <textarea id="adminMessage"  name="adminMessage" required=""><%=admin.getAdminMessage()%></textarea>
                                 <label>我的个性简介</label>
                                 <span></span>
                             </div>
-                            <input type="button" value="SEND" href="../UpdateAdmin">
+                            <input type="submit" value="SEND"  id="submit" >
                         </form>
                     </div>
                 </div>

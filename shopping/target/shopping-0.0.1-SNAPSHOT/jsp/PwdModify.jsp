@@ -338,6 +338,7 @@
                 });
             }
         }else{
+            alert("密码输入错误");
             return false;
         }
     });
@@ -393,6 +394,7 @@
             });
         }
         else {
+            alert("两次输入的密码不一致！");
             return false;
         }
     })

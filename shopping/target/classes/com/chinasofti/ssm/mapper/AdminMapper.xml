@@ -26,15 +26,11 @@
         </insert>
         <update id="update" parameterType="Admin">
             update admin set
-                      adminId=#{adminId},
                       adminName=#{adminName},
                       adminTel=#{adminTel},
-                      adminPhone=#{adminPhone},
                       adminEmail=#{adminEmail},
-                      adminPassword=#{adminPassword},
-                      deleteStatus=#{deleteStatus},
-                      adminMessage=#{adminMessage}.
-                      adminTitle=#{adminTitle}
+                      adminGender=#{adminGender},
+                      adminMessage=#{adminMessage}
              where id=#{id}
         </update>
         <update id="modifypwd" parameterType="Admin">
