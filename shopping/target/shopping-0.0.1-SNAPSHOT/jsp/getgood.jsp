@@ -20,6 +20,7 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
     <link href="../cssGet/bootstrap.css" rel="stylesheet" />
     <link href="../cssGet/fresh-bootstrap-table.css" rel="stylesheet" />
+    <link href="../cssyqw/fonticon.css" rel="stylesheet">
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
@@ -218,7 +219,7 @@
     <div id="page-wrapper" style="background-color: #e6e2c3;font-family:Calibri">
         <div class="main-page" >
             <div class="wrapper">
-                <div class="fresh-table full-color-blue full-screen-table">
+                <div class="fresh-table full-color-green full-screen-table">
                     <!--    Available colors for the full background: full-color-blue, full-color-azure, full-color-green, full-color-red, full-color-orange
                             Available colors only for the toolbar: toolbar-color-blue, toolbar-color-azure, toolbar-color-green, toolbar-color-red, toolbar-color-orange
                     -->
@@ -227,8 +228,9 @@
                         <th data-field="id" style="font-family: 楷体">编号</th>
                         <th data-field="name" data-sortable="true" style="font-family: 楷体">商品名</th>
                         <th data-field="price" data-sortable="true" style="font-family: 楷体">商品进货单价</th>
+                        <th data-field="num" data-sortable="true" style="font-family: 楷体">商品库存</th>
                         <th data-field="provider" data-sortable="true" style="font-family: 楷体">供应商</th>
-                        <th data-field="num" style="font-family: 楷体">进货数量</th>
+                        <th data-field="actions"  style="font-family: 楷体" >操作</th>
                         </thead>
                         <tbody>
                         <%
@@ -237,12 +239,14 @@
                                 for(Good good : goods){
                         %>
                                 <tr>
-                                    <td><%=good.getGoodId()%></td>
+                                    <td class="useful"><%=good.getGoodId()%></td>
                                     <td><%=good.getGoodName()%></td>
                                     <td><%=good.getGoodPrice()%></td>
+                                    <td><%=good.getGoodStock()%></td>
                                     <td><%=good.getProvider().getProviderName()%></td>
-                                    <td><input type="text" name="num" style="border: none;background-color: rgba(255, 255, 255, 0.15);width: 70px">
-                                        <input type="submit" name="submit" value="submit" style="border:none;width: 65px;background-color: rgba(255, 255, 255, 0.15)" >
+                                    <td>
+                                        <a rel="tooltip"  onclick="openLook(<%=good.getGoodId()%>)"  title="查看商品详细信息"><img src="../FontIcon/look.png" style="width: 15px;height: 15px" /></a>
+                                        <a rel="tooltip"  onclick="openGet(<%=good.getGoodId()%>)"  title="进货"><img src="../FontIcon/getmoregood.png" style="width: 15px;height: 15px" /></a>
                                     </td>
                                 </tr>
                         <%
@@ -268,18 +272,23 @@
 <script type="text/javascript" src="../jsGet/bootstrap.js"></script>
 <script type="text/javascript" src="../jsGet/bootstrap-table.js"></script>
 
+<script>
+    function openLook(userFul) {
+        window.open ("/look?goodId="+userFul, "newwindow", "height=400, width=600, top=180, left=400" +
+            "toolbar =no, menubar=no, scrollbars=no, resizable=no, location=no, status=no") //写成一行
+    }
+    function openGet(userFul) {
+        window.open ("/get?goodId="+userFul, "newwindow", "height=400, width=600, top=180, left=400" +
+            "toolbar =no, menubar=no, scrollbars=no, resizable=no, location=no, status=no") //写成一行
+    }
+</script>
+
 <script type="text/javascript">
     var $table = $('#fresh-table'),
         $alertBtn = $('#alertBtn'),
-        full_screen = false,
-        window_height;
+        full_screen = false;
 
     $().ready(function(){
-
-        window_height = $(window).height();
-        table_height = window_height ;
-
-
         $table.bootstrapTable({
             toolbar: ".toolbar",
 
@@ -289,10 +298,8 @@
             showColumns: true,
             pagination: true,
             striped: true,
-            sortable: true,
-            height: table_height,
-            pageSize: 25,
-            pageList: [25,50,100],
+            pageSize: 8,
+            pageList: [8,10,25,50,100],
 
             formatShowingRows: function(pageFrom, pageTo, totalRows){
                 //do nothing here, we don't want to show the text "showing x of y from..."
@@ -309,11 +316,13 @@
             }
         });
 
+
+
         $(window).resize(function () {
             $table.bootstrapTable('resetView');
         });
-    });
 
+    })
 </script>
 
 

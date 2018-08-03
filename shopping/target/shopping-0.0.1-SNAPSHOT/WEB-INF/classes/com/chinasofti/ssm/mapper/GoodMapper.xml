@@ -63,7 +63,7 @@
 	</insert>
 	<update id="update" parameterType="com.chinasofti.ssm.domain.Good">
 		update goods
-		set GoodId=#{GoodId},GoodName=#{GoodName},GoodPrice = #{GoodPrice},GoodImage = #{GoodImage},GoodStock=#{GoodStock},GoodSaleSum=#{GoodSaleSum},GoodComment=#{GoodComment},ProviderId=#{ProviderId},TypeId=#{TypeId},DeleteStatus=1
+		set GoodId=#{GoodId},GoodName=#{GoodName},GoodPrice = #{GoodPrice},GoodImage = #{GoodImage},GoodStock=#{GoodStock},GoodSaleSum=#{GoodSaleSum},DeleteStatus=1
 		where Id = #{Id} and DeleteStatus=1
 	</update>
 	<delete id="delete" parameterType="Integer">
