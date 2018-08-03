@@ -13,34 +13,37 @@ public class GoodBizImpl implements GoodBiz {
 
 	@Autowired
 	private GoodDao goodDao;
-
-	public List<Good> findByName(String GoodName) {
+	
+	public List<Good> findByName(String goodName) {
 		// TODO Auto-generated method stub
-		return goodDao.findByName(GoodName);
+		return goodDao.findByName(goodName);
 	}
 
-	public List<Good> findByPrice(double GoodPrice) {
-		return goodDao.findByPrice(GoodPrice);
+	public List<Good> findByPrice(double goodPrice) {
+		return goodDao.findByPrice(goodPrice);
+	}
+
+	public List<Good> findByChildrenTypeId(String typeId) {
+		return goodDao.findByChildrenTypeId(typeId);
+	}
+
+	public List<Good> findByRootTypeId(String typeId) {
+		return goodDao.findByRootTypeId(typeId);
+	}
+
+	public List<Good> findByProviderId(String providerId) {
+		return goodDao.findByProviderId(providerId);
 	}
 
 
-	public List<Good> findByType(Integer TypeId) {
+
+	public Good findByGoodId(String goodId) {
 		// TODO Auto-generated method stub
-		return goodDao.findByType(TypeId);
+		return goodDao.findByGoodId(goodId);
 	}
 
-	public List<Good> findByProviderId(String ProviderId) {
-		// TODO Auto-generated method stub
-		return goodDao.findByProviderId(ProviderId);
-	}
-
-	public Good findByGoodId(String GoodId) {
-		// TODO Auto-generated method stub
-		return goodDao.findByGoodId(GoodId);
-	}
-
-	public String findProviderIdByGoodId(String GoodId) {
-		return goodDao.findProviderIdByGoodId(GoodId);
+	public String findProviderIdByGoodId(String goodId) {
+		return goodDao.findProviderIdByGoodId(goodId);
 	}
 
 	public Good findById(Integer Id) {
@@ -57,8 +60,8 @@ public class GoodBizImpl implements GoodBiz {
 		return goodDao.insert(good)==1;
 	}
 
-	public boolean delete(Integer Id) {
-		return goodDao.delete(Id)==1;
+	public boolean delete(Integer id) {
+		return goodDao.delete(id)==1;
 	}
 
 	public boolean delete(Good good) {

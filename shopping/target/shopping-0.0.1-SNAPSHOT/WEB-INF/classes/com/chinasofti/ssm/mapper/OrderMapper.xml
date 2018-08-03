@@ -42,29 +42,29 @@
     <select id="findByIsDone" parameterType="Integer" resultMap="OrderResultMap">
         select *
         from orders
-        where IsDone = #{IsDone}
+        where IsDone = #{isDone}
     </select>
 
     <select id="findByCreateTime" parameterType="Date" resultMap="OrderResultMap">
         select *
         from orders
-        where CreateTime=#{CreateTime}
+        where CreateTime=#{createTime}
     </select>
 
     <insert id="insert" parameterType="com.chinasofti.ssm.domain.Order">
-        insert into orders values('',#{CustomerId},#{GoodId},#{GoodPrice},#{GoodNum},#{CreateTime},#{DeleteStatus},#{IsDone})
+        insert into orders values('',#{customerId},#{goodId},#{goodPrice},#{goodNum},#{createTime},#{deleteStatus},#{isDone})
     </insert>
 
     <delete id="delete" parameterType="Integer">
        update orders
        set DeleteStatus = 0
-       where Id = #{Id} and DeleteStatus = 1
+       where Id = #{id} and DeleteStatus = 1
     </delete>
 
     <update id="update" parameterType="com.chinasofti.ssm.domain.Order">
         update orders
-        set CustomerId=#{customer.CustomerId},GoodId=#{good.GoodId},GoodPrice=#{GoodPrice},GoodNum=#{GoodNum},CreateTime=#{CreateTime},DeleteStatus=#{DeleteStatus},IsDone=#{IsDone}
-        where Id=#{Id}
+        set CustomerId=#{customer.customerId},GoodId=#{good.goodId},GoodPrice=#{goodPrice},GoodNum=#{goodNum},CreateTime=#{createTime},DeleteStatus=#{deleteStatus},IsDone=#{isDone}
+        where Id=#{id}
     </update>
 
     <update id="doneOrder" parameterType="String">

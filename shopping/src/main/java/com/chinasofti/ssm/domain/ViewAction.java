@@ -4,9 +4,9 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 public class ViewAction implements Serializable{
-	private Integer Id;
-	private Timestamp ClickTime;
-	private Timestamp EndTime;
+	private Integer id;
+	private Timestamp clickTime;
+	private Timestamp endTime;
 	private Customer customer;
 	private Good good;
 	public ViewAction() {
@@ -14,22 +14,22 @@ public class ViewAction implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 	public Integer getId() {
-		return Id;
+		return id;
 	}
 	public void setId(Integer id) {
-		Id = id;
+		this.id = id;
 	}
 	public Timestamp getClickTime() {
-		return ClickTime;
+		return clickTime;
 	}
 	public void setClickTime(Timestamp clickTime) {
-		ClickTime = clickTime;
+		this.clickTime = clickTime;
 	}
 	public Timestamp getEndTime() {
-		return EndTime;
+		return endTime;
 	}
 	public void setEndTime(Timestamp endTime) {
-		EndTime = endTime;
+		this.endTime = endTime;
 	}
 	public Customer getCustomer() {
 		return customer;

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.chinasofti.ssm.dao.FaqDao">
+
+    <select id="getCustomerByCustomerId" parameterType="String" resultType="com.chinasofti.ssm.domain.Customer">
+		select *
+		from customers
+		where CustomerId = #{customerid}
+	</select>
+
+    <select id="getGoodByGoodId" parameterType="String" resultType="com.chinasofti.ssm.domain.Good">
+		select *
+		from goods
+		where GoodId = #{goodid}
+	</select>
+
+    <resultMap id="FaqResultMap" type="com.chinasofti.ssm.domain.Faq" autoMapping="true">
+        <association property="customer" column="customerid" select="getCustomerByCustomerId"></association>
+        <association property="good" column="goodid" select="getGoodByGoodId"></association>
+    </resultMap>
+
+
+
+    <select id="findAll" resultMap="FaqResultMap">
+        select *
+        from faq
+        where DeleteStatus = 1
+    </select>
+    <select id="findById" parameterType="int" resultMap="FaqResultMap">
+        select *
+        from faq
+        where id = #{id} and DeleteStatus = 1
+    </select>
+	<select id="findByGoodId" parameterType="String" resultMap="FaqResultMap">
+        select *
+        from faq
+        where goodid = #{goodId} and DeleteStatus = 1
+    </select>
+
+    <insert id="insert" parameterType="com.chinasofti.ssm.domain.Faq" useGeneratedKeys="true" keyProperty="Id">
+		insert
+		into faq
+		values(null,#{good.goodId},#{customer.customerId},#{question},#{answer},#{createTime},#{deleteStatus})
+	</insert>
+    <update id="update" parameterType="com.chinasofti.ssm.domain.Faq">
+		update faq
+		set goodid = #{good.goodId}, customerid = #{customer.customerId}, question = #{question}, answer = #{answer}, createtime = #{createTime}, deletestatus=#{deleteStatus}
+		where Id = #{id}
+	</update>
+    <delete id="deleteById" parameterType="int">
+		update faq
+		set deletestatus = 0
+		where id = #{id}
+	</delete>
+</mapper>

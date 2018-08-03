@@ -50,7 +50,4 @@ public class Address implements Serializable{
 	public void setDeleteStatus(Integer deleteStatus) {
 		this.deleteStatus = deleteStatus;
 	}
-	
-	
-
 }

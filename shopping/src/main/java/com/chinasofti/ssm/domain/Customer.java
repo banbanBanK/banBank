@@ -15,7 +15,7 @@ public class Customer implements Serializable{
 	private String customerEmail;
 	private String customerZipCode;
 	private String customerIdCard;
-	private Date customerBirthday;
+	private String customerBirthday;
 	private String customerPassword;
 	private Integer deleteStatus;
 	private Address address;
@@ -89,10 +89,10 @@ public class Customer implements Serializable{
 	public void setCustomerIdCard(String customerIdCard) {
 		this.customerIdCard = customerIdCard;
 	}
-	public Date getCustomerBirthday() {
+	public String getCustomerBirthday() {
 		return customerBirthday;
 	}
-	public void setCustomerBirthday(Date customerBirthday) {
+	public void setCustomerBirthday(String customerBirthday) {
 		this.customerBirthday = customerBirthday;
 	}
 	public String getCustomerPassword() {

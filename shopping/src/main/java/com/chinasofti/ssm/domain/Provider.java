@@ -1,74 +1,74 @@
 package com.chinasofti.ssm.domain;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class Provider implements Serializable{
-	private Integer Id;
-	private String ProviderId;
-	private String ProviderName;
-	private String ProviderTel;
-	private String ProviderPhone;
-	private String ProivderEmial;
-	private String ProviderZipCode;
-	private Integer DeleteStatus;
-	private Good good;
+	private Integer id;
+	private String providerId;
+	private String providerName;
+	private String providerTel;
+	private String providerPhone;
+	private String proivderEmial;
+	private String providerZipCode;
+	private Integer deleteStatus;
+	private List<Good> goods;
 	public Provider() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	public Integer getId() {
-		return Id;
+		return id;
 	}
 	public void setId(Integer id) {
-		Id = id;
+		this.id = id;
 	}
 	public String getProviderId() {
-		return ProviderId;
+		return providerId;
 	}
 	public void setProviderId(String providerId) {
-		ProviderId = providerId;
+		this.providerId = providerId;
 	}
 	public String getProviderName() {
-		return ProviderName;
+		return providerName;
 	}
 	public void setProviderName(String providerName) {
-		ProviderName = providerName;
+		this.providerName = providerName;
 	}
 	public String getProviderTel() {
-		return ProviderTel;
+		return providerTel;
 	}
 	public void setProviderTel(String providerTel) {
-		ProviderTel = providerTel;
+		this.providerTel = providerTel;
 	}
 	public String getProviderPhone() {
-		return ProviderPhone;
+		return providerPhone;
 	}
 	public void setProviderPhone(String providerPhone) {
-		ProviderPhone = providerPhone;
+		this.providerPhone = providerPhone;
 	}
 	public String getProivderEmial() {
-		return ProivderEmial;
+		return proivderEmial;
 	}
 	public void setProivderEmial(String proivderEmial) {
-		ProivderEmial = proivderEmial;
+		this.proivderEmial = proivderEmial;
 	}
 	public String getProviderZipCode() {
-		return ProviderZipCode;
+		return providerZipCode;
 	}
 	public void setProviderZipCode(String providerZipCode) {
-		ProviderZipCode = providerZipCode;
+		this.providerZipCode = providerZipCode;
 	}
 	public Integer getDeleteStatus() {
-		return DeleteStatus;
+		return deleteStatus;
 	}
 	public void setDeleteStatus(Integer deleteStatus) {
-		DeleteStatus = deleteStatus;
+		this.deleteStatus = deleteStatus;
 	}
-	public Good getGood() {
-		return good;
+	public List<Good> getGoods() {
+		return goods;
 	}
-	public void setGood(Good good) {
-		this.good = good;
+	public void setGoods(List<Good> goods) {
+		this.goods = goods;
 	}
-
 }
