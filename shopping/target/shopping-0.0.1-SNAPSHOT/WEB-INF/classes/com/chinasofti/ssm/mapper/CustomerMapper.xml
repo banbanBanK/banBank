@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.chinasofti.ssm.dao.CustomerDao">
@@ -13,55 +12,26 @@
     </resultMap>
 
     <select id="findByCustomerId" parameterType="String" resultMap="resultCustomer">
-=======
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
-"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.chinasofti.ssm.dao.CustomerDao">
-     <resultMap type="Customer" id="resultCustomer" autoMapping="true">
-          <id property="id" column="id"/>
-          <association property="address" javaType="Address" autoMapping="true">
-             <id property="id" column="aId"/>
-             <result property="deleteStatus" column="aDeleteStatus"/>
-          </association>
-     </resultMap>
-     <select id="findByCustomerId" parameterType="String" resultMap="resultCustomer">
->>>>>>> 7af4b23398edcfda6ea744208eb027a6a5bac2db
           select *,address.id as aId,address.deleteStatus as aDeleteStatus
 	      from  customers left outer join address on customers.customerAddressId=address.addressId
 	      where customerId=#{customerId}
      </select>
-<<<<<<< HEAD
     <select id="findByCustomerName" parameterType="String" resultMap="resultCustomer">
-=======
-     <select id="findByCustomerName" parameterType="String" resultMap="resultCustomer">
->>>>>>> 7af4b23398edcfda6ea744208eb027a6a5bac2db
           select *,address.id as aId,address.deleteStatus as aDeleteStatus
 	      from  customers left outer join address on customers.customerAddressId=address.addressId
 	      where customerName=#{customerName}
      </select>
-<<<<<<< HEAD
     <select id="findById" parameterType="int" resultMap="resultCustomer">
-=======
-     <select id="findById" parameterType="int" resultMap="resultCustomer">
->>>>>>> 7af4b23398edcfda6ea744208eb027a6a5bac2db
           select *,address.id as aId,address.deleteStatus as aDeleteStatus
 	      from  customers left outer join address on customers.customerAddressId=address.addressId
 	      where  id=#{id}
      </select>
-<<<<<<< HEAD
     <select id="findAll" resultMap="resultCustomer">
           select *,address.id as aId,address.deleteStatus as aDeleteStatus
 	      from  customers left outer join address on customers.customerAddressId=address.addressId
      </select>
 
     <insert id="insert" parameterType="com.chinasofti.ssm.domain.Customer" >
-=======
-     <select id="findAll" resultMap="resultCustomer">
-          select *,address.id as aId,address.deleteStatus as aDeleteStatus
-	      from  customers left outer join address on customers.customerAddressId=address.addressId
-     </select>
-     <insert id="insert" parameterType="Customer" >
->>>>>>> 7af4b23398edcfda6ea744208eb027a6a5bac2db
          insert into customers
          (id,customerId,customerName,customerGender,customerAge,customerAddressId,customerTel,customerPhone,customerEmail,
          customerZipCode,customerIdCard,customerBirthday,customerPassword,deleteStatus)
@@ -69,11 +39,7 @@
          #{customerTel},#{customerPhone},#{customerEmail},#{customerZipCode},#{customerIdCard},#{customerBirthday},
          #{customerPassword},#{deleteStatus})
      </insert>
-<<<<<<< HEAD
     <update id="update" parameterType="com.chinasofti.ssm.domain.Customer">
-=======
-     <update id="update" parameterType="Customer">
->>>>>>> 7af4b23398edcfda6ea744208eb027a6a5bac2db
          update customers set
               customerId=#{customerId},
               customerName=#{customerName},
@@ -90,14 +56,8 @@
               deleteStatus=#{deleteStatus}
           where id=#{id}
      </update>
-<<<<<<< HEAD
     <delete id="deleteById" parameterType="int">
          delete from customers
          where Id=#{id}
-=======
-     <delete id="delete" parameterType="String">
-         delete from customers
-         where customerId=#{customerId}
->>>>>>> 7af4b23398edcfda6ea744208eb027a6a5bac2db
      </delete>
 </mapper>

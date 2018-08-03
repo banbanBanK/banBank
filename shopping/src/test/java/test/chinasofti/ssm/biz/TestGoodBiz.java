@@ -24,7 +24,7 @@ import java.util.Set;
 @RunWith(SpringJUnit4ClassRunner.class)
 public class TestGoodBiz{
 	@Autowired
-	private GoodBiz GoodBiz;
+	private GoodBiz goodBiz;
 	ProviderBiz providerBiz ;
 
 	@Test
@@ -69,7 +69,7 @@ public class TestGoodBiz{
 
 	@Test
 	public void testFindByProvider(){
-		List<Good> goods = GoodBiz.findByProviderId("2");
+		List<Good> goods = goodBiz.findByProviderId("2");
 		for (Good good : goods){
 			System.out.println("name = " + good.getGoodName());
 		}
@@ -111,7 +111,7 @@ public class TestGoodBiz{
 	}
 	@Test
 	public void tets1(){
-		List<Good> goods = GoodBiz.findAll();
+		List<Good> goods = goodBiz.findAll();
 		String s = goods.get(1).getGoodName();
 		System.out.println(s);
 	}
@@ -119,12 +119,12 @@ public class TestGoodBiz{
 
 	@Test
 	public void test1(){
-		List<Good> goods = GoodBiz.findAll();
+		List<Good> goods = goodBiz.findAll();
 		int judge = 1;
 		while(judge < 10)
 		{
 			String GoodId = goods.get(judge).getGoodId();
-			String ProviderId= GoodBiz.findProviderIdByGoodId(GoodId);
+			String ProviderId= goodBiz.findProviderIdByGoodId(GoodId);
 			//Provider provider = providerBiz.findByProviderId(ProviderId);
 			/*String ProviderName = provider.getProviderName();*/
 			System.out.println(ProviderId+"         ");

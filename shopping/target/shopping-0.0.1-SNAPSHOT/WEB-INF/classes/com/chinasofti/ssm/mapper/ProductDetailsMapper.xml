@@ -32,11 +32,11 @@
 
     <insert id="insert" parameterType="com.chinasofti.ssm.domain.ProductDetails" useGeneratedKeys="true" keyProperty="id">
 		insert into product_details
-		values(null,#{good.GoodId},#{review},#{weight},#{productPosition},#{productType},#{timeToMarket},#{cpu},#{ram},#{hardDisk},#{screenSize},#{graphicsCard},#{packingList})
+		values(null,#{good.GoodId},#{review},#{weight},#{productPosition},#{productType},#{timeToMarket},#{packingList},#{cpu},#{ram},#{hardDisk},#{screenType},#{screenSize},#{battery},#{resolution},#{graphicsCard},#{adorn},#{microphone},#{sensitivity},#{earphoneFeature},#{sensorType},#{sensorSize},#{pixel},#{os})
 	</insert>
     <update id="update" parameterType="com.chinasofti.ssm.domain.ProductDetails">
 		update product_details
-		set goodid =#{good.GoodId}, review = #{review}, weight = #{weight}, productPosition = #{productPosition}, productType = #{productType}, timeToMarket = #{timeToMarket}, cpu = #{cpu}, ram = #{ram}, hardDisk = #{hardDisk}, screenSize = #{screenSize}, graphicsCard = #{graphicsCard}, packingList = #{packingList}
+		set goodid =#{good.GoodId}, review = #{review}, weight = #{weight}, productPosition = #{productPosition}, productType = #{productType}, timeToMarket = #{timeToMarket}, packingList = #{packingList}, cpu = #{cpu}, ram = #{ram}, hardDisk = #{hardDisk}, screenType = #{screenType},screenSize = #{screenSize},battery = #{battery},resolution = #{resolution}, graphicsCard = #{graphicsCard}, adorn = #{adorn}, microphone = #{microphone}, sensitivity = #{sensitivity}, earphoneFeature = #{earphoneFeature}, sensorType = #{sensorType}, sensorSize = #{sensorSize}, pixel = #{pixel}, os = #{os}
 		where id = #{id}
 	</update>
 </mapper>

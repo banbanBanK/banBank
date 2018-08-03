@@ -36,11 +36,7 @@
     <select id="findByCustomerId" parameterType="String" resultMap="OrderResultMap">
         select *
         from orders
-<<<<<<< HEAD
-        where CustomerId=#{customerId}
-=======
         where CustomerId=#{CustomerId} and DeleteStatus = 1 and IsDone = 0
->>>>>>> f48b7e0f403b2ecf63c520b69fcd4b931cee03a3
     </select>
 
     <select id="findByIsDone" parameterType="Integer" resultMap="OrderResultMap">

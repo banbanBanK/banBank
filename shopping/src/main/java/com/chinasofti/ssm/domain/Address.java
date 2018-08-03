@@ -49,18 +49,5 @@ public class Address implements Serializable{
 	}
 	public void setDeleteStatus(Integer deleteStatus) {
 		this.deleteStatus = deleteStatus;
-<<<<<<< HEAD
 	}
-	public Customer getCustomer() {
-		return customer;
-	}
-	public void setCustomer(Customer customer) {
-		this.customer = customer;
-	}
-=======
-	}
-	
-	
-
->>>>>>> 7af4b23398edcfda6ea744208eb027a6a5bac2db
 }

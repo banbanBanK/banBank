@@ -11,6 +11,7 @@ public interface GoodDao extends GenericDao<Good, Integer> {
 	List<Good> findByRootTypeId(String typeId);
 	List<Good> findByProviderId(String providerId);
 	String findProviderIdByGoodId(String goodId);
+	Good findByGoodId(String goodId);
 
 	int insert(Good good);
 	int delete(Integer id);

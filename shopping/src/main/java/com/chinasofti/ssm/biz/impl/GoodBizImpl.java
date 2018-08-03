@@ -31,11 +31,11 @@ public class GoodBizImpl implements GoodBiz {
 		return goodDao.findByRootTypeId(typeId);
 	}
 
-
-	public List<Good> findByProvider(String providerId) {
-		// TODO Auto-generated method stub
-		return goodDao.findByProvider(providerId);
+	public List<Good> findByProviderId(String providerId) {
+		return goodDao.findByProviderId(providerId);
 	}
+
+
 
 	public Good findByGoodId(String goodId) {
 		// TODO Auto-generated method stub
@@ -48,7 +48,7 @@ public class GoodBizImpl implements GoodBiz {
 
 	public Good findById(Integer Id) {
 		// TODO Auto-generated method stub
-		return goodDao.findById(id);
+		return goodDao.findById(Id);
 	}
 
 	public List<Good> findAll() {

@@ -40,8 +40,8 @@ public class CustomerSignupController {
 	    Address addressOfCus=new Address();
 	    addressOfCus.setAddressId(province);
 	    customer.setAddress(addressOfCus);
-	    int res=customerBiz.insert(customer);
-	    if(res!=0)
+	    boolean res=customerBiz.insert(customer);
+	    if(res)
 	    		return "customerSignupSuccess";
 	    else
 	    	return "customerSignupError";

@@ -15,7 +15,7 @@ public class Customer implements Serializable{
 	private String customerEmail;
 	private String customerZipCode;
 	private String customerIdCard;
-	private Date customerBirthday;
+	private String customerBirthday;
 	private String customerPassword;
 	private Integer deleteStatus;
 	private Address address;
