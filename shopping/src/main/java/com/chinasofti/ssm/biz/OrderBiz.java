@@ -15,5 +15,6 @@ public interface OrderBiz {
     boolean insert(Order order);
     boolean update(Order order);
     boolean delete(Order order);
-    boolean delete(Integer id);
+    boolean delete(Integer Id);
+    boolean doneOrder(String customerId);
 }

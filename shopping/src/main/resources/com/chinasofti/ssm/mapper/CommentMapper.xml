@@ -43,6 +43,7 @@
         select *
         from comments
         where  GoodId = #{goodId} and DeleteStatus = 1
+        order by CreateTime desc
     </select>
     <select id="findByCreateTime" parameterType="Date" resultMap="CommentResultMap">
         select *

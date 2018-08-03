@@ -9,4 +9,5 @@ public interface AdminDao extends GenericDao<Admin, Integer>{
 	public int insert(Admin admin);
 	public int update(Admin admin);
 	public int delete(String AdminId);
+	public int modifypwd(Admin admin);
 }

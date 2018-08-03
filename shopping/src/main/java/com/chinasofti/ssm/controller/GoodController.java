@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -23,6 +24,8 @@ public class GoodController {
     private FaqBiz faqBiz;
     @Autowired
     private ProductStyleBiz productStyleBiz;
+    @Autowired
+    private AdminBiz adminBiz;
 
     @RequestMapping("/GoodFindAll")
     public String goodFindAll(HttpServletRequest request){
@@ -112,5 +115,17 @@ public class GoodController {
         if(good.getType().getFatherTypeId().equals("4"))
             return "../jspFront/product-cellphone-details";
         else return "";
+    }
+
+    @RequestMapping("/GetGood")
+    public String getGood(HttpServletRequest request){
+        List<Good> goods = goodBiz.findAll();
+        request.setAttribute("goods",goods);
+        //String adminId = request.getParameter("");
+        //Admin admin1 = adminBiz.findByAdminId(adminId);
+        HttpSession session = request.getSession();
+        Admin admin = adminBiz.findByAdminId("1");
+        session.setAttribute("admin",admin);
+        return "getgood";
     }
 }

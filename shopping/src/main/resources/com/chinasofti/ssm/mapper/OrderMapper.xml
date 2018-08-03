@@ -36,7 +36,7 @@
     <select id="findByCustomerId" parameterType="String" resultMap="OrderResultMap">
         select *
         from orders
-        where CustomerId=#{customerId}
+        where CustomerId=#{CustomerId} and DeleteStatus = 1 and IsDone = 0
     </select>
 
     <select id="findByIsDone" parameterType="Integer" resultMap="OrderResultMap">
@@ -65,5 +65,11 @@
         update orders
         set CustomerId=#{customer.customerId},GoodId=#{good.goodId},GoodPrice=#{goodPrice},GoodNum=#{goodNum},CreateTime=#{createTime},DeleteStatus=#{deleteStatus},IsDone=#{isDone}
         where Id=#{id}
+    </update>
+
+    <update id="doneOrder" parameterType="String">
+        update orders
+        set IsDone = 1,DeleteStatus = 0
+        where customerId = #{customerId} and DeleteStatus = 1
     </update>
 </mapper>

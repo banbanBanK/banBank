@@ -42,7 +42,11 @@ public class GoodBizImpl implements GoodBiz {
 		return goodDao.findByGoodId(goodId);
 	}
 
-	public Good findById(Integer id) {
+	public String findProviderIdByGoodId(String goodId) {
+		return goodDao.findProviderIdByGoodId(goodId);
+	}
+
+	public Good findById(Integer Id) {
 		// TODO Auto-generated method stub
 		return goodDao.findById(id);
 	}

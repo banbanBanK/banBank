@@ -1,6 +1,8 @@
 package test.chinasofti.ssm.biz;
 
+import com.chinasofti.ssm.biz.ProviderBiz;
 import com.chinasofti.ssm.domain.Comment;
+import com.chinasofti.ssm.domain.Provider;
 import com.chinasofti.ssm.domain.Type;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,6 +13,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.chinasofti.ssm.biz.GoodBiz;
 import com.chinasofti.ssm.domain.Good;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -20,7 +24,9 @@ import java.util.Set;
 @RunWith(SpringJUnit4ClassRunner.class)
 public class TestGoodBiz{
 	@Autowired
-	private GoodBiz goodBiz;
+	private GoodBiz GoodBiz;
+	ProviderBiz providerBiz ;
+
 	@Test
 	public void testFindById() {
 		Integer a= 1 ;
@@ -63,7 +69,7 @@ public class TestGoodBiz{
 
 	@Test
 	public void testFindByProvider(){
-		List<Good> goods = goodBiz.findByProvider("2");
+		List<Good> goods = GoodBiz.findByProviderId("2");
 		for (Good good : goods){
 			System.out.println("name = " + good.getGoodName());
 		}
@@ -102,5 +108,27 @@ public class TestGoodBiz{
 	@Test
 	public void testUpdate(){
 
+	}
+	@Test
+	public void tets1(){
+		List<Good> goods = GoodBiz.findAll();
+		String s = goods.get(1).getGoodName();
+		System.out.println(s);
+	}
+
+
+	@Test
+	public void test1(){
+		List<Good> goods = GoodBiz.findAll();
+		int judge = 1;
+		while(judge < 10)
+		{
+			String GoodId = goods.get(judge).getGoodId();
+			String ProviderId= GoodBiz.findProviderIdByGoodId(GoodId);
+			//Provider provider = providerBiz.findByProviderId(ProviderId);
+			/*String ProviderName = provider.getProviderName();*/
+			System.out.println(ProviderId+"         ");
+			judge+=1;
+		}
 	}
 }

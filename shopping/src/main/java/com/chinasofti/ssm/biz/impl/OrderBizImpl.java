@@ -26,6 +26,10 @@ public class OrderBizImpl implements OrderBiz {
         return orderDao.delete(id) == 1;
     }
 
+    public boolean doneOrder(String customerId) {
+        return orderDao.doneOrder(customerId)==1;
+    }
+
     public boolean insert(Order order) {
         return orderDao.insert(order) == 1;
     }

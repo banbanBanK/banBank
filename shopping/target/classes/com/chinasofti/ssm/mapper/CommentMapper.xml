@@ -43,6 +43,7 @@
         select *
         from comments
         where  GoodId = #{goodId} and DeleteStatus = 1
+        order by CreateTime desc
     </select>
     <select id="findByCreateTime" parameterType="Date" resultMap="CommentResultMap">
         select *
@@ -52,12 +53,21 @@
 
     <insert id="insert" parameterType="com.chinasofti.ssm.domain.Comment" useGeneratedKeys="true" keyProperty="Id">
 		insert into comments
+<<<<<<< HEAD
 		values(null,#{good.goodId},#{customer.customerId},#{comment},#{evaluation},null,#{deleteStatus})
 	</insert>
     <update id="update" parameterType="com.chinasofti.ssm.domain.Comment">
 		update comments
 		set GoodId = #{good.goodId}, CustomerId = #{customer.customerId}, Comment = #{comment}, Evaluation = #{evaluation}, CreateTime = #{createTime}, DeleteStatus=#{deleteStatus}
 		where Id = #{id}
+=======
+		values(null,#{good.GoodId},#{customer.CustomerId},#{comment},#{evaluation},#{createTime},#{deleteStatus})
+	</insert>
+    <update id="update" parameterType="com.chinasofti.ssm.domain.Comment">
+		update comments
+		set GoodId = #{good.GoodId}, CustomerId = #{customer.CustomerId}, Comment = #{comment}, Evaluation = #{evaluation}, CreateTime = #{createTime}, DeleteStatus=#{deleteStatus}
+		where Id = #{Id}
+>>>>>>> f48b7e0f403b2ecf63c520b69fcd4b931cee03a3
 	</update>
     <delete id="deleteById" parameterType="int">
 		update comments
