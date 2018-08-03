@@ -377,74 +377,17 @@
               <item name="shopping" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-<<<<<<< HEAD
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="jspFront" type="462c0819:PsiDirectoryNode" />
             </path>
-=======
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shopping" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="properties" type="462c0819:PsiDirectoryNode" />
-            </path>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="SQL Dialects" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\git\banBank1\banBank\shopping\src\main\webapp\jsp" />
-      <recent name="D:\git\banBank1\banBank\shopping\src\main\webapp\images" />
-      <recent name="D:\git\banBank1\banBank\shopping\src\main\webapp\jspFront" />
-      <recent name="D:\git\banBank1\banBank\shopping\src\main\webapp\css" />
-      <recent name="D:\git\banBank1\banBank\shopping\src\main\webapp\js" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="L:\cpfile\Git\Bank\LHY\banBank\shopping\src\main\webapp\img" />
-      <recent name="E:\工作 学习\大二下\实习实训\项目SJQ\banBank\shopping\src\main\webapp\jsp" />
-      <recent name="E:\工作 学习\大二下\实习实训\项目SJQ\banBank\shopping\src\main\webapp" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-<<<<<<< HEAD
   <component name="RunManager" selected="Tomcat Server.index.jsp (1)">
-=======
-  <component name="RunManager" selected="Tomcat Server.login.jsp">
->>>>>>> f48b7e0f403b2ecf63c520b69fcd4b931cee03a3
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-<<<<<<< HEAD
     <configuration name="TestCommentBiz.insert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-=======
-    <configuration name="TestAdminBiz.findByAdminId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
->>>>>>> f48b7e0f403b2ecf63c520b69fcd4b931cee03a3
       <module name="shopping" />
       <extension name="coverage">
         <pattern>
@@ -455,7 +398,6 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="test.chinasofti.ssm.biz" />
-<<<<<<< HEAD
       <option name="MAIN_CLASS_NAME" value="test.chinasofti.ssm.biz.TestCommentBiz" />
       <option name="METHOD_NAME" value="insert" />
       <option name="TEST_OBJECT" value="method" />
@@ -481,10 +423,6 @@
       <option name="PACKAGE_NAME" value="test.chinasofti.ssm.biz" />
       <option name="MAIN_CLASS_NAME" value="test.chinasofti.ssm.biz.TestCustomerBiz" />
       <option name="METHOD_NAME" value="findAll" />
-=======
-      <option name="MAIN_CLASS_NAME" value="test.chinasofti.ssm.biz.TestAdminBiz" />
-      <option name="METHOD_NAME" value="findByAdminId" />
->>>>>>> f48b7e0f403b2ecf63c520b69fcd4b931cee03a3
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -518,11 +456,7 @@
       </option>
       <patterns />
     </configuration>
-<<<<<<< HEAD
     <configuration name="TestProductStyle.findMainByRelationId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-=======
-    <configuration name="TestGoodBiz.tets1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
->>>>>>> f48b7e0f403b2ecf63c520b69fcd4b931cee03a3
       <module name="shopping" />
       <extension name="coverage">
         <pattern>
@@ -533,13 +467,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="test.chinasofti.ssm.biz" />
-<<<<<<< HEAD
       <option name="MAIN_CLASS_NAME" value="test.chinasofti.ssm.biz.TestProductStyle" />
       <option name="METHOD_NAME" value="findMainByRelationId" />
-=======
-      <option name="MAIN_CLASS_NAME" value="test.chinasofti.ssm.biz.TestGoodBiz" />
-      <option name="METHOD_NAME" value="tets1" />
->>>>>>> f48b7e0f403b2ecf63c520b69fcd4b931cee03a3
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -550,12 +479,7 @@
       </option>
       <patterns />
     </configuration>
-<<<<<<< HEAD
     <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.36" ALTERNATIVE_JRE_ENABLED="false">
-=======
-    <configuration name="Tomcat 8.5.32" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.32" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8">
-      <option name="BROWSER_ID" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
->>>>>>> f48b7e0f403b2ecf63c520b69fcd4b931cee03a3
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment />
       <server-settings>
@@ -566,7 +490,6 @@
       <predefined_log_file id="Tomcat Manager" enabled="false" />
       <predefined_log_file id="Tomcat Host Manager" enabled="false" />
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-<<<<<<< HEAD
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="9726" />
       </RunnerSettings>
@@ -585,8 +508,6 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
-=======
->>>>>>> f48b7e0f403b2ecf63c520b69fcd4b931cee03a3
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -646,14 +567,9 @@
         </option>
       </method>
     </configuration>
-<<<<<<< HEAD
     <configuration name="index.jsp (1)" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 8.0.36" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/jspFront/index.jsp" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
-=======
-    <configuration name="login.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 8.0.361" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/jsp/login.jsp" />
->>>>>>> f48b7e0f403b2ecf63c520b69fcd4b931cee03a3
       <deployment>
         <artifact name="shopping:war exploded">
           <settings>
@@ -662,11 +578,7 @@
         </artifact>
       </deployment>
       <server-settings>
-<<<<<<< HEAD
         <option name="BASE_DIRECTORY_NAME" value="index_jsp_(1)_shopping_2" />
-=======
-        <option name="BASE_DIRECTORY_NAME" value="login_jsp_shopping" />
->>>>>>> f48b7e0f403b2ecf63c520b69fcd4b931cee03a3
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -674,13 +586,23 @@
       <predefined_log_file id="Tomcat Host Manager" enabled="false" />
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <RunnerSettings RunnerId="Debug">
-<<<<<<< HEAD
         <option name="DEBUG_PORT" value="2165" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-=======
-        <option name="DEBUG_PORT" value="41789" />
-      </RunnerSettings>
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -697,73 +619,6 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
->>>>>>> f48b7e0f403b2ecf63c520b69fcd4b931cee03a3
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-<<<<<<< HEAD
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-=======
-      <method>
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="shopping:war exploded" />
-        </option>
-      </method>
-    </configuration>
-    <configuration name="show-comments.jsp (2)" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 8.0.36" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/jspFront/show-comments.jsp" />
-      <option name="BROWSER_ID" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-      <option name="UPDATING_POLICY" value="hot-swap-classes" />
-      <deployment>
-        <artifact name="shopping:war exploded">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="show-comments_jsp_(2)_shopping" />
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="4899" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
->>>>>>> f48b7e0f403b2ecf63c520b69fcd4b931cee03a3
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-<<<<<<< HEAD
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-=======
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
->>>>>>> f48b7e0f403b2ecf63c520b69fcd4b931cee03a3
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
           <option name="USE_DEFAULT" value="true" />
@@ -862,7 +717,6 @@
       </method>
     </configuration>
     <list>
-<<<<<<< HEAD
       <item itemvalue="Tomcat Server.Unnamed" />
       <item itemvalue="Tomcat Server.products.jsp" />
       <item itemvalue="Tomcat Server.index.jsp (1)" />
@@ -876,22 +730,6 @@
         <item itemvalue="JUnit.TestCustomerBiz.findByCustomerId" />
         <item itemvalue="JUnit.TestCustomerBiz.findAll" />
         <item itemvalue="JUnit.TestProductStyle.findMainByRelationId" />
-=======
-      <item itemvalue="Tomcat Server.Tomcat 8.5.32" />
-      <item itemvalue="Tomcat Server.show-comments.jsp (2)" />
-      <item itemvalue="JUnit.TestCustomerBiz.findByCustomerId" />
-      <item itemvalue="Tomcat Server.cart.jsp" />
-      <item itemvalue="Tomcat Server.login.jsp" />
-      <item itemvalue="JUnit.TestAdminBiz.findByAdminId" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Tomcat Server.login.jsp" />
-        <item itemvalue="JUnit.TestAdminBiz.findByAdminId" />
-        <item itemvalue="Tomcat Server.cart.jsp" />
-        <item itemvalue="JUnit.TestCustomerBiz.findByCustomerId" />
-        <item itemvalue="Tomcat Server.show-comments.jsp (2)" />
->>>>>>> f48b7e0f403b2ecf63c520b69fcd4b931cee03a3
       </list>
     </recent_temporary>
   </component>
@@ -915,7 +753,6 @@
       <workItem from="1532762393558" duration="7603000" />
       <workItem from="1532832233425" duration="1515000" />
       <workItem from="1532852264405" duration="634000" />
-<<<<<<< HEAD
       <workItem from="1532910335001" duration="12894000" />
       <workItem from="1532929137834" duration="2158000" />
       <workItem from="1532946968879" duration="2057000" />
@@ -934,25 +771,10 @@
       <workItem from="1533173466466" duration="9116000" />
       <workItem from="1533188381839" duration="6989000" />
       <workItem from="1533195612759" duration="4487000" />
-=======
-      <workItem from="1532928166162" duration="3789000" />
-      <workItem from="1532933537062" duration="317000" />
-      <workItem from="1532938550084" duration="4962000" />
-      <workItem from="1533085165665" duration="25173000" />
-      <workItem from="1533171924666" duration="4720000" />
-      <workItem from="1533177670094" duration="31000" />
-      <workItem from="1533179394594" duration="129000" />
-      <workItem from="1533179631505" duration="136000" />
-      <workItem from="1533179932155" duration="2694000" />
-      <workItem from="1533198141271" duration="1058000" />
-      <workItem from="1533212568028" duration="887000" />
-      <workItem from="1533213682763" duration="4292000" />
->>>>>>> f48b7e0f403b2ecf63c520b69fcd4b931cee03a3
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-<<<<<<< HEAD
     <history-entry file="TestProductStyle_findById - 2018.08.02 at 00h 12m 36s.xml">
       <configuration name="TestProductStyle.findById" configurationId="JUnit" />
     </history-entry>
@@ -996,64 +818,12 @@
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32980973" />
       <window_info anchor="right" id="Maven Projects" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-=======
-    <history-entry file="TestGoodBiz_test1 - 2018.08.02 at 15h 23m 14s.xml">
-      <configuration name="TestGoodBiz.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestGoodBiz_test1 - 2018.08.02 at 15h 24m 05s.xml">
-      <configuration name="TestGoodBiz.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestGoodBiz_test1 - 2018.08.02 at 15h 24m 29s.xml">
-      <configuration name="TestGoodBiz.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestGoodBiz_test1 - 2018.08.02 at 15h 24m 57s.xml">
-      <configuration name="TestGoodBiz.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestGoodBiz_testFindByName - 2018.08.01 at 22h 58m 01s.xml">
-      <configuration name="TestGoodBiz.testFindByName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestGoodBiz_testFindByName - 2018.08.01 at 23h 40m 11s.xml">
-      <configuration name="TestGoodBiz.testFindByName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestCustomerBiz_findByCustomerId - 2018.08.02 at 11h 14m 21s.xml">
-      <configuration name="TestCustomerBiz.findByCustomerId" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestCustomerBiz_findByCustomerId - 2018.08.02 at 11h 15m 32s.xml">
-      <configuration name="TestCustomerBiz.findByCustomerId" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestGoodBiz_tets1 - 2018.08.02 at 11h 21m 19s.xml">
-      <configuration name="TestGoodBiz.tets1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestGoodBiz_tets1 - 2018.08.02 at 11h 21m 55s.xml">
-      <configuration name="TestGoodBiz.tets1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestAdminBiz_findByAdminId - 2018.08.02 at 21h 10m 16s.xml">
-      <configuration name="TestAdminBiz.findByAdminId" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestAdminBiz_findByAdminId - 2018.08.02 at 21h 11m 45s.xml">
-      <configuration name="TestAdminBiz.findByAdminId" configurationId="JUnit" />
-    </history-entry>
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104899000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
-    <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32980973" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
->>>>>>> f48b7e0f403b2ecf63c520b69fcd4b931cee03a3
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
-<<<<<<< HEAD
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3808219" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.23561645" />
@@ -1066,20 +836,6 @@
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12711865" />
-=======
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49121523" weight="0.397463" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49121523" weight="0.3255814" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info id="Image Layers" order="3" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5329429" visible="true" weight="0.35940802" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20989583" />
->>>>>>> f48b7e0f403b2ecf63c520b69fcd4b931cee03a3
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="5" side_tool="true" />
@@ -1100,25 +856,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-<<<<<<< HEAD
       <option name="time" value="24" />
-=======
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/AdminController.java</url>
-          <line>54</line>
-          <properties />
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/impl/AdminBizImpl.java</url>
-          <line>16</line>
-          <properties />
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="28" />
->>>>>>> f48b7e0f403b2ecf63c520b69fcd4b931cee03a3
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
@@ -1136,7 +874,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/impl/FavorBizImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1276,153 +1013,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/CommentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1296">
-          <caret line="60" column="21" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/impl/AdminBizImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1323">
-          <caret line="49" column="69" selection-start-line="49" selection-start-column="54" selection-end-line="49" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1161">
-          <caret line="52" column="38" lean-forward="true" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/CommentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="60" column="21" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/admin-login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="60" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/impl/CommentBizImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#842#843#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jspFront/show-comments.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2516">
-          <caret line="148" column="89" selection-start-line="148" selection-start-column="89" selection-end-line="148" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/CustomerSignupController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="50" lean-forward="true" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/signup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="76" column="33" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/CommentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="60" column="21" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/admin-login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="60" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/impl/CommentBizImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#842#843#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/signup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="65" column="12" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jspFront/show-comments.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2516">
-          <caret line="148" column="89" selection-start-line="148" selection-start-column="89" selection-end-line="148" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/admin-login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="60" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jspFront/show-comments.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2516">
-          <caret line="148" column="89" selection-start-line="148" selection-start-column="89" selection-end-line="148" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/signup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="76" column="33" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/getgood.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="34" column="51" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
->>>>>>> f48b7e0f403b2ecf63c520b69fcd4b931cee03a3
         </state>
       </provider>
     </entry>
@@ -1435,7 +1025,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/ProductStyleMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="1102">
           <caret line="58" column="36" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="36" />
         </state>
@@ -1559,124 +1148,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-=======
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/OrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/impl/CustomerBizImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/impl/CommentBizImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#842#843#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jspFront/index.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/grids.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/GoodController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-905">
-          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/CardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/mybatis/mybatis-spring/1.3.1/mybatis-spring-1.3.1-sources.jar!/org/mybatis/spring/SqlSessionTemplate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="374" selection-start-line="374" selection-end-line="374" />
-          <folding>
-            <element signature="e#10834#10835#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/binding/MapperProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/session/Configuration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="685" selection-start-line="685" selection-end-line="685" />
-          <folding>
-            <element signature="e#23201#23202#0" expanded="true" />
-            <element signature="e#24182#24183#0" expanded="true" />
-            <element signature="e#24232#24233#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/binding/MapperMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="210" selection-start-line="210" selection-end-line="210" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/session/defaults/DefaultSqlSessionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
-          <folding>
-            <element signature="e#2993#2994#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/CustomerSignupController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="51" column="50" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="50" />
->>>>>>> f48b7e0f403b2ecf63c520b69fcd4b931cee03a3
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="-589">
           <caret line="195" column="141" selection-start-line="195" selection-start-column="141" selection-end-line="195" selection-end-column="141" />
         </state>
@@ -1789,76 +1265,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="482">
           <caret line="253" column="87" selection-start-line="253" selection-start-column="87" selection-end-line="253" selection-end-column="87" />
-=======
-        <state relative-caret-position="247">
-          <caret line="49" column="74" selection-start-line="49" selection-start-column="74" selection-end-line="49" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/domain/Admin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="60" column="44" lean-forward="true" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="53" column="31" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/impl/AdminBizImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/properties/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/test/chinasofti/ssm/biz/TestAdminBiz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/CommentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/AdminMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/impl/CardBizImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/dao/AdminDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
->>>>>>> f48b7e0f403b2ecf63c520b69fcd4b931cee03a3
         </state>
       </provider>
     </entry>
