@@ -9,7 +9,7 @@
 
 		<!-- spring版本号 -->
 
-		<spring.version>5.0.7.RELEASE</spring.version>
+		<spring.version>4.3.18.RELEASE</spring.version>
 
 		<!-- log4j日志文件管理包版本 -->
 
@@ -316,5 +316,10 @@
 			<version>4.3.18.RELEASE</version>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>4.3.18.RELEASE</version>
+        </dependency>
+    </dependencies>
 </project>

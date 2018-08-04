@@ -83,7 +83,7 @@ public class GoodController {
 
 
     @RequestMapping("/GoodDetailsFindById")
-    public String goodDetailsFindById(@RequestParam int id, @RequestParam String fatherTypeId,@RequestParam int evaluation, HttpServletRequest request) {
+    public String goodDetailsFindById(@RequestParam int id, @RequestParam String fatherTypeId, HttpServletRequest request) {
         Good good = goodBiz.findById(id);
         ProductDetails productDetails = productDetailsBiz.findByGoodId(good.getGoodId());
         List<Good> recommendGoods = goodBiz.findByChildrenTypeId(good.getType().getTypeId());
@@ -113,7 +113,6 @@ public class GoodController {
             List<ProductStyle> productStyles = productStyleBiz.findByGoodId(mainGoodId);
             request.setAttribute("productStyles",productStyles);
         }
-        request.setAttribute("evaluation",evaluation);
         request.setAttribute("searchGoods",searchGoods);
 
         if(good.getType().getFatherTypeId().equals("1"))
