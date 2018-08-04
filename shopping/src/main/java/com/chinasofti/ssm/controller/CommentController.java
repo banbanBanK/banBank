@@ -31,7 +31,7 @@ public class CommentController {
     @Autowired
     private CustomerBiz customerBiz;
 
-    @RequestMapping("/CommentFindByCreatTime")
+    @RequestMapping("/CommentFindByCreateTime")
     public String commentFindByCreatTime(@RequestParam Timestamp createTime, HttpServletRequest request) {
         List<Comment> comments = commentBiz.findByCreateTime(createTime);
 
@@ -107,6 +107,8 @@ public class CommentController {
     @RequestMapping(value = "/showComments")
     public ModelAndView showComments(HttpServletRequest request) {
         request.setAttribute("goodId", "1");
+        List<Good> searchGoods = goodBiz.findAll();
+        request.setAttribute("searchGoods",searchGoods);
         String goodId = (String) request.getAttribute("goodId");
         List<Comment> list = new ArrayList<Comment>();
         list = commentBiz.findByGoodId(goodId);

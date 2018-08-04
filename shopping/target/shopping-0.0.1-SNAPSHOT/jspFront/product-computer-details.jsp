@@ -39,7 +39,6 @@
     <link rel="stylesheet" href="../css2/responsive.css" />
     <link rel="stylesheet" href="../css2/ic-helpers.min.css" />
 
-
 </head>
 <body>
 
@@ -47,7 +46,7 @@
 
 <!-- Left menu -->
 <div class="menu-left hidden-xs">
-    <a href="index.jsp" class="logo-left">
+    <a href="../jspFrontIndex" class="logo-left">
         <img src="../img/logo.png" alt="" />
     </a>
 
@@ -58,7 +57,7 @@
     </div>
 
     <div class="nav-item">
-        <a href="cart.jsp" class="text-primary">
+        <a href="../OrderFindByCustomer?customerId=123" class="text-primary">
             <i class="fas fa-shopping-bag fa-2x"></i>
             <span class="badge">3</span>
         </a>
@@ -97,7 +96,8 @@
         <a href="index.jsp"><i class="fas fa-desktop"></i></a>
     </div>
 
-    <ul>
+
+    <ul style="margin: 150px 50px">
         <%
             List<Type> types_parents = (List<Type>)request.getAttribute("types_parents");
             if(types_parents != null && types_parents.size() != 0){
@@ -105,26 +105,45 @@
         %>
         <li>
             <a href="../GoodFindByRootTypeId?fatherTypeId=<%=type_parents.getTypeId() %>"><%=type_parents.getTypeName() %>
-                <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" />
+                <%
+                    switch (type_parents.getTypeId()) {
+                        case "1":
+                %>
+                <img src="../img/computer.png" class="h-30 align-middle m-l-20" alt=""/>
+                <%
+                        break;
+                    case "2":
+                %>
+                <img src="../img/music.png" class="h-30 align-middle m-l-20" alt=""/>
+                <%
+                        break;
+                    case "3":
+                %>
+                <img src="../img/camera.png" class="h-30 align-middle m-l-20" alt=""/>
+                <%
+                            break;
+                    }
+                %>
             </a>
         </li>
-        <ul>
+        <%
+            List<Type> types_children = (List<Type>) request.getAttribute("types_children");
+            if(types_children != null && types_children.size() != 0 && type_parents.getTypeId().equals(types_children.get(0).getFatherTypeId())){
+        %>
+        <ul style="margin: 10px 10px 10px 60px;">
             <%
-                List<Type> types_children = (List<Type>) request.getAttribute("types_children");
-                if(types_children != null && types_children.size() != 0 && type_parents.getTypeId().equals(types_children.get(0).getFatherTypeId())){
-                    for(Type type_children : types_children){
+                for(Type type_children : types_children){
             %>
             <li>
                 <a href="../GoodFindByChildrenTypeId?typeId=<%=type_children.getTypeId() %>&fatherTypeId=<%=type_parents.getTypeId() %>"><%=type_children.getTypeName() %>
-                    <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" />
                 </a>
             </li>
             <%
-                    }
                 }
             %>
         </ul>
         <%
+                    }
                 }
             }
         %>
@@ -136,7 +155,7 @@
         %>
         <li>
             <a href="../GoodFindByChildrenTypeId?typeId=<%=type_singleRoots.getTypeId() %>&fatherTypeId=<%=type_singleRoots.getTypeId() %>"><%=type_singleRoots.getTypeName() %>
-                <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" />
+                <img src="../img/phone.png" class="h-30 align-middle m-l-20" alt="" />
             </a>
         </li>
         <%
@@ -151,8 +170,13 @@
         <li><a href="blog-post.jsp">Blog Post</a></li>
         <li><a href="contact.jsp">Contact</a></li>
     </ul>
+    <div class="social-media-box">
+        <hr />
+        <span>允公允能  日新月异</span>
+    </div>
 </div>
 <!-- Right menu -->
+
 
 <!-- Content -->
 <div class="content-right">
@@ -180,7 +204,7 @@
                             </div>
 
                             <div class="col-sm-4">
-                                <h5 class="text-xs-center text-right text-gray"><%=good.getType().getTypeName()%> <img src="../img/icon-headphones.png" class="h-30 align-text-bottom m-l-20" alt="" /></h5>
+                                <h5 class="text-xs-center text-right text-gray"><%=good.getType().getTypeName()%> <img src="../img/computer.png" class="h-30 align-text-bottom m-l-20" alt="" /></h5>
                             </div>
                         </div>
 
@@ -188,7 +212,7 @@
                             <div class="col-xs-12 col-sm-12 col-md-12 m-tb-100">
                                 <p class="text-justify m-tb-70"><%=productDetails.getReview()%></p>
 
-                                <h2><%=good.getGoodPrice()%><small class="strike m-l-10">原价</small></h2>
+                                <h2>￥<%=good.getGoodPrice()%><small class="strike m-l-10">原价</small></h2>
 
                                 <div class="m-b-20">
                                     <%
@@ -209,9 +233,26 @@
                                     %>
                                 </div>
 
-                                <a href="#" class="btn btn-success"><i class="fas fa-shopping-bag"></i>&nbsp; Add to Cart</a>
+                                <a onclick="addToCart(<%=good.getGoodId()%>,'1')" class="btn btn-success"><i class="fas fa-shopping-bag"></i>&nbsp; Add to Cart</a>
                             </div>
-
+                            <script>
+                                function addToCart(goodId,customerId) {
+                                    var param = "/addToCart?customerId="+customerId+"&goodId="+goodId;
+                                    $.ajax(
+                                        {
+                                            url: "/addToCart?customerId="+customerId+"&goodId="+goodId ,
+                                            type: "post", // 接受数据格式
+                                            dataType: "json", // 要传递的数据
+                                            success: function a(result) {
+                                                if (result)
+                                                    alert("添加成功，请到购物车中查看~");
+                                                else
+                                                    alert("该商品已经添加至购物车中，请仔细查看哦~");
+                                            }
+                                        }
+                                    )
+                                }
+                            </script>
                             <!-- Tabs -->
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div role="tabpanel">
@@ -402,11 +443,11 @@
                     <div class="form-group">
                         <div class="col-sm-11 center-block">
                             <div class="input-group">
-                                <input type="text" class="form-control search-input" placeholder="Start typing..." />
+                                <input type="text" id="searchButton" class="form-control search-input" placeholder="Start typing..." />
 
                                 <span class="input-group-btn">
-										<button type="submit" class="btn btn-primary search-button">Go!</button>
-									</span>
+										<input type="button"  class="btn btn-primary search-button" value="GO!" onclick="searchGoodByName()">
+								</span>
                             </div>
                         </div>
                     </div>
@@ -416,194 +457,208 @@
             </div>
         </div>
 
+        <div id="panel">
+        </div>
+
+
+        <%List<Good> searchGoods = (List<Good>) request.getAttribute("searchGoods");
+            if(searchGoods!=null && searchGoods.size()!=0){
+        %>
         <div class="row m-t-70 m-b-70">
             <div class="col-sm-12 text-center">
-                <h4>we found 3 products for you:</h4>
+                <h4>你可能会对这<%=searchGoods.size()-searchGoods.size()%3%> 件商品感兴趣:</h4>
             </div>
         </div>
-
+        <%
+            for(int i = 0; i<searchGoods.size()-searchGoods.size()%3;i+=3){
+        %>
         <div class="row m-b-20">
             <div class="col-sm-4 col-md-4 result-box text-sm-center">
                 <div class="col-md-6">
-                    <a href="#">
-                        <img src="../img/products/product8.png" class="img-responsive" alt="" />
+                    <a href="../GoodDetailsFindById?id=<%=searchGoods.get(i).getId() %>&fatherTypeId=<%=searchGoods.get(i).getType().getFatherTypeId()%>&evaluation=0">
+                        <img src="<%=searchGoods.get(i).getGoodImage()%>" class="img-responsive" alt="<%=searchGoods.get(i).getGoodName()%>" title="￥<%=searchGoods.get(i).getGoodPrice()%>"/>
                     </a>
                 </div>
 
                 <div class="col-md-6 result-info">
-                    <a href="#">
-                        <h4>Staro-One</h4>
+                    <a href="../GoodDetailsFindById?id=<%=searchGoods.get(i).getId() %>&fatherTypeId=<%=searchGoods.get(i).getType().getFatherTypeId()%>&evaluation=0">
+                        <h4><%=searchGoods.get(i).getGoodName()%></h4>
                     </a>
 
-                    <p>ST-O S1000</p>
+                    <p><%=searchGoods.get(i).getGoodName()%></p>
 
-                    <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-shopping-bag"></i>&nbsp; Buy Now</a>
+                    <a href="../GoodDetailsFindById?id=<%=searchGoods.get(i).getId() %>&fatherTypeId=<%=searchGoods.get(i).getType().getFatherTypeId()%>&evaluation=0" class="btn btn-primary btn-sm"><i class="fas fa-shopping-bag"></i>&nbsp; Buy Now</a>
                 </div>
             </div>
 
             <div class="col-sm-4 col-md-4 result-box text-sm-center">
                 <div class="col-md-6">
-                    <a href="#">
-                        <img src="../img/products/product9.png" class="img-responsive" alt="" />
+                    <a href="../GoodDetailsFindById?id=<%=searchGoods.get(i+1).getId() %>&fatherTypeId=<%=searchGoods.get(i+1).getType().getFatherTypeId()%>&evaluation=0">
+                        <img src="<%=searchGoods.get(i+1).getGoodImage()%>" class="img-responsive" alt="<%=searchGoods.get(i+1).getGoodName()%>" title="￥<%=searchGoods.get(i+1).getGoodPrice()%>" />
                     </a>
                 </div>
 
                 <div class="col-md-6 result-info">
-                    <a href="#">
-                        <h4>Staro-One</h4>
+                    <a href="../GoodDetailsFindById?id=<%=searchGoods.get(i+1).getId() %>&fatherTypeId=<%=searchGoods.get(i+1).getType().getFatherTypeId()%>&evaluation=0">
+                        <h4><%=searchGoods.get(i+1).getGoodName()%></h4>
                     </a>
 
-                    <p>ST-O S2000</p>
+                    <p><%=searchGoods.get(i+1).getGoodName()%></p>
 
-                    <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-shopping-bag"></i>&nbsp; Buy Now</a>
+                    <a href="../GoodDetailsFindById?id=<%=searchGoods.get(i+1).getId() %>&fatherTypeId=<%=searchGoods.get(i+1).getType().getFatherTypeId()%>&evaluation=0" class="btn btn-primary btn-sm"><i class="fas fa-shopping-bag"></i>&nbsp; Buy Now</a>
                 </div>
             </div>
 
             <div class="col-sm-4 col-md-4 result-box text-sm-center">
                 <div class="col-md-6">
-                    <a href="#">
-                        <img src="../img/products/product10.png" class="img-responsive" alt="" />
+                    <a href="../GoodDetailsFindById?id=<%=searchGoods.get(i+2).getId() %>&fatherTypeId=<%=searchGoods.get(i+2).getType().getFatherTypeId()%>&evaluation=0">
+                        <img src="<%=searchGoods.get(i+2).getGoodImage()%>" class="img-responsive" alt="<%=searchGoods.get(i+2).getGoodName()%>" title="<%=searchGoods.get(i+2).getGoodPrice()%>" />
                     </a>
                 </div>
 
                 <div class="col-md-6 result-info">
-                    <a href="#">
-                        <h4>Staro-One</h4>
+                    <a href="../GoodDetailsFindById?id=<%=searchGoods.get(i+2).getId() %>&fatherTypeId=<%=searchGoods.get(i+2).getType().getFatherTypeId()%>&evaluation=0">
+                        <h4><%=searchGoods.get(i+2).getGoodName()%></h4>
                     </a>
 
-                    <p>ST-O S3000</p>
+                    <p><%=searchGoods.get(i+2).getGoodName()%></p>
 
-                    <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-shopping-bag"></i>&nbsp; Buy Now</a>
+                    <a href="../GoodDetailsFindById?id=<%=searchGoods.get(i+2).getId() %>&fatherTypeId=<%=searchGoods.get(i+2).getType().getFatherTypeId()%>&evaluation=0" class="btn btn-primary btn-sm"><i class="fas fa-shopping-bag"></i>&nbsp; Buy Now</a>
                 </div>
             </div>
         </div>
-
-        <div class="row m-b-20">
-            <div class="col-sm-4 col-md-4 result-box text-sm-center">
-                <div class="col-md-6">
-                    <a href="#">
-                        <img src="../img/products/product3.png" class="img-responsive" alt="" />
-                    </a>
-                </div>
-
-                <div class="col-md-6 result-info">
-                    <a href="#">
-                        <h4>Staro-Two</h4>
-                    </a>
-
-                    <p>ST-T A100</p>
-
-                    <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-shopping-bag"></i>&nbsp; Buy Now</a>
-                </div>
-            </div>
-
-            <div class="col-sm-4 col-md-4 result-box text-sm-center">
-                <div class="col-md-6">
-                    <a href="#">
-                        <img src="../img/products/product2.png" class="img-responsive" alt="" />
-                    </a>
-                </div>
-
-                <div class="col-md-6 result-info">
-                    <a href="#">
-                        <h4>Staro-Two</h4>
-                    </a>
-
-                    <p>ST-T A100</p>
-
-                    <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-shopping-bag"></i>&nbsp; Buy Now</a>
-                </div>
-            </div>
-
-            <div class="col-sm-4 col-md-4 result-box text-sm-center">
-                <div class="col-md-6">
-                    <a href="#">
-                        <img src="../img/products/product1.png" class="img-responsive" alt="" />
-                    </a>
-                </div>
-
-                <div class="col-md-6 result-info">
-                    <a href="#">
-                        <h4>Staro-Two</h4>
-                    </a>
-
-                    <p>ST-T A100</p>
-
-                    <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-shopping-bag"></i>&nbsp; Buy Now</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="row m-b-20">
-            <div class="col-sm-4 col-md-4 result-box text-sm-center">
-                <div class="col-md-6">
-                    <a href="#">
-                        <img src="../img/products/product4.png" class="img-responsive" alt="" />
-                    </a>
-                </div>
-
-                <div class="col-md-6 result-info">
-                    <a href="#">
-                        <h4>Staro-Four</h4>
-                    </a>
-
-                    <p>ST-F M200</p>
-
-                    <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-shopping-bag"></i>&nbsp; Buy Now</a>
-                </div>
-            </div>
-
-            <div class="col-sm-4 col-md-4 result-box text-sm-center">
-                <div class="col-md-6">
-                    <a href="#">
-                        <img src="../img/products/product6.png" class="img-responsive" alt="" />
-                    </a>
-                </div>
-
-                <div class="col-md-6 result-info">
-                    <a href="#">
-                        <h4>Staro-Four</h4>
-                    </a>
-
-                    <p>ST-F M200</p>
-
-                    <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-shopping-bag"></i>&nbsp; Buy Now</a>
-                </div>
-            </div>
-
-            <div class="col-sm-4 col-md-4 result-box text-sm-center">
-                <div class="col-md-6">
-                    <a href="#">
-                        <img src="../img/products/product7.png" class="img-responsive" alt="" />
-                    </a>
-                </div>
-
-                <div class="col-md-6 result-info">
-                    <a href="#">
-                        <h4>Staro-Four</h4>
-                    </a>
-
-                    <p>ST-F M200</p>
-
-                    <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-shopping-bag"></i>&nbsp; Buy Now</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12 text-center">
-                <a href="#" class="text-primary link-underline">Show all results</a>
-            </div>
-        </div>
+        <%
+                }
+            }
+        %>
     </div>
 </div>
 <!-- Search overlay -->
-<script src="../plugins/jquery.min.js"></script>
-<script src="../js/jquery.raty.js"></script>
+<script>
+    function searchGoodByName() {
+        var searchName = document.getElementById("searchButton").value;
+        var param = "/SearchByGoodName?goodName=" + searchName;
+        $.ajax({
+            url: "/SearchByGoodName?goodName=" + searchName, // 数据发送方式
+            type: "post", // 接受数据格式
+            dataType: "json", // 要传递的数据
+            data: param, // 回调函数，接受服务器端返回给客户端的值，即result值
+            success: function a(result) {
+                //alert(result.length);
+                function format(template, json) {
+                    return template.replace(/@\{(.*?)\}/g, function(all, key) {
+                        return json && (key in json) ? json[key] : "";
+                    });
+                }
+                if(result.length >= 3){
+                    document.getElementById('panel').innerHTML = format(
+                        String(function(){/*!
+                     <div class="row m-t-70 m-b-70">
+            <div class="col-sm-12 text-center"><h4>搜索结果：</h4>
+            </div>
+        </div> */}).replace(/^[^\{]*\{\s*\/\*!?|\*\/[;|\s]*\}$/g, ''),
+                        {
 
+                        }
+                    );}else{
+                    document.getElementById('panel').innerHTML = format(
+                        String(function(){/*!
+                     <div class="row m-t-70 m-b-70">
+            <div class="col-sm-12 text-center"><h4>暂无您所搜索的商品！</h4>
+            </div>
+        </div> */}).replace(/^[^\{]*\{\s*\/\*!?|\*\/[;|\s]*\}$/g, ''),
+                        {
+
+                        }
+                    );
+                }
+                for(var i = 0; i < (result.length - result.length % 3)/3; i++)
+                    document.getElementById('panel').innerHTML += format(
+                        String(function(){/*!
+        <div class="row m-b-20">
+            <div class="col-sm-4 col-md-4 result-box text-sm-center">
+                <div class="col-md-6">
+                    <a href="/GoodDetailsFindById?id=@{resultId1}&fatherTypeId=@{resultFatherType1}&evaluation=0">
+                        <img src="@{resultImg1}" class="img-responsive" alt="@{resultName1}" title="售价：@{resultPrice1}元"/>
+                    </a>
+                </div>
+
+                <div class="col-md-6 result-info">
+                    <a href="/GoodDetailsFindById?id=@{resultId1}&fatherTypeId=@{resultFatherType1}&evaluation=0">
+                        <h4>@{resultName1}</h4>
+                    </a>
+
+                    <p>@{resultName1}</p>
+
+                    <a href="/GoodDetailsFindById?id=@{resultId1}&fatherTypeId=@{resultFatherType1}&evaluation=0" class="btn btn-primary btn-sm"><i class="fas fa-shopping-bag"></i>&nbsp; Buy Now</a>
+                </div>
+            </div>
+
+            <div class="col-sm-4 col-md-4 result-box text-sm-center">
+                <div class="col-md-6">
+                    <a href="/GoodDetailsFindById?id=@{resultId2}&fatherTypeId=@{resultFatherType2}&evaluation=0">
+                        <img src="@{resultImg2}" class="img-responsive" alt="@{resultName2}" title="售价：@{resultPrice2}元" />
+                    </a>
+                </div>
+
+                <div class="col-md-6 result-info">
+                    <a href="/GoodDetailsFindById?id=@{resultId2}&fatherTypeId=@{resultFatherType2}&evaluation=0">
+                        <h4>@{resultName2}</h4>
+                    </a>
+
+                    <p>@{resultName2}</p>
+
+                    <a href="/GoodDetailsFindById?id=@{resultId2}&fatherTypeId=@{resultFatherType2}&evaluation=0" class="btn btn-primary btn-sm"><i class="fas fa-shopping-bag"></i>&nbsp; Buy Now</a>
+                </div>
+            </div>
+
+            <div class="col-sm-4 col-md-4 result-box text-sm-center">
+                <div class="col-md-6">
+                    <a href="/GoodDetailsFindById?id=@{resultId3}&fatherTypeId=@{resultFatherType3}&evaluation=0">
+                        <img src="@{resultImg3}" class="img-responsive" alt="@{resultName3}" title="售价：@{resultPrice3}元" />
+                    </a>
+                </div>
+
+                <div class="col-md-6 result-info">
+                    <a href="/GoodDetailsFindById?id=@{resultId3}&fatherTypeId=@{resultFatherType3}&evaluation=0">
+                        <h4>@{resultName3}</h4>
+                    </a>
+
+                    <p>@{resultName3}</p>
+
+                    <a href="/GoodDetailsFindById?id=@{resultId3}&fatherTypeId=@{resultFatherType3}&evaluation=0" class="btn btn-primary btn-sm"><i class="fas fa-shopping-bag"></i>&nbsp; Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+*/}).replace(/^[^\{]*\{\s*\/\*!?|\*\/[;|\s]*\}$/g, ''),
+                        {
+                            image:"123",
+                            resultId1:result[3*i][0],
+                            resultId2:result[3*i+1][0],
+                            resultId3:result[3*i+2][0],
+                            resultName1:result[3*i][1],
+                            resultName2:result[3*i+1][1],
+                            resultName3:result[3*i+2][1],
+                            resultImg1:result[3*i][2],
+                            resultImg2:result[3*i+1][2],
+                            resultImg3:result[3*i+2][2],
+                            resultPrice1:result[3*i][3],
+                            resultPrice2:result[3*i+1][3],
+                            resultPrice3:result[3*i+2][3],
+                            resultFatherType1:result[3*i][4],
+                            resultFatherType2:result[3*i+1][4],
+                            resultFatherType3:result[3*i+2][4]
+                        }
+                    );
+            }
+        });
+    }
+</script>
+
+<script src="../plugins/jquery.min.js"></script>
 <script src="../plugins/bootstrap/bootstrap.min.js"></script>
 <script src="../plugins/bxslider/bxslider.min.js"></script>
 <script src="../js/global.js"></script>
-
 </body>
 </html>

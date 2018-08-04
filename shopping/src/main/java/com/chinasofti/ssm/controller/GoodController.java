@@ -43,6 +43,8 @@ public class GoodController {
         List<Type> types_children = typeBiz.findChildren(fatherTypeId);
         List<Good> goods = goodBiz.findByRootTypeId(fatherTypeId);
 
+        request.setAttribute("thisTypeId",fatherTypeId);
+
         if(types_children != null)
             request.setAttribute("types_children",types_children);
         if(types_parents != null)
@@ -52,6 +54,8 @@ public class GoodController {
         if(goods != null)
             request.setAttribute("goods",goods);
 
+        List<Good> searchGoods = goodBiz.findAll();
+        request.setAttribute("searchGoods",searchGoods);
         return "../jspFront/products";
     }
     @RequestMapping("/GoodFindByChildrenTypeId")
@@ -61,6 +65,10 @@ public class GoodController {
         List<Type> types_children = typeBiz.findChildren(fatherTypeId);
         List<Good> goods = goodBiz.findByChildrenTypeId(typeId);
 
+        List<Good> searchGoods = goodBiz.findAll();//待修改
+        request.setAttribute("searchGoods",searchGoods);
+
+        request.setAttribute("thisChildrenTypeId", fatherTypeId);
         if(types_children != null)
             request.setAttribute("types_children",types_children);
         if(types_parents != null)
@@ -83,6 +91,7 @@ public class GoodController {
         List<Type> types_children = typeBiz.findChildren(fatherTypeId);
         List<Type> types_parents = typeBiz.findParents();
         List<Type> types_singleRoots = typeBiz.findSingleRoots();
+        List<Good> searchGoods = goodBiz.findAll();
         String mainGoodId = productStyleBiz.findMainByRelationId(good.getGoodId());
 
         if(types_children != null)
@@ -104,6 +113,7 @@ public class GoodController {
             List<ProductStyle> productStyles = productStyleBiz.findByGoodId(mainGoodId);
             request.setAttribute("productStyles",productStyles);
         }
+        request.setAttribute("searchGoods",searchGoods);
 
         if(good.getType().getFatherTypeId().equals("1"))
             return "../jspFront/product-computer-details";
