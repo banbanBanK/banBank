@@ -40,8 +40,12 @@
 </head>
 <body>
 
-
-
+<%
+    String customerId = (String)session.getAttribute("customerId");
+    boolean loginStatus = false ;
+    if(customerId!=null ){
+        loginStatus = (boolean)session.getAttribute("loginStatus");
+%>
 <!-- Left menu -->
 <div class="menu-left hidden-xs">
     <a href="../jspFrontIndex" class="logo-left">
@@ -49,13 +53,13 @@
     </a>
 
     <div class="nav-item">
-        <a href="login.jsp" class="text-primary">
+        <a href="../CustomerDetails?customerId=<%=customerId%>" class="text-primary">
             <i class="fas fa-user-circle fa-2x"></i>
         </a>
     </div>
 
     <div class="nav-item">
-        <a href="../OrderFindByCustomer?customerId=123" class="text-primary">
+        <a href="../OrderFindByCustomer?customerId=<%=customerId%>" class="text-primary">
             <i class="fas fa-shopping-bag fa-2x"></i>
             <span class="badge">3</span>
         </a>
@@ -67,6 +71,36 @@
         </a>
     </div>
 </div>
+<%
+}else{
+%>
+<div class="menu-left hidden-xs">
+    <a href="../jspFrontIndex" class="logo-left">
+        <img src="../img/logo.png" alt="" />
+    </a>
+
+    <div class="nav-item">
+        <a href="/jspFront/login.jsp" class="text-primary">
+            <i class="fas fa-user-circle fa-2x"></i>
+        </a>
+    </div>
+
+    <div class="nav-item">
+        <a href="../OrderFindByCustomer?customerId=-1" class="text-primary">
+            <i class="fas fa-shopping-bag fa-2x"></i>
+            <span class="badge">3</span>
+        </a>
+    </div>
+
+    <div class="nav-item last">
+        <a href="javascript:void(0);" onclick="openSearch();" class="text-primary">
+            <i class="fas fa-search fa-2x"></i>
+        </a>
+    </div>
+</div>
+<%
+    }
+%>
 <!-- Left menu -->
 
 <!-- Right menu -->
@@ -229,24 +263,30 @@
                                     %>
                                 </div>
 
-                                <a onclick="addToCart(<%=good.getGoodId()%>,'1')" class="btn btn-success"><i class="fas fa-shopping-bag"></i>&nbsp; Add to Cart</a>
+                                <a onclick="addToCart(<%=good.getGoodId()%>,<%=customerId%>,<%=loginStatus%>)" class="btn btn-success"><i class="fas fa-shopping-bag"></i>&nbsp; Add to Cart</a>
                             </div>
+
                             <script>
-                                function addToCart(goodId,customerId) {
-                                    var param = "/addToCart?customerId="+customerId+"&goodId="+goodId;
-                                    $.ajax(
-                                        {
-                                            url: "/addToCart?customerId="+customerId+"&goodId="+goodId ,
-                                            type: "post", // 接受数据格式
-                                            dataType: "json", // 要传递的数据
-                                            success: function a(result) {
-                                                if (result)
-                                                    alert("添加成功，请到购物车中查看~");
-                                                else
-                                                    alert("该商品已经添加至购物车中，请仔细查看哦~");
+                                function addToCart(goodId,customerId,status) {
+                                    if(status === true) {
+                                        var param = "/addToCart?customerId=" + customerId + "&goodId=" + goodId;
+                                        $.ajax(
+                                            {
+                                                url: "/addToCart?customerId=" + customerId + "&goodId=" + goodId, // 数据发送方式
+                                                type: "post", // 接受数据格式
+                                                dataType: "json", // 要传递的数据
+                                                success: function a(result) {
+                                                    if (result)
+                                                        alert("添加成功，请到购物车中查看~");
+                                                    else
+                                                        alert("该商品已经添加至购物车中，请仔细查看哦~");
+                                                }
                                             }
-                                        }
-                                    )
+                                        )
+                                    }else{
+                                        alert("您还没有登录，登录后才能继续操作哦~");
+                                        window.location="http://localhost:8080/jspFront/login.jsp";
+                                    }
                                 }
                             </script>
                             <!-- Tabs -->

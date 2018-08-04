@@ -32,7 +32,10 @@
     <link rel="stylesheet" href="../css2/ic-helpers.min.css" />
 </head>
 <body>
-
+<%
+    String customerId = (String)session.getAttribute("customerId");
+    if(customerId!=null ){
+%>
 <!-- Left menu -->
 <div class="menu-left hidden-xs">
     <a href="../jspFrontIndex" class="logo-left">
@@ -40,13 +43,13 @@
     </a>
 
     <div class="nav-item">
-        <a href="login.jsp" class="text-primary">
+        <a href="../CustomerDetails?customerId=<%=customerId%>" class="text-primary">
             <i class="fas fa-user-circle fa-2x"></i>
         </a>
     </div>
 
     <div class="nav-item">
-        <a href="../OrderFindByCustomer?customerId=123" class="text-primary">
+        <a href="../OrderFindByCustomer?customerId=<%=customerId%>" class="text-primary">
             <i class="fas fa-shopping-bag fa-2x"></i>
             <span class="badge">3</span>
         </a>
@@ -58,7 +61,38 @@
         </a>
     </div>
 </div>
+<%
+}else{
+%>
+<div class="menu-left hidden-xs">
+    <a href="../jspFrontIndex" class="logo-left">
+        <img src="../img/logo.png" alt="" />
+    </a>
+
+    <div class="nav-item">
+        <a href="/jspFront/login.jsp" class="text-primary">
+            <i class="fas fa-user-circle fa-2x"></i>
+        </a>
+    </div>
+
+    <div class="nav-item">
+        <a href="../OrderFindByCustomer?customerId=-1" class="text-primary">
+            <i class="fas fa-shopping-bag fa-2x"></i>
+            <span class="badge">3</span>
+        </a>
+    </div>
+
+    <div class="nav-item last">
+        <a href="javascript:void(0);" onclick="openSearch();" class="text-primary">
+            <i class="fas fa-search fa-2x"></i>
+        </a>
+    </div>
+</div>
+<%
+    }
+%>
 <!-- Left menu -->
+
 
 <!-- Right menu -->
 <div class="menu-right-btn">

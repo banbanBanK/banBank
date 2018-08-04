@@ -34,7 +34,10 @@
 <body>
 
 
-
+<%
+    String customerId = (String)session.getAttribute("customerId");
+    boolean loginStatus = (boolean) session.getAttribute("loginStatus");
+%>
 <!-- Left menu -->
 <div class="menu-left hidden-xs">
     <a href="../jspFrontIndex" class="logo-left">
@@ -48,7 +51,7 @@
     </div>
 
     <div class="nav-item">
-        <a href="../OrderFindByCustomer?customerId=123" class="text-primary">
+        <a href="../OrderFindByCustomer?customerId=<%=customerId%>" class="text-primary">
             <i class="fas fa-shopping-bag fa-2x"></i>
             <span class="badge">3</span>
         </a>
