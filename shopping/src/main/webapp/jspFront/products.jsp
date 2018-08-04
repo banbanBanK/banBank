@@ -189,11 +189,11 @@
             <div class="col-xs-12 col-sm-3 col-md-3">
                 <div class="panel">
                     <div class="panel-body p-t-30 p-b-30 text-center">
-                        <a href="../GoodDetailsFindById?id=<%=good.getId() %>&fatherTypeId=<%=good.getType().getFatherTypeId()%>&evaluation=0" class="product-item">
+                        <a href="../GoodDetailsFindById?id=<%=good.getId() %>&fatherTypeId=<%=good.getType().getFatherTypeId()%>" class="product-item">
                             <img src="<%=good.getGoodImage()%>" class="img-responsive center-block" alt="" />
                         </a>
 
-                        <a href="../GoodDetailsFindById?id=<%=good.getId() %>&fatherTypeId=<%=good.getType().getFatherTypeId()%>&evaluation=0">
+                        <a href="../GoodDetailsFindById?id=<%=good.getId() %>&fatherTypeId=<%=good.getType().getFatherTypeId()%>">
                             <h5 class="m-tb-20"><%=good.getGoodName()%></h5>
                         </a>
 

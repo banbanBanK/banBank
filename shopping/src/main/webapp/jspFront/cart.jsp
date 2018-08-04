@@ -93,7 +93,6 @@
         <li><hr class="m-tb-30" /></li>
 
         <li><a href="products.jsp">Products</a></li>
-        <li><a href="product-details.jsp">Product Details</a></li>
         <li><a href="about.jsp">About</a></li>
         <li><a href="blog.jsp">Blog</a></li>
         <li><a href="blog-post.jsp">Blog Post</a></li>
