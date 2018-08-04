@@ -42,7 +42,7 @@ public class CommentController {
             return "";
     }
     @RequestMapping("/PublishComment")
-    public String publishComment(@RequestParam String commentStr, @RequestParam String customerId, @RequestParam int evaluation,@RequestParam int id, @RequestParam String fatherTypeId, HttpServletRequest request) {
+    public String publishComment(@RequestParam String commentStr, @RequestParam String customerId, @RequestParam int id,@RequestParam int evaluation, @RequestParam String fatherTypeId, HttpServletRequest request) {
         Good good = goodBiz.findById(id);
         ProductDetails productDetails = productDetailsBiz.findByGoodId(good.getGoodId());
         List<Good> recommendGoods = goodBiz.findByChildrenTypeId(good.getType().getTypeId());
@@ -79,7 +79,6 @@ public class CommentController {
             List<ProductStyle> productStyles = productStyleBiz.findByGoodId(mainGoodId);
             request.setAttribute("productStyles",productStyles);
         }
-        request.setAttribute("evaluation",0);
 
         boolean result = commentBiz.insert(comment);
 

@@ -37,6 +37,9 @@
     <link rel="stylesheet" href="../css2/style.css" />
     <link rel="stylesheet" href="../css2/responsive.css" />
     <link rel="stylesheet" href="../css2/ic-helpers.min.css" />
+
+    <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.raty.js"></script>
 </head>
 <body>
 
@@ -194,7 +197,7 @@
                                                 for(int k = 0;k < productStyles.size();k++){
                                                     if(productStyles.get(k).getRelationPlace() == i){
                                     %>
-                                    <a href="../GoodDetailsFindById?id=<%=productStyles.get(k).getRelation().getId()%>&fatherTypeId=<%=productStyles.get(k).getRelation().getType().getFatherTypeId()%>&evaluation=0" class="thumbnail variant active">
+                                    <a href="../GoodDetailsFindById?id=<%=productStyles.get(k).getRelation().getId()%>&fatherTypeId=<%=productStyles.get(k).getRelation().getType().getFatherTypeId()%>" class="thumbnail variant active">
                                         <span class="variant-color" style="background: <%=productStyles.get(k).getRelatedColor()%>;"></span>
                                         <span class="variant-name"><%=productStyles.get(k).getRelatedColor()%></span>
                                     </a>
@@ -263,24 +266,20 @@
                                                     <label>评论内容:</label>
                                                     <textarea id="comment" name="comment" class="form-control v-resize" rows="7" required></textarea>
                                                 </div>
-                                                <div>
-                                                    <%
-                                                        for(int i = 0;i<evaluation;i++){
-                                                    %>
-                                                    <img src="../img/star-red.jpg" title="<%=i+1%>星"
-                                                         onclick="location.href='../GoodDetailsFindById?id=<%=good.getId() %>&fatherTypeId=<%=good.getType().getFatherTypeId()%>&evaluation=<%=i+1%>'"/>
-                                                    <%
-                                                        }
-                                                    %>
-                                                    <%
-                                                        for(int i = evaluation;i<5;i++){
-                                                    %>
-                                                    <img src="../img/star-grey.jpg" title="<%=i+1%>星"
-                                                         onclick="location.href='../GoodDetailsFindById?id=<%=good.getId() %>&fatherTypeId=<%=good.getType().getFatherTypeId()%>&evaluation=<%=i+1%>'"/>
-                                                    <%
-                                                        }
-                                                    %>
-                                                </div>
+                                                <div id="starts"></div>
+                                                <script type="text/javascript">
+                                                    $(function(){
+                                                        $("#starts").raty({
+                                                            number : 5,//星星个数
+                                                            starOn : '../img/demo/star-on.png',
+                                                            starOff : '../img/demo/star-off.png',
+                                                            hints : ['很差','一般','不错','很好','非常满意'],
+                                                            click : function(score, evt) {
+                                                                ${evaluation} = score;
+                                                            }
+                                                        });
+                                                    });
+                                                </script>
                                                 <div class="form-group text-right">
                                                     <input type="button"value="提交" class="btn btn-success" onclick="var comment = document.getElementById('comment').value;
                                                             location.href='../PublishComment?commentStr='+comment+'&customerId=1&evaluation=<%=evaluation%>&id=<%=good.getId()%>&fatherTypeId=<%=good.getType().getFatherTypeId()%>';">
@@ -343,10 +342,10 @@
                                     Good recommendGood = recommendGoods.get(i);
                             %>
                             <div class="col-xs-12 col-sm-4 col-md-4">
-                                <a href="../GoodDetailsFindById?id=<%=recommendGood.getId() %>&fatherTypeId=<%=recommendGood.getType().getFatherTypeId()%>&evaluation=0" class="product-item">
+                                <a href="../GoodDetailsFindById?id=<%=recommendGood.getId() %>&fatherTypeId=<%=recommendGood.getType().getFatherTypeId()%>" class="product-item">
                                     <img src="<%=recommendGood.getGoodImage() %>" class="img-responsive p-30" alt="" />
                                 </a>
-                                <a href="../GoodDetailsFindById?id=<%=recommendGood.getId() %>&fatherTypeId=<%=recommendGood.getType().getFatherTypeId()%>&evaluation=0">
+                                <a href="../GoodDetailsFindById?id=<%=recommendGood.getId() %>&fatherTypeId=<%=recommendGood.getType().getFatherTypeId()%>">
                                     <h5 class="text-center m-b-20"><%=recommendGood.getGoodName()%></h5>
                                 </a>
                             </div>
