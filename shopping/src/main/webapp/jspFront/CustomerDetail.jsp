@@ -1,6 +1,7 @@
 <%@ page import="com.chinasofti.ssm.domain.Type" %>
 <%@ page import="java.util.List" %>
-<%@ page import="com.chinasofti.ssm.domain.Good" %><%--
+<%@ page import="com.chinasofti.ssm.domain.Good" %>
+<%@ page import="com.chinasofti.ssm.domain.Customer" %><%--
   Created by IntelliJ IDEA.
   User: 该读过
   Date: 2018/7/28
@@ -31,8 +32,10 @@
     <link rel="stylesheet" href="../css2/ic-helpers.min.css" />
 </head>
 <body>
-
-
+<%
+    String customerId = (String)session.getAttribute("customerId");
+    if(customerId!=null ){
+%>
 <!-- Left menu -->
 <div class="menu-left hidden-xs">
     <a href="../jspFrontIndex" class="logo-left">
@@ -40,13 +43,13 @@
     </a>
 
     <div class="nav-item">
-        <a href="login.jsp" class="text-primary">
+        <a href="../CustomerDetails?customerId=<%=customerId%>" class="text-primary">
             <i class="fas fa-user-circle fa-2x"></i>
         </a>
     </div>
 
     <div class="nav-item">
-        <a href="../OrderFindByCustomer?customerId=123" class="text-primary">
+        <a href="../OrderFindByCustomer?customerId=<%=customerId%>" class="text-primary">
             <i class="fas fa-shopping-bag fa-2x"></i>
             <span class="badge">3</span>
         </a>
@@ -58,6 +61,36 @@
         </a>
     </div>
 </div>
+<%
+}else{
+%>
+<div class="menu-left hidden-xs">
+    <a href="../jspFrontIndex" class="logo-left">
+        <img src="../img/logo.png" alt="" />
+    </a>
+
+    <div class="nav-item">
+        <a href="/jspFront/login.jsp" class="text-primary">
+            <i class="fas fa-user-circle fa-2x"></i>
+        </a>
+    </div>
+
+    <div class="nav-item">
+        <a href="../OrderFindByCustomer?customerId=-1" class="text-primary">
+            <i class="fas fa-shopping-bag fa-2x"></i>
+            <span class="badge">3</span>
+        </a>
+    </div>
+
+    <div class="nav-item last">
+        <a href="javascript:void(0);" onclick="openSearch();" class="text-primary">
+            <i class="fas fa-search fa-2x"></i>
+        </a>
+    </div>
+</div>
+<%
+    }
+%>
 <!-- Left menu -->
 
 <!-- Right menu -->
@@ -172,6 +205,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <h1 class="text-xs-center">信息更改</h1>
+                <hr />
             </div>
 
             <!--				<div class="col-sm-12 m-t-70">
@@ -227,25 +261,24 @@
                     </ul>
                 </div>
             </div>
-
+            <%Customer customerDetail = (Customer)request.getAttribute("customerDetail"); %>
             <div class="col-xs-12 col-sm-12 col-md-7 pull-right">
                 <form>
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group form-group-default required">
                                 <label>姓名</label>
-                                <input type="text" name="first_name" class="form-control" required />
+                                <input type="text" id="name" class="form-control" value="<%=customerDetail.getCustomerName()%>" required />
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="form-group form-group-default required">
                                 <label>性别</label>
-                                <select name="Sex" class="form-control">
-                                    <option></option>
-                                    <option value="unKnown">未知</option>
-                                    <option value="Female">女</option>
-                                    <option value="Male">男</option>
+                                <select id="Sex" class="form-control">
+                                    <option value="unKnown" selected="selected" disabled="disabled" >请选择性别</option>
+                                    <option value="女">女</option>
+                                    <option value="男">男</option>
                                 </select>
                             </div>
                         </div>
@@ -255,14 +288,14 @@
                         <div class="col-sm-6">
                             <div class="form-group form-group-default required">
                                 <label>Email</label>
-                                <input type="email" name="email" class="form-control" required />
+                                <input type="email" id="email" value="<%=customerDetail.getCustomerEmail()%>" class="form-control" required />
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="form-group form-group-default required">
                                 <label>生日</label>
-                                <input type="date" name="birthday" class="form-control" required />
+                                <input type="date" id="birthday" value="<%=customerDetail.getCustomerBirthday()%>" class="form-control" required />
                             </div>
                         </div>
                     </div>
@@ -271,32 +304,56 @@
                         <div class="col-sm-6">
                             <div class="form-group form-group-default required">
                                 <label>联系电话</label>
-                                <input type="phone" name="phone" class="form-control" required />
+                                <input type="phone" id="phone" value="<%=customerDetail.getCustomerPhone() %>" class="form-control" required />
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="form-group form-group-default ">
                                 <label>邮编</label>
-                                <input type="text" name="zipCode" class="form-control" />
+                                <input type="text" id="zipCode" value="<%=customerDetail.getCustomerZipCode()%>" class="form-control" />
                             </div>
                         </div>
 
                     </div>
                     <div class="form-group form-group-default required">
                         <label>详细地址</label>
-                        <input type="text" name="address" class="form-control" required" />
+                        <input type="text" id="address" value="<%=customerDetail.getAddress().getAddressName()%>" class="form-control" required" />
                     </div>
 
                     <div class="form-group form-group-default">
                         <label>个人简介</label>
-                        <textarea name="message" class="form-control v-resize" rows="10" ></textarea>
+                        <textarea id="info" class="form-control v-resize" rows="10"><%=customerDetail.getCustomerName()%></textarea>
                     </div>
 
                     <div class="form-group text-center">
-                        <button type="submit" class="btn btn-success"><i class="fas fa-paper-plane"></i>&nbsp; Sign In</button>
+                        <input type="button" class="btn btn-success" onclick="saveCustomerInfo(<%=customerId%>)" value="保存修改"/>
                     </div>
                 </form>
+
+                <script>
+                    function saveCustomerInfo(customerId) {
+                        var name = document.getElementById("name").value;
+                        var Sex = document.getElementById("Sex").value;
+                        var email = document.getElementById("email").value;
+                        var birthday = document.getElementById("birthday").value;
+                        var phone = document.getElementById("phone").value;
+                        var zipCode = document.getElementById("zipCode".value);
+                        var address = document.getElementById("address").value;
+                        var  info =document.getElementById("info").value;
+
+                        $.ajax({
+                            url:"/SaveCustomerInfo?customerName="+name+"&customerSex="+Sex+"&customerEmail="+email+"&customerBirthday="+birthday+"&customerPhone="+phone+"&customerZipCode="+zipCode
+                            +"&customerAddress=" + address ,
+                            type:"post",
+                            dataTye:"json",
+                            success(result){
+                                if(result)
+                                    window.location.reload();
+                            }
+                        })
+                    }
+                </script>
             </div>
         </div>
     </div>
@@ -308,84 +365,77 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 col-md-5 m-b-40 text-xs-center">
-                            <h5>Support</h5>
+                            <h5>关于</h5>
 
-                            <p class="m-b-20">Our goal is to offer you a level of support that<br />matches the attention to detail of our products.</p>
+                            <p class="m-b-20">南开实训小组购物系统   允公允能 日新月异(ง •_•)ง</p>
 
                             <ul class="footer-menu">
                                 <li>
-                                    <i class="far fa-building"></i>&nbsp; 12 Rock Rd, VA 22066, USA
+                                    <i class="far fa-building"></i>&nbsp; 天津市南开大学   NKU
                                 </li>
                                 <li>
-                                    <i class="fas fa-mobile-alt"></i>&nbsp; <a href="">+1 0123-456.789</a>
+                                    <i class="fas fa-mobile-alt"></i>&nbsp; <a href="">15822589363</a>
                                 </li>
                                 <li>
-                                    <i class="far fa-envelope"></i>&nbsp; <a href="mailto:info@company.com">info@company.com</a>
+                                    <i class="far fa-envelope"></i>&nbsp; <a href="mailto:stduents@edu.nankai.com">stduents@edu.nankai.com</a>
                                 </li>
                             </ul>
                         </div>
 
                         <div class="col-xs-12 col-sm-6 col-md-2 m-b-40 text-xs-center">
-                            <h5>Company</h5>
+                            <h5>小组成员</h5>
 
                             <ul class="footer-menu">
                                 <li>
-                                    <i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="#">About</a>
+                                    <i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="#">SJQ</a>
                                 </li>
                                 <li>
-                                    <i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="#">Technology</a>
+                                    <i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="#">LHY</a>
                                 </li>
                                 <li>
-                                    <i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="#">The Team</a>
+                                    <i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="#">YQW</a>
                                 </li>
                                 <li>
-                                    <i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="#">Blog</a>
+                                    <i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="#">ZJG</a>
                                 </li>
                                 <li>
-                                    <i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="#">Careers</a>
-                                </li>
-                                <li>
-                                    <i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="#">Contact</a>
+                                    <i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="#">ZY</a>
                                 </li>
                             </ul>
                         </div>
 
                         <div class="col-xs-12 col-sm-6 col-md-2 m-b-40 text-xs-center">
-                            <h5>Services</h5>
+                            <h5>帮助</h5>
 
                             <ul class="footer-menu">
                                 <li>
-                                    <i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="#">FAQ</a>
+                                    <i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="#">常见问题</a>
                                 </li>
                                 <li>
-                                    <i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="#">Warranty</a>
+                                    <i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="#">友情链接</a>
                                 </li>
                                 <li>
-                                    <i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="#">Payments</a>
+                                    <i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="https://github.com/banbanBanK/banBank">git链接</a>
                                 </li>
                                 <li>
-                                    <i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="#">Shipping & Returns</a>
+                                    <i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="#">售后服务</a>
                                 </li>
                                 <li>
-                                    <i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="#">Privacy Policy</a>
-                                </li>
-                                <li>
-                                    <i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="#">Terms & Conditions</a>
+                                    <i class="fas fa-angle-right m-r-5 hidden-xs"></i> <a href="#">免责声明</a>
                                 </li>
                             </ul>
                         </div>
 
                         <div class="col-xs-12 col-sm-6 col-md-3 m-b-40 text-xs-center">
-                            <h5>Newsletter</h5>
+                            <h5>最新进展</h5>
 
-                            <p class="m-b-20">Join us to get news updates from us</p>
+                            <p class="m-b-20">加入我们了解最新资讯</p>
 
                             <form class="form-inline">
                                 <div class="form-group">
                                     <input type="text" name="subscribe" class="form-control" placeholder="Email" />
+                                    <button type="submit" class="btn btn-success btn-square">Join Us</button>
                                 </div>
-
-                                <button type="submit" class="btn btn-success btn-square">Join Us</button>
                             </form>
 
                             <ul class="footer-list m-t-30">
@@ -422,7 +472,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 text-xs-center">
-                            <p>&copy; 2018 <a href="#">Staro</a>. All rights reserved.</p>
+                            <p>&copy; 2018 <a href="#">NKU</a>. All rights reserved.</p>
                         </div>
 
                         <div class="col-xs-12 col-sm-6 text-xs-center">

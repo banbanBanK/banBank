@@ -33,7 +33,10 @@
 <body>
 
 
-
+<%
+    String customerId = (String)session.getAttribute("customerId");
+    if(customerId!=null ){
+%>
 <!-- Left menu -->
 <div class="menu-left hidden-xs">
     <a href="../jspFrontIndex" class="logo-left">
@@ -41,13 +44,13 @@
     </a>
 
     <div class="nav-item">
-        <a href="login.jsp" class="text-primary">
+        <a href="../CustomerDetails?customerId=<%=customerId%>" class="text-primary">
             <i class="fas fa-user-circle fa-2x"></i>
         </a>
     </div>
 
     <div class="nav-item">
-        <a href="../OrderFindByCustomer?customerId=123" class="text-primary">
+        <a href="../OrderFindByCustomer?customerId=<%=customerId%>" class="text-primary">
             <i class="fas fa-shopping-bag fa-2x"></i>
             <span class="badge">3</span>
         </a>
@@ -59,6 +62,36 @@
         </a>
     </div>
 </div>
+<%
+}else{
+%>
+<div class="menu-left hidden-xs">
+    <a href="../jspFrontIndex" class="logo-left">
+        <img src="../img/logo.png" alt="" />
+    </a>
+
+    <div class="nav-item">
+        <a href="/jspFront/login.jsp" class="text-primary">
+            <i class="fas fa-user-circle fa-2x"></i>
+        </a>
+    </div>
+
+    <div class="nav-item">
+        <a href="../OrderFindByCustomer?customerId=-1" class="text-primary">
+            <i class="fas fa-shopping-bag fa-2x"></i>
+            <span class="badge">3</span>
+        </a>
+    </div>
+
+    <div class="nav-item last">
+        <a href="javascript:void(0);" onclick="openSearch();" class="text-primary">
+            <i class="fas fa-search fa-2x"></i>
+        </a>
+    </div>
+</div>
+<%
+    }
+%>
 <!-- Left menu -->
 
 <!-- Right menu -->
@@ -184,22 +217,42 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-4 col-sm-push-4">
                             <div class="form-group form-group-default required">
-                                <label>Email</label>
-                                <input type="text" name="email" class="form-control" required />
+                                <label>账号(Id)</label>
+                                <input type="text" id="customerId" name="id" class="form-control" required />
                             </div>
 
                             <div class="form-group form-group-default required">
-                                <label>Password</label>
-                                <input type="password" name="password" class="form-control" required />
+                                <label>密码(Password)</label>
+                                <input type="password" id="password" name="password" class="form-control" required />
                             </div>
 
                             <div class="form-group text-center m-t-40">
-                                <button type="submit" class="btn btn-success"><i class="fas fa-unlock"></i>&nbsp; Sign In</button>
+                                <input type="button" class="btn btn-success" onclick="login()" value="&nbsp; Sign In"/>
 
                                 <p class="small m-t-20">
                                     Not registered? <a href="http://demo.intelcoder.net/staro/register.html" class="text-success">Create an account</a>
                                 </p>
                             </div>
+                            <script>
+                                function login() {
+                                    var customerId = document.getElementById("customerId").value;
+                                    var password = document.getElementById("password").value;
+
+                                    $.ajax({
+                                        url:"/loginFront?customerId=" + customerId + "&password=" + password,
+                                        type:"post",
+                                        dataType:"json",
+                                        success(result){
+                                            if(result){
+                                                alert("登陆成功，浏览器即将跳转...");
+                                                window.location="http://localhost:8080/jspFrontIndex";
+                                            }else{
+                                                alert("登录失败，请检查您的账号密码是否正确！");
+                                            }
+                                        }
+                                    })
+                                }
+                            </script>
                         </div>
                     </div>
                 </form>
