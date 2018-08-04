@@ -6,13 +6,13 @@
 
 <mapper namespace="com.chinasofti.ssm.dao.OrderDao">
 
-    <select id="getCustomerByCustomerId" parameterType="String" resultType="com.chinasofti.ssm.domain.Customer">
+    <select id="getCustomerByCustomerId" parameterType="String" resultMap="com.chinasofti.ssm.dao.CustomerDao.resultCustomer">
         select *
         from customers
         where CustomerId=#{CustomerId}
     </select>
 
-    <select id="getGoodByGoodId" parameterType="String" resultType="com.chinasofti.ssm.domain.Good">
+    <select id="getGoodByGoodId" parameterType="String" resultMap="com.chinasofti.ssm.dao.GoodDao.GoodResultMap">
         select *
         from goods
         where GoodId=#{GoodId}
@@ -52,7 +52,7 @@
     </select>
 
     <insert id="insert" parameterType="com.chinasofti.ssm.domain.Order">
-        insert into orders values('',#{customerId},#{goodId},#{goodPrice},#{goodNum},#{createTime},#{deleteStatus},#{isDone})
+        insert into orders values(null,#{customer.customerId},#{good.goodId},#{goodPrice},#{goodNum},#{createTime},#{deleteStatus},#{isDone})
     </insert>
 
     <delete id="delete" parameterType="Integer">
@@ -71,5 +71,11 @@
         update orders
         set IsDone = 1,DeleteStatus = 0
         where customerId = #{customerId} and DeleteStatus = 1
+    </update>
+
+    <update id="updateGoodNum">
+        update orders
+        set goodNum = #{goodNum}
+        where customerId=#{customerId} and goodId=#{goodId}
     </update>
 </mapper>
