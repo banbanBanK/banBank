@@ -3,32 +3,32 @@ package com.chinasofti.ssm.domain;
 import java.io.Serializable;
 
 public class Favor implements Serializable{
-	private Integer Id;
-	private Integer FavorLevel;
+	private Integer id;
+	private Integer favorLevel;
 	private Customer customer ;
 	private Type type;
-	private Integer DeleteStatus;
+	private Integer deleteStatus;
 	public Favor() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	public Integer getDeleteStatus() {
-		return DeleteStatus;
+		return deleteStatus;
 	}
 	public void setDeleteStatus(Integer deleteStatus) {
-		DeleteStatus = deleteStatus;
+		this.deleteStatus = deleteStatus;
 	}
 	public Integer getId() {
-		return Id;
+		return id;
 	}
 	public void setId(Integer id) {
-		Id = id;
+		this.id = id;
 	}
 	public Integer getFavorLevel() {
-		return FavorLevel;
+		return favorLevel;
 	}
 	public void setFavorLevel(Integer favorLevel) {
-		FavorLevel = favorLevel;
+		this.favorLevel = favorLevel;
 	}
 	public Customer getCustomer() {
 		return customer;

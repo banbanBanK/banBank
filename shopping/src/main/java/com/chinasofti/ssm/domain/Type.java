@@ -5,31 +5,32 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Type implements Serializable{
-	private Integer Id;
-	private String TypeId;
-	private String TypeName;
+	private Integer id;
+	private String typeId;
+	private String typeName;
+	private String fatherTypeId;
 	private Set<Favor> favors = new HashSet<Favor>();
 	public Type() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	public Integer getId() {
-		return Id;
+		return id;
 	}
 	public void setId(Integer id) {
-		Id = id;
+		this.id = id;
 	}
 	public String getTypeId() {
-		return TypeId;
+		return typeId;
 	}
 	public void setTypeId(String typeId) {
-		TypeId = typeId;
+		this.typeId = typeId;
 	}
 	public String getTypeName() {
-		return TypeName;
+		return typeName;
 	}
 	public void setTypeName(String typeName) {
-		TypeName = typeName;
+		this.typeName = typeName;
 	}
 	public Set<Favor> getFavors() {
 		return favors;
@@ -37,5 +38,10 @@ public class Type implements Serializable{
 	public void setFavors(Set<Favor> favors) {
 		this.favors = favors;
 	}
-
+	public String getFatherTypeId() {
+		return fatherTypeId;
+	}
+	public void setFatherTypeId(String fatherId) {
+		this.fatherTypeId = fatherId;
+	}
 }

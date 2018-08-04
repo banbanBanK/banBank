@@ -32,7 +32,7 @@
     <select id="findById" parameterType="Integer" resultMap="FavorResultMap">
         select *
         from favor
-        where Id = #{Id} and DeleteStatus = 1
+        where Id = #{id} and DeleteStatus = 1
     </select>
     <select id="findByCustomerId" parameterType="String" resultMap="FavorResultMap">
         select *
@@ -52,12 +52,12 @@
 
     <insert id="insert" parameterType="com.chinasofti.ssm.domain.Favor" useGeneratedKeys="true" keyProperty="Id">
 		insert into favor
-		values(null,#{type.TypeId},#{customer.CustomerId},#{FavorLevel},#{DeleteStatus})
+		values(null,#{type.typeId},#{customer.customerId},#{favorLevel},#{deleteStatus})
 	</insert>
     <update id="update" parameterType="com.chinasofti.ssm.domain.Favor">
 		update favor
-		set TypeId = #{type.TypeId}, CustomerId = #{customer.CustomerId}, FavorLevel = #{FavorLevel}, DeleteStatus=#{DeleteStatus}
-		where Id = #{Id}
+		set TypeId = #{type.typeId}, CustomerId = #{customer.customerId}, FavorLevel = #{favorLevel}, DeleteStatus=#{deleteStatus}
+		where Id = #{id}
 	</update>
     <delete id="deleteById" parameterType="int">
 		update favor

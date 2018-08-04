@@ -38,12 +38,12 @@
     <link href="../css/custom.css" rel="stylesheet">
     <!--//Metis Menu -->
 </head>
-<body class="cbp-spmenu-push" style="font-family:'calisto mt'">
+<body class="cbp-spmenu-push" style="font-family:'calisto mt';background: #424a5d">
 <div class="main-content">
     <!--left-fixed -navigation-->
     <div class=" sidebar" role="navigation">
         <div class="navbar-collapse">
-            <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+            <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1"  style="background: #424a5d">
                 <ul class="nav" id="side-menu">
                     <li>
                         <a href="/InfoView" style="font-family:'楷体'"><i class="fa fa-home nav_icon"></i>信息汇总</a>
@@ -52,28 +52,7 @@
                         <a href="/getgood" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>进货计划<span class="nav-badge">03</span></a>
                     </li>
                     <li>
-                        <a href="comment1.jsp" style="font-family:'楷体'"><i class="fa fa-book nav_icon"></i>客户评价<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse" style="font-family:'楷体'">
-                            <li>
-                                <a href="comment1.jsp">1星评价</a>
-                            </li>
-                            <li>
-                                <a href="comment2.jsp">2星评价</a>
-                            </li>
-                            <li>
-                                <a href="comment3.jsp">3星评价</a>
-                            </li>
-                            <li>
-                                <a href="comment4.jsp">4星评价</a>
-                            </li>
-                            <li>
-                                <a href="comment5.jsp">5星评价</a>
-                            </li>
-                        </ul>
-                        <!-- /nav-second-level -->
-                    </li>
-                    <li>
-                        <a href="CustomerView.jsp"  style="font-family:'楷体'"><i class="fa fa-bar-chart nav_icon"></i>客户总览</a>
+                        <a href="/CustomerView"  style="font-family:'楷体'"><i class="fa fa-bar-chart nav_icon"></i>客户总览</a>
                     </li>
                     <li>
                         <a href="/AdminInfo" class="active" style="font-family:'楷体'"><i class="fa fa-check-square-o nav_icon"></i>我的信息<span class="fa arrow"></span></a>
@@ -108,10 +87,10 @@
     <div class="sticky-header header-section ">
         <div class="header-left">
             <!--toggle button start-->
-            <button id="showLeftPush"><i class="fa fa-bars"></i></button>
+            <button id="showLeftPush" style="background: #424a5d"><i class="fa fa-bars"></i></button>
             <!--toggle button end-->
             <!--logo -->
-            <div class="logo" style="width:230px">
+            <div class="logo" style="width:230px;background: #424a5d">
                 <a href="index.jsp">
                     <h1><font style="font-family:'calisto mt';font-style: italic;">NKUTT</font></h1>
                     <span><font style="font-family:'calisto mt';font-style: italic;">Adminpannel</font></span>
@@ -202,7 +181,7 @@
             </div>
             <div class="clearfix"> </div>
         </div>
-        <div class="clearfix"> </div>
+        <div class="clearfix" style="background: #424a5d"> </div>
     </div>
     <!-- //header-ends -->
     <!-- main content start-->
@@ -247,7 +226,7 @@
         </div>
     </div>
     <!--footer-->
-    <div class="footer" style="position: relative">
+    <div class="footer" style="background: #424a5d">
         <p>南开大学实训小组</p>
     </div>
     <!--//footer-->

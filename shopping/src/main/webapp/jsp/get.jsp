@@ -24,11 +24,11 @@
     </style>
 </head>
 <body>
-<form action="/getmore" method="post" class="row-one">
+<form action="/getMore" method="post" class="row-one">
     <%
         session.setAttribute("getGet",request.getParameter("goodId"));
     %>
-    <input type="text" class="get" name="goodnum" id="goodnum"  placeholder="请选择此次购进数量">
+    <input type="text" class="get" name="goodNum" id="goodNum"  placeholder="请选择此次购进数量">
     <input type="submit" id="submit" value="提交" style="background-color: rgba(12,156,20,0.66)">
 </form>
 </body>

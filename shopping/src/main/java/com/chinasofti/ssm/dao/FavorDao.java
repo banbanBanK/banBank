@@ -7,13 +7,13 @@ import com.chinasofti.ssm.domain.Type;
 import java.util.List;
 
 public interface FavorDao extends GenericDao<Favor, Integer> {
-    public List<Favor> findByCustomerId(String customerId);
-    public List<Favor> findByTypeId(String typeId);
-    public List<Favor> findByLevel(Integer level);
+    List<Favor> findByCustomerId(String customerId);
+    List<Favor> findByTypeId(String typeId);
+    List<Favor> findByLevel(Integer level);
 
-    public int insert(Favor favor);
-    public int update(Favor favor);
-    public int deleteById(int id);
-//    public boolean deleteForCustomer(Customer customer);
-//    public boolean deleteForType(Type type);
+    int insert(Favor favor);
+    int update(Favor favor);
+    int deleteById(int id);
+//    boolean deleteForCustomer(Customer customer);
+//    boolean deleteForType(Type type);
 }

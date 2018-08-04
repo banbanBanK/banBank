@@ -3,38 +3,38 @@ package com.chinasofti.ssm.domain;
 import java.io.Serializable;
 
 public class Card implements Serializable{
-	private Integer Id;
-	private String  CardId;
-	private double  Account;
-	private Integer DeleteStatus;
+	private Integer id;
+	private String  cardId;
+	private double  account;
+	private Integer deleteStatus;
 	private Customer customer;
 	public Card() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	public Integer getId() {
-		return Id;
+		return id;
 	}
 	public void setId(Integer id) {
-		Id = id;
+		this.id = id;
 	}
 	public String getCardId() {
-		return CardId;
+		return cardId;
 	}
 	public void setCardId(String cardId) {
-		CardId = cardId;
+		this.cardId = cardId;
 	}
 	public double getAccount() {
-		return Account;
+		return account;
 	}
 	public void setAccount(double account) {
-		Account = account;
+		this.account = account;
 	}
 	public Integer getDeleteStatus() {
-		return DeleteStatus;
+		return deleteStatus;
 	}
 	public void setDeleteStatus(Integer deleteStatus) {
-		DeleteStatus = deleteStatus;
+		this.deleteStatus = deleteStatus;
 	}
 	public Customer getCustomer() {
 		return customer;

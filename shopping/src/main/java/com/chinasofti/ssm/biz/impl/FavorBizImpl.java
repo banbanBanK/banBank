@@ -17,8 +17,8 @@ public class FavorBizImpl implements FavorBiz {
         return favorDao.findAll();
     }
 
-    public Favor findById(Integer Id) {
-        return favorDao.findById(Id);
+    public Favor findById(Integer id) {
+        return favorDao.findById(id);
     }
 
     public List<Favor> findByCustomerId(String customerId) {

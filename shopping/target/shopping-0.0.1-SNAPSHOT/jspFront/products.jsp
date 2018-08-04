@@ -1,4 +1,7 @@
-<%--
+<%@ page import="java.util.List" %>
+<%@ page import="com.chinasofti.ssm.domain.Type" %>
+<%@ page import="com.chinasofti.ssm.biz.TypeBiz" %>
+<%@ page import="com.chinasofti.ssm.domain.Good" %><%--
   Created by IntelliJ IDEA.
   User: 该读过
   Date: 2018/7/28
@@ -29,7 +32,6 @@
     <link rel="stylesheet" href="../css2/ic-helpers.min.css" />
 </head>
 <body>
-
 
 <!-- Left menu -->
 <div class="menu-left hidden-xs">
@@ -83,33 +85,61 @@
         <a href="index.jsp"><i class="fas fa-desktop"></i></a>
     </div>
 
-    <ul>
-        <li><a href="products.jsp">Over-ear <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
-        <li><a href="products.jsp">On-ear <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
-        <li><a href="products.jsp">In-ear <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
-        <li><a href="products.jsp">Accessories <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" /></a></li>
 
+    <ul>
+        <%
+            List<Type> types_parents = (List<Type>)request.getAttribute("types_parents");
+            if(types_parents != null && types_parents.size() != 0){
+                for(Type type_parents : types_parents){
+        %>
+        <li>
+            <a href="../GoodFindByRootTypeId?fatherTypeId=<%=type_parents.getTypeId() %>"><%=type_parents.getTypeName() %>
+                <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" />
+            </a>
+        </li>
+        <ul>
+            <%
+                List<Type> types_children = (List<Type>) request.getAttribute("types_children");
+                if(types_children != null && types_children.size() != 0 && type_parents.getTypeId().equals(types_children.get(0).getFatherTypeId())){
+                    for(Type type_children : types_children){
+            %>
+            <li>
+                <a href="../GoodFindByChildrenTypeId?typeId=<%=type_children.getTypeId() %>&fatherTypeId=<%=type_parents.getTypeId() %>"><%=type_children.getTypeName() %>
+                    <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" />
+                </a>
+            </li>
+            <%
+                    }
+                }
+            %>
+        </ul>
+        <%
+                }
+            }
+        %>
+
+        <%
+            List<Type> types_singleRoots = (List<Type>)request.getAttribute("types_singleRoots");
+            if(types_singleRoots != null && types_singleRoots.size() != 0){
+                for(Type type_singleRoots : types_singleRoots){
+        %>
+        <li>
+            <a href="../GoodFindByChildrenTypeId?typeId=<%=type_singleRoots.getTypeId() %>&fatherTypeId=<%=type_singleRoots.getTypeId() %>"><%=type_singleRoots.getTypeName() %>
+                <img src="../img/icon-headphones.png" class="h-30 align-middle m-l-20" alt="" />
+            </a>
+        </li>
+        <%
+                }
+            }
+        %>
         <li><hr class="m-tb-30" /></li>
 
-        <li><a href="products.jsp">Products</a></li>
-        <li><a href="product-details.jsp">Product Details</a></li>
+        <li><a href="../GoodFindAll">Products</a></li>
         <li><a href="about.jsp">About</a></li>
         <li><a href="blog.jsp">Blog</a></li>
         <li><a href="blog-post.jsp">Blog Post</a></li>
         <li><a href="contact.jsp">Contact</a></li>
     </ul>
-
-    <div class="social-media-box">
-        <hr />
-
-        <a href="#" class="text-primary" target="_blank"><i class="fab fa-facebook-square"></i></a>
-        <a href="#" class="text-primary" target="_blank"><i class="fab fa-google-plus-square"></i></a>
-        <a href="#" class="text-primary" target="_blank"><i class="fab fa-twitter-square"></i></a>
-        <a href="#" class="text-primary" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="text-primary" target="_blank"><i class="fab fa-pinterest-square"></i></a>
-        <a href="#" class="text-primary" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="#" class="text-primary" target="_blank"><i class="fab fa-youtube-square"></i></a>
-    </div>
 </div>
 <!-- Right menu -->
 
@@ -144,175 +174,41 @@
             </div>
         </div>
 
+
+        <%
+            List<Good> goods = (List<Good>) request.getAttribute("goods");
+            if(goods.size() != 0){
+                for(int i=0;i<3;i++){
+
+        %>
         <div class="row">
-            <div class="col-xs-12 col-sm-4 col-md-4">
+            <%
+                    for(int k = 4 * i;k < 4 + 4 * i;k++){
+                        Good good = goods.get(k);
+            %>
+            <div class="col-xs-12 col-sm-3 col-md-3">
                 <div class="panel">
                     <div class="panel-body p-t-30 p-b-30 text-center">
-                        <div class="badge-sale-primary">Sale</div>
-
-                        <a href="product-details.jsp" class="product-item">
-                            <img src="../img/products/product8.png" class="img-responsive center-block" alt="" />
+                        <a href="../GoodDetailsFindById?id=<%=good.getId() %>&fatherTypeId=<%=good.getType().getFatherTypeId()%>&evaluation=0" class="product-item">
+                            <img src="<%=good.getGoodImage()%>" class="img-responsive center-block" alt="" />
                         </a>
 
-                        <a href="product-details.jsp">
-                            <h5 class="m-tb-20">Staro-One S1000</h5>
+                        <a href="../GoodDetailsFindById?id=<%=good.getId() %>&fatherTypeId=<%=good.getType().getFatherTypeId()%>&evaluation=0">
+                            <h5 class="m-tb-20"><%=good.getGoodName()%></h5>
                         </a>
 
-                        <h6 class="text-success">$199.00</h6>
+                        <h6 class="text-success"><%=good.getGoodPrice()%></h6>
                     </div>
                 </div>
             </div>
-
-            <div class="col-xs-12 col-sm-4 col-md-4">
-                <div class="panel">
-                    <div class="panel-body p-t-30 p-b-30 text-center">
-                        <div class="badge-sale-primary">-10%</div>
-
-                        <a href="product-details.jsp" class="product-item">
-                            <img src="../img/products/product9.png" class="img-responsive center-block" alt="" />
-                        </a>
-
-                        <a href="product-details.jsp">
-                            <h5 class="m-tb-20">Staro-One S2000</h5>
-                        </a>
-
-                        <h6 class="text-success">$299.00</h6>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-4 col-md-4">
-                <div class="panel">
-                    <div class="panel-body p-t-30 p-b-30 text-center">
-                        <a href="product-details.jsp" class="product-item">
-                            <img src="../img/products/product10.png" class="img-responsive center-block" alt="" />
-                        </a>
-
-                        <a href="product-details.jsp">
-                            <h5 class="m-tb-20">Staro-One S3000</h5>
-                        </a>
-
-                        <h6 class="text-success">$399.00</h6>
-                    </div>
-                </div>
-            </div>
+            <%
+                }
+            %>
         </div>
-
-        <div class="row">
-            <div class="col-xs-12 col-sm-4 col-md-4">
-                <div class="panel">
-                    <div class="panel-body p-t-30 p-b-30 text-center">
-                        <a href="product-details.jsp" class="product-item">
-                            <img src="../img/products/product1.png" class="img-responsive center-block" alt="" />
-                        </a>
-
-                        <a href="product-details.jsp">
-                            <h5 class="m-tb-20">Staro-Two A100</h5>
-                        </a>
-
-                        <h6 class="text-success">$199.00</h6>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-4 col-md-4">
-                <div class="panel">
-                    <div class="panel-body p-t-30 p-b-30 text-center">
-                        <a href="product-details.jsp" class="product-item">
-                            <img src="../img/products/product2.png" class="img-responsive center-block" alt="" />
-                        </a>
-
-                        <a href="product-details.jsp">
-                            <h5 class="m-tb-20">Staro-Two A100</h5>
-                        </a>
-
-                        <h6 class="text-success">$299.00</h6>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-4 col-md-4">
-                <div class="panel">
-                    <div class="panel-body p-t-30 p-b-30 text-center">
-                        <a href="product-details.jsp" class="product-item">
-                            <img src="../img/products/product3.png" class="img-responsive center-block" alt="" />
-                        </a>
-
-                        <a href="product-details.jsp">
-                            <h5 class="m-tb-20">Staro-Two A100</h5>
-                        </a>
-
-                        <h6 class="text-success">$399.00</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row m-b-70">
-            <div class="col-xs-12 col-sm-3 col-md-3">
-                <div class="panel">
-                    <div class="panel-body p-t-30 p-b-30 text-center">
-                        <a href="product-details.jsp" class="product-item">
-                            <img src="../img/products/product4.png" class="img-responsive center-block" alt="" />
-                        </a>
-
-                        <a href="product-details.jsp">
-                            <h5 class="m-tb-20">Staro-Four M200</h5>
-                        </a>
-
-                        <h6 class="text-success">$199.00</h6>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-3 col-md-3">
-                <div class="panel">
-                    <div class="panel-body p-t-30 p-b-30 text-center">
-                        <a href="product-details.jsp" class="product-item">
-                            <img src="../img/products/product5.png" class="img-responsive center-block" alt="" />
-                        </a>
-
-                        <a href="product-details.jsp">
-                            <h5 class="m-tb-20">Staro-Four M200</h5>
-                        </a>
-
-                        <h6 class="text-success">$299.00</h6>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-3 col-md-3">
-                <div class="panel">
-                    <div class="panel-body p-t-30 p-b-30 text-center">
-                        <a href="product-details.jsp" class="product-item">
-                            <img src="../img/products/product6.png" class="img-responsive center-block" alt="" />
-                        </a>
-
-                        <a href="product-details.jsp">
-                            <h5 class="m-tb-20">Staro-Four M200</h5>
-                        </a>
-
-                        <h6 class="text-success">$399.00</h6>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-3 col-md-3">
-                <div class="panel">
-                    <div class="panel-body p-t-30 p-b-30 text-center">
-                        <a href="product-details.jsp" class="product-item">
-                            <img src="../img/products/product7.png" class="img-responsive center-block" alt="" />
-                        </a>
-
-                        <a href="product-details.jsp">
-                            <h5 class="m-tb-20">Staro-Four M200</h5>
-                        </a>
-
-                        <h6 class="text-success">$499.00</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <%
+                }
+            }
+        %>
 
         <div class="row m-b-70">
             <div class="col-sm-12 text-center">

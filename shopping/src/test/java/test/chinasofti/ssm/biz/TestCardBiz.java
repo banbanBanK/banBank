@@ -17,30 +17,25 @@ public class TestCardBiz {
     @Autowired
     private CardBiz cardBiz;
     @Test
-    public void run(){
-//        findAll();
-//        findByCardId();
-//        findByCustomerId();
-//        insert();
-//        update();
-//        delete();
-    }
     public void findAll(){
         List<Card> cards = cardBiz.findAll();
         for(Card card : cards){
             System.out.println("findByAll "+ card.getCustomer().getCustomerId());
         }
     }
+    @Test
     public void findByCardId(){
         Card card = cardBiz.findByCardId("3");
         System.out.println("findByCardId "+ card.getId());
     }
+    @Test
     public void findByCustomerId(){
         List<Card> cards = cardBiz.findByCustomerId("3");
         for(Card card : cards){
             System.out.println("findByCustomer "+ card.getId());
         }
     }
+    @Test
     public void insert(){
         Card card = new Card();
         Customer customer = new Customer();
@@ -51,6 +46,7 @@ public class TestCardBiz {
 
         cardBiz.insert(card);
     }
+    @Test
     public void update(){
         Card card = new Card();
         card.setId(1);
@@ -62,6 +58,7 @@ public class TestCardBiz {
 
         cardBiz.update(card);
     }
+    @Test
     public void delete(){
         cardBiz.deleteById(1);
     }

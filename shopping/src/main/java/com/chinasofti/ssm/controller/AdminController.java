@@ -28,7 +28,7 @@ public class AdminController {
 		return "AdminInfo";
 	}
 
-	@RequestMapping("/updateadmin")
+	@RequestMapping("/updateAdmin")
 	public String updateadmin(HttpServletRequest request){
 		//String adminId = request.getParameter("");
 		//Admin admin1 = adminBiz.findByAdminId(adminId);
@@ -66,4 +66,12 @@ public class AdminController {
 	public String first(HttpServletRequest request){
 		return "InfoView";
 	}
+    @RequestMapping(value = "/jsp/adminLogin")
+    public String adminLogin(String id,String password){
+       Boolean flag=adminBiz.login(id,password);
+       if(flag)
+           return "InfoView";
+       else
+           return "";
+    }
 }
