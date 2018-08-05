@@ -46,7 +46,7 @@ public class CustomerSignupController {
 	    customer.setAddress(addressOfCus);
 	    boolean res=customerBiz.insert(customer);
 	    if(res)
-	    		return "customerSignupSuccess";
+	    		return "../jspFront/login";
 	    else
 	    	return "customerSignupError";
 	}
@@ -98,4 +98,22 @@ public class CustomerSignupController {
 	   return "../jspFront/CustomerDetail";
 
     }
+
+    @RequestMapping("/SaveCustomerInfo")
+    @ResponseBody
+    public boolean SaveCustomerInfo(String customerName, String customerGender, String customerEmail, java.sql.Date customerBirthday, String customerPhone, String customerZipCode, String customerAddress, String customerInfo){
+	    return customerBiz.updateCustomerInfo(customerName,customerGender,customerEmail,customerBirthday,customerPhone,customerZipCode,customerAddress,customerInfo);
+    }
+
+    @RequestMapping("/logout")
+	@ResponseBody
+	public boolean logout(HttpServletRequest request){
+		HttpSession session = request.getSession();
+		if(session.getAttribute("customerId")!=null) {
+			session.removeAttribute("customerId");
+			session.removeAttribute("loginStatus");
+			return true;
+		}else
+			return false;
+	}
 }

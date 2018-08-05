@@ -121,7 +121,7 @@ public class GoodController {
             return "../jspFront/product-headset-details";
         if(good.getType().getFatherTypeId().equals("3"))
             return "../jspFront/product-camera-details";
-        if(good.getType().getFatherTypeId().equals("4"))
+        if(good.getType().getFatherTypeId().equals("0"))
             return "../jspFront/product-cellphone-details";
         else return "";
     }

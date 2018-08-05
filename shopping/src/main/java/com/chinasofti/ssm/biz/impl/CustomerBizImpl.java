@@ -6,6 +6,7 @@ import com.chinasofti.ssm.domain.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -48,5 +49,9 @@ public class CustomerBizImpl implements CustomerBiz {
         result = customerDao.deleteById(id);
         if(result > 0) return true;
         else return false;
+    }
+
+    public boolean updateCustomerInfo(String customerName, String customerGender, String customerEmail, Date customerBirthday, String customerPhone, String customerZipCode, String customerAddress, String customerIntroduction) {
+        return customerDao.updateCustomerInfo(customerName,customerGender,customerEmail,customerBirthday,customerPhone,customerZipCode,customerAddress,customerIntroduction)==1;
     }
 }
