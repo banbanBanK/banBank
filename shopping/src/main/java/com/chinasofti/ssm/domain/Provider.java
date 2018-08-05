@@ -9,7 +9,7 @@ public class Provider implements Serializable{
 	private String providerName;
 	private String providerTel;
 	private String providerPhone;
-	private String proivderEmial;
+	private String providerEmail;
 	private String providerZipCode;
 	private Integer deleteStatus;
 	private List<Good> goods;
@@ -47,14 +47,14 @@ public class Provider implements Serializable{
 	public void setProviderPhone(String providerPhone) {
 		this.providerPhone = providerPhone;
 	}
-	public String getProivderEmial() {
-		return proivderEmial;
-	}
-	public void setProivderEmial(String proivderEmial) {
-		this.proivderEmial = proivderEmial;
+	public String getProviderEmail() {
+		return providerEmail;
 	}
 	public String getProviderZipCode() {
 		return providerZipCode;
+	}
+	public void setProviderEmail(String providerEmail) {
+		this.providerEmail= providerEmail;
 	}
 	public void setProviderZipCode(String providerZipCode) {
 		this.providerZipCode = providerZipCode;

@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 import static java.lang.Integer.parseInt;
+import static java.lang.Integer.signum;
 
 @Controller
 public class GoodController {
@@ -130,13 +131,20 @@ public class GoodController {
 
     @RequestMapping("/getgood")
     public String getGood(HttpServletRequest request){
-        List<Good> goods = goodBiz.findAll();
-        request.setAttribute("goods",goods);
-        return "getgood";
+        HttpSession session = request.getSession();
+        String adminId = (String) session.getAttribute("loginAdminId");
+        Admin admin = adminBiz.findByAdminId(adminId);
+         if(adminId!=null) {
+            List<Good> goods = goodBiz.findAll();
+            request.setAttribute("goods", goods);
+            request.setAttribute("admin",admin);
+            return "getgood";
+        }else
+            return "login";
     }
 
     @RequestMapping("/look")
-    public String lookgood(@RequestParam String goodId, HttpServletRequest request){
+    public String lookGood(@RequestParam String goodId, HttpServletRequest request){
         HttpSession session = request.getSession();
         Good good = goodBiz.findByGoodId(goodId);
         session.setAttribute("goodName",good.getGoodName());
