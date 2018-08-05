@@ -8,13 +8,13 @@
 	<select id="getTypeByTypeId" parameterType="String" resultType="com.chinasofti.ssm.domain.Type">
 		select *
 		from types
-		where TypeId=#{TypeId}
+		where TypeId=#{typeId}
 	</select>
 
 	<select id="getProviderByProviderId" parameterType="String" resultType="com.chinasofti.ssm.domain.Provider">
 		select *
 		from providers
-		where ProviderId=#{ProviderId} and DeleteStatus = 1
+		where ProviderId=#{providerId} and DeleteStatus = 1
 	</select>
 
 	<resultMap id="GoodResultMap" type="com.chinasofti.ssm.domain.Good" autoMapping="true">
@@ -72,7 +72,7 @@
 	</insert>
 	<update id="update" parameterType="com.chinasofti.ssm.domain.Good">
 		update goods
-		set GoodId=#{goodId},GoodName=#{goodName},GoodPrice = #{goodPrice},GoodImage = #{goodImage},GoodStock=#{goodStock},GoodSaleSum=#{goodSaleSum},GoodComment=#{goodComment},ProviderId=#{providerId},TypeId=#{typeId},DeleteStatus=1
+		set GoodId=#{goodId},GoodName=#{goodName},GoodPrice = #{goodPrice},GoodImage = #{goodImage},GoodStock=#{goodStock},GoodSaleSum=#{goodSaleSum},DeleteStatus=1
 		where Id = #{id} and DeleteStatus=1
 	</update>
 	<delete id="delete" parameterType="Integer">
@@ -84,6 +84,6 @@
 	<select id="findProviderIdByGoodId" parameterType="String" resultType="String">
 		select ProviderId
 		from goods
-		where GoodId = #{GoodId}
+		where GoodId = #{goodId}
 	</select>
 </mapper>
