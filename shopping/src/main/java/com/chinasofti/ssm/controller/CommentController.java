@@ -31,7 +31,7 @@ public class CommentController {
     @Autowired
     private CustomerBiz customerBiz;
 
-    @RequestMapping("/CommentFindByCreatTime")
+    @RequestMapping("/CommentFindByCreateTime")
     public String commentFindByCreatTime(@RequestParam Timestamp createTime, HttpServletRequest request) {
         List<Comment> comments = commentBiz.findByCreateTime(createTime);
 
@@ -42,7 +42,7 @@ public class CommentController {
             return "";
     }
     @RequestMapping("/PublishComment")
-    public String publishComment(@RequestParam String commentStr, @RequestParam String customerId, @RequestParam int evaluation,@RequestParam int id, @RequestParam String fatherTypeId, HttpServletRequest request) {
+    public String publishComment(@RequestParam String commentStr, @RequestParam String customerId, @RequestParam int id,@RequestParam int evaluation, @RequestParam String fatherTypeId, HttpServletRequest request) {
         Good good = goodBiz.findById(id);
         ProductDetails productDetails = productDetailsBiz.findByGoodId(good.getGoodId());
         List<Good> recommendGoods = goodBiz.findByChildrenTypeId(good.getType().getTypeId());
@@ -79,7 +79,6 @@ public class CommentController {
             List<ProductStyle> productStyles = productStyleBiz.findByGoodId(mainGoodId);
             request.setAttribute("productStyles",productStyles);
         }
-        request.setAttribute("evaluation",0);
 
         boolean result = commentBiz.insert(comment);
 
@@ -108,6 +107,8 @@ public class CommentController {
     @RequestMapping(value = "/showComments")
     public ModelAndView showComments(HttpServletRequest request) {
         request.setAttribute("goodId", "1");
+        List<Good> searchGoods = goodBiz.findAll();
+        request.setAttribute("searchGoods",searchGoods);
         String goodId = (String) request.getAttribute("goodId");
         List<Comment> list = new ArrayList<Comment>();
         list = commentBiz.findByGoodId(goodId);
