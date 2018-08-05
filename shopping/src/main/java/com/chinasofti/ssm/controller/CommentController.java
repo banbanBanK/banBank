@@ -116,4 +116,24 @@ public class CommentController {
         model.addObject("list", list);
         return model;
     }
+
+    @RequestMapping("/commentEarphone")
+    public String earphone(HttpServletRequest request){
+        return "InfoView";
+    }
+
+    @RequestMapping("/commentCamera")
+    public String camera(HttpServletRequest request){
+        return "InfoView";
+    }
+
+    @RequestMapping("/commentComputer")
+    public String computer(HttpServletRequest request){
+        return "InfoView";
+    }
+
+    @RequestMapping("/commentPhone")
+    public String phone(HttpServletRequest request){
+        return "InfoView";
+    }
 }

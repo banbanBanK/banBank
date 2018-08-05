@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+        "name" : "一星评价",
+        "percent" : 13
+    },
+    {
+        "name" : "二星评价",
+        "percent" : 24
+    },
+    {
+        "name" : "三星评价",
+        "percent" : 35
+    },
+    {
+        "name" : "四星评价",
+        "percent" : 29
+    },
+    {
+        "name" : "五星评价",
+        "percent" : 30
+    }
+  ]
+}

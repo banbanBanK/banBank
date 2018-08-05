@@ -55,7 +55,7 @@
                         <a href="/InfoView"  style="font-family:'楷体'"><i class="fa fa-home nav_icon"></i>信息汇总</a>
                     </li>
                     <li>
-                        <a href="/getgood" class="active" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>进货计划<span class="nav-badge">03</span></a>
+                        <a href="/getgood" class="active" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>进货计划</a>
                     </li>
                     <li>
                         <a href="/CustomerView"  style="font-family:'楷体'"><i class="fa fa-bar-chart nav_icon"></i>客户总览</a>
@@ -70,18 +70,6 @@
                                 <a href="/PwdModify">密码修改</a>
                             </li>
                         </ul>
-                    </li>
-                    <li>
-                        <a href="grids.jsp" style="font-family:'楷体'"><i class="fa fa-cogs nav_icon" ></i>设置<span class="nav-badge">12</span> <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse" style="font-family:'楷体'">
-                            <li>
-                                <a href="grids.jsp">菜单设置</a>
-                            </li>
-                            <li>
-                                <a href="media.jsp">媒体设置</a>
-                            </li>
-                        </ul>
-                        <!-- /nav-second-level -->
                     </li>
                 </ul>
                 <!-- //sidebar-collapse -->
@@ -209,7 +197,7 @@
                         <th data-field="price" data-sortable="true" style="font-family: 楷体">商品进货单价</th>
                         <th data-field="num" data-sortable="true" style="font-family: 楷体">商品库存</th>
                         <th data-field="provider" data-sortable="true" style="font-family: 楷体">供应商</th>
-                        <th data-field="actions"  style="font-family: 楷体" >操作</th>
+                        <th data-field="actions"  style="font-family: 楷体" >进货数额</th>
                         </thead>
                         <tbody>
                         <%
@@ -224,7 +212,6 @@
                                     <td><%=good.getGoodStock()%></td>
                                     <td><%=good.getProvider().getProviderName()%></td>
                                     <td>
-                                        <a rel="tooltip"  onclick="openLook(<%=good.getGoodId()%>)"  title="查看商品详细信息"><img src="../FontIcon/look.png" style="width: 15px;height: 15px" /></a>
                                         <a rel="tooltip"  onclick="openGet(<%=good.getGoodId()%>)"  title="进货"><img src="../FontIcon/getmoregood.png" style="width: 15px;height: 15px" /></a>
                                     </td>
                                 </tr>
@@ -252,10 +239,6 @@
 <script type="text/javascript" src="../jsGet/bootstrap-table.js"></script>
 
 <script>
-    function openLook(userFul) {
-        window.open ("/look?goodId="+userFul, "newwindow", "height=400, width=600, top=180, left=400" +
-            "toolbar =no, menubar=no, scrollbars=no, resizable=no, location=no, status=no") //写成一行
-    }
     function openGet(userFul) {
         window.open ("/get?goodId="+userFul, "newwindow", "height=400, width=600, top=180, left=400" +
             "toolbar =no, menubar=no, scrollbars=no, resizable=no, location=no, status=no") //写成一行

@@ -49,7 +49,7 @@
                         <a href="/InfoView" style="font-family:'楷体'"><i class="fa fa-home nav_icon"></i>信息汇总</a>
                     </li>
                     <li>
-                        <a href="/getgood" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>进货计划<span class="nav-badge">03</span></a>
+                        <a href="/getgood" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>进货计划</a>
                     </li>
                     <li>
                         <a href="/CustomerView"  style="font-family:'楷体'"><i class="fa fa-bar-chart nav_icon"></i>客户总览</a>
@@ -64,18 +64,6 @@
                                 <a href="/PwdModify">密码修改</a>
                             </li>
                         </ul>
-                    </li>
-                    <li>
-                        <a href="grids.jsp" style="font-family:'楷体'"><i class="fa fa-cogs nav_icon" ></i>设置<span class="nav-badge">12</span> <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse" style="font-family:'楷体'">
-                            <li>
-                                <a href="grids.jsp">菜单设置</a>
-                            </li>
-                            <li>
-                                <a href="media.jsp">媒体设置</a>
-                            </li>
-                        </ul>
-                        <!-- /nav-second-level -->
                     </li>
                 </ul>
                 <!-- //sidebar-collapse -->
