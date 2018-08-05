@@ -31,6 +31,29 @@
       <change afterPath="$PROJECT_DIR$/src/main/webapp/scripts404/custom-scripts.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/webapp/scripts404/jquery-1.7.2.min.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/webapp/scripts404/jquery.tipsy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/css404/ie8.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/css404/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/css404/tipsy.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/font404/sing-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/font404/sing-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/font404/sing-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/font404/sing-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/font404/sing-webfont_162a16fe.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/images404/404.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/images404/bubble.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/images404/cat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/images404/cookie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/images404/dog.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/images404/planet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/images404/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/images404/sky-background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/images404/sky-shine.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/images404/tipsy.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/images404/universal-preloader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/scripts404/custom-scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/scripts404/jquery-1.7.2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/scripts404/jquery.tipsy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/CustomerBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/CustomerBiz.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/impl/CustomerBizImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/impl/CustomerBizImpl.java" afterDir="false" />
@@ -112,6 +135,7 @@
       <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/mapper/CommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/mapper/CommentMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/mapper/CustomerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/mapper/CustomerMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/properties/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/properties/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/CustomerDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/CustomerDetail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/about.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/blog-post.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/blog-post.jsp" afterDir="false" />
@@ -220,14 +244,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="products.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="products.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jspFront/products.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9119">
-              <caret line="557" column="11" selection-start-line="557" selection-start-column="11" selection-end-line="557" selection-end-column="11" />
+            <state relative-caret-position="182">
+              <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
               <folding>
                 <element signature="e#1453#1553#0#JSP" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jdbc.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/properties/jdbc.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="1" column="45" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -272,7 +305,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/jspFront/products.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jspFront/show-comments.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jspFront/signup.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/properties/jdbc.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/GoodController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/CommentController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/CommentMapper.xml" />
@@ -285,6 +317,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/jspFront/error.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jspFront/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/properties/jdbc.properties" />
       </list>
     </option>
   </component>
@@ -353,21 +386,23 @@
               <item name="shopping" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
               <item name="shopping" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="jspFront" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="properties" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
               <item name="shopping" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -870,7 +905,7 @@
       <workItem from="1533344529190" duration="8265000" />
       <workItem from="1533353812260" duration="989000" />
       <workItem from="1533354984093" duration="17261000" />
-      <workItem from="1533434532423" duration="10098000" />
+      <workItem from="1533434532423" duration="10734000" />
     </task>
     <servers />
   </component>
@@ -907,7 +942,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28329000" />
+    <option name="totallyTimeSpent" value="28965000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1156,13 +1191,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/properties/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/domain/Order.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
@@ -1341,11 +1369,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jspFront/products.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9119">
-          <caret line="557" column="11" selection-start-line="557" selection-start-column="11" selection-end-line="557" selection-end-column="11" />
+        <state relative-caret-position="182">
+          <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
           <folding>
             <element signature="e#1453#1553#0#JSP" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/properties/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="45" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
         </state>
       </provider>
     </entry>
