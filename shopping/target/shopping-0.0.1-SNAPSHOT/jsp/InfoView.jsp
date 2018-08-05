@@ -179,7 +179,7 @@
     <!-- //header-ends -->
     <!-- main content start-->
     <div id="page-wrapper">
-        <div class="main-page">
+        <div class="main-page" style="background: #04243E">
             <!--  走马灯设计  -->
             <div style="height:300px;padding-left:1em; padding-right: 1em;padding-top: 1em;" id="myCarousel" class="carousel slide">
                 <!-- 轮播（Carousel）指标 -->
@@ -277,7 +277,7 @@
                 <div class="clearfix"> </div>
             </div>
 
-            <div id="mainAge"  style="width: 600px;height:400px"></div>
+            <div id="mainAge"  style="width: 1000px;height:400px"></div>
             <script type="text/javascript">
                 // 基于准备好的dom，初始化echarts实例
                 var myChart = echarts.init(document.getElementById('mainAge'));
@@ -349,7 +349,7 @@
                 myChart.setOption(option);
             </script>
 
-            <div id="mainGood"  style="width: 800px;height:400px"></div>
+            <div id="mainGood"  style="width: 1000px;height:400px"></div>
             <script type="text/javascript">
                 // 基于准备好的dom，初始化echarts实例
                 var myChart = echarts.init(document.getElementById('mainGood'));
@@ -437,7 +437,7 @@
                 myChart.setOption(option);
             </script>
 
-            <div id="mainMap" style="width: 1000px;height:1000px;"></div>
+            <div id="mainMap" style="width: 900px;height:800px;"></div>
             <script type="text/javascript">
                 // 基于准备好的dom，初始化echarts实例
                 var myChart = echarts.init(document.getElementById('mainMap'));
@@ -773,7 +773,7 @@
                     })
                 }
                 option = {
-                    backgroundColor: "#141f56",
+                    backgroundColor: "#04243E",
                     legend: {
                         top: 20,
                         textStyle: {
@@ -878,7 +878,7 @@
                 myChart.setOption(option);
             </script>
 
-            <div id="mainComment" style="width: 1000px;height:700px;background:#04243E; "></div>
+            <div id="mainComment" style="width: 85%;height:700px;float: left; "></div>
             <script type="text/javascript">
                 // 基于准备好的dom，初始化echarts实例
                 var myChart = echarts.init(document.getElementById('mainComment'));
@@ -986,7 +986,7 @@
                 }];
                 option = {
                     title: {
-                        text: "电脑类商品评价总览",
+                        text: "商品评价总览",
                         textStyle: {
                             color: '#fff',
                             fontSize: '22',
@@ -1014,7 +1014,23 @@
                 // 使用刚指定的配置项和数据显示图表。
                 myChart.setOption(option);
             </script>
-
+            <div style="background: #04243E;width: 15%;height: 700px;float: right">
+                <div>
+                    <input type="button" value="电脑类" onclick="computer()" style="border: 1em;color:greenyellow;background:#04243E "/>
+                </div>
+                <br/><br/>
+                <div>
+                    <input type="button" value="耳机类" onclick="earphone()" style="border: 1em;color:greenyellow;background:#04243E "/>
+                </div>
+                <br/><br/>
+                <div>
+                    <input type="button" value="相机类" onclick="camera()" style="border: 1em;color:greenyellow;background:#04243E "/>
+                </div>
+                <br/><br/>
+                <div>
+                    <input type="button" value="手机类" onclick="phone()" style="border: 1em;color:greenyellow;background:#04243E "/>
+                </div>>
+            </div>
             <div class="clearfix"> </div>
         </div>
     </div>
