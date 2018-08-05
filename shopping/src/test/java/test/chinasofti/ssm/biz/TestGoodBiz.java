@@ -25,6 +25,7 @@ import java.util.Set;
 public class TestGoodBiz{
 	@Autowired
 	private GoodBiz goodBiz;
+	@Autowired
 	ProviderBiz providerBiz ;
 
 	@Test

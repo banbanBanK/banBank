@@ -39,7 +39,6 @@
     <link rel="stylesheet" href="../css2/responsive.css" />
     <link rel="stylesheet" href="../css2/ic-helpers.min.css" />
 
-
 </head>
 <body>
 
@@ -599,11 +598,8 @@
 </div>
 <!-- Search overlay -->
 <script src="../plugins/jquery.min.js"></script>
-<script src="../js/jquery.raty.js"></script>
-
 <script src="../plugins/bootstrap/bootstrap.min.js"></script>
 <script src="../plugins/bxslider/bxslider.min.js"></script>
 <script src="../js/global.js"></script>
-
 </body>
 </html>

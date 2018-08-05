@@ -222,11 +222,11 @@
                     <div class="panel-body p-t-30 p-b-30 text-center">
                         <div class="badge-sale-secondary">New</div>
 
-                        <a href="product-details.jsp" class="product-item">
+                        <a href="#" class="product-item">
                             <img src="../img/products/product-sale.png" class="h-150 center-block" alt="" />
                         </a>
 
-                        <a href="product-details.jsp">
+                        <a href="#">
                             <h5 class="text-white m-tb-20">Staro-Four M200</h5>
                         </a>
 

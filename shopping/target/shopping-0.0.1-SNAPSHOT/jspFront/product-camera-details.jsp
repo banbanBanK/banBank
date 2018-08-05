@@ -14,7 +14,6 @@
     ProductDetails productDetails = (ProductDetails) request.getAttribute("productDetails");
     List<Faq> faqs = (List<Faq>) request.getAttribute("faqs");
     List<ProductStyle> productStyles = (List<ProductStyle>) request.getAttribute("productStyles");
-    int evaluation = (int) request.getAttribute("evaluation");
 %>
 <head>
     <meta charset="UTF-8" />
@@ -38,8 +37,6 @@
     <link rel="stylesheet" href="../css2/responsive.css" />
     <link rel="stylesheet" href="../css2/ic-helpers.min.css" />
 
-    <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="../js/jquery.raty.js"></script>
 </head>
 <body>
 
@@ -263,24 +260,53 @@
                                                 <div class="form-group form-group-default required">
                                                     <label>评论内容:</label>
                                                     <textarea id="comment" name="comment" class="form-control v-resize" rows="7" required></textarea>
+                                                    <input type="hidden" id="evaluation">
                                                 </div>
-                                                <div id="starts"></div>
+                                                <p onmouseover="rate(this,event)">
+                                                    <img src="../img/demo/star-off.png" title="很烂" />
+                                                    <img src="../img/demo/star-off.png" title="一般" />
+                                                    <img src="../img/demo/star-off.png" title="还好" />
+                                                    <img src="../img/demo/star-off.png" title="较好" />
+                                                    <img src="../img/demo/star-off.png" title="很好" />
+                                                </p>
                                                 <script type="text/javascript">
-                                                    $(function(){
-                                                        $("#starts").raty({
-                                                            number : 5,//星星个数
-                                                            starOn : '../img/demo/star-on.png',
-                                                            starOff : '../img/demo/star-off.png',
-                                                            hints : ['很差','一般','不错','很好','非常满意'],
-                                                            click : function(score, evt) {
-                                                                ${evaluation} = score;
+                                                    function rate(obj,oEvent){
+                                                        var imgSrc = '../img/demo/star-off.png'; //没有填色的星星
+                                                        var imgSrc_2 = '../img/demo/star-on.png'; //打分后有颜色的星星
+                                                        if(obj.rateFlag) return;
+                                                        var e = oEvent || window.event;
+                                                        var target = e.target || e.srcElement;
+                                                        var imgArray = obj.getElementsByTagName("img");
+                                                        for(var i=0; !(i >= imgArray.length); i++){
+                                                            imgArray[i]._num = i;
+                                                            imgArray[i].onclick=function(){
+                                                                if(obj.rateFlag) return;
+                                                                obj.rateFlag=true;
+                                                                document.getElementById("evaluation").value = this._num+1;
+                                                                alert(document.getElementById("evaluation").value); //this._num+1这个数字写入到数据库中,作为评分的依据
+                                                            };
+                                                        }
+                                                        if(target.tagName=="IMG"){
+                                                            for(var j=0; !(j >= imgArray.length); j++){
+                                                                if(!(j > target._num)){
+                                                                    imgArray[j].src=imgSrc_2;
+                                                                } else {
+                                                                    imgArray[j].src=imgSrc;
+                                                                }
                                                             }
-                                                        });
-                                                    });
+                                                        } else {
+                                                            for(var k=0; !(k >= imgArray.length); k++){
+                                                                imgArray[k].src=imgSrc;
+                                                            }
+                                                        }
+                                                    }
                                                 </script>
                                                 <div class="form-group text-right">
-                                                    <input type="button"value="提交" class="btn btn-success" onclick="var comment = document.getElementById('comment').value;
-                                                            location.href='../PublishComment?commentStr='+comment+'&customerId=1&evaluation=<%=evaluation%>&id=<%=good.getId()%>&fatherTypeId=<%=good.getType().getFatherTypeId()%>';">
+                                                    <input type="button"value="提交" class="btn btn-success" onclick="
+                                                            var comment = document.getElementById('comment').value;
+                                                            var evaluation = document.getElementById('evaluation').value;
+                                                            location.href='../PublishComment?commentStr='+comment+'&customerId=1&id=<%=good.getId()%>&evaluation='+evaluation+'&fatherTypeId=<%=good.getType().getFatherTypeId()%>';"
+                                                    />
                                                 </div>
                                             </form>
                                         </div>
@@ -574,7 +600,6 @@
 <script src="../plugins/jquery.min.js"></script>
 <script src="../plugins/bootstrap/bootstrap.min.js"></script>
 <script src="../plugins/bxslider/bxslider.min.js"></script>
-
 <script src="../js/global.js"></script>
 </body>
 </html>

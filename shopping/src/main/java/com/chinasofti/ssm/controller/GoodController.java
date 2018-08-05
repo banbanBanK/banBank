@@ -84,6 +84,13 @@ public class GoodController {
         List<Type> types_parents = typeBiz.findParents();
         List<Type> types_singleRoots = typeBiz.findSingleRoots();
         String mainGoodId = productStyleBiz.findMainByRelationId(good.getGoodId());
+        List<Good> goods;
+        if(good.getType().getTypeId().equals("4")){
+            goods = goodBiz.findByChildrenTypeId(good.getType().getTypeId());
+        }
+        else{
+            goods = goodBiz.findByRootTypeId(fatherTypeId);
+        }
 
         if(types_children != null)
             request.setAttribute("types_children",types_children);
@@ -104,16 +111,18 @@ public class GoodController {
             List<ProductStyle> productStyles = productStyleBiz.findByGoodId(mainGoodId);
             request.setAttribute("productStyles",productStyles);
         }
+        if(goods!=null)
+            request.setAttribute("goods",goods);
 
+        if(good.getType().getTypeId().equals("4"))
+            return "../jspFront/product-cellphone-details";
         if(good.getType().getFatherTypeId().equals("1"))
             return "../jspFront/product-computer-details";
         if(good.getType().getFatherTypeId().equals("2"))
             return "../jspFront/product-headset-details";
         if(good.getType().getFatherTypeId().equals("3"))
             return "../jspFront/product-camera-details";
-        if(good.getType().getFatherTypeId().equals("4"))
-            return "../jspFront/product-cellphone-details";
-        else return "";
+        else return "../jspFront/products";
     }
 
     @RequestMapping("/GetGood")
