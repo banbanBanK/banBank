@@ -27,58 +27,25 @@
         new WOW().init();
     </script>
     <!--//end-animate-->
-    <!-- chart -->
-    <script src="../js/Chart.js"></script>
-    <!-- //chart -->
-    <!--Calender-->
-    <link rel="stylesheet" href="../css/clndr.css" type="text/css" />
-    <script src="../js/underscore-min.js" type="text/javascript"></script>
-    <script src= "../js/moment-2.2.1.js" type="text/javascript"></script>
-    <script src="../js/clndr.js" type="text/javascript"></script>
-    <script src="../js/site.js" type="text/javascript"></script>
-    <!--End Calender-->
-    <!-- Metis Menu -->
-    <script src="../js/metisMenu.min.js"></script>
-    <script src="../js/custom.js"></script>
-    <link href="../css/custom.css" rel="stylesheet">
-    <!--//Metis Menu -->
+    <!-- map and echarts-->
+    <script src = "../js/echarts.min.js"></script>
+    <script src = "../map/js/china.js"></script>
 </head>
 <body class="cbp-spmenu-push" style="font-family:'calisto mt'">
 <div class="main-content">
     <!--left-fixed -navigation-->
     <div class=" sidebar" role="navigation">
         <div class="navbar-collapse">
-            <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+            <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1" style="background: #424a5d">
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="InfoView.jsp" class="active" style="font-family:'楷体'"><i class="fa fa-home nav_icon"></i>信息汇总</a>
+                        <a href="/InfoView" class="active" style="font-family:'楷体'"><i class="fa fa-home nav_icon"></i>信息汇总</a>
                     </li>
                     <li>
-                        <a href="../GetGood" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>进货计划<span class="nav-badge">03</span></a>
+                        <a href="/getgood" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>进货计划<span class="nav-badge">03</span></a>
                     </li>
                     <li>
-                        <a href="comment1.jsp" style="font-family:'楷体'"><i class="fa fa-book nav_icon"></i>客户评价<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse" style="font-family:'楷体'">
-                            <li>
-                                <a href="comment1.jsp">1星评价</a>
-                            </li>
-                            <li>
-                                <a href="comment2.jsp">2星评价</a>
-                            </li>
-                            <li>
-                                <a href="comment3.jsp">3星评价</a>
-                            </li>
-                            <li>
-                                <a href="comment4.jsp">4星评价</a>
-                            </li>
-                            <li>
-                                <a href="comment5.jsp">5星评价</a>
-                            </li>
-                        </ul>
-                        <!-- /nav-second-level -->
-                    </li>
-                    <li>
-                        <a href="CustomerView.jsp"  style="font-family:'楷体'"><i class="fa fa-bar-chart nav_icon"></i>客户总览</a>
+                        <a href="/CustomerView"  style="font-family:'楷体'"><i class="fa fa-bar-chart nav_icon"></i>客户总览</a>
                     </li>
                     <li>
                         <a href="/AdminInfo" style="font-family:'楷体'"><i class="fa fa-check-square-o nav_icon"></i>我的信息<span class="fa arrow"></span></a>
@@ -113,10 +80,10 @@
     <div class="sticky-header header-section ">
         <div class="header-left">
             <!--toggle button start-->
-            <button id="showLeftPush"><i class="fa fa-bars"></i></button>
+            <button id="showLeftPush" style="background: #424a5d"><i class="fa fa-bars"></i></button>
             <!--toggle button end-->
             <!--logo -->
-            <div class="logo" style="width:230px">
+            <div class="logo" style="width:230px;background: #424a5d">
                 <a href="index.jsp">
                     <h1><font style="font-family:'calisto mt';font-style: italic;">NKUTT</font></h1>
                     <span><font style="font-family:'calisto mt';font-style: italic;">Adminpannel</font></span>
@@ -207,16 +174,14 @@
             </div>
             <div class="clearfix"> </div>
         </div>
-        <div class="clearfix"> </div>
+        <div class="clearfix" style="background: #424a5d"> </div>
     </div>
     <!-- //header-ends -->
     <!-- main content start-->
     <div id="page-wrapper">
-        <div class="main-page">
+        <div class="main-page" style="background: #04243E">
             <!--  走马灯设计  -->
-
-
-            <div style="height:300px;padding-left:1em; padding-right: 1em;" id="myCarousel" class="carousel slide">
+            <div style="height:300px;padding-left:1em; padding-right: 1em;padding-top: 1em;" id="myCarousel" class="carousel slide">
                 <!-- 轮播（Carousel）指标 -->
                 <ol class="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0"
@@ -238,7 +203,7 @@
 
                 </div>
                 <!-- 轮播（Carousel）导航 -->
-                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" >
                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
@@ -246,7 +211,6 @@
                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
-
             </div>
             <script>
                 $(function(){
@@ -278,7 +242,6 @@
                     });
                 });
             </script>
-
 
             <div class="row-one" style="margin-top:2em ;">
                 <div class="col-md-4 widget">
@@ -313,262 +276,767 @@
                 </div>
                 <div class="clearfix"> </div>
             </div>
-            <div class="charts">
-                <div class="col-md-4 charts-grids widget">
-                    <h4 class="title" style="font-family:'楷体">今年和去年的各月销售情况</h4>
-                    <canvas id="bar" height="300" width="400"> </canvas>
-                    <span><font size="3" color="#e94e02" style="font-family:'calisto mt';font-style: italic;">LastYear</font></span>
-                        <span><font size="3" color="#4F52BA" style="font-family:'calisto mt';font-style: italic;">ThisYear</font></span>
-                </div>
-                <div class="col-md-4 charts-grids widget states-mdl">
-                    <h4 class="title" style="font-family:'楷体">Line Chart Example</h4>
-                    <canvas id="line" height="300" width="400"> </canvas>
-                    <span><font size="3" color="#F2B33F" style="font-family:'calisto mt';font-style: italic;">Litature</font></span>
-                        <span><font size="3" color="#9358ac" style="font-family:'calisto mt';font-style: italic;">Houseware</font></span>
-                </div>
-                <div class="col-md-4 charts-grids widget">
-                    <h4 class="title" style="font-family:'楷体"><a href="index.jsp">商品销售情况...</a></h4>
-                    <canvas id="pie" height="300" width="400"> </canvas>
-                    <br/>
-                    <span><font size="3" color="seagreen" style="font-family:'calisto mt';font-style: italic;">Jan</font></span>
-                </div>
-                <div class="clearfix"> </div>
-                <script>
-                    var barChartData = {
-                        labels : ["Jan","Feb","March","April","May","June","July"],
-                        datasets : [
-                            {
-                                fillColor : "rgba(233, 78, 2, 0.9)",
-                                strokeColor : "rgba(233, 78, 2, 0.9)",
-                                highlightFill: "#e94e02",
-                                highlightStroke: "#e94e02",
-                                data : [65,59,90,81,56,55,40]
 
-                            },
-                            {
-                                fillColor : "rgba(79, 82, 186, 0.9)",
-                                strokeColor : "rgba(79, 82, 186, 0.9)",
-                                highlightFill: "#4F52BA",
-                                highlightStroke: "#4F52BA",
-                                data : [40,70,55,20,45,70,60]
-                            }
-                        ]
-                    };
-                    var lineChartData = {
-                        labels : ["Jan","Feb","March","April","May","June","July"],
-                        datasets : [
-                            {
-                                fillColor : "rgba(242, 179, 63, 1)",
-                                strokeColor : "#F2B33F",
-                                pointColor : "rgba(242, 179, 63, 1)",
-                                pointStrokeColor : "#fff",
-                                data : [70,60,72,61,75,59,80]
+            <div id="mainAge"  style="width: 1000px;height:400px"></div>
+            <script type="text/javascript">
+                // 基于准备好的dom，初始化echarts实例
+                var myChart = echarts.init(document.getElementById('mainAge'));
 
-                            },
-                            {
-                                fillColor : "rgba(97, 100, 193, 1)",
-                                strokeColor : "#6164C1",
-                                pointColor : "rgba(97, 100, 193,1)",
-                                pointStrokeColor : "#9358ac",
-                                data : [50,65,51,67,52,64,50]
-
-                            }
-                        ]
-
-                    };
-                    var pieData = [
-                        {
-                            value: 90,
-                            color:"rgba(233, 78, 2, 1)",
-                            label: "Product 1"
-                        },
-                        {
-                            value : 50,
-                            color : "rgba(242, 179, 63, 1)",
-                            label: "Product 2"
-                        },
-                        {
-                            value : 60,
-                            color : "rgba(88, 88, 88,1)",
-                            label: "Product 3"
-                        },
-                        {
-                            value : 40,
-                            color : "rgba(79, 82, 186, 1)",
-                            label: "Product 4"
+                // 指定图表的配置项和数据
+                option = {
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: { // 坐标轴指示器，坐标轴触发有效
+                            type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
                         }
+                    },
+                    legend: {
+                        data: ['男性', '女性', '未透露']
+                    },
+                    grid: {
+                        left: '3%',
+                        right: '4%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+                    xAxis: {
+                        type: 'value'
+                    },
+                    yAxis: {
+                        type: 'category',
+                        data: ['15-19岁', '19-23岁', '23-30岁 ', '30-35岁', '35-40岁', '40-50岁', '其他年龄段']
+                    },
+                    series: [{
+                        name: '男性',
+                        type: 'bar',
+                        stack: '总量',
+                        label: {
+                            normal: {
+                                show: true,
+                                position: 'insideRight'
+                            }
+                        },
+                        data: [320, 302, 301, 334, 390, 330, 320]
+                    },
+                        {
+                            name: '女性',
+                            type: 'bar',
+                            stack: '总量',
+                            label: {
+                                normal: {
+                                    show: true,
+                                    position: 'insideRight'
+                                }
+                            },
+                            data: [120, 132, 101, 134, 90, 230, 210]
+                        },
+                        {
+                            name: '未透露',
+                            type: 'bar',
+                            stack: '总量',
+                            label: {
+                                normal: {
+                                    show: true,
+                                    position: 'insideRight'
+                                }
+                            },
+                            data: [220, 182, 191, 234, 290, 330, 310]
+                        }
+                    ]
+                };
 
-                    ];
+                // 使用刚指定的配置项和数据显示图表。
+                myChart.setOption(option);
+            </script>
 
-                    new Chart(document.getElementById("line").getContext("2d")).Line(lineChartData);
-                    new Chart(document.getElementById("bar").getContext("2d")).Bar(barChartData);
-                    new Chart(document.getElementById("pie").getContext("2d")).Pie(pieData);
+            <div id="mainGood"  style="width: 1000px;height:400px"></div>
+            <script type="text/javascript">
+                // 基于准备好的dom，初始化echarts实例
+                var myChart = echarts.init(document.getElementById('mainGood'));
 
-                </script>
+                // 指定图表的配置项和数据
+                option = {
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {type: 'cross'}
+                    },
+                    toolbox: {
+                        feature: {
+                            dataView: {show: true, readOnly: false},
+                            magicType: {show: true, type: ['line', 'bar']},
+                            restore: {show: true},
+                            saveAsImage: {show: true}
+                        }
+                    },
+                    legend: {
+                        data:['当月总销售量','该商品销售数','占比率']
+                    },
+                    xAxis: [
+                        {
+                            type: 'category',
+                            data: ['1月','2月','3月','4月','5月','6月','7月','8月']
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            name: '总销售数',
+                            min: 0,
+                            max: 4500,
+                            axisLabel: {
+                                formatter: '{value}'
+                            }
+                        },
+                        {
+                            type: 'value',
+                            name: '占比率（%）',
+                            min: 0,
+                            max: 100,
+                            position: 'right',
+                            axisLabel: {
+                                formatter: '{value}',
+                            }
+                        }
+                    ],
+                    series: [
+                        {
+                            name:'当月总销售量',
+                            type:'bar',
+                            itemStyle:{normal:{color:'#386AB7'}},
+                            data:[2990, 2900, 3133, 3433, 3233, 3333, 3133, 2933],
+                        },
+                        {
+                            name:'该商品销售数',
+                            type:'bar',
+                            itemStyle:{normal:{color:'#99cccc'}},
+                            data:[800, 833, 933, 1003, 933, 1083, 1150, 1329],
+                        },
+                        {
+                            name:'占比率',
+                            type:'line',
+                            yAxisIndex: 1,
+                            itemStyle:{normal:{color:'#ff9933'}},
+                            data:[26.8, 28.7, 29.8, 29.2, 28.9, 32.5, 36.8, 45.3],
+                            markPoint : {
+                                color:'blue',
+                                data : [
+                                    {type : 'max', name : '最大值'},
+                                    {type : 'min', name : '最小值'}
+                                ]
+                            },
+                            markLine : {
+                                data : [
+                                    {type : 'average', name : '平均值'}
+                                ]
+                            }
+                        }
+                    ]
+                };
 
-            </div>
-            <div class="row">
-                <div class="col-md-4 stats-info widget">
-                    <div class="stats-title">
-                        <h4 class="title" style="font-family:'楷体">用户年龄信息</h4>
-                    </div>
-                    <div class="stats-body">
-                        <ul class="list-unstyled">
-                            <li>15~18 years <span class="pull-right">15%</span>
-                                <div class="progress progress-striped active progress-right">
-                                    <div class="bar green" style="width:15%;"></div>
-                                </div>
-                            </li>
-                            <li>19~25 years <span class="pull-right">25%</span>
-                                <div class="progress progress-striped active progress-right">
-                                    <div class="bar yellow" style="width:25%;"></div>
-                                </div>
-                            </li>
-                            <li>26~35 years<span class="pull-right">25%</span>
-                                <div class="progress progress-striped active progress-right">
-                                    <div class="bar red" style="width:25%;"></div>
-                                </div>
-                            </li>
-                            <li>36~45 years <span class="pull-right">20%</span>
-                                <div class="progress progress-striped active progress-right">
-                                    <div class="bar blue" style="width:20%;"></div>
-                                </div>
-                            </li>
-                            <li>46~55 years <span class="pull-right">10%</span>
-                                <div class="progress progress-striped active progress-right">
-                                    <div class="bar light-blue" style="width:10%;"></div>
-                                </div>
-                            </li>
-                            <li class="last">Others <span class="pull-right">5%</span>
-                                <div class="progress progress-striped active progress-right">
-                                    <div class="bar orange" style="width:5%;"></div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-8 stats-info stats-last widget-shadow">
-                    <table class="table stats-table " style="font-family:'楷体">
-                        <thead>
-                        <tr>
-                            <th>编号</th>
-                            <th>商品</th>
-                            <th>销售状态</th>
-                            <th>销售量进展</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Lorem ipsum</td>
-                            <td><span class="label label-success">In progress</span></td>
-                            <td><h5>85% <i class="fa fa-level-up"></i></h5></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Aliquam</td>
-                            <td><span class="label label-warning">New</span></td>
-                            <td><h5>35% <i class="fa fa-level-up"></i></h5></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Lorem ipsum</td>
-                            <td><span class="label label-danger">Overdue</span></td>
-                            <td><h5  class="down">40% <i class="fa fa-level-down"></i></h5></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            <td>Aliquam</td>
-                            <td><span class="label label-info">Out of stock</span></td>
-                            <td><h5>100% <i class="fa fa-level-up"></i></h5></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">5</th>
-                            <td>Lorem ipsum</td>
-                            <td><span class="label label-success">In progress</span></td>
-                            <td><h5 class="down">10% <i class="fa fa-level-down"></i></h5></td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><a href="index.jsp"><font color="#269ABC">More...</font></a></th>
+                // 使用刚指定的配置项和数据显示图表。
+                myChart.setOption(option);
+            </script>
 
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="clearfix"> </div>
-            </div>
-            <div class="row">
-                <div class="col-md-8 map widget-shadow">
-                    <h4 class="title" style="font-family:'楷体">用户地域分析</h4>
-                    <div class="map_container"><div id="vmap" style="width: 90%; height: 215px;"></div></div>
-                    <!--map js-->
-                    <link href="../css/jqvmap.css" rel="stylesheet" type="text/css" />
-                    <script src="../js/jquery.vmap.js"></script>
-                    <script src="../js/jquery.vmap.sampledata.js" type="text/javascript"></script>
-                    <script src="../js/jquery.vmap.world.js" type="text/javascript"></script>
-                    <script type="text/javascript">
-                        jQuery(document).ready(function() {
-                            jQuery('#vmap').vectorMap({
-                                map: 'world_en',
-                                backgroundColor: '#fff',
-                                color: '#696565',
-                                hoverOpacity: 0.8,
-                                selectedColor: '#696565',
-                                enableZoom: true,
-                                showTooltip: true,
-                                values: sample_data,
-                                scaleColors: ['#585858', '#696565'],
-                                normalizeFunction: 'polynomial'
-                            });
+            <div id="mainMap" style="width: 900px;height:800px;"></div>
+            <script type="text/javascript">
+                // 基于准备好的dom，初始化echarts实例
+                var myChart = echarts.init(document.getElementById('mainMap'));
+
+                // 指定图表的配置项和数据
+                function mapTooltipClick(name) {
+                    alert(name)
+                }
+                option = {
+                    visualMap: {
+                        min: 0,
+                        max: 1000,
+                        left: 'left',
+                        top: 'bottom',
+                        text: ['高', '低'],
+                        calculable: false,
+                        orient: 'horizontal',
+                        inRange: {
+                            color: ['#e0ffff', '#006edd'],
+                            symbolSize: [30, 100]
+                        }
+                    },
+                    tooltip: {
+                        padding: 0,
+                        enterable: true,
+                        transitionDuration: 1,
+                        textStyle: {
+                            color: '#000',
+                            decoration: 'none',
+                        },
+                        // position: function (point, params, dom, rect, size) {
+                        //   return [point[0], point[1]];
+                        // },
+                    },
+                    series: [{
+                        name: '人数',
+                        type: 'map',
+                        mapType: 'china',
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: false
+                                }
+                            },
+                            emphasis: {
+                                label: {
+                                    show: true
+                                }
+                            }
+                        },
+                        data: [{
+                            name: '北京',
+                            value: Math.round(Math.random() * 1000),
+                            tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                        },
+                            {
+                                name: '天津',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '上海',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '重庆',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '河北',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '河南',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '云南',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '辽宁',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '黑龙江',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '湖南',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '安徽',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '山东',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '新疆',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '江苏',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '浙江',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '江西',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '湖北',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '广西',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '甘肃',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '山西',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '内蒙古',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '陕西',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '吉林',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '福建',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '贵州',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '广东',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '青海',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '西藏',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '四川',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '宁夏',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '海南',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '台湾',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '香港',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                            {
+                                name: '澳门',
+                                value: Math.round(Math.random() * 1000),
+                                tipData: [Math.round(Math.random() * 1000), Math.round(Math.random() * 1000)]
+                            },
+                        ]
+                    }, ]
+                }
+                var count = 0;
+                var timeTicket = null;
+                var dataLength = option.series[0].data.length;
+                timeTicket && clearInterval(timeTicket);
+                timeTicket = setInterval(function() {
+                    myChart.dispatchAction({
+                        type: 'downplay',
+                        seriesIndex: 0,
+                    });
+                    myChart.dispatchAction({
+                        type: 'highlight',
+                        seriesIndex: 0,
+                        dataIndex: (count) % dataLength
+                    });
+                    myChart.dispatchAction({
+                        type: 'showTip',
+                        seriesIndex: 0,
+                        dataIndex: (count) % dataLength
+                    });
+                    count++;
+                }, 1000);
+
+                myChart.on('mouseover', function(params) {
+                    //console.log(params)
+                    clearInterval(timeTicket);
+                    myChart.dispatchAction({
+                        type: 'downplay',
+                        seriesIndex: 0
+                    });
+                    myChart.dispatchAction({
+                        type: 'highlight',
+                        seriesIndex: 0,
+                        dataIndex: params.dataIndex
+                    });
+                    myChart.dispatchAction({
+                        type: 'showTip',
+                        seriesIndex: 0,
+                        dataIndex: params.dataIndex,
+                    });
+                });
+                myChart.on('mouseout', function(params) {
+                    timeTicket && clearInterval(timeTicket);
+                    timeTicket = setInterval(function() {
+                        myChart.dispatchAction({
+                            type: 'downplay',
+                            seriesIndex: 0,
                         });
-                    </script>
-                    <!-- //map js -->
+                        myChart.dispatchAction({
+                            type: 'highlight',
+                            seriesIndex: 0,
+                            dataIndex: (count) % dataLength
+                        });
+                        myChart.dispatchAction({
+                            type: 'showTip',
+                            seriesIndex: 0,
+                            dataIndex: (count) % dataLength
+                        });
+                        count++;
+                    }, 1000);
+                });
+
+                // 使用刚指定的配置项和数据显示图表。
+                myChart.setOption(option);
+            </script>
+
+            <div id="mainGoodType" style="width: 1000px;height:1000px;"></div>
+            <script type="text/javascript">
+                // 基于准备好的dom，初始化echarts实例
+                var myChart = echarts.init(document.getElementById('mainGoodType'));
+
+                // 指定图表的配置项和数据
+                var xData = function() {
+                    var data = [];
+                    for(var i = 1; i < 9; i++) {
+                        data.push(i + "月");
+                    }
+                    return data;
+                }();
+                var color = ['#1a9bfc', '#99da69', '#e32f46', '#7049f0']
+                var temp = ['电脑', '耳机', '相机', '手机']
+                var data = [
+                    [13.7, 3.4, 13.5, 16.1, 7.4, 15.2, 10.2, 14.0],
+                    [17.4, 13.7, 13.5, 3.4, 15.2, 13.5, 14.0, 10.1],
+                    [13.4, 7.4, 13.7, 13.5, 16.1, 13.7, 7.9, 10.3],
+                    [3.5, 15.2, 16.1, 17.4, 13.4, 6.1, 10.3, 7.8],
+                ];
+
+                var series = [];
+                for(var i = 0; i < 4; i++) {
+                    series.push({
+                        name: temp[i],
+                        type: "line",
+                        symbolSize: 8,
+                        symbol: 'circle',
+                        itemStyle: {
+                            normal: {
+                                color: color[i],
+                                lineStyle: {
+                                    width: 1,
+                                    type: 'dotted' //'dotted'虚线 'solid'实线
+                                },
+                                barBorderRadius: 0,
+                                label: {
+                                    show: false,
+                                }
+                            }
+                        },
+                        data: data[i],
+
+                    })
+                }
+                option = {
+                    backgroundColor: "#04243E",
+                    legend: {
+                        top: 20,
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: '12'
+                        },
+                        data: temp,
+                        selected: {
+                            // 选中'系列1'
+                            '电脑': true,
+                            // 不选中'系列2'
+                            '耳机': true
+                        }
+                    },
+                    title: {
+                        text: "1-8月各大类商品销售量",
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: '22',
+                            fontWeight: 'normal',
+                        },
+                        subtextStyle: {
+                            color: '#90979c',
+                            fontSize: '16',
+
+                        },
+                    },
+                    tooltip: {
+                        trigger: "axis",
+                        axisPointer: { // 坐标轴指示器，坐标轴触发有效
+                            type: 'line', // 默认为直线，可选为：'line' | 'shadow'
+                        },
+                        formatter: '{b}<br />{a0}: {c0}%<br />{a1}: {c1}%<br />{a2}: {c2}%<br />{a3}: {c3}%<br />',
+                        backgroundColor: 'rgba(0,0,0,0.7)', // 背景
+                        padding: [8, 10], //内边距
+                        extraCssText: 'box-shadow: 0 0 3px rgba(255, 255, 255, 0.4);', //添加阴影
+                    },
+                    grid: {
+                        borderWidth: 0,
+                        top: 110,
+                        bottom: 95,
+                        textStyle: {
+                            color: "#fff"
+                        }
+                    },
+                    xAxis: [{
+                        type: "category",
+                        axisLine: {
+                            lineStyle: {
+                                color: '#32346c'
+                            }
+                        },
+                        splitLine: {
+                            show: false
+                        },
+                        axisTick: {
+                            show: false
+                        },
+                        splitArea: {
+                            show: false
+                        },
+                        axisLabel: {
+                            inside: false,
+                            textStyle: {
+                                color: '#bac0c0',
+                                fontWeight: 'normal',
+                                fontSize: '12',
+                            },
+                        },
+                        data: xData,
+                    }],
+                    yAxis: {
+                        type: 'value',
+                        axisTick: {
+                            show: false
+                        },
+                        axisLine: {
+                            show: true,
+                            lineStyle: {
+                                color: '#32346c',
+                            }
+                        },
+                        splitLine: {
+                            show: true,
+                            lineStyle: {
+                                color: '#32346c ',
+                            }
+                        },
+                        axisLabel: {
+                            textStyle: {
+                                color: '#bac0c0',
+                                fontWeight: 'normal',
+                                fontSize: '12',
+                            },
+                            formatter: '{value}%',
+                        },
+                    },
+                    series: series,
+                };
+
+                // 使用刚指定的配置项和数据显示图表。
+                myChart.setOption(option);
+            </script>
+
+            <div id="mainComment" style="width: 85%;height:700px;float: left; "></div>
+            <script type="text/javascript">
+                // 基于准备好的dom，初始化echarts实例
+                var myChart = echarts.init(document.getElementById('mainComment'));
+
+                // 指定图表的配置项和数据
+                var scaleData = [{
+                    'name': '一星评价',
+                    'value': 13
+                },
+                    {
+                        'name': '二星评价',
+                        'value': 20
+                    },
+                    {
+                        'name': '三星评价',
+                        'value': 20
+                    },
+                    {
+                        'name': '四星评价',
+                        'value': 27
+                    },
+                    {
+                        'name': '五星评价',
+                        'value': 20
+                    }
+                ];
+                var rich = {
+                    white: {
+                        color: '#ddd',
+                        align: 'center',
+                        padding: [5, 0]
+                    }
+                };
+                var placeHolderStyle = {
+                    normal: {
+                        label: {
+                            show: false
+                        },
+                        labelLine: {
+                            show: false
+                        },
+                        color: 'rgba(0, 0, 0, 0)',
+                        borderColor: 'rgba(0, 0, 0, 0)',
+                        borderWidth: 0
+                    }
+                };
+                var data = [];
+                for(var i = 0; i < scaleData.length; i++) {
+                    data.push({
+                        value: scaleData[i].value,
+                        name: scaleData[i].name,
+                        itemStyle: {
+                            normal: {
+                                borderWidth: 5,
+                                shadowBlur: 30,
+                                borderColor: new echarts.graphic.LinearGradient(0, 0, 1, 1, [{
+                                    offset: 0,
+                                    color: '#7777eb'
+                                }, {
+                                    offset: 1,
+                                    color: '#70ffac'
+                                }]),
+                                shadowColor: 'rgba(142, 152, 241, 0.6)'
+                            }
+                        }
+                    }, {
+                        value: 4,
+                        name: '',
+                        itemStyle: placeHolderStyle
+                    });
+                }
+                var seriesObj = [{
+                    name: '',
+                    type: 'pie',
+                    clockWise: false,
+                    radius: [195, 200],
+                    hoverAnimation: false,
+                    itemStyle: {
+                        normal: {
+                            label: {
+                                show: true,
+                                position: 'outside',
+                                color: '#ddd',
+                                formatter: function(params) {
+                                    var percent = 0;
+                                    var total = 0;
+                                    for(var i = 0; i < scaleData.length; i++) {
+                                        total += scaleData[i].value;
+                                    }
+                                    percent = ((params.value / total) * 100).toFixed(0);
+                                    if(params.name !== '') {
+                                        return params.name + '\n{white|' + '占比' + percent + '%}';
+                                    } else {
+                                        return '';
+                                    }
+                                },
+                                rich: rich
+                            },
+                            labelLine: {
+                                show: false
+                            }
+                        }
+                    },
+                    data: data
+                }];
+                option = {
+                    title: {
+                        text: "商品评价总览",
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: '22',
+                            fontWeight: 'normal',
+                        },
+                        subtextStyle: {
+                            color: '#90979c',
+                            fontSize: '16',
+
+                        },
+                    },
+                    backgroundColor: '#04243E',
+                    tooltip: {
+                        show: false
+                    },
+                    legend: {
+                        show: false
+                    },
+                    toolbox: {
+                        show: false
+                    },
+                    series: seriesObj
+                };
+
+                // 使用刚指定的配置项和数据显示图表。
+                myChart.setOption(option);
+            </script>
+            <div style="background: #04243E;width: 15%;height: 700px;float: right">
+                <div>
+                    <input type="button" value="电脑类" onclick="computer()" style="border: 1em;color:greenyellow;background:#04243E "/>
                 </div>
-                <div class="col-md-4 social-media widget-shadow">
-                    <h4 class="title" style="font-family:'楷体"><a href="index.jsp">用户评价...</a></h4>
-                    <div class="polar-area">
-                        <canvas id="polarArea" height="342" width="400" style="width: 400px; height: 342px;"></canvas>
-                    </div>
+                <br/><br/>
+                <div>
+                    <input type="button" value="耳机类" onclick="earphone()" style="border: 1em;color:greenyellow;background:#04243E "/>
                 </div>
-                <div class="clearfix"> </div>
-                <script>
-                    var chartData = [
-                        {
-                            value : Math.random(),
-                            color: "rgba(239, 85, 58, 0.87)"
-                        },
-                        {
-                            value : Math.random(),
-                            color: "rgba(242, 179, 63, 0.87)"
-                        },
-                        {
-                            value : Math.random(),
-                            color: "rgba(88, 88, 88, 0.87)"
-                        },
-                        {
-                            value : Math.random(),
-                            color: "rgba(147, 88, 172, 0.87)"
-                        },
-                        {
-                            value : Math.random(),
-                            color: "rgba(79, 82, 186, 0.87)"
-                        },
-                    ];
-                    new Chart(document.getElementById("polarArea").getContext("2d")).PolarArea(chartData);
-                </script>
+                <br/><br/>
+                <div>
+                    <input type="button" value="相机类" onclick="camera()" style="border: 1em;color:greenyellow;background:#04243E "/>
+                </div>
+                <br/><br/>
+                <div>
+                    <input type="button" value="手机类" onclick="phone()" style="border: 1em;color:greenyellow;background:#04243E "/>
+                </div>>
             </div>
 
-            <div class="row calender widget-shadow">
-                <h4 class="title" style="font-family:'楷体">日历</h4>
-                <div class="cal1">
-
-                </div>
-            </div>
             <div class="clearfix"> </div>
         </div>
     </div>
     <!--footer-->
-    <div class="footer">
+    <div class="footer"  style="background: #424a5d">
         <p>南开大学实训小组</p>
     </div>
     <!--//footer-->

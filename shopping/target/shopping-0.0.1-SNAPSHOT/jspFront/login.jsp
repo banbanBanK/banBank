@@ -144,9 +144,9 @@
         <li><hr class="m-tb-30" /></li>
 
         <li><a href="../GoodFindAll">Products</a></li>
-        <li><a href="about.jsp">About</a></li>
-        <li><a href="blog.jsp">Blog</a></li>
-        <li><a href="blog-post.jsp">Blog Post</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="blog">Blog</a></li>
+        <li><a href="blog-post">Blog Post</a></li>
         <li><a href="javaScript:logout()">logout</a></li>
         <script>
             function logout(){

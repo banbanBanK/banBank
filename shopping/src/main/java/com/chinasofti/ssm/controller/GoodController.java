@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
+import static java.lang.Integer.parseInt;
+
 @Controller
 public class GoodController {
 
@@ -126,15 +128,37 @@ public class GoodController {
         else return "";
     }
 
-    @RequestMapping("/GetGood")
+    @RequestMapping("/getgood")
     public String getGood(HttpServletRequest request){
         List<Good> goods = goodBiz.findAll();
         request.setAttribute("goods",goods);
-        //String adminId = request.getParameter("");
-        //Admin admin1 = adminBiz.findByAdminId(adminId);
-        HttpSession session = request.getSession();
-        Admin admin = adminBiz.findByAdminId("1");
-        session.setAttribute("admin",admin);
         return "getgood";
+    }
+
+    @RequestMapping("/look")
+    public String lookgood(@RequestParam String goodId, HttpServletRequest request){
+        HttpSession session = request.getSession();
+        Good good = goodBiz.findByGoodId(goodId);
+        session.setAttribute("goodName",good.getGoodName());
+        session.setAttribute("goodPrice",good.getGoodPrice());
+        session.setAttribute("goodStock",good.getGoodStock());
+        session.setAttribute("goodSaleNum",good.getGoodSaleSum());
+        session.setAttribute("goodType",good.getType().getTypeName());
+        session.setAttribute("goodProvider",good.getProvider().getProviderName());
+        return "look";
+    }
+
+    @RequestMapping("/get")
+    public String get(HttpServletRequest request){
+        return "get";
+    }
+
+    @RequestMapping("/getMore")
+    public String getgood( HttpServletRequest request) {
+        Good goodmom = goodBiz.findByGoodId((String)request.getSession().getAttribute("getGet"));
+        int num =parseInt(request.getParameter("goodNum"));
+        goodmom.setGoodStock(goodmom.getGoodStock()+num);
+        goodBiz.update(goodmom);
+        return "get";
     }
 }

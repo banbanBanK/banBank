@@ -28,11 +28,16 @@ public class AdminController {
 		return "AdminInfo";
 	}
 
-	@RequestMapping("/UpdateAdmin")
+	@RequestMapping("/updateAdmin")
 	public String updateadmin(HttpServletRequest request){
 		//String adminId = request.getParameter("");
 		//Admin admin1 = adminBiz.findByAdminId(adminId);
 		Admin admin = adminBiz.findByAdminId("1");
+		admin.setAdminName(request.getParameter("adminName"));
+		admin.setAdminTel(request.getParameter("adminTel"));
+		admin.setAdminGender(request.getParameter("adminGender"));
+		admin.setAdminEmail(request.getParameter("adminEmail"));
+		admin.setAdminMessage(request.getParameter("adminMessage"));
 		adminBiz.update(admin);
 		return "AdminInfo";
 	}
@@ -41,14 +46,26 @@ public class AdminController {
 	public String modify(HttpServletRequest request){
 		//String adminId = request.getParameter("");
 		//Admin admin1 = adminBiz.findByAdminId(adminId);
-		Admin admin = adminBiz.findByAdminId("1");
 		HttpSession session = request.getSession();
-		session.setAttribute("admin",admin);
-		admin.setAdminPassword((String)request.getAttribute("adminPassword"));
-		adminBiz.modifypwd(admin);
+		Admin admin = adminBiz.findByAdminId("1");
+		session.setAttribute("pwd",admin.getAdminPassword());
 		return "PwdModify";
 	}
 
+	@RequestMapping("/PwdModify1")
+	public String modify1(HttpServletRequest request){
+		//String adminId = request.getParameter("");
+		//Admin admin1 = adminBiz.findByAdminId(adminId);
+		HttpSession session = request.getSession();
+		Admin admin = adminBiz.findByAdminId("1");
+		admin.setAdminPassword((String)request.getParameter("adminPassword"));
+		adminBiz.modifypwd(admin);
+		return "InfoView";
+	}
+	@RequestMapping("/InfoView")
+	public String first(HttpServletRequest request){
+		return "InfoView";
+	}
     @RequestMapping(value = "/jsp/adminLogin")
     public String adminLogin(String id,String password){
        Boolean flag=adminBiz.login(id,password);

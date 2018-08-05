@@ -38,42 +38,21 @@
     <link href="../css/custom.css" rel="stylesheet">
     <!--//Metis Menu -->
 </head>
-<body class="cbp-spmenu-push" style="font-family:'calisto mt'">
+<body class="cbp-spmenu-push" style="font-family:'calisto mt';background: #424a5d">
 <div class="main-content">
     <!--left-fixed -navigation-->
     <div class=" sidebar" role="navigation">
         <div class="navbar-collapse">
-            <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+            <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1"  style="background: #424a5d">
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="InfoView.jsp" style="font-family:'楷体'"><i class="fa fa-home nav_icon"></i>信息汇总</a>
+                        <a href="/InfoView" style="font-family:'楷体'"><i class="fa fa-home nav_icon"></i>信息汇总</a>
                     </li>
                     <li>
-                        <a href="getgood.jsp" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>进货计划<span class="nav-badge">03</span></a>
+                        <a href="/getgood" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>进货计划<span class="nav-badge">03</span></a>
                     </li>
                     <li>
-                        <a href="comment1.jsp" style="font-family:'楷体'"><i class="fa fa-book nav_icon"></i>客户评价<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse" style="font-family:'楷体'">
-                            <li>
-                                <a href="comment1.jsp">1星评价</a>
-                            </li>
-                            <li>
-                                <a href="comment2.jsp">2星评价</a>
-                            </li>
-                            <li>
-                                <a href="comment3.jsp">3星评价</a>
-                            </li>
-                            <li>
-                                <a href="comment4.jsp">4星评价</a>
-                            </li>
-                            <li>
-                                <a href="comment5.jsp">5星评价</a>
-                            </li>
-                        </ul>
-                        <!-- /nav-second-level -->
-                    </li>
-                    <li>
-                        <a href="CustomerView.jsp"  style="font-family:'楷体'"><i class="fa fa-bar-chart nav_icon"></i>客户总览</a>
+                        <a href="/CustomerView"  style="font-family:'楷体'"><i class="fa fa-bar-chart nav_icon"></i>客户总览</a>
                     </li>
                     <li>
                         <a href="/AdminInfo" class="active" style="font-family:'楷体'"><i class="fa fa-check-square-o nav_icon"></i>我的信息<span class="fa arrow"></span></a>
@@ -108,10 +87,10 @@
     <div class="sticky-header header-section ">
         <div class="header-left">
             <!--toggle button start-->
-            <button id="showLeftPush"><i class="fa fa-bars"></i></button>
+            <button id="showLeftPush" style="background: #424a5d"><i class="fa fa-bars"></i></button>
             <!--toggle button end-->
             <!--logo -->
-            <div class="logo" style="width:230px">
+            <div class="logo" style="width:230px;background: #424a5d">
                 <a href="index.jsp">
                     <h1><font style="font-family:'calisto mt';font-style: italic;">NKUTT</font></h1>
                     <span><font style="font-family:'calisto mt';font-style: italic;">Adminpannel</font></span>
@@ -202,13 +181,13 @@
             </div>
             <div class="clearfix"> </div>
         </div>
-        <div class="clearfix"> </div>
+        <div class="clearfix" style="background: #424a5d"> </div>
     </div>
     <!-- //header-ends -->
     <!-- main content start-->
     <div id="page-wrapper">
         <div class="main-page">
-            <div style="display:none"></div><form id="msform">
+            <div style="display:none"></div><form id="msform" >
             <!-- progressbar -->
             <ul id="progressbar" style="font-family: '楷体'">
                 <li class="active" >确认身份</li>
@@ -226,10 +205,10 @@
             <fieldset>
                 <h2 class="fs-title">请设置新密码</h2>
                 <h3 class="fs-subtitle">我们不会向他人透露该信息</h3>
-                <input type="password" name="pass" id="pass1" placeholder="Password" />
-                <input type="password" name="cpass" id="cpass1" placeholder="Confirm Password" />
+                <input type="password" name="pass1" id="pass1" placeholder="Password" />
+                <input type="password" name="cpass1" id="cpass1" placeholder="Confirm Password" />
                 <input type="button" name="previous" class="previous action-button" value="Previous" />
-                <input type="submit" name="submit2" class="submit2 action-button" value="Submit" />
+                <input type="button" name="submit2" class="submit2 action-button" value="Submit" />
             </fieldset>
             <fieldset>
                 <h2 class="fs-title">Congratulations!</h2>
@@ -247,7 +226,7 @@
         </div>
     </div>
     <!--footer-->
-    <div class="footer" style="position: relative">
+    <div class="footer" style="background: #424a5d">
         <p>南开大学实训小组</p>
     </div>
     <!--//footer-->
@@ -255,7 +234,7 @@
 
 <script>
     <%
-        Admin admin = (Admin) session.getAttribute("admin");
+        String pwd = (String) session.getAttribute("pwd");
     %>
     //jQuery time
     var current_fs, next_fs, previous_fs; //fieldsets
@@ -309,7 +288,7 @@
         var v1 = s1.value;
         var v2 = s2.value;
         if(v1 == v2) {
-            if(v1 == <%=admin.getAdminPassword()%>){
+            if(v1 == <%=pwd%>){
                 //activate next step on progressbar using the index of next_fs
                 $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
 
@@ -338,6 +317,7 @@
                 });
             }
         }else{
+            alert("密码输入错误");
             return false;
         }
     });
@@ -349,13 +329,21 @@
         current_fs = $(this).parent();
         next_fs = $(this).parent().next();
 
-        if (document.getElementById("pass1").val() == document.getElementById("cpass1").val()) {
+        var ss1 = document.getElementById("pass1");
+        var ss2 = document.getElementById("cpass1");
+        var vv1 = ss1.value;
+        var vv2 = ss2.value;
+        if (vv1 == vv2) {
             $.ajax({
-                    url:'../PwdModify',
+                    url:'/PwdModify1',
                     type:'POST',
-                    data:{adminPassword:document.getElementById("pass1").val()},
+                    data:{adminPassword:vv1},
+                    dataType:"json",
+                    success: function a(){
+                        window.location.reload();
+                    }
                 }
-            )
+            );
 
             //activate next step on progressbar using the index of next_fs
             $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
@@ -385,6 +373,7 @@
             });
         }
         else {
+            alert("两次输入的密码不一致！");
             return false;
         }
     })

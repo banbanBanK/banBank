@@ -20,6 +20,7 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
     <link href="../cssGet/bootstrap.css" rel="stylesheet" />
     <link href="../cssGet/fresh-bootstrap-table.css" rel="stylesheet" />
+    <link href="../cssyqw/fonticon.css" rel="stylesheet">
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
@@ -43,42 +44,21 @@
     <link href="../css/custom.css" rel="stylesheet">
     <!--//Metis Menu -->
 </head>
-<body class="cbp-spmenu-push">
+<body class="cbp-spmenu-push" style="font-family:'calisto mt';background: #424a5d">
 <div class="main-content">
     <!--left-fixed -navigation-->
     <div class=" sidebar" role="navigation" style="font-family:'calisto mt'">
         <div class="navbar-collapse">
-            <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+            <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1"  style="background: #424a5d">
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="InfoView.jsp"  style="font-family:'楷体'"><i class="fa fa-home nav_icon"></i>信息汇总</a>
+                        <a href="/InfoView"  style="font-family:'楷体'"><i class="fa fa-home nav_icon"></i>信息汇总</a>
                     </li>
                     <li>
-                        <a href="getgood.jsp" class="active" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>进货计划<span class="nav-badge">03</span></a>
+                        <a href="/getgood" class="active" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>进货计划<span class="nav-badge">03</span></a>
                     </li>
                     <li>
-                        <a href="comment1.jsp" style="font-family:'楷体'"><i class="fa fa-book nav_icon"></i>客户评价<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse" style="font-family:'楷体'">
-                            <li>
-                                <a href="comment1.jsp">1星评价</a>
-                            </li>
-                            <li>
-                                <a href="comment2.jsp">2星评价</a>
-                            </li>
-                            <li>
-                                <a href="comment3.jsp">3星评价</a>
-                            </li>
-                            <li>
-                                <a href="comment4.jsp">4星评价</a>
-                            </li>
-                            <li>
-                                <a href="comment5.jsp">5星评价</a>
-                            </li>
-                        </ul>
-                        <!-- /nav-second-level -->
-                    </li>
-                    <li>
-                        <a href="CustomerView.jsp"  style="font-family:'楷体'"><i class="fa fa-bar-chart nav_icon"></i>客户总览</a>
+                        <a href="/CustomerView"  style="font-family:'楷体'"><i class="fa fa-bar-chart nav_icon"></i>客户总览</a>
                     </li>
                     <li>
                         <a href="/AdminInfo" style="font-family:'楷体'"><i class="fa fa-check-square-o nav_icon"></i>我的信息<span class="fa arrow"></span></a>
@@ -113,10 +93,10 @@
     <div class="sticky-header header-section " style="font-family:'calisto mt'">
         <div class="header-left">
             <!--toggle button start-->
-            <button id="showLeftPush"><i class="fa fa-bars"></i></button>
+            <button id="showLeftPush" style="background: #424a5d"><i class="fa fa-bars"></i></button>
             <!--toggle button end-->
             <!--logo -->
-            <div class="logo" style="width:230px">
+            <div class="logo" style="width:230px;background: #424a5d">
                 <a href="index.jsp">
                     <h1><font style="font-family:'calisto mt';font-style: italic;">NKUTT</font></h1>
                     <span><font style="font-family:'calisto mt';font-style: italic;">Adminpannel</font></span>
@@ -207,7 +187,7 @@
             </div>
             <div class="clearfix"> </div>
         </div>
-        <div class="clearfix"> </div>
+        <div class="clearfix" style="background: #424a5d"> </div>
     </div>
     <!-- //header-ends -->
     <!-- main content start-->
@@ -218,7 +198,7 @@
     <div id="page-wrapper" style="background-color: #e6e2c3;font-family:Calibri">
         <div class="main-page" >
             <div class="wrapper">
-                <div class="fresh-table full-color-blue full-screen-table">
+                <div class="fresh-table full-color-green full-screen-table">
                     <!--    Available colors for the full background: full-color-blue, full-color-azure, full-color-green, full-color-red, full-color-orange
                             Available colors only for the toolbar: toolbar-color-blue, toolbar-color-azure, toolbar-color-green, toolbar-color-red, toolbar-color-orange
                     -->
@@ -227,8 +207,9 @@
                         <th data-field="id" style="font-family: 楷体">编号</th>
                         <th data-field="name" data-sortable="true" style="font-family: 楷体">商品名</th>
                         <th data-field="price" data-sortable="true" style="font-family: 楷体">商品进货单价</th>
+                        <th data-field="num" data-sortable="true" style="font-family: 楷体">商品库存</th>
                         <th data-field="provider" data-sortable="true" style="font-family: 楷体">供应商</th>
-                        <th data-field="num" style="font-family: 楷体">进货数量</th>
+                        <th data-field="actions"  style="font-family: 楷体" >操作</th>
                         </thead>
                         <tbody>
                         <%
@@ -236,17 +217,17 @@
                             if(goods != null && goods.size()!=0){
                                 for(Good good : goods){
                         %>
-                            <%--<c:forEach var="good" items="${goods}" varStatus="status">--%>
                                 <tr>
-                                    <td><%=good.getGoodId()%></td>
-                                    <td><%=good.getGoodId()%></td>
-                                    <td><%=good.getGoodId()%></td>
-                                    <td><%=good.getGoodId()%></td>
-                                    <td><input type="text" name="num" style="border: none;background-color: rgba(255, 255, 255, 0.15);width: 70px">
-                                        <input type="submit" name="submit" value="submit" style="border:none;width: 65px;background-color: rgba(255, 255, 255, 0.15)" >
+                                    <td class="useful"><%=good.getGoodId()%></td>
+                                    <td><%=good.getGoodName()%></td>
+                                    <td><%=good.getGoodPrice()%></td>
+                                    <td><%=good.getGoodStock()%></td>
+                                    <td><%=good.getProvider().getProviderName()%></td>
+                                    <td>
+                                        <a rel="tooltip"  onclick="openLook(<%=good.getGoodId()%>)"  title="查看商品详细信息"><img src="../FontIcon/look.png" style="width: 15px;height: 15px" /></a>
+                                        <a rel="tooltip"  onclick="openGet(<%=good.getGoodId()%>)"  title="进货"><img src="../FontIcon/getmoregood.png" style="width: 15px;height: 15px" /></a>
                                     </td>
                                 </tr>
-                           <%-- </c:forEach>--%>
                         <%
                             }
                             }
@@ -259,7 +240,7 @@
         </div>
     </div>
     <!--footer-->
-    <div class="footer">
+    <div class="footer"  style="background: #424a5d">
         <p>南开大学实训小组</p>
     </div>
     <!--//footer-->
@@ -270,18 +251,23 @@
 <script type="text/javascript" src="../jsGet/bootstrap.js"></script>
 <script type="text/javascript" src="../jsGet/bootstrap-table.js"></script>
 
+<script>
+    function openLook(userFul) {
+        window.open ("/look?goodId="+userFul, "newwindow", "height=400, width=600, top=180, left=400" +
+            "toolbar =no, menubar=no, scrollbars=no, resizable=no, location=no, status=no") //写成一行
+    }
+    function openGet(userFul) {
+        window.open ("/get?goodId="+userFul, "newwindow", "height=400, width=600, top=180, left=400" +
+            "toolbar =no, menubar=no, scrollbars=no, resizable=no, location=no, status=no") //写成一行
+    }
+</script>
+
 <script type="text/javascript">
     var $table = $('#fresh-table'),
         $alertBtn = $('#alertBtn'),
-        full_screen = false,
-        window_height;
+        full_screen = false;
 
     $().ready(function(){
-
-        window_height = $(window).height();
-        table_height = window_height ;
-
-
         $table.bootstrapTable({
             toolbar: ".toolbar",
 
@@ -291,10 +277,8 @@
             showColumns: true,
             pagination: true,
             striped: true,
-            sortable: true,
-            height: table_height,
-            pageSize: 25,
-            pageList: [25,50,100],
+            pageSize: 8,
+            pageList: [8,10,25,50,100],
 
             formatShowingRows: function(pageFrom, pageTo, totalRows){
                 //do nothing here, we don't want to show the text "showing x of y from..."
@@ -311,11 +295,13 @@
             }
         });
 
+
+
         $(window).resize(function () {
             $table.bootstrapTable('resetView');
         });
-    });
 
+    })
 </script>
 
 
