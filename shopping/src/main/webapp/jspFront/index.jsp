@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <title>Staro</title>
+    <title>NK shop</title>
 
     <meta name="author" content="IntelCoder, www.intelcoder.com" />
     <meta name="description" content="Staro is a clean and light HTML5 theme for showing your products in a simple and elegant way. It's a fully responsive e-commerce template that was built with customers in mind." />
@@ -234,40 +234,33 @@
                 <img src="../img/slider/slide1.jpg" alt="" />
 
                 <div class="carousel-caption text-xs-center text-sm-center text-md-center text-left">
-                    <h1>NK商城</h1>
+                    <h1>索尼WH-1000XM2</h1>
 
-                    <p class="text-gray m-b-80">Introducing the new ST-O S1000 Purple Edition</p>
+                    <p class="text-gray m-b-80">静谧聆听&nbsp;&nbsp;&nbsp;智能降噪</p>
 
-                    <a href="#" class="btn btn-success"><i class="fas fa-rocket"></i>&nbsp; Explore</a>
+                    <a href="/GoodDetailsFindById?id=226&fatherTypeId=2" class="btn btn-success"><i class="fas fa-rocket"></i>&nbsp; Explore</a>
 
                     <span class="m-r-30 hidden-xs"></span>
                     <span class="m-b-30 visible-xs"></span>
-
-                    <a href="#" class="btn btn-success"><i class="fas fa-shopping-bag"></i>&nbsp; Buy Now</a>
                 </div>
             </div>
 
             <div class="item">
-                <img src="../img/slider/slide2.jpg" alt="" />
+                <img src="../img/computer_index.JPG" alt="" />
+
 
                 <div class="carousel-caption text-xs-center text-sm-center text-md-center text-left">
-                    <h1>Gaming Collection</h1>
-
-                    <p class="text-primary m-b-80">Checkout our gaming collection</p>
-
-                    <a href="products.jsp" class="btn btn-success"><i class="fas fa-rocket"></i>&nbsp; Explore</a>
+                    <div style="height: 48%"></div>
+                    <a href="/GoodDetailsFindById?id=10&fatherTypeId=1&evaluation=0" class="btn btn-success" style="margin-left: 80%"><i class="fas fa-rocket"></i>&nbsp; Explore</a>
                 </div>
             </div>
 
             <div class="item">
-                <img src="../img/slider/slide3.jpg" alt="" />
+                <img src="../img/phone_index.JPG" alt="" />
 
                 <div class="carousel-caption text-xs-center text-sm-center text-md-center text-left">
-                    <h1>Wireless Collection</h1>
-
-                    <p class="text-white m-b-80">Introducing the new Wi-Fi headphones collection</p>
-
-                    <a href="#" class="btn btn-success"><i class="fas fa-rocket"></i>&nbsp; Explore</a>
+                    <div style="height: 60%"></div>
+                    <a href="/GoodDetailsFindById?id=375&fatherTypeId=0" class="btn btn-success"><i class="fas fa-rocket"></i>&nbsp; Explore</a>
                 </div>
             </div>
         </div>
