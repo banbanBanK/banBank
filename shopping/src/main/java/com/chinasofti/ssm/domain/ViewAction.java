@@ -5,8 +5,8 @@ import java.sql.Timestamp;
 
 public class ViewAction implements Serializable{
 	private Integer id;
-	private Timestamp clickTime;
-	private Timestamp endTime;
+	private String clickTime;
+	private String endTime;
 	private Customer customer;
 	private Good good;
 	public ViewAction() {
@@ -19,18 +19,23 @@ public class ViewAction implements Serializable{
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public Timestamp getClickTime() {
+
+	public String getClickTime() {
 		return clickTime;
 	}
-	public void setClickTime(Timestamp clickTime) {
+
+	public void setClickTime(String clickTime) {
 		this.clickTime = clickTime;
 	}
-	public Timestamp getEndTime() {
+
+	public String getEndTime() {
 		return endTime;
 	}
-	public void setEndTime(Timestamp endTime) {
+
+	public void setEndTime(String endTime) {
 		this.endTime = endTime;
 	}
+
 	public Customer getCustomer() {
 		return customer;
 	}
