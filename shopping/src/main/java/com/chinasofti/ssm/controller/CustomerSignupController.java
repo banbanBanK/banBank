@@ -5,15 +5,21 @@ import java.util.HashSet;
 import java.util.List;
 
 
+import com.chinasofti.ssm.biz.AdminBiz;
+import com.chinasofti.ssm.domain.Admin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.chinasofti.ssm.biz.AddressBiz;
 import com.chinasofti.ssm.biz.CustomerBiz;
 import com.chinasofti.ssm.domain.Address;
 import com.chinasofti.ssm.domain.Customer;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping
@@ -24,6 +30,9 @@ public class CustomerSignupController {
 	
 	@Autowired
 	private AddressBiz addressBiz;
+
+	@Autowired
+    private AdminBiz adminBiz;
 	
 	
 	@RequestMapping(value="/jsp/signup")
@@ -42,7 +51,7 @@ public class CustomerSignupController {
 	    customer.setAddress(addressOfCus);
 	    boolean res=customerBiz.insert(customer);
 	    if(res)
-	    		return "customerSignupSuccess";
+	    		return "../jspFront/login";
 	    else
 	    	return "customerSignupError";
 	}
@@ -66,4 +75,64 @@ public class CustomerSignupController {
 		list=addressBiz.findAll();
         return list;
 	}
+
+	@RequestMapping("/loginFront")
+    @ResponseBody
+    public boolean loginFront(@RequestParam String customerId , @RequestParam String password, HttpServletRequest request){
+	    Customer customer = customerBiz.findByCustomerId(customerId);
+        HttpSession session = request.getSession();
+	    if(customer!=null) {
+            String Password = customer.getCustomerPassword();
+            if(Password.equals(password)) {
+                session.setAttribute("customerId",customerId);
+                session.setAttribute("loginStatus", true);
+                return true;
+            }else {
+                session.setAttribute("customerId","-1");
+                session.setAttribute("loginStatus",false);
+                return false;
+            }
+	    }else return false;
+    }
+
+    @RequestMapping("/CustomerDetails")
+    public String CustomerDetails(@RequestParam String customerId,HttpServletRequest request){
+	   Customer customer = customerBiz.findByCustomerId(customerId);
+	   if(customer!=null)
+	    request.setAttribute("customerDetail",customer);
+	   return "../jspFront/CustomerDetail";
+
+    }
+
+    @RequestMapping("/SaveCustomerInfo")
+    @ResponseBody
+    public boolean SaveCustomerInfo(String customerName, String customerGender, String customerEmail, java.sql.Date customerBirthday, String customerPhone, String customerZipCode, String customerAddress, String customerInfo){
+	    return customerBiz.updateCustomerInfo(customerName,customerGender,customerEmail,customerBirthday,customerPhone,customerZipCode,customerAddress,customerInfo);
+    }
+
+    @RequestMapping("/logout")
+	@ResponseBody
+	public boolean logout(HttpServletRequest request){
+		HttpSession session = request.getSession();
+		if(session.getAttribute("customerId")!=null) {
+			session.removeAttribute("customerId");
+			session.removeAttribute("loginStatus");
+			return true;
+		}else
+			return false;
+	}
+
+	@RequestMapping("/CustomerView")
+    public String CustomerView(HttpServletRequest request){
+	    HttpSession session = request.getSession();
+	    String adminId = (String) session.getAttribute("loginAdminId");
+        Admin admin = adminBiz.findByAdminId(adminId);
+	    if(adminId != null){
+	       List<Customer> customers = customerBiz.findAll();
+	       request.setAttribute("customers",customers);
+	       request.setAttribute("admin",admin);
+	       return "/CustomerView";
+        }else
+            return "login";
+    }
 }

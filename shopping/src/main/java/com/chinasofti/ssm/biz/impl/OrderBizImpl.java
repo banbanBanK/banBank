@@ -38,6 +38,10 @@ public class OrderBizImpl implements OrderBiz {
         return orderDao.update(order)==1;
     }
 
+    public boolean updateGoodNum(Integer goodNum, String customerId, String goodId ) {
+        return orderDao.updateGoodNum(goodNum,customerId,goodId)==1;
+    }
+
     public boolean delete(Order order) {
         return orderDao.delete(order)==1;
     }

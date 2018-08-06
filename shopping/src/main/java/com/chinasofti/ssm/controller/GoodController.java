@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.signum;
+
 @Controller
 public class GoodController {
 
@@ -43,6 +46,8 @@ public class GoodController {
         List<Type> types_children = typeBiz.findChildren(fatherTypeId);
         List<Good> goods = goodBiz.findByRootTypeId(fatherTypeId);
 
+        request.setAttribute("thisTypeId",fatherTypeId);
+
         if(types_children != null)
             request.setAttribute("types_children",types_children);
         if(types_parents != null)
@@ -52,6 +57,8 @@ public class GoodController {
         if(goods != null)
             request.setAttribute("goods",goods);
 
+        List<Good> searchGoods = goodBiz.findAll();
+        request.setAttribute("searchGoods",searchGoods);
         return "../jspFront/products";
     }
     @RequestMapping("/GoodFindByChildrenTypeId")
@@ -61,6 +68,10 @@ public class GoodController {
         List<Type> types_children = typeBiz.findChildren(fatherTypeId);
         List<Good> goods = goodBiz.findByChildrenTypeId(typeId);
 
+        List<Good> searchGoods = goodBiz.findAll();//待修改
+        request.setAttribute("searchGoods",searchGoods);
+
+        request.setAttribute("thisChildrenTypeId", fatherTypeId);
         if(types_children != null)
             request.setAttribute("types_children",types_children);
         if(types_parents != null)
@@ -83,6 +94,7 @@ public class GoodController {
         List<Type> types_children = typeBiz.findChildren(fatherTypeId);
         List<Type> types_parents = typeBiz.findParents();
         List<Type> types_singleRoots = typeBiz.findSingleRoots();
+        List<Good> searchGoods = goodBiz.findAll();
         String mainGoodId = productStyleBiz.findMainByRelationId(good.getGoodId());
         List<Good> goods;
         if(good.getType().getTypeId().equals("4")){
@@ -113,6 +125,7 @@ public class GoodController {
         }
         if(goods!=null)
             request.setAttribute("goods",goods);
+        request.setAttribute("searchGoods",searchGoods);
 
         if(good.getType().getTypeId().equals("4"))
             return "../jspFront/product-cellphone-details";
@@ -122,18 +135,49 @@ public class GoodController {
             return "../jspFront/product-headset-details";
         if(good.getType().getFatherTypeId().equals("3"))
             return "../jspFront/product-camera-details";
+        if(good.getType().getFatherTypeId().equals("0"))
+            return "../jspFront/product-cellphone-details";
         else return "../jspFront/products";
     }
 
-    @RequestMapping("/GetGood")
+    @RequestMapping("/getgood")
     public String getGood(HttpServletRequest request){
-        List<Good> goods = goodBiz.findAll();
-        request.setAttribute("goods",goods);
-        //String adminId = request.getParameter("");
-        //Admin admin1 = adminBiz.findByAdminId(adminId);
         HttpSession session = request.getSession();
-        Admin admin = adminBiz.findByAdminId("1");
-        session.setAttribute("admin",admin);
-        return "getgood";
+        String adminId = (String) session.getAttribute("loginAdminId");
+        Admin admin = adminBiz.findByAdminId(adminId);
+         if(adminId!=null) {
+            List<Good> goods = goodBiz.findAll();
+            request.setAttribute("goods", goods);
+            request.setAttribute("admin",admin);
+            return "getgood";
+        }else
+            return "login";
+    }
+
+    @RequestMapping("/look")
+    public String lookGood(@RequestParam String goodId, HttpServletRequest request){
+        HttpSession session = request.getSession();
+        Good good = goodBiz.findByGoodId(goodId);
+        session.setAttribute("goodName",good.getGoodName());
+        session.setAttribute("goodPrice",good.getGoodPrice());
+        session.setAttribute("goodStock",good.getGoodStock());
+        session.setAttribute("goodSaleNum",good.getGoodSaleSum());
+        session.setAttribute("goodType",good.getType().getTypeName());
+        session.setAttribute("goodProvider",good.getProvider().getProviderName());
+        return "look";
+    }
+
+    @RequestMapping("/get")
+    public String get(HttpServletRequest request){
+        return "get";
+    }
+
+    @RequestMapping("/getMore")
+    public String getgood( HttpServletRequest request) {
+        Good goodmom = goodBiz.findByGoodId((String)request.getSession().getAttribute("getGet"));
+        int num =parseInt(request.getParameter("goodNum"));
+        goodmom.setGoodStock(goodmom.getGoodStock()+num);
+        goodBiz.update(goodmom);
+        return "get";
     }
 }

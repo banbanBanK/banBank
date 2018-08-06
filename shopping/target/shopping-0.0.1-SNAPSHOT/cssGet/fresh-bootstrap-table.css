@@ -1084,7 +1084,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 .fresh-table .dropdown-menu > li > a:hover,
 .fresh-table .dropdown-menu > li > a:focus {
-  background-color: greenyellow;
+  background-color: #dede1d;
   color: rgba(0, 0, 0, 0.35) ;
   opacity: 1;
   text-decoration: none;
@@ -1092,7 +1092,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 .fresh-table .dropdown-menu > li.active > a,
 .fresh-table .dropdown-menu > li.active > a:hover,
 .fresh-table .dropdown-menu > li.active > a:focus {
-  background-color: greenyellow;
+  background-color: #dede1d;
 }
 .fresh-table .dropdown-menu:after {
   border-bottom: 11px solid rgba(23, 23, 23, 0.73);
@@ -1213,16 +1213,16 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   background-size: 250% 250%;
 }
 .fresh-table.toolbar-color-green .fixed-table-toolbar {
-  background: #83CB1E;
-  background: -moz-radial-gradient(ellipse at center, #53A319 0%, #83CB1E 100%);
+  background: #424a5d;
+  background: -moz-radial-gradient(ellipse at center, #424a5d 0%,#424a5d 100%);
   /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(ellipse at center, #53A319 0%, #83CB1E 100%);
+  background: -webkit-radial-gradient(ellipse at center, #424a5d 0%, #424a5d 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(ellipse at center, #53A319 0%, #83CB1E 100%);
+  background: -o-radial-gradient(ellipse at center,#424a5d 0%, #424a5d 100%);
   /* Opera 12+ */
-  background: -ms-radial-gradient(ellipse at center, #53A319 0%, #83CB1E 100%);
+  background: -ms-radial-gradient(ellipse at center, #424a5d 0%, #424a5d 100%);
   /* IE10+ */
-  background: radial-gradient(ellipse at center, #53A319 0%, #83CB1E 100%);
+  background: radial-gradient(ellipse at center, #424a5d 0%, #424a5d 100%);
   /* W3C */
   background-size: 250% 250%;
 }
@@ -1522,16 +1522,16 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   background-size: 250% 250%;
 }
 .fresh-table.full-color-green {
-  background: #83CB1E;
-  background: -moz-radial-gradient(ellipse at center, #53A319 0%, #83CB1E 100%);
+  background: #424a5d;
+  background: -moz-radial-gradient(ellipse at center, #424a5d 0%, #424a5d 100%);
   /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(ellipse at center, #53A319 0%, #83CB1E 100%);
+  background: -webkit-radial-gradient(ellipse at center, #424a5d 0%, #424a5d 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(ellipse at center, #53A319 0%, #83CB1E 100%);
+  background: -o-radial-gradient(ellipse at center,#424a5d 0%, #424a5d 100%);
   /* Opera 12+ */
-  background: -ms-radial-gradient(ellipse at center, #53A319 0%, #83CB1E 100%);
+  background: -ms-radial-gradient(ellipse at center, #424a5d 0%, #424a5d 100%);
   /* IE10+ */
-  background: radial-gradient(ellipse at center, #53A319 0%, #83CB1E 100%);
+  background: radial-gradient(ellipse at center, #424a5d 0%, #424a5d 100%);
   /* W3C */
   background-size: 250% 250%;
 }

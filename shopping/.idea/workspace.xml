@@ -1,9 +1,537 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="shopping:war" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba1a73ab-8306-4314-b9bc-af17aec584ea" name="Default" comment="" />
+    <list default="true" id="6657a3e4-a6fa-41de-9a0f-39193db4c5b7" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_4_3_18_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_18_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_18_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_18_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/ProviderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/FontIcon/edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/FontIcon/getmoregood.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/FontIcon/look.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css404/ie8.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css404/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css404/tipsy.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/font404/sing-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/font404/sing-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/font404/sing-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/font404/sing-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/font404/sing-webfont_162a16fe.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/skin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images404/404.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images404/bubble.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images404/cat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images404/cookie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images404/dog.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images404/planet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images404/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images404/sky-background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images404/sky-shine.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images404/tipsy.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images404/universal-preloader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/camera.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/computer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/music.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/phone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/echarts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/ProviderView.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/get.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/look.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/product-details.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/china-contour.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/china.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/anhui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/aomen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/beijing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/chongqing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/fujian.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/gansu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/guangdong.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/guangxi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/guizhou.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/hainan.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/hebei.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/heilongjiang.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/henan.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/hubei.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/hunan.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/jiangsu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/jiangxi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/jilin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/liaoning.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/neimenggu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/ningxia.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/qinghai.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/shandong.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/shanghai.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/shanxi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/shanxi1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/sichuan.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/taiwan.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/tianjin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/xianggang.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/xinjiang.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/xizang.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/yunnan.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/province/zhejiang.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/js/world.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/china-cities.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/china-contour.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/china.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/anhui.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/aomen.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/beijing.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/chongqing.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/fujian.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/gansu.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/guangdong.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/guangxi.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/guizhou.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/hainan.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/hebei.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/heilongjiang.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/henan.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/hubei.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/hunan.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/jiangsu.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/jiangxi.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/jilin.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/liaoning.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/neimenggu.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/ningxia.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/qinghai.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/shandong.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/shanghai.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/shanxi.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/shanxi1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/sichuan.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/taiwan.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/tianjin.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/xianggang.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/xinjiang.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/xizang.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/yunnan.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/province/zhejiang.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/map/json/world.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/scripts404/custom-scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/scripts404/jquery-1.7.2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/scripts404/jquery.tipsy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/ProviderController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/FontIcon/edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/FontIcon/getmoregood.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/FontIcon/look.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/controller/ProviderController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/lib/aspectjweaver-1.8.9.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/lib/commons-logging-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/lib/spring-aop-4.3.18.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/lib/spring-aspects-4.3.18.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/lib/spring-beans-4.3.18.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/lib/spring-context-4.3.18.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/lib/spring-context-support-4.3.18.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/lib/spring-core-4.3.18.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/lib/spring-expression-4.3.18.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/lib/spring-jdbc-4.3.18.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/lib/spring-tx-4.3.18.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/lib/spring-web-4.3.18.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/lib/spring-webmvc-4.3.18.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/css404/ie8.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/css404/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/css404/tipsy.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/font404/sing-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/font404/sing-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/font404/sing-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/font404/sing-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/font404/sing-webfont_162a16fe.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/images/skin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/images404/404.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/images404/bubble.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/images404/cat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/images404/cookie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/images404/dog.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/images404/planet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/images404/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/images404/sky-background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/images404/sky-shine.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/images404/tipsy.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/images404/universal-preloader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/img/camera.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/img/computer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/img/music.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/img/phone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/js/echarts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/ProviderView.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/get.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/look.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/china-contour.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/china.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/anhui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/aomen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/beijing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/chongqing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/fujian.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/gansu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/guangdong.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/guangxi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/guizhou.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/hainan.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/hebei.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/heilongjiang.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/henan.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/hubei.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/hunan.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/jiangsu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/jiangxi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/jilin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/liaoning.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/neimenggu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/ningxia.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/qinghai.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/shandong.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/shanghai.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/shanxi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/shanxi1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/sichuan.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/taiwan.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/tianjin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/xianggang.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/xinjiang.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/xizang.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/yunnan.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/province/zhejiang.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/js/world.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/china-cities.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/china-contour.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/china.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/anhui.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/aomen.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/beijing.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/chongqing.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/fujian.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/gansu.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/guangdong.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/guangxi.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/guizhou.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/hainan.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/hebei.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/heilongjiang.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/henan.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/hubei.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/hunan.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/jiangsu.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/jiangxi.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/jilin.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/liaoning.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/neimenggu.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/ningxia.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/qinghai.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/shandong.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/shanghai.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/shanxi.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/shanxi1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/sichuan.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/taiwan.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/tianjin.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/xianggang.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/xinjiang.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/xizang.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/yunnan.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/province/zhejiang.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/map/json/world.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/scripts404/custom-scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/scripts404/jquery-1.7.2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/scripts404/jquery.tipsy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/shopping_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/shopping_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_9.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_18_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_0_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_18_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_0_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_3_18_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_18_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_18_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_0_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_18_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_0_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_0_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" afterPath="$PROJECT_DIR$/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/CustomerBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/CustomerBiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/OrderBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/OrderBiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/impl/CustomerBizImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/impl/CustomerBizImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/impl/OrderBizImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/biz/impl/OrderBizImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/CustomerSignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/CustomerSignupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/GoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/GoodController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/TypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/TypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/dao/CustomerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/dao/CustomerDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/dao/OrderDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/dao/ProviderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/dao/ProviderDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/domain/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/domain/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/domain/Provider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/domain/Provider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/AdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/AdminMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/CommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/CommentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/CustomerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/CustomerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/GoodMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/GoodMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/OrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/ProviderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/ProviderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/properties/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/properties/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cssGet/fresh-bootstrap-table.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cssGet/fresh-bootstrap-table.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/Chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/AdminInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/AdminInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/CustomerView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/CustomerView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/InfoView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/InfoView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/PwdModify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/PwdModify.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/comment1.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/comment2.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/comment3.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/comment4.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/comment5.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/getgood.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/getgood.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jspFront/CustomerDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/CustomerDetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jspFront/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/about.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jspFront/blog-post.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/blog-post.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jspFront/blog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/blog.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jspFront/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/cart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jspFront/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/contact.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jspFront/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jspFront/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jspFront/product-camera-details.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/product-camera-details.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jspFront/product-cellphone-details.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/product-cellphone-details.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jspFront/product-computer-details.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/product-computer-details.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jspFront/product-headset-details.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/product-headset-details.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jspFront/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/products.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jspFront/show-comments.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/show-comments.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jspFront/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/chinasofti/ssm/biz/TestAdminBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/chinasofti/ssm/biz/TestAdminBiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/chinasofti/ssm/biz/TestOrderBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/chinasofti/ssm/biz/TestOrderBiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/chinasofti/ssm/biz/TestProviderBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/chinasofti/ssm/biz/TestProviderBiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/AddressBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/AddressBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/AdminBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/AdminBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/CardBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/CardBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/CommentBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/CommentBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/CustomerAnalysisBiz.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/CustomerBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/CustomerBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/FaqBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/FaqBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/FavorBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/FavorBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/GoodBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/GoodBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/OrderBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/OrderBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/ProductDetailsBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/ProductDetailsBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/ProductStyleBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/ProductStyleBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/ProviderBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/ProviderBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/TypeBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/TypeBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/ViewActionBiz.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/AddressBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/AddressBizImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/AdminBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/AdminBizImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/CardBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/CardBizImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/CommentBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/CommentBizImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/CustomerAnalysisBizImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/CustomerBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/CustomerBizImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/FaqBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/FaqBizImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/FavorBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/FavorBizImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/GoodBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/GoodBizImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/OrderBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/OrderBizImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/ProductDetailsBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/ProductDetailsBizImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/ProductStyleBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/ProductStyleBizImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/ProviderBizImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/TypeBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/TypeBizImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/ViewActionBizImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/CardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/CardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/CommentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/CustomerSignupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/CustomerSignupController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/FavorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/FavorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/GoodController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/GoodController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/OrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/TypeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/TypeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/ViewActionController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/AddressDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/AddressDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/AdminDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/AdminDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/CardDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/CardDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/CommentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/CommentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/CustomerAnalysisDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/CustomerDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/CustomerDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/FaqDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/FaqDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/FavorDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/FavorDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/GenericDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/GenericDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/GoodDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/GoodDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/OrderDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/OrderDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/ProductDetailsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/ProductDetailsDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/ProductStyleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/ProductStyleDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/ProviderDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/ProviderDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/TypeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/TypeDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/ViewActionDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/ViewActionDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/Address.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/Card.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/Comment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/CustomerAnalysis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/Faq.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/Faq.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/Favor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/Favor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/Good.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/Good.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/GoodSummary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/ProductAnalysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/ProductAnalysis.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/ProductAssociation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/ProductAssociation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/ProductDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/ProductDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/ProductStyle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/ProductStyle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/Provider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/Provider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/Type.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/Type.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/ViewAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/ViewAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/mapper/AdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/mapper/AdminMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/mapper/CommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/mapper/CommentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/mapper/CustomerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/mapper/CustomerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/mapper/GoodMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/mapper/GoodMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/mapper/OrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/mapper/ProviderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/mapper/ProviderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/properties/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/properties/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/AddressBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/AddressBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/AdminBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/AdminBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/CardBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/CardBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/CommentBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/CommentBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/CustomerBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/CustomerBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/FaqBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/FaqBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/FavorBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/FavorBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/GoodBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/GoodBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/OrderBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/OrderBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/ProductDetailsBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/ProductDetailsBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/ProductStyleBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/ProductStyleBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/ProviderBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/ProviderBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/TypeBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/TypeBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/AddressBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/AddressBizImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/AdminBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/AdminBizImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/CardBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/CardBizImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/CommentBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/CommentBizImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/CustomerBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/CustomerBizImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/FaqBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/FaqBizImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/FavorBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/FavorBizImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/GoodBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/GoodBizImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/OrderBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/OrderBizImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/ProductDetailsBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/ProductDetailsBizImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/ProductStyleBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/ProductStyleBizImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/TypeBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/TypeBizImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/controller/CardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/controller/CardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/controller/CommentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/controller/CustomerSignupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/controller/CustomerSignupController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/controller/FavorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/controller/FavorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/controller/GoodController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/controller/GoodController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/controller/OrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/controller/TypeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/controller/TypeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/AddressDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/AddressDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/AdminDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/AdminDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/CardDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/CardDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/CommentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/CommentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/CustomerDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/CustomerDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/FaqDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/FaqDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/FavorDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/FavorDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/GenericDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/GenericDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/GoodDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/GoodDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/OrderDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/OrderDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/ProductDetailsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/ProductDetailsDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/ProductStyleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/ProductStyleDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/ProviderDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/ProviderDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/TypeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/TypeDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/ViewActionDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/ViewActionDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/Address.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/Card.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/Comment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/Faq.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/Faq.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/Favor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/Favor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/Good.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/Good.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/ProductAnalysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/ProductAnalysis.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/ProductAssociation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/ProductAssociation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/ProductDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/ProductDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/ProductStyle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/ProductStyle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/Provider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/Provider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/Type.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/Type.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/ViewAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/ViewAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/mapper/AdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/mapper/AdminMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/mapper/CommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/mapper/CommentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/mapper/CustomerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/mapper/CustomerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/mapper/GoodMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/mapper/GoodMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/mapper/OrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/mapper/ProviderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/mapper/ProviderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/properties/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/properties/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/lib/aspectjweaver-1.8.13.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/lib/spring-aop-5.0.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/lib/spring-aspects-5.0.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/lib/spring-beans-5.0.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/lib/spring-context-5.0.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/lib/spring-context-support-5.0.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/lib/spring-core-5.0.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/lib/spring-expression-5.0.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/lib/spring-jcl-5.0.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/lib/spring-jdbc-5.0.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/lib/spring-tx-5.0.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/lib/spring-web-5.0.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/lib/spring-webmvc-5.0.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/cssGet/fresh-bootstrap-table.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/cssGet/fresh-bootstrap-table.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/js/Chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/AdminInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/AdminInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/CustomerView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/CustomerView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/InfoView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/InfoView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/PwdModify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/PwdModify.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/comment1.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/comment2.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/comment3.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/comment4.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/comment5.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/getgood.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/getgood.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/CustomerDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/CustomerDetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/about.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/blog-post.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/blog-post.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/blog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/blog.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/cart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/contact.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/product-camera-details.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/product-camera-details.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/product-cellphone-details.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/product-cellphone-details.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/product-computer-details.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/product-computer-details.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/product-details.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/product-details.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/product-headset-details.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/product-headset-details.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/products.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/show-comments.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/show-comments.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jspFront/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/TestAdminBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/TestAdminBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/TestCardBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/TestCardBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/TestCommentBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/TestCommentBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/TestCustomerBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/TestCustomerBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/TestFavorBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/TestFavorBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/TestGoodBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/TestGoodBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/TestOrderBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/TestOrderBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/TestProductDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/TestProductDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/TestProductStyle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/TestProductStyle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/TestProviderBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/TestProviderBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/TestTypeBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/TestTypeBiz.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,29 +564,47 @@
       <file leaf-file-name="GoodController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/GoodController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state relative-caret-position="409">
+              <caret line="97" column="76" selection-start-line="97" selection-start-column="76" selection-end-line="97" selection-end-column="76" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommentController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CommentController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/CommentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            <state relative-caret-position="351">
+              <caret line="52" column="83" lean-forward="true" selection-start-line="52" selection-start-column="83" selection-end-line="52" selection-end-column="83" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/test/chinasofti/ssm/biz/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="297">
+              <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jspFront/login.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="product-cellphone-details.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jspFront/product-cellphone-details.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="413" column="54" lean-forward="true" selection-start-line="413" selection-start-column="54" selection-end-line="413" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -67,7 +613,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/test/chinasofti/ssm/biz/TestAdminBiz.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
-              <caret line="10" selection-start-line="10" selection-end-line="11" selection-end-column="39" />
+              <caret line="10" selection-start-line="10" selection-end-line="14" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -86,40 +632,23 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="FavorMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/FavorMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-567" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jdbc.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/properties/jdbc.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="1" column="50" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/resources/properties/jdbc.properties" />
-        <option value="$PROJECT_DIR$/src/test/java/test/chinasofti/ssm/biz/Test.java" />
-      </list>
-    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
@@ -146,11 +675,6 @@
             <path>
               <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
               <item name="shopping" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shopping" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -173,6 +697,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ssm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shopping" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm" type="462c0819:PsiDirectoryNode" />
+              <item name="biz" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
@@ -187,22 +720,34 @@
               <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
               <item name="shopping" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
               <item name="shopping" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
               <item name="shopping" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="biz" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shopping" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="jspFront" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -211,11 +756,6 @@
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
-  </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -229,7 +769,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Test.Signup">
+  <component name="RunManager" selected="Tomcat Server.login.jsp">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -363,14 +903,54 @@
       <properties />
       <listeners />
     </configuration>
+    <configuration name="login.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 8.0.364" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/jspFront/login.jsp" />
+      <deployment>
+        <artifact name="shopping:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="login_jsp_shopping_2" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="shopping:war" />
+        </option>
+      </method>
+    </configuration>
     <list>
       <item itemvalue="JUnit.TestFavorBiz.findByLevel" />
       <item itemvalue="JUnit.Test.Login" />
       <item itemvalue="JUnit.Test.Signup" />
       <item itemvalue="JUnit.Test.Recommand" />
+      <item itemvalue="Tomcat Server.login.jsp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Tomcat Server.login.jsp" />
         <item itemvalue="JUnit.Test.Signup" />
         <item itemvalue="JUnit.Test.Recommand" />
         <item itemvalue="JUnit.Test.Login" />
@@ -389,75 +969,50 @@
       <option name="presentableId" value="Default" />
       <updated>1533517530784</updated>
       <workItem from="1533517532284" duration="95000" />
-      <workItem from="1533517635754" duration="1667000" />
+      <workItem from="1533517635754" duration="3501000" />
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="TestFavorBiz_findByLevel - 2018.08.06 at 09h 08m 58s.xml">
-      <configuration name="TestFavorBiz.findByLevel" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestFavorBiz_findByLevel - 2018.08.06 at 09h 10m 27s.xml">
-      <configuration name="TestFavorBiz.findByLevel" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test_Login - 2018.08.06 at 09h 12m 54s.xml">
-      <configuration name="Test.Login" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test_Signup - 2018.08.06 at 09h 13m 13s.xml">
-      <configuration name="Test.Signup" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test_Recommand - 2018.08.06 at 09h 13m 22s.xml">
-      <configuration name="Test.Recommand" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test_Signup - 2018.08.06 at 09h 14m 38s.xml">
-      <configuration name="Test.Signup" configurationId="JUnit" />
-    </history-entry>
-  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1762000" />
+    <option name="totallyTimeSpent" value="1676000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
+      <window_info anchor="bottom" id="Application Servers" order="0" weight="0.32980973" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Database" order="5" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="bottom" id="Java Enterprise" order="7" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32980973" />
-      <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14322917" />
-      <window_info id="Web" order="2" side_tool="true" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="9" />
+      <window_info anchor="bottom" id="Messages" order="2" weight="0.32980973" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" visible="true" weight="0.20295984" />
+      <window_info anchor="bottom" id="Spring" order="1" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14322917" />
+      <window_info id="Web" order="6" side_tool="true" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Message" order="3" />
+      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="4" />
     </layout>
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
@@ -537,34 +1092,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/GoodController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/CommentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/test/chinasofti/ssm/biz/TestAdminBiz.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
-          <caret line="10" selection-start-line="10" selection-end-line="11" selection-end-column="39" />
+          <caret line="10" selection-start-line="10" selection-end-line="14" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/test/chinasofti/ssm/biz/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="297">
+          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/GoodController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="97" column="76" selection-start-line="97" selection-start-column="76" selection-end-line="97" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jspFront/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jspFront/product-cellphone-details.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="413" column="54" lean-forward="true" selection-start-line="413" selection-start-column="54" selection-end-line="413" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/CommentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="52" column="83" lean-forward="true" selection-start-line="52" selection-start-column="83" selection-end-line="52" selection-end-column="83" />
         </state>
       </provider>
     </entry>

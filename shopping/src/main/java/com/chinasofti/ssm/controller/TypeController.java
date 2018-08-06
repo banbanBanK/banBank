@@ -1,6 +1,8 @@
 package com.chinasofti.ssm.controller;
 
+import com.chinasofti.ssm.biz.GoodBiz;
 import com.chinasofti.ssm.biz.TypeBiz;
+import com.chinasofti.ssm.domain.Good;
 import com.chinasofti.ssm.domain.Type;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,7 +17,10 @@ public class TypeController {
     @Autowired
     private TypeBiz typeBiz;
 
-    @RequestMapping("/jspFront/index")
+    @Autowired
+    private GoodBiz goodBiz;
+
+    @RequestMapping("/jspFrontIndex")
     public String typeFindAll(HttpServletRequest request){
         List<Type> types_parents = typeBiz.findParents();
         List<Type> types_singleRoots = typeBiz.findSingleRoots();
@@ -24,6 +29,8 @@ public class TypeController {
         if(types_singleRoots != null)
             request.setAttribute("types_singleRoots",types_singleRoots);
 
+        List<Good> searchGoods = goodBiz.findAll();
+        request.setAttribute("searchGoods",searchGoods);
         return "../jspFront/index";
     }
 }

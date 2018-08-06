@@ -50,9 +50,9 @@
         from customer_analysis
         where Id = #{id}
     </select>
-    <select id="findByCustomerAndLevel" resultMap="CommentResultMap">
+    <select id="findByCustomerId" resultMap="CommentResultMap">
         select *
         from customer_analysis
-        where  customerId = #{customerId} and
+        where  customerId = #{customerId}
     </select>
 </mapper>

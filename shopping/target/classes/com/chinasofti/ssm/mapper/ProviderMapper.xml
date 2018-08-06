@@ -46,4 +46,9 @@
         where Id = #{id}
     </update>
 
+    <select id="findAll" resultMap="ProviderResultMap">
+        select *
+        from providers
+        where DeleteStatus = 1
+    </select>
 </mapper>
