@@ -293,7 +293,6 @@
                         alert("申请数据失败！");
                     }
                 });
-
                 var ageGenderF = [];
                 for(var i=0; i<7; i++)
                     ageGenderF[i] = 0;
@@ -378,7 +377,6 @@
                         }
                     ]
                 };
-
                 // 使用刚指定的配置项和数据显示图表。
                 myChart.setOption(option);
             </script>
@@ -417,7 +415,6 @@
             <script type="text/javascript">
                 // 基于准备好的dom，初始化echarts实例
                 var myChart1 = echarts.init(document.getElementById('mainGood'));
-
                 $(function() {
                     _ajax1(1);
                     $('#selectTop10').on('change', function() {
@@ -425,16 +422,13 @@
                         _ajax1(val);
                     });
                 });
-
                 // 指定图表的配置项和数据
                 function _ajax1(len1) {
-                    alert("调用成功");
                     $.ajax({
                         url: '/getGoodSum?number=' + len1,
                         type: 'get',
                         dataType: 'json',
                         success: function (res) {
-                            alert("sdwewfef");
                             var salePercent = [];
                             $.ajax({
                                 url:'/getSalePercent?number' + len1,
@@ -549,7 +543,6 @@
                                     }
                                 ]
                             };
-
                             // 使用刚指定的配置项和数据显示图表。
                             myChart1.setOption(option);
                         },
@@ -566,7 +559,6 @@
                 // 基于准备好的dom，初始化echarts实例
                 var myChart = echarts.init(document.getElementById('mainMap'));
                 var peoples = [];
-
                 for(var i=0; i<34; i++)
                     peoples[i]=0;
                 $.ajax({
@@ -582,7 +574,6 @@
                 function mapTooltipClick(name) {
                     alert(name)
                 }
-
                 option = {
                     title : {
                         text:"客户地域分析",
@@ -827,7 +818,6 @@
                     });
                     count++;
                 }, 1000);
-
                 myChart.on('mouseover', function(params) {
                     //console.log(params)
                     clearInterval(timeTicket);
@@ -866,58 +856,66 @@
                         count++;
                     }, 1000);
                 });
-
                 // 使用刚指定的配置项和数据显示图表。
                 myChart.setOption(option);
             </script>
 
             <div class="clearfix"></div><hr/>
-            <div id="mainGoodType" style="width: 1000px;height:600px;"></div>
+            <div id="mainViewAction" style="width: 1000px;height:600px;"></div>
             <script type="text/javascript">
                 // 基于准备好的dom，初始化echarts实例
-                var myChart = echarts.init(document.getElementById('mainGoodType'));
+                var myChartViewAction = echarts.init(document.getElementById('mainViewAction'));
+
+                var viewAction = [];
+                for(var i=0; i<31; i++)
+                    viewAction[i] = 0;
+
+                $.ajax({
+                    url:'/getAu',
+                    type:'post',
+                    dataType:'json',
+                    async:false,
+                    success(res){
+                        viewAction = res;
+                    },
+                    error(){
+                        alert("申请数据失败！");
+                    }
+                });
 
                 // 指定图表的配置项和数据
                 var xData = function() {
                     var data = [];
-                    for(var i = 1; i < 9; i++) {
-                        data.push(i + "月");
+                    for(var i = 1; i < 32; i++) {
+                        data.push(i + "号");
                     }
                     return data;
                 }();
-                var color = ['#1a9bfc', '#99da69', '#e32f46', '#7049f0']
-                var temp = ['电脑', '耳机', '相机', '手机']
-                var data = [
-                    [13.7, 3.4, 13.5, 16.1, 7.4, 15.2, 10.2, 14.0],
-                    [17.4, 13.7, 13.5, 3.4, 15.2, 13.5, 14.0, 10.1],
-                    [13.4, 7.4, 13.7, 13.5, 16.1, 13.7, 7.9, 10.3],
-                    [3.5, 15.2, 16.1, 17.4, 13.4, 6.1, 10.3, 7.8],
-                ];
+                var color = ['#1a9bfc']
+                var temp = ['当天用户点击量']
+                var data = [];
 
                 var series = [];
-                for(var i = 0; i < 4; i++) {
-                    series.push({
-                        name: temp[i],
-                        type: "line",
-                        symbolSize: 8,
-                        symbol: 'circle',
-                        itemStyle: {
-                            normal: {
-                                color: color[i],
-                                lineStyle: {
-                                    width: 1,
-                                    type: 'dotted' //'dotted'虚线 'solid'实线
-                                },
-                                barBorderRadius: 0,
-                                label: {
-                                    show: false,
-                                }
+                series.push({
+                    name: temp[0],
+                    type: "line",
+                    symbolSize: 8,
+                    symbol: 'circle',
+                    itemStyle: {
+                        normal: {
+                            color: color[0],
+                            lineStyle: {
+                                width: 1,
+                                type: 'dotted' //'dotted'虚线 'solid'实线
+                            },
+                            barBorderRadius: 0,
+                            label: {
+                                show: false,
                             }
-                        },
-                        data: data[i],
-
-                    })
-                }
+                        }
+                    },
+                    data: viewAction,
+                })
                 option = {
                     backgroundColor: "#04243E",
                     legend: {
@@ -927,15 +925,14 @@
                             fontSize: '12'
                         },
                         data: temp,
-                        selected: {
-                            // 选中'系列1'
-                            '电脑': true,
-                            // 不选中'系列2'
-                            '耳机': true
-                        }
                     },
+                    dataZoom: [{ // 这个dataZoom组件，默认控制x轴。
+                        type: 'slider', // 这个 dataZoom 组件是 slider 型 dataZoom 组件
+                        start: 10, // 左边在 10% 的位置。
+                        end: 40 // 右边在 40% 的位置。
+                    }],
                     title: {
-                        text: "1-8月各大类商品销售量",
+                        text: "7月用户点击量总览",
                         textStyle: {
                             color: '#fff',
                             fontSize: '22',
@@ -952,7 +949,7 @@
                         axisPointer: { // 坐标轴指示器，坐标轴触发有效
                             type: 'line', // 默认为直线，可选为：'line' | 'shadow'
                         },
-                        formatter: '{b}<br />{a0}: {c0}%<br />{a1}: {c1}%<br />{a2}: {c2}%<br />{a3}: {c3}%<br />',
+                        formatter: '{b}<br />{a0}: {c0}',
                         backgroundColor: 'rgba(0,0,0,0.7)', // 背景
                         padding: [8, 10], //内边距
                         extraCssText: 'box-shadow: 0 0 3px rgba(255, 255, 255, 0.4);', //添加阴影
@@ -1014,14 +1011,14 @@
                                 fontWeight: 'normal',
                                 fontSize: '12',
                             },
-                            formatter: '{value}%',
+                            formatter: '{value}',
                         },
                     },
                     series: series,
                 };
 
                 // 使用刚指定的配置项和数据显示图表。
-                myChart.setOption(option);
+                myChartViewAction.setOption(option);
             </script>
 
             <div class="clearfix"></div><hr/>
@@ -1055,7 +1052,6 @@
             <script type="text/javascript">
                 // 基于准备好的dom，初始化echarts实例
                 var myChart = echarts.init(document.getElementById('mainComment'));
-
                 $(function() {
                     _ajax(1);
                     $('#selectNameTop10').on('change', function() {
@@ -1063,7 +1059,6 @@
                         _ajax(val);
                     });
                 });
-
                 function _ajax(len) {
                     $.ajax({
                         url: '/getGoodComment?number='+len,
@@ -1184,7 +1179,6 @@
                                     subtextStyle: {
                                         color: '#90979c',
                                         fontSize: '16',
-
                                     },
                                 },
                                 backgroundColor: '#04243E',
@@ -1199,7 +1193,6 @@
                                 },
                                 series: seriesObj
                             };
-
                             // 使用刚指定的配置项和数据显示图表。
                             myChart.setOption(option);
                         }
@@ -1223,15 +1216,12 @@
     var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
         showLeftPush = document.getElementById( 'showLeftPush' ),
         body = document.body;
-
     showLeftPush.onclick = function() {
         classie.toggle( this, 'active' );
         classie.toggle( body, 'cbp-spmenu-push-toright' );
         classie.toggle( menuLeft, 'cbp-spmenu-open' );
         disableOther( 'showLeftPush' );
     };
-
-
     function disableOther( button ) {
         if( button !== 'showLeftPush' ) {
             classie.toggle( showLeftPush, 'disabled' );
