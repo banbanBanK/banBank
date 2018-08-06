@@ -1,7 +1,10 @@
 package test.chinasofti.ssm.biz;
 
+import com.chinasofti.ssm.biz.CustomerBiz;
+import com.chinasofti.ssm.biz.GoodBiz;
 import com.chinasofti.ssm.biz.OrderBiz;
 import com.chinasofti.ssm.domain.Customer;
+import com.chinasofti.ssm.domain.Good;
 import com.chinasofti.ssm.domain.Order;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,6 +19,10 @@ import java.util.List;
 public class TestOrderBiz {
     @Autowired
     private OrderBiz orderBiz;
+    @Autowired
+    private CustomerBiz customerBiz;
+    @Autowired
+    private GoodBiz goodBiz;
     @Test
     public void testFindById(){
         Order order = orderBiz.findById(1);
@@ -32,9 +39,9 @@ public class TestOrderBiz {
 
     @Test
     public void testFindByCustomerId(){
-        List<Order> orders = orderBiz.findByCustomerId("123");
+        List<Order> orders = orderBiz.findByCustomerId("1");
         for (Order order :orders){
-            System.out.println("Name = " + order.getCustomer().getCustomerName() + " " + order.getGood().getGoodName());
+            System.out.println("Name = " + order.getCustomer().getCustomerName() + " " + order.getGood().getType());
         }
     }
 
@@ -54,11 +61,18 @@ public class TestOrderBiz {
         }
     }*/
 
-/*    @Test
+    @Test
     public void testInsert(){
-        Order order = new Order();
-        order.setCustomer();
-    }*/
+        Order orderNew = new Order();
+        Customer cus = customerBiz.findByCustomerId("1");
+        Good good = goodBiz.findByGoodId("2");
+        orderNew.setCustomer(cus);
+        orderNew.setGood(good);
+        orderNew.setDeleteStatus(1);
+        orderNew.setGoodNum(1);
+        orderNew.setIsDone(0);
+        System.out.println(orderBiz.insert(orderNew));
+    }
     @Test
     public void testDelete(){
         boolean a = orderBiz.delete(1);

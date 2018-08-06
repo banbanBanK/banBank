@@ -62,42 +62,24 @@
     <link href="../css/custom.css" rel="stylesheet">
     <!--//Metis Menu -->
 </head>
-<body class="cbp-spmenu-push" style="font-family:'calisto mt'">
+<body class="cbp-spmenu-push" style="font-family:'calisto mt';background: #424a5d">
 <div class="main-content" onload="getData()">
     <!--left-fixed -navigation-->
     <div class=" sidebar" role="navigation">
         <div class="navbar-collapse">
-            <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+            <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1"  style="background: #424a5d">
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="InfoView.jsp" class="active" style="font-family:'楷体'"><i class="fa fa-home nav_icon"></i>信息汇总</a>
+                        <a href="/InfoView"  style="font-family:'楷体'"><i class="fa fa-home nav_icon"></i>信息汇总</a>
                     </li>
                     <li>
-                        <a href="getgood.jsp" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>进货计划<span class="nav-badge">03</span></a>
+                        <a href="/getgood" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>商品总览</a>
                     </li>
                     <li>
-                        <a href="comment1.jsp" style="font-family:'楷体'"><i class="fa fa-book nav_icon"></i>客户评价<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse" style="font-family:'楷体'">
-                            <li>
-                                <a href="comment1.jsp">1星评价</a>
-                            </li>
-                            <li>
-                                <a href="comment2.jsp">2星评价</a>
-                            </li>
-                            <li>
-                                <a href="comment3.jsp">3星评价</a>
-                            </li>
-                            <li>
-                                <a href="comment4.jsp">4星评价</a>
-                            </li>
-                            <li>
-                                <a href="comment5.jsp">5星评价</a>
-                            </li>
-                        </ul>
-                        <!-- /nav-second-level -->
+                        <a href="/CustomerView"  style="font-family:'楷体'"><i class="fa fa-bar-chart nav_icon"></i>客户总览</a>
                     </li>
                     <li>
-                        <a href="CustomerView.jsp"  style="font-family:'楷体'"><i class="fa fa-bar-chart nav_icon"></i>客户总览</a>
+                        <a href="/ProviderView"  style="font-family:'楷体'"><i class="fa fa-bar-chart nav_icon"></i>供应商总览</a>
                     </li>
                     <li>
                         <a href="/AdminInfo"  class="active" style="font-family:'楷体'"><i class="fa fa-check-square-o nav_icon"></i>我的信息<span class="fa arrow"></span></a>
@@ -110,32 +92,24 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="grids.jsp" style="font-family:'楷体'"><i class="fa fa-cogs nav_icon" ></i>设置<span class="nav-badge">12</span> <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse" style="font-family:'楷体'">
-                            <li>
-                                <a href="grids.jsp">菜单设置</a>
-                            </li>
-                            <li>
-                                <a href="media.jsp">媒体设置</a>
-                            </li>
-                        </ul>
-                        <!-- /nav-second-level -->
-                    </li>
                 </ul>
                 <!-- //sidebar-collapse -->
             </nav>
         </div>
     </div>
     <!--left-fixed -navigation-->
+
+    <%
+        Admin admin = (Admin) request.getAttribute("admin");
+    %>
     <!-- header-starts -->
     <div class="sticky-header header-section ">
         <div class="header-left">
             <!--toggle button start-->
-            <button id="showLeftPush"><i class="fa fa-bars"></i></button>
+            <button id="showLeftPush" style="background: #424a5d"><i class="fa fa-bars"></i></button>
             <!--toggle button end-->
             <!--logo -->
-            <div class="logo" style="width:230px">
+            <div class="logo" style="width:230px;background: #424a5d">
                 <a href="index.jsp">
                     <h1><font style="font-family:'calisto mt';font-style: italic;">NKUTT</font></h1>
                     <span><font style="font-family:'calisto mt';font-style: italic;">Adminpannel</font></span>
@@ -208,8 +182,8 @@
                             <div class="profile_img">
                                 <span class="prfil-img"><img src="../images/a.png" alt=""> </span>
                                 <div class="user-name">
-                                    <p style="font-family:'calisto mt';font-style: italic;">NKU</p>
-                                    <span style="font-family:'calisto mt';font-style: italic;">Administrator</span>
+                                    <p style="font-family:'calisto mt';font-style: italic;"><%=admin.getAdminName()%></p>
+                                    <span style="font-family:'calisto mt';font-style: italic;color: #FFFFFF;">管理员</span>
                                 </div>
                                 <i class="fa fa-angle-down lnr"></i>
                                 <i class="fa fa-angle-up lnr"></i>
@@ -217,31 +191,38 @@
                             </div>
                         </a>
                         <ul class="dropdown-menu drp-mnu">
-                            <li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li>
-                            <li> <a href="AdminInfo.jsp"><i class="fa fa-user"></i> Profile</a> </li>
-                            <li> <a href="#"><i class="fa fa-sign-out"></i> Logout</a> </li>
+                            <li> <a href="/AdminInfo"><i class="fa fa-user"></i> 个人信息</a> </li>
+                            <li> <a href="javaScript:AdminLogout()"><i class="fa fa-sign-out"></i> 注销</a> </li>
                         </ul>
+                        <script>
+                            function AdminLogout() {
+                                $.ajax({
+                                    url:"/AdminLogout",
+                                    type:'post',
+                                    dataType:'json',
+                                    success(result){
+                                        if(result){
+                                            alert("注销成功！");
+                                            window.location="http://localhost:8080/jsp/login.jsp";
+                                        }
+                                    }
+                                })
+                            }
+                        </script>
                     </li>
                 </ul>
             </div>
             <div class="clearfix"> </div>
         </div>
-        <div class="clearfix"> </div>
+        <div class="clearfix" style="background: #424a5d"> </div>
     </div>
     <!-- //header-ends -->
     <!-- main content start-->
     <div id="page-wrapper" style="padding: 0;position: relative; font-family:'楷体'"  >
         <div class="main-page">
-            <!-- 传参 -->
-            <%
-                Admin admin = (Admin) session.getAttribute("admin");
-            %>
             <!-- banner -->
             <div class="banner" id="home">
                 <div class="container" style="width:90%">
-                    <div class="agile-logo">
-                        <h1 style="font-family:'calisto mt'"><a href="index.html">Creative<span>Resume</span></a></h1>
-                    </div>
                     <div class="w3l-banner-grids">
                         <div class="col-md-8 w3ls-banner-right">
                             <div class="banner-right-img">
@@ -323,36 +304,36 @@
                         <h3 style="font-family:'calisto mt'">Contact Me</h3>
                     </div>
                     <div class="contact-form">
-                        <form action="/UpdateAdmin" method="post">
+                        <form action="/updateAdmin" method="post">
                             <div class="fields-grid">
                                 <div class="styled-input agile-styled-input-top">
-                                    <input type="text" name="adminName" value="<%=admin.getAdminName()%>" required="">
+                                    <input type="text" id="adminName" name="adminName" value="<%=admin.getAdminName()%>" required="">
                                     <label>我的昵称*</label>
                                     <span></span>
                                 </div>
                                 <div class="styled-input agile-styled-input-top">
-                                    <input type="text" name="adminTel" value="<%=admin.getAdminTel()%>" required="">
+                                    <input type="text" id="adminTel" name="adminTel" value="<%=admin.getAdminTel()%>" required="">
                                     <label>我的电话*</label>
                                     <span></span>
                                 </div>
                                 <div class="styled-input">
-                                    <input type="text" name="adminEmail" value="<%=admin.getAdminEmail()%>" required="">
+                                    <input type="text" id="adminEmail" name="adminEmail" value="<%=admin.getAdminEmail()%>" required="">
                                     <label>我的邮件*</label>
                                     <span></span>
                                 </div>
                                 <div class="styled-input">
-                                    <input type="text" name="adminGender" value="<%=admin.getAdminGender()%>" required="">
+                                    <input type="text" id="adminGender" name="adminGender" value="<%=admin.getAdminGender()%>" required="">
                                     <label>我的性别*</label>
                                     <span></span>
                                 </div>
                                 <div class="clearfix"> </div>
                             </div>
                             <div class="styled-input textarea-grid">
-                                <textarea name="adminMessage"   required><%=admin.getAdminMessage()%></textarea>
+                                <textarea id="adminMessage"  name="adminMessage" required=""><%=admin.getAdminMessage()%></textarea>
                                 <label>我的个性简介</label>
                                 <span></span>
                             </div>
-                            <input type="submit" value="SEND">
+                            <input type="submit" value="SEND"  id="submit" >
                         </form>
                     </div>
                 </div>
@@ -361,7 +342,7 @@
         </div>
     </div>
     <!--footer-->
-    <div class="footer" style="position: relative">
+    <div class="footer" style="background: #424a5d">
         <p>南开大学实训小组</p>
     </div>
     <!--//footer-->

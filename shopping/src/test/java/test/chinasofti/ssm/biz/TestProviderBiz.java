@@ -24,7 +24,7 @@ public class TestProviderBiz {
 
     @Test
     public void testFindByName(){
-        List<Provider> providers = providerBiz.findByName("B");
+        List<Provider> providers = providerBiz.findAll();
        for(Provider provider : providers)
         System.out.println("provider="+ provider.getProviderName());
     }
