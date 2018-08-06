@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chinasofti.ssm.dao.AdminDao">
+        <resultMap type="Admin" id="resultAdmin" autoMapping="true">
+          <id property="id" column="id"/>
+        </resultMap>
+        <select id="findByAdminId" parameterType="String" resultMap="resultAdmin">
+             select *
+             from admin
+             where adminId=#{adminId}
+        </select>
+        <select id="findAll" resultMap="resultAdmin">
+            select *
+            from admin
+        </select>
+        <select id="findById" parameterType="int" resultMap="resultAdmin">
+             select *
+             from admin
+             where id=#{id}
+        </select>
+        <insert id="insert" parameterType="Admin">
+            insert into admin
+            (id,adminId,adminName,adminTel,adminPhone,adminEmail,adminPassword,deleteStatus,adminMessage,adminTtile)
+            values(#{id},#{adminId},#{adminName},#{adminTel},#{adminPhone},#{adminEmail},#{adminPassword},#{deleteStatus},#{amindMessage},#{adminTitle})
+        </insert>
+        <update id="update" parameterType="Admin">
+            update admin set
+                      adminName=#{adminName},
+                      adminTel=#{adminTel},
+                      adminEmail=#{adminEmail},
+                      adminGender=#{adminGender},
+                      adminMessage=#{adminMessage}
+             where id=#{id}
+        </update>
+        <update id="modifypwd" parameterType="Admin">
+            update admin set
+            adminPassword = #{adminPassword}
+            where id = #{id}
+        </update>
+        <delete id="delete" parameterType="String">
+            delete
+            from admin
+            where adminId=#{adminId} 
+        </delete>
+        
+</mapper>

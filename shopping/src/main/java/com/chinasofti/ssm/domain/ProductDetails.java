@@ -16,7 +16,6 @@ public class ProductDetails implements Serializable {
     private String hardDisk;
     private String screenType;
     private String screenSize;
-    private String battery;
     private String resolution;
     private String graphicsCard;
     private String adorn;
@@ -143,14 +142,6 @@ public class ProductDetails implements Serializable {
 
     public void setScreenType(String screenType) {
         this.screenType = screenType;
-    }
-
-    public String getBattery() {
-        return battery;
-    }
-
-    public void setBattery(String battery) {
-        this.battery = battery;
     }
 
     public String getResolution() {

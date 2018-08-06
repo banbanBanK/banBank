@@ -345,7 +345,6 @@
                                         <div class="tab-pane" id="tab2">
                                             <dl class="dl-horizontal">
                                                 <dt>佩戴方式</dt><dd><%=productDetails.getAdorn()%></dd>
-                                                <dt>续航时间</dt><dd><%=productDetails.getBattery()%></dd>
                                                 <dt>麦克风</dt><dd><%=productDetails.getMicrophone()%></dd>
                                                 <dt>灵敏度</dt><dd><%=productDetails.getSensitivity()%></dd>
                                                 <dt>耳机特色</dt><dd><%=productDetails.getEarphoneFeature()%></dd>
@@ -411,6 +410,7 @@
                                                             else alert('登录后才能评论哦~');"
                                                     />
                                                 </div>
+                                                <a class="btn btn-success" href="/showComments?goodId=<%=good.getGoodId()%>">全部评论</a>
                                             </form>
                                         </div>
 

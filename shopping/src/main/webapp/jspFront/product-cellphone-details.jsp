@@ -348,7 +348,6 @@
                                                 <dt>触摸屏类型</dt><dd><%=productDetails.getScreenType()%></dd>
                                                 <dt>主屏尺寸</dt><dd><%=productDetails.getScreenSize()%></dd>
                                                 <dt>分辨率</dt><dd><%=productDetails.getResolution()%></dd>
-                                                <dt>续航时间</dt><dd><%=productDetails.getBattery()%></dd>
                                                 <dt>CPU型号</dt><dd><%=productDetails.getCpu()%></dd>
                                                 <dt>RAM容量</dt><dd><%=productDetails.getRam()%></dd>
                                                 <dt>ROM容量</dt><dd><%=productDetails.getHardDisk()%></dd>
@@ -413,6 +412,7 @@
                                                             location.href='../PublishComment?commentStr='+comment+'&customerId='+ <%=customerId%>+ '&id=<%=good.getId()%>&evaluation='+evaluation+'&fatherTypeId=<%=good.getType().getFatherTypeId()%>';}
                                                             else alert('登录后才能评论哦~');"
                                                     />
+                                                    <a class="btn btn-success" href="/showComments?goodId=<%=good.getGoodId()%>">全部评论</a>
                                                 </div>
                                             </form>
                                         </div>

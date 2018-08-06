@@ -414,6 +414,7 @@
                                                             location.href='../PublishComment?commentStr='+comment+'&customerId='+ <%=customerId%>+ '&id=<%=good.getId()%>&evaluation='+evaluation+'&fatherTypeId=<%=good.getType().getFatherTypeId()%>';}
                                                             else alert('登录后才能评论哦~');"
                                                     />
+                                                    <a class="btn btn-success" href="/showComments?goodId=<%=good.getGoodId()%>">全部评论</a>
                                                 </div>
                                             </form>
                                         </div>
