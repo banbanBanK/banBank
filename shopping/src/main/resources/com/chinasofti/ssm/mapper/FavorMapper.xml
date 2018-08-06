@@ -39,6 +39,11 @@
         from favor
         where  CustomerId = #{customerId} and DeleteStatus = 1
     </select>
+    <select id="findByCustomerAndType" resultMap="FavorResultMap">
+        select *
+        from favor
+        where  CustomerId = #{customerId} and TypeId = #{typeId} and DeleteStatus = 1
+    </select>
     <select id="findByTypeId" parameterType="String" resultMap="FavorResultMap">
         select *
         from favor
@@ -56,8 +61,8 @@
 	</insert>
     <update id="update" parameterType="com.chinasofti.ssm.domain.Favor">
 		update favor
-		set TypeId = #{type.typeId}, CustomerId = #{customer.customerId}, FavorLevel = #{favorLevel}, DeleteStatus=#{deleteStatus}
-		where Id = #{id}
+		set FavorLevel = #{favorLevel}, DeleteStatus=#{deleteStatus}
+		where TypeId = #{type.typeId} and CustomerId = #{customer.customerId}
 	</update>
     <delete id="deleteById" parameterType="int">
 		update favor
