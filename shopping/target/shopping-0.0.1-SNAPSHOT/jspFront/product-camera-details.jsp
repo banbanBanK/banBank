@@ -237,10 +237,9 @@
                 <div class="product-img-wrapper">
                     <div class="product-img-container bg-info">
                         <div class="bxslider">
-                            <div><img src="../img/products/product-details1.png" alt="" /></div>
-                            <div><img src="../img/products/product-details2.png" alt="" /></div>
-                            <div><img src="../img/products/product-details3.png" alt="" /></div>
-                            <div><img src="../img/products/product-details4.png" alt="" /></div>
+                            <div><img src="../img/camera1.jpg" alt="" /></div>
+                            <div><img src="../img/camera2.jpg" alt="" /></div>
+                            <div><img src="../img/camera3.jpg" alt="" /></div>
                         </div>
                     </div>
                 </div>
@@ -720,18 +719,15 @@
         });
     }
     function loadViewAction() {
-        alert("diaoyongle");
         var start = new Date();
         var strStart = start.getFullYear() + "-" + (start.getMonth() + 1) + "-" + start.getDate() + " " +
             start.getHours() + ":" + start.getMinutes() + ":" + start.getSeconds();
-        alert("diaoyongle1");
         $.ajax({
             url: "/InsertViewAction?goodId=<%=good.getGoodId()%>&customerId=<%=customerId%>&clickTime=" + $.cookie('strStart') + "&endTime=" + $.cookie('strEnd'),
             type: "post", // 接受数据格式
             dataType: "json", // 要传递的数据
             async: false
         });
-        alert("diaoyongle3");
         window.onbeforeunload = function () {
             var end = new Date();
             var strEnd = end.getFullYear() + "-" + (end.getMonth() + 1) + "-" + end.getDate() + " " +

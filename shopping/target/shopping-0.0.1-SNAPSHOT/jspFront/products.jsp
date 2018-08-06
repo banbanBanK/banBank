@@ -275,20 +275,61 @@
             <div class="separator-one"></div>
         </div>
 
+        <% if(thisTypeId!=null)
+            switch (thisTypeId){
+            case "1":
+        %>
         <div class="row m-b-70">
             <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="product-banner">
-                    <div class="product-banner-wrapper">
-                        <h2 class="text-white">Over-Ear Headphones</h2>
-
-                        <p class="text-white m-b-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel natus eligendi quas</p>
-
-                        <a href="#" class="btn btn-success"><i class="fas fa-rocket"></i>&nbsp; Explore</a>
+                <div class="product-banner-computer">
+                    <div class="product-banner-computer-wrapper">
                     </div>
                 </div>
             </div>
         </div>
+        <%
+            break;
+            case "2":
+        %>
+        <div class="row m-b-70">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="product-banner">
+                    <div class="product-banner-wrapper">
+                        <h2 class="text-white">over head</h2>
 
+                        <p class="text-white m-b-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel natus eligendi quas</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%
+            break;
+            case "3":
+        %>
+        <div class="row m-b-70">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="product-banner-camera">
+                    <div class="product-banner-camera-wrapper">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%
+                }
+            if(thisChildrenTypeId!=null && thisChildrenTypeId.equals("4")){
+        %>
+        <div class="row m-b-70">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="product-banner-phone">
+                    <div class="product-banner-phone-wrapper">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%
+        }
+        %>
 
         <%
             List<Good> goods = (List<Good>) request.getAttribute("goods");
@@ -335,23 +376,17 @@
             <div class="col-xs-12 col-sm-4 col-md-4">
                 <div class="panel bg-primary">
                     <div class="panel-body p-t-30 p-b-30 text-center">
-                        <div class="badge-sale-secondary">New</div>
 
                         <a href="#" class="product-item">
-                            <img src="../img/products/product-sale.png" class="h-150 center-block" alt="" />
+                            <img src="../img/nankai.JPG"  class="h-250 " alt="" />
                         </a>
 
-                        <a href="#">
-                            <h5 class="text-white m-tb-20">Staro-Four M200</h5>
-                        </a>
-
-                        <h6 class="text-gray">$199.00</h6>
                     </div>
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-8 col-md-8">
-                <img src="../img/products/banner2.jpg" class="img-responsive" alt="" />
+                <img src="../img/library.jpg" class="h-200 img-responsive" alt="" />
             </div>
         </div>
     </div>

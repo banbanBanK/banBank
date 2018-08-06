@@ -64,12 +64,11 @@
     <update id="updateCustomerInfo">
         update customers
         set customerName = #{customerName},
-        custoemrGender = #{customerGender},
+        customerGender = #{customerGender},
         customerEmail = #{customerEmail},
         customerBirthday = #{customerBirthday},
         customerPhone = #{customerPhone},
         customerZipCode = #{customerZipCode},
-        customerAddress = #{customerAddress},
         customerIntroduction = #{customerIntroduction}
         where customerId = #{customerId}
     </update>

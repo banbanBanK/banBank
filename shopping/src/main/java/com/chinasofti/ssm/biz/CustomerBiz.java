@@ -15,5 +15,5 @@ public interface CustomerBiz {
     boolean insert(Customer customer);
     boolean update(Customer customer);
     boolean deleteById(int id);
-    boolean updateCustomerInfo(String customerName, String customerGender, String customerEmail, Date customerBirthday, String customerPhone,String customerZipCode, String customerAddress, String customerIntroduction);
+    boolean updateCustomerInfo(String customerId,String customerName, String customerGender, String customerEmail, Date customerBirthday, String customerPhone,String customerZipCode, String customerIntroduction);
 }
