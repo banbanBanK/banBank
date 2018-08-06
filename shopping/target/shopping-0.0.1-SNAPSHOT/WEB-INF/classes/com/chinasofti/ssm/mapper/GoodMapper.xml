@@ -22,6 +22,11 @@
 		<association property="provider" column="ProviderId" select="getProviderByProviderId"></association>
 	</resultMap>
 
+	<resultMap id="GoodSummaryResultMap" type="com.chinasofti.ssm.domain.GoodSummary" autoMapping="true">
+		<association property="type" column="TypeId" select="getTypeByTypeId"></association>
+		<association property="provider" column="ProviderId" select="getProviderByProviderId"></association>
+	</resultMap>
+
 	<select id="findById" parameterType="int" resultMap="GoodResultMap">
 		select *
 		from goods
@@ -54,6 +59,20 @@
 	<select id="findByChildrenTypeId" resultMap="GoodResultMap">
 		select *
 		from goods
+		where TypeId = #{typeId} and DeleteStatus = 1
+	</select>
+	<select id="findByRootTypeOrdered" resultMap="GoodSummaryResultMap">
+		select *
+		from goods inner join product_summary
+		where DeleteStatus = 1 and TypeId in (
+												select TypeId
+												from types
+												where FatherTypeId = #{typeId}
+												)
+	</select>
+	<select id="findByChildrenTypeOrdered" resultMap="GoodSummaryResultMap">
+		select *
+		from goods inner join product_summary
 		where TypeId = #{typeId} and DeleteStatus = 1
 	</select>
 	<select id="findByProviderId" resultMap="GoodResultMap">

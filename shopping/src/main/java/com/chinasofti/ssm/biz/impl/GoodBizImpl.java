@@ -1,7 +1,9 @@
 package com.chinasofti.ssm.biz.impl;
 
+import java.util.Collections;
 import java.util.List;
 
+import com.chinasofti.ssm.domain.GoodSummary;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -35,6 +37,37 @@ public class GoodBizImpl implements GoodBiz {
 		return goodDao.findByProviderId(providerId);
 	}
 
+	@Override
+	public List<GoodSummary> findByRootTypeOrdered(String typeId) {
+		List<GoodSummary> goodSummaries = goodDao.findByRootTypeOrdered(typeId);
+		goodSummaries.sort((h1,h2) ->h1.getSaleSum().compareTo(h2.getSaleSum()) );
+		for(int i = 0;i < goodSummaries.size();i+=3){
+			for(int k = 0;k < 3;k++){
+				for(int j = 0;j < 3 - k;j++){
+					if(goodSummaries.get(j).getCommentLevel()<goodSummaries.get(j+1).getCommentLevel()){
+						Collections.swap(goodSummaries,j,j+1);
+					}
+				}
+			}
+		}
+		return goodSummaries;
+	}
+
+	@Override
+	public List<GoodSummary> findByChildrenTypeOrdered(String typeId) {
+		List<GoodSummary> goodSummaries = goodDao.findByChildrenTypeOrdered(typeId);
+		goodSummaries.sort((h1,h2) ->h1.getSaleSum().compareTo(h2.getSaleSum()) );
+		for(int i = 0;i < goodSummaries.size();i+=3){
+			for(int k = 0;k < 3;k++){
+				for(int j = 0;j < 3 - k;j++){
+					if(goodSummaries.get(j).getCommentLevel()<goodSummaries.get(j+1).getCommentLevel()){
+						Collections.swap(goodSummaries,j,j+1);
+					}
+				}
+			}
+		}
+		return goodSummaries;
+	}
 
 
 	public Good findByGoodId(String goodId) {
