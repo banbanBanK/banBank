@@ -55,10 +55,10 @@
                         <a href="/InfoView"  style="font-family:'楷体'"><i class="fa fa-home nav_icon"></i>信息汇总</a>
                     </li>
                     <li>
-                        <a href="/getgood" class="active" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>商品总览</a>
+                        <a href="/getgood" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>商品总览</a>
                     </li>
                     <li>
-                        <a href="/CustomerView"  style="font-family:'楷体'"><i class="fa fa-bar-chart nav_icon"></i>客户总览</a>
+                        <a href="/CustomerView" class="active"  style="font-family:'楷体'"><i class="fa fa-bar-chart nav_icon"></i>客户总览</a>
                     </li>
                     <li>
                         <a href="/ProviderView"  style="font-family:'楷体'"><i class="fa fa-bar-chart nav_icon"></i>供应商总览</a>
@@ -164,7 +164,7 @@
                                 <span class="prfil-img"><img src="../images/a.png" alt=""> </span>
                                 <div class="user-name">
                                     <p style="font-family:'calisto mt';font-style: italic;"><%=admin.getAdminName()%></p>
-                                    <span style="font-family:'calisto mt';font-style: italic;color: #FFFFFF">管理员</span>
+                                    <span style="font-family:'calisto mt';font-style: italic;color: #FFFFFF;">管理员</span>
                                 </div>
                                 <i class="fa fa-angle-down lnr"></i>
                                 <i class="fa fa-angle-up lnr"></i>
@@ -212,38 +212,36 @@
                     -->
                     <table id="fresh-table" class="table">
                         <thead style="width:100%">
-                        <th data-field="id" data-sortable="true" style="font-family: 楷体">编号</th>
+                        <th data-field="id" style="font-family: 楷体">编号</th>
                         <th data-field="name" data-sortable="true" style="font-family: 楷体">商品名</th>
                         <th data-field="price" data-sortable="true" style="font-family: 楷体">商品进货单价</th>
                         <th data-field="num" data-sortable="true" style="font-family: 楷体">商品库存</th>
                         <th data-field="provider" data-sortable="true" style="font-family: 楷体">供应商</th>
-                        <th data-field="actions"  style="font-family: 楷体" >操作</th>
+                        <th data-field="actions"  style="font-family: 楷体" >进货数额</th>
                         </thead>
                         <tbody>
                         <%
-                            List<Good> goods = (List<Good>) request.getAttribute("goods");
+                            List<Good> goods= (List<Good>) request.getAttribute("goods");
                             if(goods != null && goods.size()!=0){
-                                for(Good good : goods){
+                                for(Good good: goods){
                         %>
-                                <tr>
-                                    <td class="useful"><%=good.getGoodId()%></td>
-                                    <td><%=good.getGoodName()%></td>
-                                    <td><%=good.getGoodPrice()%></td>
-                                    <td><%=good.getGoodStock()%></td>
-                                    <td><%=good.getProvider().getProviderName()%></td>
-                                    <td>
-                                        <a rel="tooltip"  onclick="openLook(<%=good.getGoodId()%>)"  title="查看商品详细信息"><img src="../FontIcon/look.png" style="width: 15px;height: 15px" /></a>
-                                        <a rel="tooltip"  href="javaScript:openGet(<%=good.getGoodId()%>)"  title="进货"><img src="../FontIcon/getmoregood.png" style="width: 15px;height: 15px" /></a>
-                                    </td>
-                                </tr>
+                        <tr>
+                            <td class="useful"><%=good.getGoodId()%></td>
+                            <td><%=good.getGoodName()%></td>
+                            <td><%=good.getGoodPrice()%></td>
+                            <td><%=good.getGoodStock()%></td>
+                            <td><%=good.getProvider().getProviderName()%></td>
+                            <td>
+                                <a rel="tooltip"  onclick="openGet(<%=good.getGoodId()%>)"  title="进货"><img src="../FontIcon/getmoregood.png" style="width: 15px;height: 15px" /></a>
+                            </td>
+                        </tr>
                         <%
-                            }
+                                }
                             }
                         %>
                         </tbody>
                     </table>
                 </div>
-
             </div>
         </div>
     </div>
@@ -266,7 +264,7 @@
     }
     function openGet(userFul) {
         window.open ("/get?goodId="+userFul, "newwindow", "height=400, width=600, top=180, left=400" +
-            "toolbar =no, menubar=yes, scrollbars=no, resizable=no, location=yes, status=no") //写成一行
+            "toolbar =no, menubar=no, scrollbars=no, resizable=no, location=no, status=no") //写成一行
     }
 </script>
 

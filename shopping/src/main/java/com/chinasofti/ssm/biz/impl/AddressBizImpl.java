@@ -18,4 +18,8 @@ public class AddressBizImpl implements AddressBiz {
 		return addressDao.findAll(); 
 	}
 
+	public Address findByAddressId(String addressId) {
+		return addressDao.findByAddressId(addressId);
+	}
+
 }

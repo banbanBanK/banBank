@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chinasofti.ssm.dao.AuDao">
+    <resultMap type="com.chinasofti.ssm.domain.Au" id="auResultMap" autoMapping="true">
+        <id property="id" column="id"/>
+    </resultMap>
+    <select id="findAll"  resultMap="auResultMap">
+          select *
+	      from  au
+	      order by day
+    </select>
+</mapper>

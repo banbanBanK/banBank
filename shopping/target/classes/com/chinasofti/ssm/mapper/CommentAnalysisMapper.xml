@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chinasofti.ssm.dao.CommentAnalysisDao">
+    <resultMap type="com.chinasofti.ssm.domain.CommentAnalysis" id="commentAnalysisResultMap" autoMapping="true">
+        <id property="id" column="id"/>
+        <result property="goodId" column="goodid"/>
+    </resultMap>
+    <select id="findByGoodId" resultMap="commentAnalysisResultMap">
+          select *
+	      from  commentanalysis
+	      where goodid = #{goodId}
+    </select>
+</mapper>
