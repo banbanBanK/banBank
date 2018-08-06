@@ -29,10 +29,9 @@ public class ViewActionController {
         Customer customer = customerBiz.findByCustomerId(customerId);
         viewAction.setGood(good);
         viewAction.setCustomer(customer);
-        viewAction.setClickTime(Timestamp.valueOf(clickTime));
-        viewAction.setEndTime(Timestamp.valueOf(endTime));
+        viewAction.setClickTime(clickTime);
+        viewAction.setEndTime(endTime);
         viewActionBiz.insert(viewAction);
-        System.out.println("clicktime:"+clickTime);
 
         return "../jspFront/test";
     }

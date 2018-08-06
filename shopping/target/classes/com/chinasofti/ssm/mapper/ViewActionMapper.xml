@@ -31,7 +31,8 @@
     </select>
 
     <insert id="insert" parameterType="com.chinasofti.ssm.domain.ViewAction" useGeneratedKeys="true" keyProperty="id">
-		insert into viewaction
-		values(null,#{customer.customerId},#{good.goodId},#{clicktime},#{endtime})
+		insert
+		into viewaction
+		values(null,#{customer.customerId},#{good.goodId},#{clickTime},#{endTime})
 	</insert>
 </mapper>
