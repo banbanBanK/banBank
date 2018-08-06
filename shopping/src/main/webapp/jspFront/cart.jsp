@@ -192,7 +192,27 @@
         <li><a href="about.jsp">About</a></li>
         <li><a href="blog.jsp">Blog</a></li>
         <li><a href="blog-post.jsp">Blog Post</a></li>
-        <li><a href="contact.jsp">Contact</a></li>
+        <li><a href="javaScript:logout()">logout</a></li>
+        <script>
+            function logout(){
+                var se = confirm("确认注销？");
+                if(se === true) {
+                    $.ajax({
+                        url: "/logout",
+                        type: "post",
+                        dateType: "json",
+                        success(result) {
+                            if (result) {
+                                alert("您已成功注销！浏览器即将跳转~");
+                                window.location = "http://localhost:8080/jspFrontIndex"
+                            } else {
+                                alert("您还没有登陆哦~");
+                            }
+                        }
+                    })
+                }
+            }
+        </script>
     </ul>
     <div class="social-media-box">
         <hr />
@@ -293,7 +313,7 @@
 
                             <tr>
                                 <td colspan="3" class="b-t-0">
-                                    <a href="index.jsp" class="btn btn-default">继续购物</a>
+                                    <a href="/jspFrontIndex" class="btn btn-default">继续购物</a>
                                 </td>
                                 <td colspan="3" class="b-t-0 text-right">
                                     <a onclick="doneOrder()" <%--href="/doneOrder?customerId=<%=customerId%>"--%> class="btn btn-success" ><i class="fas fa-shopping-bag"></i>&nbsp; 确认购买</a>
@@ -426,7 +446,7 @@
                             <form class="form-inline">
                                 <div class="form-group">
                                     <input type="text" name="subscribe" class="form-control" placeholder="Email" />
-                                    <button type="submit" class="btn btn-success btn-square">Join Us</button>
+                                    <input type="button" class="btn btn-success btn-square" value="Join us"></input>
                                 </div>
                             </form>
 

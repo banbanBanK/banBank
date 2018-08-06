@@ -162,7 +162,27 @@
         <li><a href="about.jsp">About</a></li>
         <li><a href="blog.jsp">Blog</a></li>
         <li><a href="blog-post.jsp">Blog Post</a></li>
-        <li><a href="contact.jsp">Contact</a></li>
+        <li><a href="javaScript:logout()">logout</a></li>
+        <script>
+            function logout(){
+                var se = confirm("确认注销？");
+                if(se === true) {
+                    $.ajax({
+                        url: "/logout",
+                        type: "post",
+                        dateType: "json",
+                        success(result) {
+                            if (result) {
+                                alert("您已成功注销！浏览器即将跳转~");
+                                window.location = "http://localhost:8080/jspFrontIndex"
+                            } else {
+                                alert("您还没有登陆哦~");
+                            }
+                        }
+                    })
+                }
+            }
+        </script>
     </ul>
     <div class="social-media-box">
         <hr />
