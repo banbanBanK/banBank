@@ -42,17 +42,23 @@
 
 
     <select id="findAll" resultMap="CommentResultMap">
-        select *
-        from customer_analysis
+        select clicktable.id,clicktable.customerId,clicktable.goodId,clicktable.browseTime,clicktable.browseNum,
+        case when goodbycustomer.buySum is null then 0 else goodbycustomer.buySum end,
+        case when goodbycustomer.buyNum is null then 0 else goodbycustomer.buyNum end
+        from clicktable LEFT OUTER JOIN goodbycustomer on clicktable.goodId=goodbycustomer.goodId and clicktable.customerId=goodbycustomer.customerId
     </select>
     <select id="findById" parameterType="Integer" resultMap="CommentResultMap">
-        select *
-        from customer_analysis
-        where Id = #{id}
+        select clicktable.id,clicktable.customerId,clicktable.goodId,clicktable.browseTime,clicktable.browseNum,
+        case when goodbycustomer.buySum is null then 0 else goodbycustomer.buySum end,
+        case when goodbycustomer.buyNum is null then 0 else goodbycustomer.buyNum end
+        from clicktable LEFT OUTER JOIN goodbycustomer on clicktable.goodId=goodbycustomer.goodId and clicktable.customerId=goodbycustomer.customerId
+        where clicktable.id = #{id}
     </select>
     <select id="findByCustomerId" resultMap="CommentResultMap">
-        select *
-        from customer_analysis
-        where  customerId = #{customerId}
+        select clicktable.id,clicktable.customerId,clicktable.goodId,clicktable.browseTime,clicktable.browseNum,
+        case when goodbycustomer.buySum is null then 0 else goodbycustomer.buySum end,
+        case when goodbycustomer.buyNum is null then 0 else goodbycustomer.buyNum end
+        from clicktable LEFT OUTER JOIN goodbycustomer on clicktable.goodId=goodbycustomer.goodId and clicktable.customerId=goodbycustomer.customerId
+        where  clicktable.customerId = #{customerId}
     </select>
 </mapper>
