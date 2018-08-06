@@ -368,7 +368,7 @@
 
         <div class="row m-b-70">
             <div class="col-sm-12 text-center">
-                <a href="#" class="text-primary link-underline">Show more products</a>
+                <a href="/GoodFindAll" class="text-primary link-underline">Show more products</a>
             </div>
         </div>
 
@@ -386,7 +386,7 @@
             </div>
 
             <div class="col-xs-12 col-sm-8 col-md-8">
-                <img src="../img/library.jpg" class="h-200 img-responsive" alt="" />
+                <img src="../img/library.jpg" style="height:310px;padding-left:60px;" class="h-200 img-responsive" alt="" />
             </div>
         </div>
     </div>
