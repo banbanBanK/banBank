@@ -39,7 +39,7 @@
 	<div class="main-content">
 		
 		<!-- main content start-->
-		<div id="page-wrapper-login">
+		<div id="page-wrapper-login" style="height: 94%;">
 			<div class="main-page login-page " >
 				<h3 class="title1">后台登录界面</h3>
 				<div class="widget-shadow" id="Admin" >
@@ -47,9 +47,9 @@
 						<h3>欢迎 管理员</h3>
 					</div>
 					<div class="login-body">
-						<form method="post" action="../jsp/adminLogin.do">
-							<input type="text" class="user" name="id" placeholder="输入你的管理员Id" required="">
-							<input type="password" name="password" class="lock" placeholder="密码" required="">
+						<form method="post" action="javaScript:login()">
+							<input type="text" class="user" id="id" name="id" placeholder="输入你的管理员Id" required="">
+							<input type="password" name="password" id="pwd" class="lock" placeholder="密码" required="">
 							<input type="submit" name="SignIn" value="登录">
 							<div class="forgot-grid">
 								<label class="checkbox"><input type="checkbox" name="checkbox" checked="">记住我</label>
@@ -60,11 +60,31 @@
 							</div>
 						</form>
 					</div>
+					<script>
+						function login() {
+
+						    var id = document.getElementById("id").value;
+						    var pwd = document.getElementById("pwd").value;
+							$.ajax({
+                                url:"/adminLogin?id="+id+"&password="+pwd,
+                                type:"post",
+                                dataType:"json",
+                                success(result){
+                                    if(result){
+                                        alert("登陆成功！");
+                                        window.location="http://localhost:8080/InfoView";
+                                    }else{
+                                        alert("请检查您的账号密码！");
+                                    }
+                                }
+                            })
+                        }
+					</script>
 				</div>
 			</div>
 		</div>
 		<!--footer-->
-		<div class="footer">
+		<div class="footer" style="height: 6%;">
 		   <p>Copyright &copy; 2018.Company name All rights reserved.</p>
 		</div>
         <!--//footer-->

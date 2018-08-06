@@ -34,10 +34,10 @@
     <insert id="insert" parameterType="com.chinasofti.ssm.domain.Customer" >
          insert into customers
          (id,customerId,customerName,customerGender,customerAge,customerAddressId,customerTel,customerPhone,customerEmail,
-         customerZipCode,customerIdCard,customerBirthday,customerPassword,deleteStatus)
+         customerZipCode,customerIdCard,customerBirthday,customerPassword,deleteStatus,customerIntroduction)
          values (#{id},#{customerId},#{customerName},#{customerGender},#{customerAge},#{address.addressId},
          #{customerTel},#{customerPhone},#{customerEmail},#{customerZipCode},#{customerIdCard},#{customerBirthday},
-         #{customerPassword},#{deleteStatus})
+         #{customerPassword},#{deleteStatus},null)
      </insert>
     <update id="update" parameterType="com.chinasofti.ssm.domain.Customer">
          update customers set
@@ -53,11 +53,23 @@
               customerIdCard=#{customerIdCard},
               customerBirthday=#{customerBirthday},
               customerPassword=#{customerPassword},
-              deleteStatus=#{deleteStatus}
+              deleteStatus=#{deleteStatus},
+              customerIntroduction=#{customerIntroduction}
           where id=#{id}
      </update>
     <delete id="deleteById" parameterType="int">
          delete from customers
          where Id=#{id}
      </delete>
+    <update id="updateCustomerInfo">
+        update customers
+        set customerName = #{customerName},
+        customerGender = #{customerGender},
+        customerEmail = #{customerEmail},
+        customerBirthday = #{customerBirthday},
+        customerPhone = #{customerPhone},
+        customerZipCode = #{customerZipCode},
+        customerIntroduction = #{customerIntroduction}
+        where customerId = #{customerId}
+    </update>
 </mapper>

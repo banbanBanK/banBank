@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.chinasofti.ssm.biz.AdminBiz;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -20,26 +21,33 @@ public class AdminController {
 
 	@RequestMapping("/AdminInfo")
 	public String look(HttpServletRequest request){
-		//String adminId = request.getParameter("");
-		//Admin admin1 = adminBiz.findByAdminId(adminId);
-		Admin admin = adminBiz.findByAdminId("1");
-		HttpSession session =  request.getSession();
-		session.setAttribute("admin",admin);
-		return "AdminInfo";
+        HttpSession session =  request.getSession();
+        String adminId = (String)session.getAttribute("loginAdminId");
+        if(adminId != null) {
+            Admin admin = adminBiz.findByAdminId(adminId);
+            request.setAttribute("admin", admin);
+            return "AdminInfo";
+        }else
+            return "login";
+
 	}
 
 	@RequestMapping("/updateAdmin")
-	public String updateadmin(HttpServletRequest request){
-		//String adminId = request.getParameter("");
-		//Admin admin1 = adminBiz.findByAdminId(adminId);
-		Admin admin = adminBiz.findByAdminId("1");
-		admin.setAdminName(request.getParameter("adminName"));
-		admin.setAdminTel(request.getParameter("adminTel"));
-		admin.setAdminGender(request.getParameter("adminGender"));
-		admin.setAdminEmail(request.getParameter("adminEmail"));
-		admin.setAdminMessage(request.getParameter("adminMessage"));
-		adminBiz.update(admin);
-		return "AdminInfo";
+	public String updateAdmin(HttpServletRequest request){
+        HttpSession session =  request.getSession();
+        String adminId = (String)session.getAttribute("loginAdminId");
+		if(adminId != null) {
+            Admin admin = adminBiz.findByAdminId(adminId);
+            admin.setAdminName(request.getParameter("adminName"));
+            admin.setAdminTel(request.getParameter("adminTel"));
+            admin.setAdminGender(request.getParameter("adminGender"));
+            admin.setAdminEmail(request.getParameter("adminEmail"));
+            admin.setAdminMessage(request.getParameter("adminMessage"));
+            adminBiz.update(admin);
+            return "AdminInfo";
+        }
+        else
+            return "login";
 	}
 
 	@RequestMapping("/PwdModify")
@@ -47,7 +55,8 @@ public class AdminController {
 		//String adminId = request.getParameter("");
 		//Admin admin1 = adminBiz.findByAdminId(adminId);
 		HttpSession session = request.getSession();
-		Admin admin = adminBiz.findByAdminId("1");
+		String adminId =(String) session.getAttribute("loginAdminId");
+		Admin admin = adminBiz.findByAdminId(adminId);
 		session.setAttribute("pwd",admin.getAdminPassword());
 		return "PwdModify";
 	}
@@ -57,21 +66,43 @@ public class AdminController {
 		//String adminId = request.getParameter("");
 		//Admin admin1 = adminBiz.findByAdminId(adminId);
 		HttpSession session = request.getSession();
-		Admin admin = adminBiz.findByAdminId("1");
+		String adminId = (String) session.getAttribute("loginAdminId");
+		Admin admin = adminBiz.findByAdminId(adminId);
 		admin.setAdminPassword((String)request.getParameter("adminPassword"));
 		adminBiz.modifypwd(admin);
 		return "InfoView";
 	}
 	@RequestMapping("/InfoView")
 	public String first(HttpServletRequest request){
-		return "InfoView";
+	    HttpSession session = request.getSession();
+	    String adminId = (String) session.getAttribute("loginAdminId");
+	    if(adminId != null) {
+            Admin admin = adminBiz.findByAdminId(adminId);
+            request.setAttribute("admin", admin);
+            return "InfoView";
+        }else
+            return "login";
 	}
-    @RequestMapping(value = "/jsp/adminLogin")
-    public String adminLogin(String id,String password){
+    @RequestMapping(value = "/adminLogin")
+    @ResponseBody
+    public boolean adminLogin(String id,String password,HttpServletRequest request){
        Boolean flag=adminBiz.login(id,password);
-       if(flag)
-           return "InfoView";
-       else
-           return "";
+       if(flag) {
+       		HttpSession session = request.getSession();
+       		session.setAttribute("loginAdminId",id);
+		   return true;
+	   }else
+           return false;
+    }
+
+    @RequestMapping("/AdminLogout")
+    @ResponseBody
+    public boolean adminLogout(HttpServletRequest request){
+	    HttpSession session =request.getSession();
+	    if(session.getAttribute("loginAdminId")!=null) {
+            session.removeAttribute("loginAdminId");
+            return true;
+        }else
+            return false;
     }
 }

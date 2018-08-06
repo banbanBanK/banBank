@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.chinasofti.ssm.dao.ViewActionDao">
+    <select id="getCustomerByCustomerId" parameterType="String" resultType="com.chinasofti.ssm.domain.Customer">
+        select *
+        from customers
+        where CustomerId=#{CustomerId}
+    </select>
+
+    <select id="getGoodByGoodId" parameterType="String" resultType="com.chinasofti.ssm.domain.Good">
+        select *
+        from goods
+        where GoodId=#{GoodId}
+    </select>
+    <resultMap id="ViewActionResultMap" type="com.chinasofti.ssm.domain.ViewAction" autoMapping="true">
+        <association property="customer" column="CustomerId" select="getCustomerByCustomerId"></association>
+        <association property="good" column="GoodId" select="getGoodByGoodId"></association>
+    </resultMap>
+
+    <select id="findAll" resultMap="ViewActionResultMap">
+        select *
+        from viewaction
+    </select>
+    <select id="findById" parameterType="int" resultMap="ViewActionResultMap">
+        select *
+        from viewaction
+        where id = #{id}
+    </select>
+
+    <insert id="insert" parameterType="com.chinasofti.ssm.domain.ViewAction" useGeneratedKeys="true" keyProperty="id">
+		insert
+		into viewaction
+		values(null,#{customer.customerId},#{good.goodId},#{clickTime},#{endTime})
+	</insert>
+</mapper>

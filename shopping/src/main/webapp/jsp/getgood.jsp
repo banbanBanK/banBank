@@ -55,10 +55,13 @@
                         <a href="/InfoView"  style="font-family:'楷体'"><i class="fa fa-home nav_icon"></i>信息汇总</a>
                     </li>
                     <li>
-                        <a href="/getgood" class="active" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>进货计划</a>
+                        <a href="/getgood" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>商品总览</a>
                     </li>
                     <li>
-                        <a href="/CustomerView"  style="font-family:'楷体'"><i class="fa fa-bar-chart nav_icon"></i>客户总览</a>
+                        <a href="/CustomerView" class="active"  style="font-family:'楷体'"><i class="fa fa-bar-chart nav_icon"></i>客户总览</a>
+                    </li>
+                    <li>
+                        <a href="/ProviderView"  style="font-family:'楷体'"><i class="fa fa-bar-chart nav_icon"></i>供应商总览</a>
                     </li>
                     <li>
                         <a href="/AdminInfo" style="font-family:'楷体'"><i class="fa fa-check-square-o nav_icon"></i>我的信息<span class="fa arrow"></span></a>
@@ -77,6 +80,9 @@
         </div>
     </div>
     <!--left-fixed -navigation-->
+    <%
+        Admin admin = (Admin) request.getAttribute("admin");
+    %>
     <!-- header-starts -->
     <div class="sticky-header header-section " style="font-family:'calisto mt'">
         <div class="header-left">
@@ -157,8 +163,8 @@
                             <div class="profile_img">
                                 <span class="prfil-img"><img src="../images/a.png" alt=""> </span>
                                 <div class="user-name">
-                                    <p style="font-family:'calisto mt';font-style: italic;">NKU</p>
-                                    <span style="font-family:'calisto mt';font-style: italic;">Administrator</span>
+                                    <p style="font-family:'calisto mt';font-style: italic;"><%=admin.getAdminName()%></p>
+                                    <span style="font-family:'calisto mt';font-style: italic;color: #FFFFFF;">管理员</span>
                                 </div>
                                 <i class="fa fa-angle-down lnr"></i>
                                 <i class="fa fa-angle-up lnr"></i>
@@ -166,11 +172,25 @@
                             </div>
                         </a>
                         <ul class="dropdown-menu drp-mnu">
-                            <li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li>
-                            <li> <a href="AdminInfo.jsp"><i class="fa fa-user"></i> Profile</a> </li>
-                            <li> <a href="#"><i class="fa fa-sign-out"></i> Logout</a> </li>
+                            <li> <a href="/AdminInfo"><i class="fa fa-user"></i> 个人信息</a> </li>
+                            <li> <a href="javaScript:AdminLogout()"><i class="fa fa-sign-out"></i>注销</a> </li>
                         </ul>
                     </li>
+                    <script>
+                        function AdminLogout() {
+                            $.ajax({
+                                url:"/AdminLogout",
+                                type:'post',
+                                dataType:'json',
+                                success(result){
+                                    if(result){
+                                        alert("注销成功！");
+                                        window.location="http://localhost:8080/jsp/login.jsp";
+                                    }
+                                }
+                            })
+                        }
+                    </script>
                 </ul>
             </div>
             <div class="clearfix"> </div>
@@ -201,28 +221,27 @@
                         </thead>
                         <tbody>
                         <%
-                            List<Good> goods = (List<Good>) request.getAttribute("goods");
+                            List<Good> goods= (List<Good>) request.getAttribute("goods");
                             if(goods != null && goods.size()!=0){
-                                for(Good good : goods){
+                                for(Good good: goods){
                         %>
-                                <tr>
-                                    <td class="useful"><%=good.getGoodId()%></td>
-                                    <td><%=good.getGoodName()%></td>
-                                    <td><%=good.getGoodPrice()%></td>
-                                    <td><%=good.getGoodStock()%></td>
-                                    <td><%=good.getProvider().getProviderName()%></td>
-                                    <td>
-                                        <a rel="tooltip"  onclick="openGet(<%=good.getGoodId()%>)"  title="进货"><img src="../FontIcon/getmoregood.png" style="width: 15px;height: 15px" /></a>
-                                    </td>
-                                </tr>
+                        <tr>
+                            <td class="useful"><%=good.getGoodId()%></td>
+                            <td><%=good.getGoodName()%></td>
+                            <td><%=good.getGoodPrice()%></td>
+                            <td><%=good.getGoodStock()%></td>
+                            <td><%=good.getProvider().getProviderName()%></td>
+                            <td>
+                                <a rel="tooltip"  onclick="openGet(<%=good.getGoodId()%>)"  title="进货"><img src="../FontIcon/getmoregood.png" style="width: 15px;height: 15px" /></a>
+                            </td>
+                        </tr>
                         <%
-                            }
+                                }
                             }
                         %>
                         </tbody>
                     </table>
                 </div>
-
             </div>
         </div>
     </div>
@@ -239,6 +258,10 @@
 <script type="text/javascript" src="../jsGet/bootstrap-table.js"></script>
 
 <script>
+    function openLook(userFul) {
+        window.open ("/look?goodId="+userFul, "newwindow", "height=400, width=600, top=180, left=400" +
+            "toolbar =no, menubar=no, scrollbars=no, resizable=no, location=no, status=no") //写成一行
+    }
     function openGet(userFul) {
         window.open ("/get?goodId="+userFul, "newwindow", "height=400, width=600, top=180, left=400" +
             "toolbar =no, menubar=no, scrollbars=no, resizable=no, location=no, status=no") //写成一行
@@ -260,8 +283,8 @@
             showColumns: true,
             pagination: true,
             striped: true,
-            pageSize: 8,
-            pageList: [8,10,25,50,100],
+            pageSize: 20,
+            pageList: [20,25,50,100],
 
             formatShowingRows: function(pageFrom, pageTo, totalRows){
                 //do nothing here, we don't want to show the text "showing x of y from..."

@@ -1,3 +1,4 @@
+<%@ page import="com.chinasofti.ssm.domain.Admin" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -50,10 +51,13 @@
                         <a href="/InfoView" class="active" style="font-family:'楷体'"><i class="fa fa-home nav_icon"></i>信息汇总</a>
                     </li>
                     <li>
-                        <a href="/getgood" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>进货计划</a>
+                        <a href="/getgood" style="font-family:'楷体'"><i class="fa fa-table nav_icon"></i>商品总览</a>
                     </li>
                     <li>
                         <a href="/CustomerView"  style="font-family:'楷体'"><i class="fa fa-bar-chart nav_icon"></i>客户总览</a>
+                    </li>
+                    <li>
+                        <a href="/ProviderView"  style="font-family:'楷体'"><i class="fa fa-bar-chart nav_icon"></i>供应商总览</a>
                     </li>
                     <li>
                         <a href="/AdminInfo" style="font-family:'楷体'"><i class="fa fa-check-square-o nav_icon"></i>我的信息<span class="fa arrow"></span></a>
@@ -72,6 +76,10 @@
         </div>
     </div>
     <!--left-fixed -navigation-->
+
+    <%
+        Admin admin = (Admin) request.getAttribute("admin");
+    %>
     <!-- header-starts -->
     <div class="sticky-header header-section ">
         <div class="header-left">
@@ -152,8 +160,8 @@
                             <div class="profile_img">
                                 <span class="prfil-img"><img src="../images/a.png" alt=""> </span>
                                 <div class="user-name">
-                                    <p style="font-family:'calisto mt';font-style: italic;">NKU</p>
-                                    <span style="font-family:'calisto mt';font-style: italic;">Administrator</span>
+                                    <p style="font-family:'calisto mt';font-style: italic;"><%=admin.getAdminName()%></p>
+                                    <span style="font-family:'calisto mt';font-style: italic;color: #FFFFFF">管理员</span>
                                 </div>
                                 <i class="fa fa-angle-down lnr"></i>
                                 <i class="fa fa-angle-up lnr"></i>
@@ -161,11 +169,25 @@
                             </div>
                         </a>
                         <ul class="dropdown-menu drp-mnu">
-                            <li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li>
-                            <li> <a href="AdminInfo.jsp"><i class="fa fa-user"></i> Profile</a> </li>
-                            <li> <a href="#"><i class="fa fa-sign-out"></i> Logout</a> </li>
+                            <li> <a href="/AdminInfo"><i class="fa fa-user"></i> 个人简介</a> </li>
+                            <li> <a href="javaScript:AdminLogout()"><i class="fa fa-sign-out"></i> 注销</a> </li>
                         </ul>
                     </li>
+                    <script>
+                        function AdminLogout() {
+                            $.ajax({
+                                url:"/AdminLogout",
+                                type:'post',
+                                dataType:'json',
+                                success(result){
+                                    if(result){
+                                        alert("注销成功！");
+                                        window.location="http://localhost:8080/jsp/login.jsp";
+                                    }
+                                }
+                            })
+                        }
+                    </script>
                 </ul>
             </div>
             <div class="clearfix"> </div>
@@ -177,7 +199,7 @@
     <div id="page-wrapper">
         <div class="main-page" style="background: #04243E">
             <!--  走马灯设计  -->
-            <div style="height:300px;padding-left:1em; padding-right: 1em;" id="myCarousel" class="carousel slide">
+            <div style="height:400px;padding-left:1em; padding-right: 1em;padding-top: 5em;" id="myCarousel" class="carousel slide">
                 <!-- 轮播（Carousel）指标 -->
                 <ol class="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0"

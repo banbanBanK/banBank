@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 import static java.lang.Integer.parseInt;
+import static java.lang.Integer.signum;
 
 @Controller
 public class GoodController {
@@ -35,8 +36,7 @@ public class GoodController {
 
         if(goods!=null)
             request.setAttribute("goods",goods);
-
-            return "";
+            return "../jspFront/productsAll";
     }
     @RequestMapping("/GoodFindByRootTypeId")
     public String goodFindByRootTypeId(@RequestParam String fatherTypeId, HttpServletRequest request){
@@ -95,6 +95,13 @@ public class GoodController {
         List<Type> types_singleRoots = typeBiz.findSingleRoots();
         List<Good> searchGoods = goodBiz.findAll();
         String mainGoodId = productStyleBiz.findMainByRelationId(good.getGoodId());
+        List<Good> goods;
+        if(good.getType().getTypeId().equals("4")){
+            goods = goodBiz.findByChildrenTypeId(good.getType().getTypeId());
+        }
+        else{
+            goods = goodBiz.findByRootTypeId(fatherTypeId);
+        }
 
         if(types_children != null)
             request.setAttribute("types_children",types_children);
@@ -115,28 +122,39 @@ public class GoodController {
             List<ProductStyle> productStyles = productStyleBiz.findByGoodId(mainGoodId);
             request.setAttribute("productStyles",productStyles);
         }
+        if(goods!=null)
+            request.setAttribute("goods",goods);
         request.setAttribute("searchGoods",searchGoods);
 
+        if(good.getType().getTypeId().equals("4"))
+            return "../jspFront/product-cellphone-details";
         if(good.getType().getFatherTypeId().equals("1"))
             return "../jspFront/product-computer-details";
         if(good.getType().getFatherTypeId().equals("2"))
             return "../jspFront/product-headset-details";
         if(good.getType().getFatherTypeId().equals("3"))
             return "../jspFront/product-camera-details";
-        if(good.getType().getFatherTypeId().equals("4"))
+        if(good.getType().getFatherTypeId().equals("0"))
             return "../jspFront/product-cellphone-details";
-        else return "";
+        else return "../jspFront/products";
     }
 
     @RequestMapping("/getgood")
     public String getGood(HttpServletRequest request){
-        List<Good> goods = goodBiz.findAll();
-        request.setAttribute("goods",goods);
-        return "getgood";
+        HttpSession session = request.getSession();
+        String adminId = (String) session.getAttribute("loginAdminId");
+        Admin admin = adminBiz.findByAdminId(adminId);
+         if(adminId!=null) {
+            List<Good> goods = goodBiz.findAll();
+            request.setAttribute("goods", goods);
+            request.setAttribute("admin",admin);
+            return "getgood";
+        }else
+            return "login";
     }
 
     @RequestMapping("/look")
-    public String lookgood(@RequestParam String goodId, HttpServletRequest request){
+    public String lookGood(@RequestParam String goodId, HttpServletRequest request){
         HttpSession session = request.getSession();
         Good good = goodBiz.findByGoodId(goodId);
         session.setAttribute("goodName",good.getGoodName());

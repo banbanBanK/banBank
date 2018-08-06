@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="../css2/ic-helpers.min.css" />
 
 </head>
-<body>
+<body onload="loadViewAction()">
 
 <%
     String customerId = (String)session.getAttribute("customerId");
@@ -200,7 +200,27 @@
         <li><a href="about.jsp">About</a></li>
         <li><a href="blog.jsp">Blog</a></li>
         <li><a href="blog-post.jsp">Blog Post</a></li>
-        <li><a href="contact.jsp">Contact</a></li>
+        <li><a href="javaScript:logout()">logout</a></li>
+        <script>
+            function logout(){
+                var se = confirm("确认注销？");
+                if(se === true) {
+                    $.ajax({
+                        url: "/logout",
+                        type: "post",
+                        dateType: "json",
+                        success(result) {
+                            if (result) {
+                                alert("您已成功注销！浏览器即将跳转~");
+                                window.location = "http://localhost:8080/jspFrontIndex"
+                            } else {
+                                alert("您还没有登陆哦~");
+                            }
+                        }
+                    })
+                }
+            }
+        </script>
     </ul>
     <div class="social-media-box">
         <hr />
@@ -216,10 +236,9 @@
                 <div class="product-img-wrapper">
                     <div class="product-img-container bg-info">
                         <div class="bxslider">
-                            <div><img src="../img/products/product-details1.png" alt="" /></div>
-                            <div><img src="../img/products/product-details2.png" alt="" /></div>
-                            <div><img src="../img/products/product-details3.png" alt="" /></div>
-                            <div><img src="../img/products/product-details4.png" alt="" /></div>
+                            <div><img src="../img/phone1.jpg" alt="" /></div>
+                            <div><img src="../img/phone2.jpg" alt="" /></div>
+                            <div><img src="../img/phone3.jpg" alt="" /></div>
                         </div>
                     </div>
                 </div>
@@ -328,7 +347,6 @@
                                                 <dt>触摸屏类型</dt><dd><%=productDetails.getScreenType()%></dd>
                                                 <dt>主屏尺寸</dt><dd><%=productDetails.getScreenSize()%></dd>
                                                 <dt>分辨率</dt><dd><%=productDetails.getResolution()%></dd>
-                                                <dt>续航时间</dt><dd><%=productDetails.getBattery()%></dd>
                                                 <dt>CPU型号</dt><dd><%=productDetails.getCpu()%></dd>
                                                 <dt>RAM容量</dt><dd><%=productDetails.getRam()%></dd>
                                                 <dt>ROM容量</dt><dd><%=productDetails.getHardDisk()%></dd>
@@ -385,10 +403,15 @@
                                                 </script>
                                                 <div class="form-group text-right">
                                                     <input type="button"value="提交" class="btn btn-success" onclick="
+                                                            if(<%=loginStatus%>){
                                                             var comment = document.getElementById('comment').value;
                                                             var evaluation = document.getElementById('evaluation').value;
-                                                            location.href='../PublishComment?commentStr='+comment+'&customerId=1&id=<%=good.getId()%>&evaluation='+evaluation+'&fatherTypeId=<%=good.getType().getFatherTypeId()%>';"
+                                                            if(comment === ''){comment = '该用户不想吐槽'}
+                                                            if(evaluation === ''){evaluation = 5}
+                                                            location.href='../PublishComment?commentStr='+comment+'&customerId='+ <%=customerId%>+ '&id=<%=good.getId()%>&evaluation='+evaluation+'&fatherTypeId=<%=good.getType().getFatherTypeId()%>';}
+                                                            else alert('登录后才能评论哦~');"
                                                     />
+                                                    <a class="btn btn-success" href="/showComments?goodId=<%=good.getGoodId()%>">全部评论</a>
                                                 </div>
                                             </form>
                                         </div>
@@ -694,6 +717,45 @@
         });
     }
 </script>
+
+
+<script>
+    var start = new Date();
+    var strStart = start.getFullYear()+"-"+(start.getMonth()+1)+"-"+start.getDate()+" "+
+        start.getHours()+":"+start.getMinutes()+":"+start.getSeconds();
+    $.ajax({
+        url: "/InsertViewAction?goodId=<%=good.getGoodId()%>&customerId=<%=customerId%>&clickTime="+$.cookie('strStart')+"&endTime="+$.cookie('strEnd'),
+        type: "post", // 接受数据格式
+        dataType: "json", // 要传递的数据
+    });
+
+    window.onbeforeunload = function(){
+        var end = new Date();
+        var strEnd = end.getFullYear()+"-"+(end.getMonth()+1)+"-"+end.getDate()+" "+
+            end.getHours()+":"+end.getMinutes()+":"+end.getSeconds();
+        $.cookie('strStart', strStart, { expires: 7, path: '/' });
+        $.cookie('strEnd', strEnd, { expires: 7, path: '/' });
+    };
+    function loadViewAction() {
+        var start = new Date();
+        var strStart = start.getFullYear() + "-" + (start.getMonth() + 1) + "-" + start.getDate() + " " +
+            start.getHours() + ":" + start.getMinutes() + ":" + start.getSeconds();
+        $.ajax({
+            url: "/InsertViewAction?goodId=<%=good.getGoodId()%>&customerId=<%=customerId%>&clickTime=" + $.cookie('strStart') + "&endTime=" + $.cookie('strEnd'),
+            type: "post", // 接受数据格式
+            dataType: "json", // 要传递的数据
+            async: false
+        });
+        window.onbeforeunload = function () {
+            var end = new Date();
+            var strEnd = end.getFullYear() + "-" + (end.getMonth() + 1) + "-" + end.getDate() + " " +
+                end.getHours() + ":" + end.getMinutes() + ":" + end.getSeconds();
+            $.cookie('strStart', strStart, {expires: 7, path: '/'});
+            $.cookie('strEnd', strEnd, {expires: 7, path: '/'});
+        };
+    }
+</script>
+
 
 <script src="../plugins/jquery.min.js"></script>
 <script src="../plugins/bootstrap/bootstrap.min.js"></script>

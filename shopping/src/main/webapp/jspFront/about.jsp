@@ -121,70 +121,26 @@
     </div>
 
     <ul style="margin: 150px 50px 0px 90px">
-        <%
-            List<Type> types_parents = (List<Type>)request.getAttribute("types_parents");
-            if(types_parents != null && types_parents.size() != 0){
-                for(Type type_parents : types_parents){
-        %>
         <li>
-            <a href="../GoodFindByRootTypeId?fatherTypeId=<%=type_parents.getTypeId() %>"><%=type_parents.getTypeName() %>
-                <%
-                    switch (type_parents.getTypeId()) {
-                        case "1":
-                %>
+            <a href="../GoodFindByRootTypeId?fatherTypeId=1">电脑
                 <img src="../img/computer.png" class="h-30 align-middle m-l-20" alt=""/>
-                <%
-                        break;
-                    case "2":
-                %>
-                <img src="../img/music.png" class="h-30 align-middle m-l-20" alt=""/>
-                <%
-                        break;
-                    case "3":
-                %>
-                <img src="../img/camera.png" class="h-30 align-middle m-l-20" alt=""/>
-                <%
-                            break;
-                    }
-                %>
             </a>
         </li>
-        <%
-            List<Type> types_children = (List<Type>) request.getAttribute("types_children");
-            if(types_children != null && types_children.size() != 0 && type_parents.getTypeId().equals(types_children.get(0).getFatherTypeId())){
-        %>
-        <ul style="margin: 10px 10px 10px 60px;">
-            <%
-                for(Type type_children : types_children){
-            %>
-            <li>
-                <a href="../GoodFindByChildrenTypeId?typeId=<%=type_children.getTypeId() %>&fatherTypeId=<%=type_parents.getTypeId() %>"><%=type_children.getTypeName() %>
-                </a>
-            </li>
-            <%
-                }
-            %>
-        </ul>
-        <%
-                    }
-                }
-            }
-        %>
-
-        <%
-            List<Type> types_singleRoots = (List<Type>)request.getAttribute("types_singleRoots");
-            if(types_singleRoots != null && types_singleRoots.size() != 0){
-                for(Type type_singleRoots : types_singleRoots){
-        %>
         <li>
-            <a href="../GoodFindByChildrenTypeId?typeId=<%=type_singleRoots.getTypeId() %>&fatherTypeId=<%=type_singleRoots.getTypeId() %>"><%=type_singleRoots.getTypeName() %>
+            <a href="../GoodFindByRootTypeId?fatherTypeId=2">耳机
+                <img src="../img/music.png" class="h-30 align-middle m-l-20" alt=""/>
+            </a>
+        </li>
+        <li>
+            <a href="../GoodFindByRootTypeId?fatherTypeId=3">相机
+                <img src="../img/camera.png" class="h-30 align-middle m-l-20" alt=""/>
+            </a>
+        </li>
+        <li>
+            <a href="../GoodFindByChildrenTypeId?typeId=4&fatherTypeId=4">手机
                 <img src="../img/phone.png" class="h-30 align-middle m-l-20" alt="" />
             </a>
         </li>
-        <%
-                }
-            }
-        %>
 
         <li><hr class="m-tb-30" /></li>
 
@@ -192,7 +148,27 @@
         <li><a href="about.jsp">About</a></li>
         <li><a href="blog.jsp">Blog</a></li>
         <li><a href="blog-post.jsp">Blog Post</a></li>
-        <li><a href="contact.jsp">Contact</a></li>
+        <li><a href="javaScript:logout()">logout</a></li>
+        <script>
+            function logout(){
+                var se = confirm("确认注销？");
+                if(se === true) {
+                    $.ajax({
+                        url: "/logout",
+                        type: "post",
+                        dateType: "json",
+                        success(result) {
+                            if (result) {
+                                alert("您已成功注销！浏览器即将跳转~");
+                                window.location = "http://localhost:8080/jspFrontIndex"
+                            } else {
+                                alert("您还没有登陆哦~");
+                            }
+                        }
+                    })
+                }
+            }
+        </script>
     </ul>
     <div class="social-media-box">
         <hr />
@@ -471,7 +447,7 @@
                             <form class="form-inline">
                                 <div class="form-group">
                                     <input type="text" name="subscribe" class="form-control" placeholder="Email" />
-                                    <button type="submit" class="btn btn-success btn-square">Join Us</button>
+                                    <input type="button" class="btn btn-success btn-square" value="Join us"></input>
                                 </div>
                             </form>
 

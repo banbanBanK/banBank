@@ -19,6 +19,7 @@ public class Customer implements Serializable{
 	private String customerPassword;
 	private Integer deleteStatus;
 	private Address address;
+	private String customerIntroduction;
 	public String getCustomerEmail() {
 		return customerEmail;
 	}
@@ -107,5 +108,10 @@ public class Customer implements Serializable{
 	public void setDeleteStatus(Integer deleteStatus) {
 		this.deleteStatus = deleteStatus;
 	}
-	
+	public String getCustomerIntroduction(){
+		return customerIntroduction;
+	}
+	public void setCustomerIntroduction(String customerIntroduction){
+		this.customerIntroduction = customerIntroduction;
+	}
 }
