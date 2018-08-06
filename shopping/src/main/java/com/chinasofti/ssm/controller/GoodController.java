@@ -44,6 +44,7 @@ public class GoodController {
         List<Type> types_singleRoots = typeBiz.findSingleRoots();
         List<Type> types_children = typeBiz.findChildren(fatherTypeId);
         List<Good> goods = goodBiz.findByRootTypeId(fatherTypeId);
+        String customerId = (String) request.getSession().getAttribute("customerId");
 
         request.setAttribute("thisTypeId",fatherTypeId);
 
@@ -56,18 +57,19 @@ public class GoodController {
         if(goods != null)
             request.setAttribute("goods",goods);
 
-        List<Good> searchGoods = goodBiz.findAll();
+        List<Good> searchGoods = goodBiz.findSerchGoods(customerId);
         request.setAttribute("searchGoods",searchGoods);
         return "../jspFront/products";
     }
     @RequestMapping("/GoodFindByChildrenTypeId")
-    public String goodFindByChildrenTypeId(@RequestParam String typeId, @RequestParam String fatherTypeId, HttpServletRequest request){
+    public String goodFindByChildrenTypeId(@RequestParam String typeId, @RequestParam String fatherTypeId,  HttpServletRequest request){
         List<Type> types_parents = typeBiz.findParents();
         List<Type> types_singleRoots = typeBiz.findSingleRoots();
         List<Type> types_children = typeBiz.findChildren(fatherTypeId);
         List<Good> goods = goodBiz.findByChildrenTypeId(typeId);
+        String customerId = (String) request.getSession().getAttribute("customerId");
 
-        List<Good> searchGoods = goodBiz.findAll();//待修改
+        List<Good> searchGoods = goodBiz.findSerchGoods(customerId);
         request.setAttribute("searchGoods",searchGoods);
 
         request.setAttribute("thisChildrenTypeId", fatherTypeId);
@@ -86,6 +88,7 @@ public class GoodController {
 
     @RequestMapping("/GoodDetailsFindById")
     public String goodDetailsFindById(@RequestParam int id, @RequestParam String fatherTypeId, HttpServletRequest request) {
+        String customerId = (String) request.getSession().getAttribute("customerId");
         Good good = goodBiz.findById(id);
         ProductDetails productDetails = productDetailsBiz.findByGoodId(good.getGoodId());
         List<Good> recommendGoods = goodBiz.findByChildrenTypeId(good.getType().getTypeId());
@@ -93,7 +96,7 @@ public class GoodController {
         List<Type> types_children = typeBiz.findChildren(fatherTypeId);
         List<Type> types_parents = typeBiz.findParents();
         List<Type> types_singleRoots = typeBiz.findSingleRoots();
-        List<Good> searchGoods = goodBiz.findAll();
+        List<Good> searchGoods = goodBiz.findSerchGoods(customerId);
         String mainGoodId = productStyleBiz.findMainByRelationId(good.getGoodId());
         List<Good> goods;
         if(good.getType().getTypeId().equals("4")){

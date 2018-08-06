@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.Comparator;
 import java.util.List;
 
 @ContextConfiguration(locations = {"classpath:applicationContext.xml"})
@@ -34,7 +35,7 @@ public class TestFavorBiz {
     }
     @Test
     public void findByCustomerId(){
-        List<Favor> favors = favorBiz.findByCustomerId("3");
+        List<Favor> favors = favorBiz.findByCustomerId("1");
         for(Favor favor : favors) {
             System.out.println("findByCustomerId " + favor.getId());
         }

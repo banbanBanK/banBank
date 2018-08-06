@@ -25,6 +25,11 @@ public class ProductDetailsBizImpl implements ProductDetailsBiz {
         return productDetailsDao.findByGoodId(goodId);
     }
 
+    @Override
+    public List<ProductDetails> findLatest() {
+        return productDetailsDao.findLatest();
+    }
+
     public boolean insert(ProductDetails productDetails) {
         int result = 0;
         result = productDetailsDao.insert(productDetails);

@@ -13,6 +13,7 @@ public interface GoodDao extends GenericDao<Good, Integer> {
 	List<Good> findByProviderId(String providerId);
 	List<GoodSummary> findByRootTypeOrdered(String typeId);
 	List<GoodSummary> findByChildrenTypeOrdered(String typeId);
+	List<GoodSummary> findAllOrdered();
 
 	String findProviderIdByGoodId(String goodId);
 	Good findByGoodId(String goodId);

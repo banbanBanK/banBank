@@ -21,6 +21,13 @@
 		                  from types
 		                )
 	</select>
+    <select id="findAllChildren" resultMap="TypeResultMap">
+		select *
+		from types
+		where TypeId not in(select FatherTypeId
+		                      from types
+		                      )
+	</select>
     <select id="findSingleRoots" resultMap="TypeResultMap">
 		select *
 		from types

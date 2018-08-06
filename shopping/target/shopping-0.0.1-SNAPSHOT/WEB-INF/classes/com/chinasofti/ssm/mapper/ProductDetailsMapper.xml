@@ -19,6 +19,12 @@
         select *
         from product_details
     </select>
+    <select id="findLatest" resultMap="ProductDetailsResultMap">
+        select *
+        from product_details
+        where timeToMarket !=''
+        order by timeToMarket desc
+    </select>
     <select id="findById" parameterType="int" resultMap="ProductDetailsResultMap">
         select *
         from product_details
