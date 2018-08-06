@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="../css2/ic-helpers.min.css" />
 
 </head>
-<body>
+<body onload="loadViewAction()">
 
 <%
     String customerId = (String)session.getAttribute("customerId");
@@ -412,6 +412,7 @@
                                                             location.href='../PublishComment?commentStr='+comment+'&customerId='+ <%=customerId%>+ '&id=<%=good.getId()%>&evaluation='+evaluation+'&fatherTypeId=<%=good.getType().getFatherTypeId()%>';}
                                                             else alert('登录后才能评论哦~');"
                                                     />
+                                                    <a class="btn btn-success" href="/showComments?goodId=<%=good.getGoodId()%>">全部评论</a>
                                                 </div>
                                             </form>
                                         </div>
@@ -717,6 +718,45 @@
         });
     }
 </script>
+
+
+<script>
+    var start = new Date();
+    var strStart = start.getFullYear()+"-"+(start.getMonth()+1)+"-"+start.getDate()+" "+
+        start.getHours()+":"+start.getMinutes()+":"+start.getSeconds();
+    $.ajax({
+        url: "/InsertViewAction?goodId=<%=good.getGoodId()%>&customerId=<%=customerId%>&clickTime="+$.cookie('strStart')+"&endTime="+$.cookie('strEnd'),
+        type: "post", // 接受数据格式
+        dataType: "json", // 要传递的数据
+    });
+
+    window.onbeforeunload = function(){
+        var end = new Date();
+        var strEnd = end.getFullYear()+"-"+(end.getMonth()+1)+"-"+end.getDate()+" "+
+            end.getHours()+":"+end.getMinutes()+":"+end.getSeconds();
+        $.cookie('strStart', strStart, { expires: 7, path: '/' });
+        $.cookie('strEnd', strEnd, { expires: 7, path: '/' });
+    };
+    function loadViewAction() {
+        var start = new Date();
+        var strStart = start.getFullYear() + "-" + (start.getMonth() + 1) + "-" + start.getDate() + " " +
+            start.getHours() + ":" + start.getMinutes() + ":" + start.getSeconds();
+        $.ajax({
+            url: "/InsertViewAction?goodId=<%=good.getGoodId()%>&customerId=<%=customerId%>&clickTime=" + $.cookie('strStart') + "&endTime=" + $.cookie('strEnd'),
+            type: "post", // 接受数据格式
+            dataType: "json", // 要传递的数据
+            async: false
+        });
+        window.onbeforeunload = function () {
+            var end = new Date();
+            var strEnd = end.getFullYear() + "-" + (end.getMonth() + 1) + "-" + end.getDate() + " " +
+                end.getHours() + ":" + end.getMinutes() + ":" + end.getSeconds();
+            $.cookie('strStart', strStart, {expires: 7, path: '/'});
+            $.cookie('strEnd', strEnd, {expires: 7, path: '/'});
+        };
+    }
+</script>
+
 
 <script src="../plugins/jquery.min.js"></script>
 <script src="../plugins/bootstrap/bootstrap.min.js"></script>

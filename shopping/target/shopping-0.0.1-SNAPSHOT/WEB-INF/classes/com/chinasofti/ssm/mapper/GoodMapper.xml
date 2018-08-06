@@ -63,7 +63,7 @@
 	</select>
 	<select id="findByRootTypeOrdered" resultMap="GoodSummaryResultMap">
 		select *
-		from goods inner join product_summary
+		from goods inner join product_summary on goods.goodId = product_summary.goodId
 		where DeleteStatus = 1 and TypeId in (
 												select TypeId
 												from types
