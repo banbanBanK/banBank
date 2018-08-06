@@ -34,7 +34,7 @@ public class OrderController {
     @RequestMapping("/OrderFindByCustomer")
     public String orderFindByCustomerId(@RequestParam String customerId, HttpServletRequest request){
         List<Order> orders = orderBiz.findByCustomerId(customerId);
-        List<Good> searchGoods = goodBiz.findAll();
+        List<Good> searchGoods = goodBiz.findSerchGoods(customerId);
         List<Type> types_parents = typeBiz.findParents();
         List<Type> types_singleRoots = typeBiz.findSingleRoots();
         if(orders != null){

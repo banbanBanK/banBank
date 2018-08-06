@@ -12,6 +12,8 @@ public interface GoodBiz {
 	List<Good> findByProviderId(String providerId);
 	List<GoodSummary> findByRootTypeOrdered(String typeId);
 	List<GoodSummary> findByChildrenTypeOrdered(String typeId);
+	List<Good> findSerchGoods(String customerId);
+	List<GoodSummary> findAllOrdered();
 
 	Good findByGoodId(String goodId);
 	String findProviderIdByGoodId(String GoodId);

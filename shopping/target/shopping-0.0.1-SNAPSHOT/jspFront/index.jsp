@@ -300,21 +300,21 @@
 
                     <div >
                         <div id="awards" class="owl-carousel owl-theme">
-                            <%List<Good> goods = (List<Good>) request.getAttribute("goods");
-                              if(goods!=null && goods.size()!=0){
-                                  for(int i = 0; i<6;i++){
+                            <%List<Good> latestGoods = (List<Good>) request.getAttribute("latestGoods");
+                              if(latestGoods!=null && latestGoods.size()!=0){
+                                  for(int i = 0; i<10 && i<latestGoods.size();i++){//后台限定最大20
                             %>
-                            <div class="item"><img src="<%=goods.get(i).getGoodImage()%>" alt="<%=goods.get(i).getGoodName()%>" title="售价：￥<%=goods.get(i).getGoodPrice()%>；产品：<%=goods.get(i).getGoodName()%>" /></div>
+                            <div class="item"><img src="<%=latestGoods.get(i).getGoodImage()%>" alt="<%=latestGoods.get(i).getGoodName()%>" title="售价：￥<%=latestGoods.get(i).getGoodPrice()%>；产品：<%=latestGoods.get(i).getGoodName()%>" /></div>
                            <%-- <div class="item"><img src="../img/products/product1.png" alt="" /></div>
                             <div class="item"><img src="../img/products/product1.png" alt="" /></div>
                             <div class="item"><img src="../img/products/product1.png" alt="" /></div>
                             <div class="item"><img src="../img/products/product1.png" alt="" /></div>
                             <div class="item"><img src="../img/products/product1.png" alt="" /></div>
                             <div class="item"><img src="../img/products/product1.png" alt="" /></div>--%>
-                        <%
+                            <%
                                   }
                               }
-                        %>
+                            %>
                         </div>
                     </div>
                 </div>
@@ -331,7 +331,7 @@
                 <hr />
             </div>
             <%List<Good> specialGoods = (List<Good>) request.getAttribute("specialGoods");
-                if(specialGoods!=null&&specialGoods.size()!=0){
+                if(specialGoods!=null&&specialGoods.size()>=6){
             %>
             <div class="col-xs-6 col-sm-6 col-md-3">
                 <div class="team-box">

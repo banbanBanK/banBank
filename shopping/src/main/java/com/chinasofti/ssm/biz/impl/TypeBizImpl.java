@@ -16,6 +16,11 @@ public class TypeBizImpl implements TypeBiz {
         return typeDao.findAll();
     }
 
+    @Override
+    public List<Type> findAllChildren() {
+        return typeDao.findAllChildren();
+    }
+
     public Type findById(Integer id) {
         return typeDao.findById(id);
     }

@@ -9,7 +9,6 @@ public class Type implements Serializable{
 	private String typeId;
 	private String typeName;
 	private String fatherTypeId;
-	private Set<Favor> favors = new HashSet<Favor>();
 	public Type() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -31,12 +30,6 @@ public class Type implements Serializable{
 	}
 	public void setTypeName(String typeName) {
 		this.typeName = typeName;
-	}
-	public Set<Favor> getFavors() {
-		return favors;
-	}
-	public void setFavors(Set<Favor> favors) {
-		this.favors = favors;
 	}
 	public String getFatherTypeId() {
 		return fatherTypeId;

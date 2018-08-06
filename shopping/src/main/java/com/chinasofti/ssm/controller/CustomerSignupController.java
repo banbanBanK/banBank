@@ -5,18 +5,13 @@ import java.util.HashSet;
 import java.util.List;
 
 
-import com.chinasofti.ssm.biz.AdminBiz;
-import com.chinasofti.ssm.domain.Admin;
+import com.chinasofti.ssm.biz.*;
+import com.chinasofti.ssm.domain.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import com.chinasofti.ssm.biz.AddressBiz;
-import com.chinasofti.ssm.biz.CustomerBiz;
-import com.chinasofti.ssm.domain.Address;
-import com.chinasofti.ssm.domain.Customer;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -33,6 +28,12 @@ public class CustomerSignupController {
 
 	@Autowired
     private AdminBiz adminBiz;
+	@Autowired
+	private CustomerAnalysisBiz customerAnalysisBiz;
+	@Autowired
+	private FavorBiz favorBiz;
+	@Autowired
+	private TypeBiz typeBiz;
 	
 	
 	@RequestMapping(value="/jsp/signup")
@@ -50,8 +51,20 @@ public class CustomerSignupController {
 	    addressOfCus.setAddressId(province);
 	    customer.setAddress(addressOfCus);
 	    boolean res=customerBiz.insert(customer);
-	    if(res)
-	    		return "../jspFront/login";
+	    if(res){
+			int typeNum = typeBiz.findAll().size();
+			for(int i=1;i <= typeNum;i++){
+				Favor favor = new Favor();
+				Type type = typeBiz.findByTypeId(String.valueOf(i));
+				favor.setDeleteStatus(1);
+				favor.setType(type);
+				favor.setCustomer(customer);
+				favor.setFavorLevel(0);
+				favorBiz.insert(favor);
+			}
+			return "../jspFront/login";
+		}
+
 	    else
 	    	return "customerSignupError";
 	}
@@ -86,8 +99,26 @@ public class CustomerSignupController {
             if(Password.equals(password)) {
                 session.setAttribute("customerId",customerId);
                 session.setAttribute("loginStatus", true);
+				int typeNum = typeBiz.findAll().size();
+				for(int i = 1;i <= typeNum;i++){
+					Favor favor = favorBiz.findByCustomerAndType(customerId,String.valueOf(i));
+					favor.setFavorLevel(0);
+					favorBiz.update(favor);
+				}
+				List<CustomerAnalysis> customerAnalyses = customerAnalysisBiz.findByCustomerId(customerId);
+				for(CustomerAnalysis customerAnalysis : customerAnalyses){
+					String typeId = customerAnalysis.getGood().getType().getTypeId();
+					Favor favor = favorBiz.findByCustomerAndType(customerId,typeId);
+					int level = favor.getFavorLevel();
+					int browseNum = customerAnalysis.getBrowseNum();
+					int buyNum = customerAnalysis.getBuyNum();
+					int buySum = customerAnalysis.getBuySum();
+					favor.setFavorLevel(level+browseNum+5*buySum+2*buyNum);
+					favorBiz.update(favor);
+				}
                 return true;
-            }else {
+            }
+            else {
                 session.setAttribute("customerId","-1");
                 session.setAttribute("loginStatus",false);
                 return false;
