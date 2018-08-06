@@ -8,5 +8,11 @@
     <select id="findAll" resultMap="resultAddress">
           select *
 	      from  address
+	      order by addressName
+    </select>
+    <select id="findByAddressId" resultMap="resultAddress">
+          select *
+	      from  address
+	      where addressId = # {addressId}
     </select>
 </mapper>

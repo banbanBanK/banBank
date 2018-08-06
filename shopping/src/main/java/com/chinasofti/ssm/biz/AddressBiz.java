@@ -6,4 +6,5 @@ import com.chinasofti.ssm.domain.Address;
 
 public interface AddressBiz {
    public List<Address> findAll();
+   public Address findByAddressId(String addressId);
 }

@@ -13,7 +13,6 @@ public class GoodSummary implements Serializable {
     private Integer deleteStatus;
     private Type type;
     private Provider provider;
-    private Integer favorNum;
     private Integer commentLevel;
     private Integer saleSum;
 
@@ -99,14 +98,6 @@ public class GoodSummary implements Serializable {
 
     public void setProvider(Provider provider) {
         this.provider = provider;
-    }
-
-    public Integer getFavorNum() {
-        return favorNum;
-    }
-
-    public void setFavorNum(Integer favorNum) {
-        this.favorNum = favorNum;
     }
 
     public Integer getCommentLevel() {

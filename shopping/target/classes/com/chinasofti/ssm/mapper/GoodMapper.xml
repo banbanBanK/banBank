@@ -37,6 +37,11 @@
 		from goods
 		where DeleteStatus = 1
 	</select>
+	<select id="findAllOrdered" resultMap="GoodSummaryResultMap">
+		select *
+		from goods inner join product_summary on goods.goodid = product_summary.goodid
+		where DeleteStatus = 1
+	</select>
 	<select id="findByName" resultMap="GoodResultMap">
 		select *
 		from goods
@@ -63,7 +68,7 @@
 	</select>
 	<select id="findByRootTypeOrdered" resultMap="GoodSummaryResultMap">
 		select *
-		from goods inner join product_summary on goods.goodId = product_summary.goodId
+		from goods inner join product_summary on goods.goodid = product_summary.goodid
 		where DeleteStatus = 1 and TypeId in (
 												select TypeId
 												from types
@@ -72,7 +77,7 @@
 	</select>
 	<select id="findByChildrenTypeOrdered" resultMap="GoodSummaryResultMap">
 		select *
-		from goods inner join product_summary
+		from goods inner join product_summary on goods.goodid = product_summary.goodid
 		where TypeId = #{typeId} and DeleteStatus = 1
 	</select>
 	<select id="findByProviderId" resultMap="GoodResultMap">

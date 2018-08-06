@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Comparator;
 import java.util.List;
 
 public class Test {
@@ -44,7 +45,8 @@ public class Test {
         for(int i=1;i <= typeNum;i++){
             Favor favor = new Favor();
             Type type = typeBiz.findByTypeId(String.valueOf(i));
-            Customer customer = customerBiz.findByCustomerId(customerId);
+            Customer customer = new Customer();
+            customer.setCustomerId(customerId);
             favor.setDeleteStatus(1);
             favor.setType(type);
             favor.setCustomer(customer);
@@ -55,7 +57,8 @@ public class Test {
     }
     public String Recommand(@RequestParam String customerId,HttpServletRequest request){
         List<Favor> favors = favorBiz.findByCustomerId(customerId);
-        favors.sort((h1,h2) ->h1.getFavorLevel().compareTo(h2.getFavorLevel()));
+        Comparator<Favor> comparator = (h1, h2) ->h1.getFavorLevel().compareTo(h2.getFavorLevel());
+        favors.sort(comparator.reversed());
         for(int i = 0;i <= 2;i++){
             Favor favor = favors.get(i);
             String typeId = favor.getType().getTypeId();
