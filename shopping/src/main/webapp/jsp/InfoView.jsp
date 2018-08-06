@@ -278,7 +278,37 @@
             <script type="text/javascript">
                 // 基于准备好的dom，初始化echarts实例
                 var myChart = echarts.init(document.getElementById('mainAge'));
+                var ageGenderM = [];
+                for(var i=0; i<7; i++)
+                    ageGenderM[i] = 0;
+                $.ajax({
+                    url:"/getAgeGenderM",
+                    type:"get",
+                    dataType:"json",
+                    async:false,
+                    success(result){
+                        ageGenderM = result;
+                    },
+                    error(result){
+                        alert("申请数据失败！");
+                    }
+                });
 
+                var ageGenderF = [];
+                for(var i=0; i<7; i++)
+                    ageGenderF[i] = 0;
+                $.ajax({
+                    url:"/getAgeGenderF",
+                    type:"get",
+                    dataType:"json",
+                    async:false,
+                    success(result){
+                        ageGenderF = result;
+                    },
+                    error(result){
+                        alert("申请数据失败！");
+                    }
+                });
                 // 指定图表的配置项和数据
                 option = {
                     title:{
@@ -297,8 +327,7 @@
                     },
                     legend: {
                         data: [{name : '男性', textStyle : {color:"#25c36c"}},
-                            {name : '女性', textStyle : {color:"#25c36c"}},
-                            {name : '未透露', textStyle : {color:"#25c36c"}}]
+                            {name : '女性', textStyle : {color:"#25c36c"}}]
                     },
                     grid: {
                         left: '3%',
@@ -333,7 +362,7 @@
                                 position: 'insideRight'
                             }
                         },
-                        data: [320, 302, 301, 334, 390, 330, 320]
+                        data: [ageGenderM[0], ageGenderM[1], ageGenderM[2], ageGenderM[3], ageGenderM[4], ageGenderM[5], ageGenderM[6]]
                     },
                         {
                             name: '女性',
@@ -345,19 +374,7 @@
                                     position: 'insideRight'
                                 }
                             },
-                            data: [120, 132, 101, 134, 90, 230, 210]
-                        },
-                        {
-                            name: '未透露',
-                            type: 'bar',
-                            stack: '总量',
-                            label: {
-                                normal: {
-                                    show: true,
-                                    position: 'insideRight'
-                                }
-                            },
-                            data: [220, 182, 191, 234, 290, 330, 310]
+                            data: [ageGenderF[0], ageGenderF[1], ageGenderF[2], ageGenderF[3], ageGenderF[4], ageGenderF[5], ageGenderF[6]]
                         }
                     ]
                 };
@@ -367,132 +384,178 @@
             </script>
 
             <div class="clearfix"></div><hr/>
+            <div align="center">
+                <script>
+                    $.ajax({
+                        url : "/getNameTop10",
+                        type : "post",
+                        dataType : "json",
+                        success(result){
+                            var data = eval('result');
+                            var selectid = $('#selectTop10');
+                            var html = "";
+                            for(var i=0; i < data.length; i++){
+                                if(data[i] != "电脑") {
+                                    html += "<option value = " + (i + 1) + ">" + data[i] + "</option>";
+                                }
+                                else
+                                    break;
+                            }
+                            selectid.html(html);
+                        },
+                        error(){
+                            alert("申请数据失败!");
+                        }
+                    });
+                </script>
+                <select id="selectTop10" style="background:#04243E;color: white;float:right;">
+                    <option selected="selected" disabled="disabled">请选择商品</option>
+                </select>
+            </div>
+            <br/>
             <div id="mainGood"  style="width: 1000px;height:400px"></div>
             <script type="text/javascript">
                 // 基于准备好的dom，初始化echarts实例
-                var myChart = echarts.init(document.getElementById('mainGood'));
+                var myChart1 = echarts.init(document.getElementById('mainGood'));
+
+                $(function() {
+                    _ajax1(1);
+                    $('#selectTop10').on('change', function() {
+                        var val = $(this).val();
+                        _ajax1(val);
+                    });
+                });
 
                 // 指定图表的配置项和数据
-                option = {
-                    title:{
-                        text:"商品销售态势分析",
-                        textStyle: {
-                            color: '#fff',
-                            fontSize: '22',
-                            fontWeight: 'normal',
-                        }
-                    },
-                    tooltip: {
-                        trigger: 'axis',
-                        axisPointer: {type: 'cross'}
-                    },
-                    toolbox: {
-                        feature: {
-                            dataView: {show: true, readOnly: false},
-                            magicType: {show: true, type: ['line', 'bar']},
-                            restore: {show: true},
-                            saveAsImage: {show: true}
-                        }
-                    },
-                    legend: {
-                        data:[{name : '当月总销售量',textStyle:{color:"#25c36c"}},
-                            {name : '该商品销售数',textStyle:{color:"#25c36c"}},
-                            {name : '占比率',textStyle:{color:"#25c36c"}}]
-                    },
-                    xAxis: [
-                        {
-                            type: 'category',
-                            axisLine : {
-                                lineStyle : {
-                                    color:'white'
+                function _ajax1(len1) {
+                    $.ajax({
+                        url: '/getGoodSum?number=' + len1,
+                        type: 'get',
+                        dataType: 'json',
+                        success: function (res) {
+                            var salePercent = [];
+                            $.ajax({
+                                url:'/getSalePercent?number' + len1,
+                                type:'get',
+                                async:false,
+                                dataType:'json',
+                                success(res){
+                                    salePercent = res;
                                 }
-                            },
-                            data: ['1月','2月','3月','4月','5月','6月','7月','8月']
-                        }
-                    ],
-                    yAxis: [
-                        {
-                            type: 'value',
-                            name: '总销售数',
-                            axisLine : {
-                                lineStyle : {
-                                    color:'white'
-                                }
-                            },
-                            min: 0,
-                            max: 4500,
-                            axisLabel: {
-                                formatter: '{value}'
-                            }
-                        },
-                        {
-                            type: 'value',
-                            name: '占比率（%）',
-                            axisLine : {
-                                lineStyle : {
-                                    color:'white'
-                                }
-                            },
-                            min: 0,
-                            max: 100,
-                            position: 'right',
-                            axisLabel: {
-                                formatter: '{value}',
-                            }
-                        }
-                    ],
-                    series: [
-                        {
-                            name:'当月总销售量',
-                            axisLine : {
-                                lineStyle : {
-                                    color:'white'
-                                }
-                            },
-                            type:'bar',
-                            itemStyle:{normal:{color:'#386AB7'}},
-                            data:[2990, 2900, 3133, 3433, 3233, 3333, 3133, 2933],
-                        },
-                        {
-                            name:'该商品销售数',
-                            type:'bar',
-                            axisLine : {
-                                lineStyle : {
-                                    color:'white'
-                                }
-                            },
-                            itemStyle:{normal:{color:'#99cccc'}},
-                            data:[800, 833, 933, 1003, 933, 1083, 1150, 1329],
-                        },
-                        {
-                            name:'占比率',
-                            type:'line',
-                            yAxisIndex: 1,
-                            axisLine : {
-                                lineStyle : {
-                                    color:'white'
-                                }
-                            },
-                            itemStyle:{normal:{color:'#ff9933'}},
-                            data:[26.8, 28.7, 29.8, 29.2, 28.9, 32.5, 36.8, 45.3],
-                            markPoint : {
-                                color:'blue',
-                                data : [
-                                    {type : 'max', name : '最大值',color : 'white'},
-                                    {type : 'min', name : '最小值',color : 'white'}
+                            });
+                            option = {
+                                title: {
+                                    text: "商品销售态势分析",
+                                    textStyle: {
+                                        color: '#fff',
+                                        fontSize: '22',
+                                        fontWeight: 'normal',
+                                    }
+                                },
+                                tooltip: {
+                                    trigger: 'axis',
+                                    axisPointer: {type: 'cross'}
+                                },
+                                toolbox: {
+                                    feature: {
+                                        dataView: {show: true, readOnly: false},
+                                        magicType: {show: true, type: ['line', 'bar']},
+                                        restore: {show: true},
+                                        saveAsImage: {show: true}
+                                    }
+                                },
+                                legend: {
+                                    data: [{name: '该商品销售数', textStyle: {color: "#25c36c"}},
+                                        {name: '占比率', textStyle: {color: "#25c36c"}}]
+                                },
+                                xAxis: [
+                                    {
+                                        type: 'category',
+                                        axisLine: {
+                                            lineStyle: {
+                                                color: 'white'
+                                            }
+                                        },
+                                        data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月']
+                                    }
+                                ],
+                                yAxis: [
+                                    {
+                                        type: 'value',
+                                        name: '销售数',
+                                        axisLine: {
+                                            lineStyle: {
+                                                color: 'white'
+                                            }
+                                        },
+                                        min: 0,
+                                        max: 4500,
+                                        axisLabel: {
+                                            formatter: '{value}'
+                                        }
+                                    },
+                                    {
+                                        type: 'value',
+                                        name: '占比率（%）',
+                                        axisLine: {
+                                            lineStyle: {
+                                                color: 'white'
+                                            }
+                                        },
+                                        min: 0,
+                                        max: 100,
+                                        position: 'right',
+                                        axisLabel: {
+                                            formatter: '{value}',
+                                        }
+                                    }
+                                ],
+                                series: [
+                                    {
+                                        name: '该商品销售数',
+                                        type: 'bar',
+                                        axisLine: {
+                                            lineStyle: {
+                                                color: 'white'
+                                            }
+                                        },
+                                        itemStyle: {normal: {color: '#99cccc'}},
+                                        data: [res[0], res[1], res[2], res[3], res[4], res[5], res[6], res[7]],                                   },
+                                    {
+                                        name: '占比率',
+                                        type: 'line',
+                                        yAxisIndex: 1,
+                                        axisLine: {
+                                            lineStyle: {
+                                                color: 'white'
+                                            }
+                                        },
+                                        itemStyle: {normal: {color: '#ff9933'}},
+                                        data: [salePercent[0]*100, salePercent[1]*100, salePercent[2]*100,salePercent[3]*100, salePercent[4]*100, salePercent[5]*100, salePercent[6]*100, salePercent[7]*100],
+                                        markPoint: {
+                                            color: 'blue',
+                                            data: [
+                                                {type: 'max', name: '最大值', color: 'white'},
+                                                {type: 'min', name: '最小值', color: 'white'}
+                                            ]
+                                        },
+                                        markLine: {
+                                            data: [
+                                                {type: 'average', name: '平均值', color: 'white'}
+                                            ]
+                                        }
+                                    }
                                 ]
-                            },
-                            markLine : {
-                                data : [
-                                    {type : 'average', name : '平均值',color : 'white'}
-                                ]
-                            }
-                        }
-                    ]
-                };
+                            };
 
-                // 使用刚指定的配置项和数据显示图表。
-                myChart.setOption(option);
+                            // 使用刚指定的配置项和数据显示图表。
+                            myChart1.setOption(option);
+                        },
+                        error(res) {
+                            alert("申请数据失败！");
+                        }
+                    });
+                }
             </script>
 
             <div class="clearfix"></div><hr/>
@@ -961,11 +1024,28 @@
 
             <div class="clearfix"></div><hr/>
             <div align="center">
-                <select id="select" style="background:#04243E;color: white">
-                    <option value="1">手机类</option>
-                    <option value="2">耳机类</option>
-                    <option value="3">相机类</option>
-                    <option value="4">电脑类</option>
+                <script>
+                    $.ajax({
+                        url : "/getNameTop10",
+                        type : "post",
+                        dataType : "json",
+                        success(result){
+                            var data = eval('result');
+                            var selectid = $('#selectNameTop10');
+                            var html = "";
+                            for(var i=0; i < data.length; i++){
+                                if(data[i] != "电脑") {
+                                    html += "<option value = " + (i + 1) + ">" + data[i] + "</option>";
+                                }
+                                else
+                                    break;
+                            }
+                            selectid.html(html);
+                        }
+                    });
+                </script>
+                <select id="selectNameTop10" style="background:#04243E;color: white;float:right;">
+                    <option selected="selected" disabled="disabled">请选择商品</option>
                 </select>
             </div>
             <div id="mainComment" style="width: 1000px;height:600px; ">
@@ -976,7 +1056,7 @@
 
                 $(function() {
                     _ajax(1);
-                    $('#select').on('change', function() {
+                    $('#selectNameTop10').on('change', function() {
                         var val = $(this).val();
                         _ajax(val);
                     });
@@ -984,18 +1064,34 @@
 
                 function _ajax(len) {
                     $.ajax({
-                        url: '../data/index.json',
+                        url: '/getGoodComment?number='+len,
                         type: 'get',
+                        dataType:'json',
                         success: function(res) {
                             // 指定图表的配置项和数据
-                            var percentData = [];
-                            var nameData = [];
-                            for(var i = 0; i < len; i++) {
-                                percentData.push(res.rows[i].percent);
-                            }
-                            for(var i = 0; i < len; i++) {
-                                nameData.push(res.rows[i].name);
-                            }
+                            var data = eval('res');
+                            // 指定图表的配置项和数据
+                            var scaleData = [{
+                                'name': '一星评价',
+                                'value': data[0]*100
+                            },
+                                {
+                                    'name': '二星评价',
+                                    'value': data[1]*100
+                                },
+                                {
+                                    'name': '三星评价',
+                                    'value': data[2]*100
+                                },
+                                {
+                                    'name': '四星评价',
+                                    'value': data[3]*100
+                                },
+                                {
+                                    'name': '五星评价',
+                                    'value': data[4]*100
+                                }
+                            ];
                             var rich = {
                                 white: {
                                     color: '#ddd',
@@ -1017,10 +1113,10 @@
                                 }
                             };
                             var data = [];
-                            for (var i = 0; i < percentData.length; i++) {
+                            for (var i = 0; i < scaleData.length; i++) {
                                 data.push({
-                                    value: percentData[i],
-                                    name: nameData[i],
+                                    value: scaleData[i].value,
+                                    name: scaleData[i].name,
                                     itemStyle: {
                                         normal: {
                                             borderWidth: 5,
@@ -1056,8 +1152,8 @@
                                             formatter: function (params) {
                                                 var percent = 0;
                                                 var total = 0;
-                                                for (var i = 0; i < percentData.length; i++) {
-                                                    total += percentData[i];
+                                                for(var i = 0; i < scaleData.length; i++) {
+                                                    total += scaleData[i].value;
                                                 }
                                                 percent = ((params.value / total) * 100).toFixed(0);
                                                 if (params.name !== '') {
@@ -1077,7 +1173,7 @@
                             }];
                             option = {
                                 title: {
-                                    text: "商品评价总览",
+                                    text: "本月商品评价总览",
                                     textStyle: {
                                         color: '#fff',
                                         fontSize: '22',
