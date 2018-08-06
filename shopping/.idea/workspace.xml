@@ -7,12 +7,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d20d5e3-bc31-4d9b-89b6-2c51b746aab4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jspFront/product-camera-details.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/product-camera-details.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jspFront/show-comments.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/show-comments.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="5d20d5e3-bc31-4d9b-89b6-2c51b746aab4" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -94,8 +89,8 @@
       <file leaf-file-name="show-comments.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jspFront/show-comments.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="253" column="60" selection-start-line="253" selection-start-column="60" selection-end-line="253" selection-end-column="60" />
+            <state relative-caret-position="517">
+              <caret line="305" column="34" lean-forward="true" selection-start-line="305" selection-start-column="34" selection-end-line="305" selection-end-column="34" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="e#9460#9497#0#JSP" />
@@ -822,7 +817,7 @@
       <workItem from="1533353812260" duration="989000" />
       <workItem from="1533354984093" duration="17261000" />
       <workItem from="1533434532423" duration="33190000" />
-      <workItem from="1533515852084" duration="4847000" />
+      <workItem from="1533515852084" duration="5609000" />
     </task>
     <servers />
   </component>
@@ -838,7 +833,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56268000" />
+    <option name="totallyTimeSpent" value="57030000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -863,10 +858,10 @@
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.753125" visible="true" weight="0.2832981" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.753125" visible="true" weight="0.2832981" />
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15677084" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15677084" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -1213,8 +1208,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jspFront/show-comments.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="253" column="60" selection-start-line="253" selection-start-column="60" selection-end-line="253" selection-end-column="60" />
+        <state relative-caret-position="517">
+          <caret line="305" column="34" lean-forward="true" selection-start-line="305" selection-start-column="34" selection-end-line="305" selection-end-column="34" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#9460#9497#0#JSP" />
