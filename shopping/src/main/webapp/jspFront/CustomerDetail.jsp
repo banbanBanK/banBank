@@ -15,7 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <title>Staro - CustomerDetail</title>
+    <title>用户个人信息</title>
 
     <meta name="author" content="IntelCoder, www.intelcoder.com" />
     <meta name="description" content="Staro is a clean and light HTML5 theme for showing your products in a simple and elegant way. It's a fully responsive e-commerce template that was built with customers in mind." />
@@ -250,10 +250,10 @@
                         <div class="col-sm-6">
                             <div class="form-group form-group-default required">
                                 <label>性别</label>
-                                <select id="Sex" class="form-control">
-                                    <option value="unKnown" selected="selected" disabled="disabled" >请选择性别</option>
-                                    <option value="女">女</option>
-                                    <option value="男">男</option>
+                                <select id="Sex" class="form-control" >
+                                    <option value="unKnown" disabled="disabled" >请选择性别</option>
+                                    <option value="female">女</option>
+                                    <option value="male">男</option>
                                 </select>
                             </div>
                         </div>
@@ -291,14 +291,10 @@
                         </div>
 
                     </div>
-                    <div class="form-group form-group-default required">
-                        <label>详细地址</label>
-                        <input type="text" id="address" value="<%=customerDetail.getAddress().getAddressName()%>" class="form-control" required" />
-                    </div>
 
                     <div class="form-group form-group-default">
                         <label>个人简介</label>
-                        <textarea id="info" class="form-control v-resize" rows="10"><%=customerDetail.getCustomerIntroduction()%></textarea>
+                        <textarea id="customerInformation" class="form-control v-resize" rows="10"><%=customerDetail.getCustomerIntroduction()%></textarea>
                     </div>
 
                     <div class="form-group text-center">
@@ -307,19 +303,21 @@
                 </form>
 
                 <script>
+                    $("#Sex").val("<%=customerDetail.getCustomerGender()%>");
                     function saveCustomerInfo(customerId) {
+                        var obj = document.getElementById("Sex");
+                        var index = obj.selectedIndex;
                         var name = document.getElementById("name").value;
-                        var Sex = document.getElementById("Sex").value;
+                        var Sex = obj.options[index].value;
                         var email = document.getElementById("email").value;
                         var birthday = document.getElementById("birthday").value;
                         var phone = document.getElementById("phone").value;
                         var zipCode = document.getElementById("zipCode").value;
-                        var address = document.getElementById("address").value;
-                        var  info =document.getElementById("info").innerText;
+                        var info = document.getElementById("customerInformation").value;
 
                         $.ajax({
-                            url:"/SaveCustomerInfo?customerName="+name+"&customerSex="+Sex+"&customerEmail="+email+"&customerBirthday="+birthday+"&customerPhone="+phone+"&customerZipCode="+zipCode
-                            +"&customerAddress=" + address + "&customerIntroduction=" + info,
+                            url:"/SaveCustomerInfo?customerId="+customerId+"&customerName="+name+"&customerGender="+Sex+"&customerEmail="+email+"&customerBirthday="+birthday+"&customerPhone="+phone+"&customerZipCode="+zipCode
+                             + "&customerInfo=" + info,
                             type:"post",
                             dataTye:"json",
                             success(result){

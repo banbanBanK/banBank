@@ -137,8 +137,8 @@ public class CustomerSignupController {
 
     @RequestMapping("/SaveCustomerInfo")
     @ResponseBody
-    public boolean SaveCustomerInfo(String customerName, String customerGender, String customerEmail, java.sql.Date customerBirthday, String customerPhone, String customerZipCode, String customerAddress, String customerInfo){
-	    return customerBiz.updateCustomerInfo(customerName,customerGender,customerEmail,customerBirthday,customerPhone,customerZipCode,customerAddress,customerInfo);
+    public boolean SaveCustomerInfo(String customerId,String customerName, String customerGender, String customerEmail, java.sql.Date customerBirthday, String customerPhone, String customerZipCode, String customerInfo){
+	    return customerBiz.updateCustomerInfo(customerId,customerName,customerGender,customerEmail,customerBirthday,customerPhone,customerZipCode,customerInfo);
     }
 
     @RequestMapping("/logout")

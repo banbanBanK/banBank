@@ -854,18 +854,57 @@ a.thumbnail:hover {
 	background-color: #4b384f;
 }
 
+.product-banner-computer {
+	background: url("../img/computer.JPG") 30%;
+	height: 450px;
+	position: relative;
+}
 .product-banner {
 	background: url("../img/products/banner1.jpg") 50%;
 	height: 450px;
 	position: relative;
 }
+.product-banner-camera{
+	background: url("../img/camera.JPG") 20%;
+	height: 450px;
+	position: relative;
+}
+.product-banner-phone{
+	background: url("../img/phone.JPG") 20%;
+	height: 450px;
+	position: relative;
+}
 
-.product-banner-wrapper {
+.product-banner-camera-wrapper {
 	position: absolute;
 	top: 130px;
 	right: 100px;
 	width: 350px;
 	text-align: center;
+}
+
+.product-banner-computer-wrapper {
+    position: absolute;
+    top: 130px;
+    right: 100px;
+    width: 350px;
+    text-align: center;
+}
+
+.product-banner-phone-wrapper {
+    position: absolute;
+    top: 130px;
+    right: 100px;
+    width: 350px;
+    text-align: center;
+}
+
+.product-banner-wrapper {
+    position: absolute;
+    top: 130px;
+    right: 100px;
+    width: 350px;
+    text-align: center;
 }
 
 .product-item:hover {

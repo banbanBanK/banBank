@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="../css2/ic-helpers.min.css" />
 
 </head>
-<body>
+<body onload="loadViewAction()">
 
 <%
     String customerId = (String)session.getAttribute("customerId");
@@ -240,10 +240,10 @@
                 <div class="product-img-wrapper">
                     <div class="product-img-container bg-info">
                         <div class="bxslider">
-                            <div><img src="../img/products/product-details1.png" alt="" /></div>
-                            <div><img src="../img/products/product-details2.png" alt="" /></div>
-                            <div><img src="../img/products/product-details3.png" alt="" /></div>
-                            <div><img src="../img/products/product-details4.png" alt="" /></div>
+                            <div><img src="../img/computer1.jpg" alt="" /></div>
+                            <div><img src="../img/computer2.jpg" alt="" /></div>
+                            <div><img src="../img/computer3.jpg" alt="" /></div>
+                            <div><img src="../img/computer5.jpg" alt="" /></div>
                         </div>
                     </div>
                 </div>
@@ -414,6 +414,7 @@
                                                             location.href='../PublishComment?commentStr='+comment+'&customerId='+ <%=customerId%>+ '&id=<%=good.getId()%>&evaluation='+evaluation+'&fatherTypeId=<%=good.getType().getFatherTypeId()%>';}
                                                             else alert('登录后才能评论哦~');"
                                                     />
+                                                    <a class="btn btn-success" href="/showComments?goodId=<%=good.getGoodId()%>">全部评论</a>
                                                 </div>
                                             </form>
                                         </div>
@@ -598,7 +599,7 @@
     </div>
 </div>
 <!-- Search overlay -->
-<script>
+<script type="text/javascript">
     function searchGoodByName() {
         var searchName = document.getElementById("searchButton").value;
         var param = "/SearchByGoodName?goodName=" + searchName;
@@ -718,11 +719,31 @@
             }
         });
     }
+function loadViewAction() {
+    var start = new Date();
+    var strStart = start.getFullYear() + "-" + (start.getMonth() + 1) + "-" + start.getDate() + " " +
+        start.getHours() + ":" + start.getMinutes() + ":" + start.getSeconds();
+    $.ajax({
+        url: "/InsertViewAction?goodId=<%=good.getGoodId()%>&customerId=<%=customerId%>&clickTime=" + $.cookie('strStart') + "&endTime=" + $.cookie('strEnd'),
+        type: "post", // 接受数据格式
+        dataType: "json", // 要传递的数据
+        async: false
+    });
+    window.onbeforeunload = function () {
+        var end = new Date();
+        var strEnd = end.getFullYear() + "-" + (end.getMonth() + 1) + "-" + end.getDate() + " " +
+            end.getHours() + ":" + end.getMinutes() + ":" + end.getSeconds();
+        $.cookie('strStart', strStart, {expires: 7, path: '/'});
+        $.cookie('strEnd', strEnd, {expires: 7, path: '/'});
+    };
+}
 </script>
 
 <script src="../plugins/jquery.min.js"></script>
 <script src="../plugins/bootstrap/bootstrap.min.js"></script>
 <script src="../plugins/bxslider/bxslider.min.js"></script>
+<script src="../js/jquery.cookie.js"></script>
 <script src="../js/global.js"></script>
+
 </body>
 </html>

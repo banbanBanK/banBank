@@ -1,7 +1,8 @@
 <%@ page import="com.chinasofti.ssm.domain.Order" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.chinasofti.ssm.domain.Good" %>
-<%@ page import="com.chinasofti.ssm.domain.Type" %><%--
+<%@ page import="com.chinasofti.ssm.domain.Type" %>
+<%@ page import="com.chinasofti.ssm.domain.GoodSummary" %><%--
   Created by IntelliJ IDEA.
   User: 该读过
   Date: 2018/7/28
@@ -537,7 +538,7 @@
         </div>
 
 
-        <%List<Good> searchGoods = (List<Good>) request.getAttribute("searchGoods");
+        <%List<GoodSummary> searchGoods = (List<GoodSummary>) request.getAttribute("searchGoods");
             if(searchGoods!=null && searchGoods.size()!=0){
         %>
         <div class="row m-t-70 m-b-70">

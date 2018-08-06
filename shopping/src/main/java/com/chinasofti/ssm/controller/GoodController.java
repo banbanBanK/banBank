@@ -36,8 +36,7 @@ public class GoodController {
 
         if(goods!=null)
             request.setAttribute("goods",goods);
-
-            return "";
+            return "../jspFront/productsAll";
     }
     @RequestMapping("/GoodFindByRootTypeId")
     public String goodFindByRootTypeId(@RequestParam String fatherTypeId, HttpServletRequest request){
