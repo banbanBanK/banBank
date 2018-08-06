@@ -8,46 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d20d5e3-bc31-4d9b-89b6-2c51b746aab4" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/ProviderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/ProviderView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/CustomerSignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/CustomerSignupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/GoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/GoodController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/dao/ProviderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/dao/ProviderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/domain/Provider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/domain/Provider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/ProviderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/ProviderMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/properties/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/properties/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/AdminInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/AdminInfo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/CustomerView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/CustomerView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/InfoView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/InfoView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/PwdModify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/PwdModify.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/getgood.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/getgood.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/chinasofti/ssm/biz/TestProviderBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/chinasofti/ssm/biz/TestProviderBiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/ProviderBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/biz/impl/ProviderBizImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/CustomerSignupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/CustomerSignupController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/GoodController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/controller/GoodController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/ProviderDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/dao/ProviderDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/Provider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/domain/Provider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/mapper/ProviderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chinasofti/ssm/mapper/ProviderMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/properties/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/properties/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/ProviderBizImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/biz/impl/ProviderBizImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/controller/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/controller/CustomerSignupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/controller/CustomerSignupController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/controller/GoodController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/controller/GoodController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/ProviderDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/dao/ProviderDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/Provider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/domain/Provider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/mapper/ProviderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/WEB-INF/classes/com/chinasofti/ssm/mapper/ProviderMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/AdminInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/AdminInfo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/CustomerView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/CustomerView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/InfoView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/InfoView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/PwdModify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/PwdModify.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/getgood.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/getgood.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/shopping-0.0.1-SNAPSHOT/jsp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/TestProviderBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/chinasofti/ssm/biz/TestProviderBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jspFront/product-camera-details.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/product-camera-details.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jspFront/show-comments.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jspFront/show-comments.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -63,11 +27,8 @@
       <file leaf-file-name="ProviderView.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/ProviderView.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="217" column="75" lean-forward="true" selection-start-line="217" selection-start-column="75" selection-end-line="217" selection-end-column="75" />
-              <folding>
-                <element signature="n#style#0;n#th#2;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="5859">
+              <caret line="217" column="75" selection-start-line="217" selection-start-column="75" selection-end-line="217" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -75,31 +36,8 @@
       <file leaf-file-name="PwdModify.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/PwdModify.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="563">
-              <caret line="60" column="52" lean-forward="true" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/OrderController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="88" column="71" lean-forward="true" selection-start-line="88" selection-start-column="71" selection-end-line="88" selection-end-column="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProviderController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/ProviderController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
-              <caret line="37" column="38" lean-forward="true" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1211#1212#0" expanded="true" />
-                <element signature="e#1237#1238#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1620">
+              <caret line="60" column="52" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -107,7 +45,7 @@
       <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-179">
+            <state relative-caret-position="1323">
               <caret line="49" column="62" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="62" />
             </state>
           </provider>
@@ -116,20 +54,17 @@
       <file leaf-file-name="getgood.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/getgood.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
+            <state relative-caret-position="7236">
               <caret line="268" column="37" selection-start-line="268" selection-start-column="37" selection-end-line="268" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="get.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="get.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/get.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="30" column="59" lean-forward="true" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
-              <folding>
-                <element signature="n#style#0;n#input#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="810">
+              <caret line="30" column="59" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -137,8 +72,45 @@
       <file leaf-file-name="GoodController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/GoodController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="170" column="32" lean-forward="true" selection-start-line="170" selection-start-column="32" selection-end-line="170" selection-end-column="32" />
+            <state relative-caret-position="3429">
+              <caret line="139" column="46" selection-start-line="139" selection-start-column="46" selection-end-line="139" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="product-camera-details.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jspFront/product-camera-details.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="409">
+              <caret line="414" column="137" selection-start-line="414" selection-start-column="137" selection-end-line="414" selection-end-column="137" />
+              <folding>
+                <element signature="e#3862#3869#1#HTML" expanded="true" />
+                <element signature="e#25661#25668#1#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show-comments.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jspFront/show-comments.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="253" column="60" selection-start-line="253" selection-start-column="60" selection-end-line="253" selection-end-column="60" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#9460#9497#0#JSP" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommentController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/CommentController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="301">
+              <caret line="111" column="47" lean-forward="true" selection-start-line="111" selection-start-column="47" selection-end-line="111" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -146,21 +118,8 @@
       <file leaf-file-name="ProviderMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/ProviderMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
+            <state relative-caret-position="1404">
               <caret line="52" selection-start-line="52" selection-end-line="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Provider.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/domain/Provider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
-              <caret line="56" column="41" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
-              <folding>
-                <element signature="e#1198#1199#0" expanded="true" />
-                <element signature="e#1225#1226#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -206,14 +165,11 @@
         <option value="$PROJECT_DIR$/src/main/webapp/jspFront/CustomerDetail.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jspFront/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jspFront/products.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jspFront/show-comments.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jspFront/signup.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/CommentController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/CommentMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/jspFront/product-headset-details.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jspFront/product-computer-details.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jspFront/product-cellphone-details.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jspFront/product-camera-details.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/css404/main.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/css404/tipsy.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
@@ -234,9 +190,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/ProviderController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/OrderController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/ProviderView.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/GoodController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/getgood.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/get.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/GoodController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/CommentController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jspFront/product-camera-details.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jspFront/show-comments.jsp" />
       </list>
     </option>
   </component>
@@ -274,8 +233,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -389,7 +346,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+              <item name="jspFront" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
@@ -416,7 +373,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../项目LHY/shopping" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -435,7 +399,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.login.jsp (1)">
+  <component name="RunManager" selected="Tomcat Server.login.jsp">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -821,9 +785,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Tomcat Server.login.jsp" />
         <item itemvalue="Tomcat Server.login.jsp (1)" />
         <item itemvalue="JUnit.TestProviderBiz.testFindByName" />
-        <item itemvalue="Tomcat Server.login.jsp" />
         <item itemvalue="Tomcat Server.error.jsp" />
         <item itemvalue="JUnit.TestCustomerBiz.findByCustomerId" />
       </list>
@@ -857,7 +821,8 @@
       <workItem from="1533344529190" duration="8265000" />
       <workItem from="1533353812260" duration="989000" />
       <workItem from="1533354984093" duration="17261000" />
-      <workItem from="1533434532423" duration="32410000" />
+      <workItem from="1533434532423" duration="33190000" />
+      <workItem from="1533515852084" duration="4847000" />
     </task>
     <servers />
   </component>
@@ -873,10 +838,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50641000" />
+    <option name="totallyTimeSpent" value="56268000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -898,7 +863,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.753125" visible="true" weight="0.31712472" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.753125" visible="true" weight="0.2832981" />
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15677084" />
@@ -925,27 +890,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jspFront/product-camera-details.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="415" column="51" selection-start-line="415" selection-start-column="51" selection-end-line="415" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jspFront/error.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="61" column="24" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jspFront/about.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-595">
@@ -1074,9 +1018,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
           <caret line="131" column="55" lean-forward="true" selection-start-line="131" selection-start-column="55" selection-end-line="131" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1091,9 +1032,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1122,9 +1060,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="7" column="26" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1132,10 +1067,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
           <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding>
-            <element signature="e#454#455#0" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1172,9 +1103,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1196,83 +1124,102 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="539">
           <caret line="56" column="41" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
-          <folding>
-            <element signature="e#1198#1199#0" expanded="true" />
-            <element signature="e#1225#1226#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/OrderController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="88" column="71" lean-forward="true" selection-start-line="88" selection-start-column="71" selection-end-line="88" selection-end-column="71" />
+        <state relative-caret-position="1917">
+          <caret line="88" column="71" selection-start-line="88" selection-start-column="71" selection-end-line="88" selection-end-column="71" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/ProviderController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="37" column="38" lean-forward="true" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+        <state relative-caret-position="675">
+          <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1211#1212#0" expanded="true" />
-            <element signature="e#1237#1238#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-179">
+        <state relative-caret-position="1323">
           <caret line="49" column="62" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/chinasofti/ssm/mapper/ProviderMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
+        <state relative-caret-position="1404">
           <caret line="52" selection-start-line="52" selection-end-line="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/ProviderView.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="217" column="75" lean-forward="true" selection-start-line="217" selection-start-column="75" selection-end-line="217" selection-end-column="75" />
-          <folding>
-            <element signature="n#style#0;n#th#2;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="5859">
+          <caret line="217" column="75" selection-start-line="217" selection-start-column="75" selection-end-line="217" selection-end-column="75" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/PwdModify.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="60" column="52" lean-forward="true" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/GoodController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="170" column="32" lean-forward="true" selection-start-line="170" selection-start-column="32" selection-end-line="170" selection-end-column="32" />
+        <state relative-caret-position="1620">
+          <caret line="60" column="52" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/getgood.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
+        <state relative-caret-position="7236">
           <caret line="268" column="37" selection-start-line="268" selection-start-column="37" selection-end-line="268" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/get.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="30" column="59" lean-forward="true" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
+        <state relative-caret-position="810">
+          <caret line="30" column="59" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/GoodController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3429">
+          <caret line="139" column="46" selection-start-line="139" selection-start-column="46" selection-end-line="139" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinasofti/ssm/controller/CommentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="111" column="47" lean-forward="true" selection-start-line="111" selection-start-column="47" selection-end-line="111" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jspFront/product-camera-details.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="414" column="137" selection-start-line="414" selection-start-column="137" selection-end-line="414" selection-end-column="137" />
           <folding>
-            <element signature="n#style#0;n#input#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#3862#3869#1#HTML" expanded="true" />
+            <element signature="e#25661#25668#1#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jspFront/show-comments.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="253" column="60" selection-start-line="253" selection-start-column="60" selection-end-line="253" selection-end-column="60" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#9460#9497#0#JSP" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

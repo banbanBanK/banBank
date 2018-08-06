@@ -251,8 +251,8 @@
 
 						%>
 						<div class="inbox-row widget-shadow" id="accordion" role="tablist" aria-multiselectable="true">
-							<div class="mail"><img src="../images/i1.png" alt=""></div>
-							<div class="mail mail-name"> <h6><%=item.getCustomer().getCustomerId()%></h6> </div>
+							<div class="mail"><img src="<%=item.getGood().getGoodImage()%>" style=" max-height:50px;max-width: 50px;vertical-align:middle;" title="售价：<%=item.getGood().getGoodPrice()%>元"></div>
+							<div class="mail mail-name"> <h6>用户：<%=item.getCustomer().getCustomerName()%></h6> </div>
 							<a role="button" data-toggle="collapse" data-parent="#accordion" href=<%=cur_href%> aria-expanded="true" aria-controls="collapseOne" class="">
 								<div class="mail"><p><%=item.getGood().getGoodName()%></p></div>
 							</a>
@@ -267,7 +267,7 @@
 								                          String time=format.format(item.getCreateTime());
 							                               %><%=time%></p></div>
 							<div class="clearfix"> </div>
-							<div id=<%=cur_id%> class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true" style="">
+							<div id="<%=cur_id%>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true" style="">
 								<div class="mail-body">
 									<p><%=item.getComment()%></p>
 
@@ -293,8 +293,8 @@
 					%>
 					<div class="inbox-row widget-shadow">
 						
-						<div class="mail"><img src="../images/i2.png" alt=""></div>
-						<div class="mail mail-name"><h6><%=item.getCustomer().getCustomerId()%></h6></div>
+						<div class="mail"><img src="<%=item.getGood().getGoodImage()%>" style=" max-height:50px;max-width: 50px;vertical-align:middle;" title="售价：<%=item.getGood().getGoodPrice()%>元"></div>
+						<div class="mail mail-name"><h6>用户：<%=item.getCustomer().getCustomerName()%></h6></div>
 						<a role="button" data-toggle="collapse" data-parent="#accordion" href=<%=cur_href%> aria-expanded="false" aria-controls="collapseFive" class="collapsed">
 							<div class="mail"><p><%=item.getGood().getGoodName()%></p></div>
 						</a>
@@ -309,7 +309,7 @@
 							                       String time=format.format(item.getCreateTime());
 						                           %><%=time%></p></div>
 						<div class="clearfix"> </div>
-						<div id=<%=cur_id%> class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive" style="height: 0px;" aria-expanded="false">
+						<div id="<%=cur_id%>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive" style="height: 0px;" aria-expanded="false">
 							<div class="mail-body">
 								<p><%=item.getComment()%></p>
 							</div>
