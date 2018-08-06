@@ -19,6 +19,7 @@ this is a test
         url: "/InsertViewAction?goodId=1&customerId=1&clickTime="+$.cookie('strStart')+"&endTime="+$.cookie('strEnd'),
         type: "post", // 接受数据格式
         dataType: "json", // 要传递的数据
+        async : false
     });
 
     window.onbeforeunload = function(){

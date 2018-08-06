@@ -1,13 +1,7 @@
 package com.chinasofti.ssm.controller;
 
-import com.chinasofti.ssm.biz.CustomerBiz;
-import com.chinasofti.ssm.biz.GoodBiz;
-import com.chinasofti.ssm.biz.OrderBiz;
-import com.chinasofti.ssm.biz.TypeBiz;
-import com.chinasofti.ssm.domain.Customer;
-import com.chinasofti.ssm.domain.Good;
-import com.chinasofti.ssm.domain.Order;
-import com.chinasofti.ssm.domain.Type;
+import com.chinasofti.ssm.biz.*;
+import com.chinasofti.ssm.domain.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,20 +25,22 @@ public class OrderController {
     @Autowired
     private CustomerBiz customerBiz;
 
+    @Autowired
+    private FavorBiz favorBiz;
+
     @RequestMapping("/OrderFindByCustomer")
     public String orderFindByCustomerId(@RequestParam String customerId, HttpServletRequest request){
         List<Order> orders = orderBiz.findByCustomerId(customerId);
-        List<Good> searchGoods = goodBiz.findAll();
+        List<Good> searchGoods = null;
         List<Type> types_parents = typeBiz.findParents();
         List<Type> types_singleRoots = typeBiz.findSingleRoots();
         if(orders != null){
             request.setAttribute("orders",orders);
-            request.setAttribute("searchGoods",searchGoods);
             request.setAttribute("types_parents",types_parents);
             request.setAttribute("types_singleRoots",types_singleRoots);
             return "../jspFront/cart";
         }else
-            return "";
+            return "../jspFront/cart";
     }
     @RequestMapping("/InsertOrder")
     public String insert(@RequestParam Order order, HttpServletRequest request) {
