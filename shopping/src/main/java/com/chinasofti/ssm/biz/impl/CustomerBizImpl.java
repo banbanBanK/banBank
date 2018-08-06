@@ -51,7 +51,7 @@ public class CustomerBizImpl implements CustomerBiz {
         else return false;
     }
 
-    public boolean updateCustomerInfo(String customerName, String customerGender, String customerEmail, Date customerBirthday, String customerPhone, String customerZipCode, String customerAddress, String customerIntroduction) {
-        return customerDao.updateCustomerInfo(customerName,customerGender,customerEmail,customerBirthday,customerPhone,customerZipCode,customerAddress,customerIntroduction)==1;
+    public boolean updateCustomerInfo(String customerId,String customerName, String customerGender, String customerEmail, Date customerBirthday, String customerPhone, String customerZipCode, String customerIntroduction) {
+        return customerDao.updateCustomerInfo(customerId,customerName,customerGender,customerEmail,customerBirthday,customerPhone,customerZipCode,customerIntroduction)==1;
     }
 }

@@ -16,5 +16,5 @@ public interface CustomerDao extends GenericDao<Customer, Integer> {
     int insert(Customer customer);
     int update(Customer customer);
     int deleteById(int id);
-    int updateCustomerInfo(@Param("customerName")String customerName, @Param("customerGender")String customerGender, @Param("customerEmail") String customerEmail, @Param("customerBirthday") Date customerBirthday,@Param("customerPhone")String customerPhone,@Param("customerZipCode")String customerZipCode,@Param("customerAddress")String customerAddress,@Param("customerIntroduction") String customerIntroduction);
+    int updateCustomerInfo(@Param("customerId") String customerId,@Param("customerName")String customerName, @Param("customerGender")String customerGender, @Param("customerEmail") String customerEmail, @Param("customerBirthday") Date customerBirthday,@Param("customerPhone")String customerPhone,@Param("customerZipCode")String customerZipCode,@Param("customerIntroduction") String customerIntroduction);
 }

@@ -54,20 +54,7 @@ public class CustomerSignupController {
 	    customer.setAddress(addressOfCus);
 	    boolean res=customerBiz.insert(customer);
 	    if(res) {
-            int typeNum = typeBiz.findAll().size();
-            for(int i=1;i <= typeNum;i++){
-                Favor favor = new Favor();
-                Type type = typeBiz.findByTypeId(String.valueOf(i));
-                Customer customer1 = customerBiz.findByCustomerId(customerId);
-                favor.setDeleteStatus(1);
-                favor.setType(type);
-                favor.setCustomer(customer1);
-                favor.setFavorLevel(0);
-                favorBiz.insert(favor);
-            }
-
             return "../jspFront/login";
-
         }else
 	    	return "customerSignupError";
 	}
@@ -102,24 +89,6 @@ public class CustomerSignupController {
             if(Password.equals(password)) {
                 session.setAttribute("customerId",customerId);
                 session.setAttribute("loginStatus", true);
-
-				int typeNum = typeBiz.findAll().size();
-				for(int i = 1;i <= typeNum;i++){
-					Favor favor = favorBiz.findByCustomerAndType(customerId,String.valueOf(i));
-					favor.setFavorLevel(0);
-                    favorBiz.update(favor);
-				}
-				List<CustomerAnalysis> customerAnalyses = customerAnalysisBiz.findByCustomerId(customerId);
-				for(CustomerAnalysis customerAnalysis : customerAnalyses){
-					String typeId = customerAnalysis.getGood().getType().getTypeId();
-					Favor favor = favorBiz.findByCustomerAndType(customerId,typeId);
-					int level = favor.getFavorLevel();
-					int browseNum = customerAnalysis.getBrowseNum();
-					int buyNum = customerAnalysis.getBuyNum();
-					int buySum = customerAnalysis.getBuySum();
-					favor.setFavorLevel(level+browseNum+5*buySum+2*buyNum);
-					favorBiz.update(favor);
-				}
                 return true;
             }else {
                 session.setAttribute("customerId","-1");
@@ -140,8 +109,8 @@ public class CustomerSignupController {
 
     @RequestMapping("/SaveCustomerInfo")
     @ResponseBody
-    public boolean SaveCustomerInfo(String customerName, String customerGender, String customerEmail, java.sql.Date customerBirthday, String customerPhone, String customerZipCode, String customerAddress, String customerInfo){
-	    return customerBiz.updateCustomerInfo(customerName,customerGender,customerEmail,customerBirthday,customerPhone,customerZipCode,customerAddress,customerInfo);
+    public boolean SaveCustomerInfo(String customerId,String customerName, String customerGender, String customerEmail, java.sql.Date customerBirthday, String customerPhone, String customerZipCode, String customerInfo){
+	    return customerBiz.updateCustomerInfo(customerId,customerName,customerGender,customerEmail,customerBirthday,customerPhone,customerZipCode,customerInfo);
     }
 
     @RequestMapping("/logout")

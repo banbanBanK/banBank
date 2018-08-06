@@ -240,10 +240,10 @@
                 <div class="product-img-wrapper">
                     <div class="product-img-container bg-info">
                         <div class="bxslider">
-                            <div><img src="../img/products/product-details1.png" alt="" /></div>
-                            <div><img src="../img/products/product-details2.png" alt="" /></div>
-                            <div><img src="../img/products/product-details3.png" alt="" /></div>
-                            <div><img src="../img/products/product-details4.png" alt="" /></div>
+                            <div><img src="../img/computer1.jpg" alt="" /></div>
+                            <div><img src="../img/computer2.jpg" alt="" /></div>
+                            <div><img src="../img/computer3.jpg" alt="" /></div>
+                            <div><img src="../img/computer5.jpg" alt="" /></div>
                         </div>
                     </div>
                 </div>
