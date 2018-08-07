@@ -9,7 +9,6 @@
 <body>
 <script src="../plugins/jquery.min.js"></script>
 <script src="../js/jquery.cookie.js"></script>
-<script type="text/javascript" src="http://counter.sina.com.cn/ip/" charset="gb2312"></script>
 this is a test
 <input id="url"/><br/>
 <a onclick="hitTime++"> 按钮</a>
@@ -23,7 +22,6 @@ this is a test
         dataType: "json", // 要传递的数据
         async : false
     });
-
     window.onbeforeunload = function(){
         var end = new Date();
         var strEnd = end.getFullYear()+"-"+(end.getMonth()+1)+"-"+end.getDate()+" "+
@@ -32,10 +30,7 @@ this is a test
         $.cookie('strEnd', strEnd, { expires: 7, path: '/' });
     };
 
-    /*var ip = ILData[0];
-    var ipAddrss = ILData[2];
-    //ILData[2]   输出接口数据中的IP地址的省市
-    //ILData[4]   输出接口数据中的IP地址的运营商
+    /*
     var hitTime = 0;
     var len = 0;
     var end;

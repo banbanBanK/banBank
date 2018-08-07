@@ -112,57 +112,13 @@
             <div class="clearfix"> </div>
         </div>
         <div class="header-right">
-            <div class="profile_details_left"><!--notifications of menu start -->
-                <ul class="nofitications-dropdown">
-                    <li class="dropdown head-dpdn">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bell"></i><span class="badge blue">3</span></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <div class="notification_header">
-                                    <h3>You have 3 new notification</h3>
-                                </div>
-                            </li>
-                            <li><a href="#">
-                                <div class="user_img"><img src="../images/2.png" alt=""></div>
-                                <div class="notification_desc">
-                                    <p>Lorem ipsum dolor amet</p>
-                                    <p><span>1 hour ago</span></p>
-                                </div>
-                                <div class="clearfix"></div>
-                            </a></li>
-                            <li class="odd"><a href="#">
-                                <div class="user_img"><img src="../images/1.png" alt=""></div>
-                                <div class="notification_desc">
-                                    <p>Lorem ipsum dolor amet </p>
-                                    <p><span>1 hour ago</span></p>
-                                </div>
-                                <div class="clearfix"></div>
-                            </a></li>
-                            <li><a href="#">
-                                <div class="user_img"><img src="../images/3.png" alt=""></div>
-                                <div class="notification_desc">
-                                    <p>Lorem ipsum dolor amet </p>
-                                    <p><span>1 hour ago</span></p>
-                                </div>
-                                <div class="clearfix"></div>
-                            </a></li>
-                            <li>
-                                <div class="notification_bottom">
-                                    <a href="#">See all notifications</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <div class="clearfix"> </div>
-            </div>
             <!--notification menu end -->
             <div class="profile_details">
                 <ul>
                     <li class="dropdown profile_details_drop">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                             <div class="profile_img">
-                                <span class="prfil-img"><img src="../images/a.png" alt=""> </span>
+                                <span class="prfil-img"><img src="../images/1.jpg" height="50px" alt=""> </span>
                                 <div class="user-name">
                                     <p style="font-family:'calisto mt';font-style: italic;"><%=admin.getAdminName()%></p>
                                     <span style="font-family:'calisto mt';font-style: italic;color: #FFFFFF;">管理员</span>

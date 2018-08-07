@@ -1,9 +1,7 @@
 package test.chinasofti.ssm.biz;
 
 import com.chinasofti.ssm.biz.ProviderBiz;
-import com.chinasofti.ssm.domain.Comment;
-import com.chinasofti.ssm.domain.Provider;
-import com.chinasofti.ssm.domain.Type;
+import com.chinasofti.ssm.domain.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +9,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.chinasofti.ssm.biz.GoodBiz;
-import com.chinasofti.ssm.domain.Good;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -54,9 +51,20 @@ public class TestGoodBiz{
 
 	@Test
 	public void testFindByChildrenType(){
-		List<Good> goods = goodBiz.findByChildrenTypeId("5");
-		for (Good good : goods){
-			System.out.println("name = " + good.getGoodName());
+		List<GoodSummary> goodSummaries = goodBiz.findByChildrenTypeOrdered("5");
+		for(int k = 0;k < 6 && k < goodSummaries.size();k++){
+			GoodSummary goodSummary = goodSummaries.get(k);
+			Good good = new Good();
+			good.setGoodId(goodSummary.getGoodId());
+			good.setGoodName(goodSummary.getGoodName());
+			good.setGoodPrice(goodSummary.getGoodPrice());
+			good.setGoodImage(goodSummary.getGoodImage());
+			good.setGoodStock(goodSummary.getGoodStock());
+			good.setGoodSaleSum(goodSummary.getGoodSaleSum());
+			good.setDeleteStatus(goodSummary.getDeleteStatus());
+			good.setType(goodSummary.getType());
+			good.setProvider(goodSummary.getProvider());
+			System.out.println(good.getGoodName());
 		}
 	}
 

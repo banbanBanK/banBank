@@ -46,7 +46,7 @@ public class GoodBizImpl implements GoodBiz {
 	@Override
 	public List<GoodSummary> findByRootTypeOrdered(String typeId) {
 		List<GoodSummary> goodSummaries = goodDao.findByRootTypeOrdered(typeId);
-		Comparator<GoodSummary> comparator = (h1,h2) ->h1.getSaleSum().compareTo(h2.getSaleSum());
+		Comparator<GoodSummary> comparator = (h1,h2) ->h1.getGoodSaleSum().compareTo(h2.getGoodSaleSum());
 		goodSummaries.sort(comparator.reversed());
 		if(goodSummaries.size()>=3){
 			for(int i = 0;i < goodSummaries.size();i+=3){
@@ -65,7 +65,7 @@ public class GoodBizImpl implements GoodBiz {
 	@Override
 	public List<GoodSummary> findByChildrenTypeOrdered(String typeId) {
 		List<GoodSummary> goodSummaries = goodDao.findByChildrenTypeOrdered(typeId);
-		Comparator<GoodSummary> comparator = (h1,h2) ->h1.getSaleSum().compareTo(h2.getSaleSum());
+		Comparator<GoodSummary> comparator = (h1,h2) ->h1.getGoodSaleSum().compareTo(h2.getGoodSaleSum());
 		goodSummaries.sort(comparator.reversed());
 		if(goodSummaries.size()>=3){
 			for(int i = 0;i < goodSummaries.size();i+=3){

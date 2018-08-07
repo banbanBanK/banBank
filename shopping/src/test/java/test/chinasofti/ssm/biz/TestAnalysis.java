@@ -66,18 +66,42 @@ public class TestAnalysis {
     }
     @Test
     public void Test3(){
-        List<Favor> favors = favorBiz.findByCustomerId("1");
+        List<Favor> favors = favorBiz.findByCustomerId("5");
+//        Comparator<Favor> comparator = (h1, h2) ->h1.getFavorLevel().compareTo(h2.getFavorLevel());
+//        favors.sort(comparator.reversed());
+//        for(int i = 0;i <= 2;i++){
+//            Favor favor = favors.get(i);
+//            String typeId = favor.getType().getTypeId();
+//            if(favor.getFavorLevel() != 0){
+//                List<Good> goods = goodBiz.findByChildrenTypeId(typeId);
+//                for(Good good : goods){
+//                    System.out.println(good.getType().getTypeId());
+//                }
+//
+//            }
+//            else break;
+//        }
         Comparator<Favor> comparator = (h1, h2) ->h1.getFavorLevel().compareTo(h2.getFavorLevel());
         favors.sort(comparator.reversed());
         for(int i = 0;i <= 2;i++){
             Favor favor = favors.get(i);
             String typeId = favor.getType().getTypeId();
             if(favor.getFavorLevel() != 0){
-                List<Good> goods = goodBiz.findByChildrenTypeId(typeId);
-                for(Good good : goods){
-                    System.out.println(good.getType().getTypeId());
+                List<GoodSummary> goodSummaries = goodBiz.findByChildrenTypeOrdered(typeId);
+                for(int k = 0;k < 6 && k < goodSummaries.size();k++){
+                    GoodSummary goodSummary = goodSummaries.get(k);
+                    Good good = new Good();
+                    good.setGoodId(goodSummary.getGoodId());
+                    good.setGoodName(goodSummary.getGoodName());
+                    good.setGoodPrice(goodSummary.getGoodPrice());
+                    good.setGoodImage(goodSummary.getGoodImage());
+                    good.setGoodStock(goodSummary.getGoodStock());
+                    good.setGoodSaleSum(goodSummary.getGoodSaleSum());
+                    good.setDeleteStatus(goodSummary.getDeleteStatus());
+                    good.setType(goodSummary.getType());
+                    good.setProvider(goodSummary.getProvider());
+                    System.out.println(good.getGoodName());
                 }
-
             }
             else break;
         }
@@ -109,13 +133,13 @@ public class TestAnalysis {
             Good good = goodBiz.findByGoodId(goodSummaries1.get(i).getGoodId());
             specialGoods.add(good);
         }
-        int typeId2 = (typeId1 + 1) % maxTypeId - 1 + minTypeId;
+        int typeId2 = (typeId1 + 1) % maxTypeId;
         List<GoodSummary> goodSummaries2 = goodBiz.findByChildrenTypeOrdered(String.valueOf(typeId2));
         for(int i=0;i<goodSummaries2.size()&&i<2;i++){
             Good good = goodBiz.findByGoodId(goodSummaries2.get(i).getGoodId());
             specialGoods.add(good);
         }
-        int typeId3 = (typeId2 + 1) % maxTypeId - 1 + minTypeId;
+        int typeId3 = (typeId2 + 1) % maxTypeId;
         List<GoodSummary> goodSummaries3 = goodBiz.findByChildrenTypeOrdered(String.valueOf(typeId3));
         for(int i=0;i<goodSummaries3.size()&&i<2;i++){
             Good good = goodBiz.findByGoodId(goodSummaries3.get(i).getGoodId());
@@ -123,6 +147,20 @@ public class TestAnalysis {
         }
         for(Good good : specialGoods){
             System.out.println(good.getGoodName());
+        }
+    }
+    @Test
+    public void Test6(){
+        List<CustomerAnalysis> customerAnalyses = customerAnalysisBiz.findByCustomerId("1");
+        for(CustomerAnalysis customerAnalysis : customerAnalyses){
+            String typeId = customerAnalysis.getGood().getType().getTypeId();
+            Favor favor = favorBiz.findByCustomerAndType("1",typeId);
+            int level = favor.getFavorLevel();
+            int browseNum = customerAnalysis.getBrowseNum();
+            int buyNum = customerAnalysis.getBuyNum();
+            int buySum = customerAnalysis.getBuySum();
+            favor.setFavorLevel(level+browseNum+5*buySum+2*buyNum);
+            favorBiz.update(favor);
         }
     }
 }

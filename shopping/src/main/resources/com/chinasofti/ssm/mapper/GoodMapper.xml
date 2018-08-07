@@ -67,18 +67,22 @@
 		where TypeId = #{typeId} and DeleteStatus = 1
 	</select>
 	<select id="findByRootTypeOrdered" resultMap="GoodSummaryResultMap">
-		select *
-		from goods inner join product_summary on goods.goodid = product_summary.goodid
+		select goods.GoodId,GoodName,GoodPrice,GoodImage,GoodStock,GoodSaleSum,DeleteStatus,TypeId,ProviderId,
+		case when SUM(commentLevel * levelPercent) is null then 0 else SUM(commentLevel * levelPercent) end as commentLevel
+		from goods LEFT OUTER JOIN commentanalysis ON goods.goodid=commentanalysis.goodid
 		where DeleteStatus = 1 and TypeId in (
 												select TypeId
 												from types
 												where FatherTypeId = #{typeId}
 												)
+		GROUP BY goodid
 	</select>
 	<select id="findByChildrenTypeOrdered" resultMap="GoodSummaryResultMap">
-		select *
-		from goods inner join product_summary on goods.goodid = product_summary.goodid
+		select goods.GoodId,GoodName,GoodPrice,GoodImage,GoodStock,GoodSaleSum,DeleteStatus,TypeId,ProviderId,
+		case when SUM(commentLevel * levelPercent) is null then 0 else SUM(commentLevel * levelPercent) end as commentLevel
+		from goods LEFT OUTER JOIN commentanalysis ON goods.goodid=commentanalysis.goodid
 		where TypeId = #{typeId} and DeleteStatus = 1
+		GROUP BY goodid
 	</select>
 	<select id="findByProviderId" resultMap="GoodResultMap">
 		select *

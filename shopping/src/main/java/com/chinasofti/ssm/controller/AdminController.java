@@ -58,6 +58,7 @@ public class AdminController {
 		String adminId =(String) session.getAttribute("loginAdminId");
 		Admin admin = adminBiz.findByAdminId(adminId);
 		session.setAttribute("pwd",admin.getAdminPassword());
+		request.setAttribute("admin",admin);
 		return "PwdModify";
 	}
 

@@ -34,25 +34,31 @@
 		where GoodId = #{GoodId}
 	</select>
 
-    <resultMap id="CommentResultMap" type="com.chinasofti.ssm.domain.CustomerAnalysis" autoMapping="true">
+    <resultMap id="CustomerAnalysisResultMap" type="com.chinasofti.ssm.domain.CustomerAnalysis" autoMapping="true">
         <association property="customer" column="CustomerId" select="getCustomerByCustomerId"></association>
         <association property="good" column="GoodId" select="getGoodByGoodId"></association>
     </resultMap>
 
 
 
-    <select id="findAll" resultMap="CommentResultMap">
-        select *
-        from customer_analysis
+    <select id="findAll" resultMap="CustomerAnalysisResultMap">
+        select clicktable.id,clicktable.customerId,clicktable.goodId,clicktable.browseTime,clicktable.browseNum,
+        case when goodbycustomer.buySum is null then 0 else goodbycustomer.buySum end as buySum,
+        case when goodbycustomer.buyNum is null then 0 else goodbycustomer.buyNum end as buyNum
+        from clicktable LEFT OUTER JOIN goodbycustomer on clicktable.goodId=goodbycustomer.goodId and clicktable.customerId=goodbycustomer.customerId
     </select>
-    <select id="findById" parameterType="Integer" resultMap="CommentResultMap">
-        select *
-        from customer_analysis
-        where Id = #{id}
+    <select id="findById" parameterType="Integer" resultMap="CustomerAnalysisResultMap">
+        select clicktable.id,clicktable.customerId,clicktable.goodId,clicktable.browseTime,clicktable.browseNum,
+        case when goodbycustomer.buySum is null then 0 else goodbycustomer.buySum end as buySum,
+        case when goodbycustomer.buyNum is null then 0 else goodbycustomer.buyNum end as buyNum
+        from clicktable LEFT OUTER JOIN goodbycustomer on clicktable.goodId=goodbycustomer.goodId and clicktable.customerId=goodbycustomer.customerId
+        where clicktable.id = #{id}
     </select>
-    <select id="findByCustomerId" resultMap="CommentResultMap">
-        select *
-        from customer_analysis
-        where  customerId = #{customerId}
+    <select id="findByCustomerId" resultMap="CustomerAnalysisResultMap">
+        select clicktable.id,clicktable.customerId,clicktable.goodId,clicktable.browseTime,clicktable.browseNum,
+        case when goodbycustomer.buySum is null then 0 else goodbycustomer.buySum end as buySum,
+        case when goodbycustomer.buyNum is null then 0 else goodbycustomer.buyNum end as buyNum
+        from clicktable LEFT OUTER JOIN goodbycustomer on clicktable.goodId=goodbycustomer.goodId and clicktable.customerId=goodbycustomer.customerId
+        where  clicktable.customerId = #{customerId}
     </select>
 </mapper>

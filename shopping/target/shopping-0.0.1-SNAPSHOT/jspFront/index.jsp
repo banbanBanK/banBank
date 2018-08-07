@@ -324,7 +324,7 @@
                 <hr />
             </div>
             <%List<Good> specialGoods = (List<Good>) request.getAttribute("specialGoods");
-                if(specialGoods!=null&&specialGoods.size()>=6){
+                if(specialGoods!=null&&specialGoods.size()>=4){
             %>
             <div class="col-xs-6 col-sm-6 col-md-3">
                 <div class="team-box">
@@ -333,81 +333,7 @@
                         <img src="<%=specialGoods.get(4).getGoodImage()%>" class="img-responsive" alt="" />
                     </figure>
 
-                    <h3 class="m-t-30"><a href="/product-details?Id=<%=specialGoods.get(4).getGoodId()%>"><%=specialGoods.get(4).getGoodName()%></a></h3>
-
-                </div>
-            </div>
-
-            <div class="col-xs-6 col-sm-6 col-md-3">
-                <div class="team-box">
-                    <figure>
-                        <img src="<%=specialGoods.get(5).getGoodImage()%>" class="img-responsive team-member" alt="" />
-                        <img src="<%=specialGoods.get(5).getGoodImage()%>" class="img-responsive" alt="" />
-                    </figure>
-
-                    <h3 class="m-t-30"><a href="/product-details?Id=<%=specialGoods.get(5).getGoodId()%>"><%=specialGoods.get(5).getGoodName()%></a></h3>
-
-                </div>
-            </div>
-
-            <div class="col-xs-6 col-sm-6 col-md-3">
-                <div class="team-box">
-                    <figure>
-                        <img src="<%=specialGoods.get(6).getGoodImage()%>" class="img-responsive team-member" alt="" />
-                        <img src="<%=specialGoods.get(6).getGoodImage()%>" class="img-responsive" alt="" />
-                    </figure>
-
-                    <h3 class="m-t-30"><a href="/product-details?Id=<%=specialGoods.get(6).getGoodId()%>"><%=specialGoods.get(6).getGoodName()%></a></h3>
-
-                </div>
-            </div>
-
-            <div class="col-xs-6 col-sm-6 col-md-3 text-center">
-                <div class="team-box">
-                    <figure>
-                        <img src="<%=specialGoods.get(7).getGoodImage()%>" class="img-responsive team-member" alt="" />
-                        <img src="<%=specialGoods.get(7).getGoodImage()%>" class="img-responsive" alt="" />
-                    </figure>
-
-                    <h3 class="m-t-30"><a href="/product-details?Id=<%=specialGoods.get(7).getGoodId()%>"><%=specialGoods.get(7).getGoodName()%></a></h3>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-xs-6 col-sm-6 col-md-3">
-                <div class="team-box">
-                    <figure>
-                        <img src="<%=specialGoods.get(0).getGoodImage()%>" class="img-responsive team-member" alt="" />
-                        <img src="<%=specialGoods.get(0).getGoodImage()%>" class="img-responsive" alt="" />
-                    </figure>
-
-                    <h3 class="m-t-30"><a href="/product-details?Id=<%=specialGoods.get(0).getGoodId()%>"><%=specialGoods.get(0).getGoodName()%></a></h3>
-
-                </div>
-            </div>
-
-            <div class="col-xs-6 col-sm-6 col-md-3">
-                <div class="team-box">
-                    <figure>
-                        <img src="<%=specialGoods.get(1).getGoodImage()%>" class="img-responsive team-member" alt="" />
-                        <img src="<%=specialGoods.get(1).getGoodImage()%>" class="img-responsive" alt="" />
-                    </figure>
-
-                    <h3 class="m-t-30"><a href="/product-details?Id=<%=specialGoods.get(1).getGoodId()%>"><%=specialGoods.get(1).getGoodName()%></a></h3>
-
-                </div>
-            </div>
-
-            <div class="col-xs-6 col-sm-6 col-md-3 text-center">
-                <div class="team-box">
-                    <figure>
-                        <img src="<%=specialGoods.get(2).getGoodImage()%>" class="img-responsive team-member" alt="" />
-                        <img src="<%=specialGoods.get(2).getGoodImage()%>" class="img-responsive" alt="" />
-                    </figure>
-
-                    <h3 class="m-t-30"><a href="/product-details?Id=<%=specialGoods.get(2).getGoodId()%>"><%=specialGoods.get(2).getGoodName()%></a></h3>
+                    <h3 class="m-t-30"><a href="../GoodDetailsFindById?id=<%=specialGoods.get(4).getId() %>&fatherTypeId=<%=specialGoods.get(4).getType().getFatherTypeId()%>"><%=specialGoods.get(4).getGoodName()%></a></h3>
 
                 </div>
             </div>
@@ -419,7 +345,31 @@
                         <img src="<%=specialGoods.get(3).getGoodImage()%>" class="img-responsive" alt="" />
                     </figure>
 
-                    <h3 class="m-t-30"><a href="/product-details?Id=<%=specialGoods.get(3).getGoodId()%>"><%=specialGoods.get(3).getGoodName()%></a></h3>
+                    <h3 class="m-t-30"><a href="../GoodDetailsFindById?id=<%=specialGoods.get(3).getId() %>&fatherTypeId=<%=specialGoods.get(3).getType().getFatherTypeId()%>"><%=specialGoods.get(3).getGoodName()%></a></h3>
+
+                </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-6 col-md-3">
+                <div class="team-box">
+                    <figure>
+                        <img src="<%=specialGoods.get(2).getGoodImage()%>" class="img-responsive team-member" alt="" />
+                        <img src="<%=specialGoods.get(2).getGoodImage()%>" class="img-responsive" alt="" />
+                    </figure>
+
+                    <h3 class="m-t-30"><a href="../GoodDetailsFindById?id=<%=specialGoods.get(2).getId() %>&fatherTypeId=<%=specialGoods.get(2).getType().getFatherTypeId()%>"><%=specialGoods.get(2).getGoodName()%></a></h3>
+
+                </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-6 col-md-3 text-center">
+                <div class="team-box">
+                    <figure>
+                        <img src="<%=specialGoods.get(1).getGoodImage()%>" class="img-responsive team-member" alt="" />
+                        <img src="<%=specialGoods.get(1).getGoodImage()%>" class="img-responsive" alt="" />
+                    </figure>
+
+                    <h3 class="m-t-30"><a href="../GoodDetailsFindById?id=<%=specialGoods.get(1).getId() %>&fatherTypeId=<%=specialGoods.get(1).getType().getFatherTypeId()%>"><%=specialGoods.get(1).getGoodName()%></a></h3>
 
                 </div>
             </div>

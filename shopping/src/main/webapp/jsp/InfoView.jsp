@@ -108,57 +108,13 @@
             <div class="clearfix"> </div>
         </div>
         <div class="header-right">
-            <div class="profile_details_left"><!--notifications of menu start -->
-                <ul class="nofitications-dropdown">
-                    <li class="dropdown head-dpdn">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bell"></i><span class="badge blue">3</span></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <div class="notification_header">
-                                    <h3>You have 3 new notification</h3>
-                                </div>
-                            </li>
-                            <li><a href="#">
-                                <div class="user_img"><img src="../images/2.png" alt=""></div>
-                                <div class="notification_desc">
-                                    <p>Lorem ipsum dolor amet</p>
-                                    <p><span>1 hour ago</span></p>
-                                </div>
-                                <div class="clearfix"></div>
-                            </a></li>
-                            <li class="odd"><a href="#">
-                                <div class="user_img"><img src="../images/1.png" alt=""></div>
-                                <div class="notification_desc">
-                                    <p>Lorem ipsum dolor amet </p>
-                                    <p><span>1 hour ago</span></p>
-                                </div>
-                                <div class="clearfix"></div>
-                            </a></li>
-                            <li><a href="#">
-                                <div class="user_img"><img src="../images/3.png" alt=""></div>
-                                <div class="notification_desc">
-                                    <p>Lorem ipsum dolor amet </p>
-                                    <p><span>1 hour ago</span></p>
-                                </div>
-                                <div class="clearfix"></div>
-                            </a></li>
-                            <li>
-                                <div class="notification_bottom">
-                                    <a href="#">See all notifications</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <div class="clearfix"> </div>
-            </div>
             <!--notification menu end -->
             <div class="profile_details">
                 <ul>
                     <li class="dropdown profile_details_drop">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                             <div class="profile_img">
-                                <span class="prfil-img"><img src="../images/a.png" alt=""> </span>
+                                <span class="prfil-img"><img src="../images/1.jpg" height="50px" alt=""> </span>
                                 <div class="user-name">
                                     <p style="font-family:'calisto mt';font-style: italic;"><%=admin.getAdminName()%></p>
                                     <span style="font-family:'calisto mt';font-style: italic;color: #FFFFFF">管理员</span>
@@ -198,81 +154,19 @@
     <!-- main content start-->
     <div id="page-wrapper">
         <div class="main-page" style="background: #04243E">
-            <!--  走马灯设计  -->
-            <div style="height:400px;padding-left:1em; padding-right: 1em;padding-top: 5em;" id="myCarousel" class="carousel slide">
-                <!-- 轮播（Carousel）指标 -->
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0"
-                        class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>
-                <!-- 轮播（Carousel）项目 -->
-                <div  class="carousel-inner">
-                    <div align="center"  class="item active" >
-                        <img src="../images/insta-feed2.jpg"  style="height:300px;"  alt="First slide">
-                    </div>
-                    <div align="center"   class="item" >
-                        <img src="../images/insta-feed7.jpg"  style="height:300px;"  alt="Second slide">
-                    </div>
-                    <div align="center"   class="item" >
-                        <img src="../images/insta-feed8.jpg"  style="height:300px;"  alt="Third slide">
-                    </div>
-
-                </div>
-                <!-- 轮播（Carousel）导航 -->
-                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" >
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-            <script>
-                $(function(){
-                    // 初始化轮播
-                    $(".start-slide").click(function(){
-                        $("#myCarousel").carousel('cycle');
-                    });
-                    // 停止轮播
-                    $(".pause-slide").click(function(){
-                        $("#myCarousel").carousel('pause');
-                    });
-                    // 循环轮播到上一个项目
-                    $(".prev-slide").click(function(){
-                        $("#myCarousel").carousel('prev');
-                    });
-                    // 循环轮播到下一个项目
-                    $(".next-slide").click(function(){
-                        $("#myCarousel").carousel('next');
-                    });
-                    // 循环轮播到某个特定的帧
-                    $(".slide-one").click(function(){
-                        $("#myCarousel").carousel(0);
-                    });
-                    $(".slide-two").click(function(){
-                        $("#myCarousel").carousel(1);
-                    });
-                    $(".slide-three").click(function(){
-                        $("#myCarousel").carousel(2);
-                    });
-                });
-            </script>
 
             <div class="row-one" style="margin-top:2em ;">
-                <div class="col-md-4 widget">
-                    <div class="stats-left ">
+                <div class="col-md-4 widget" style="margin-top: 5em">
+                    <div class="stats-left">
                         <h5>Today</h5>
                         <h4>Sales</h4>
                     </div>
-                    <div class="stats-right">
+                    <div class="stats-right" >
                         <label> 45</label>
                     </div>
                     <div class="clearfix"> </div>
                 </div>
-                <div class="col-md-4 widget states-mdl">
+                <div class="col-md-4 widget states-mdl" style="margin-top: 5em">
                     <div class="stats-left">
                         <h5>Today</h5>
                         <h4>Visitors</h4>
@@ -282,7 +176,7 @@
                     </div>
                     <div class="clearfix"> </div>
                 </div>
-                <div class="col-md-4 widget states-last">
+                <div class="col-md-4 widget states-last" style="margin-top: 5em">
                     <div class="stats-left">
                         <h5>Today</h5>
                         <h4>Orders</h4>
@@ -453,7 +347,7 @@
                         success: function (res) {
                             var salePercent = [];
                             $.ajax({
-                                url:'/getSalePercent?number' + len1,
+                                url:'/getSalePercent?number=' + len1,
                                 type:'get',
                                 async:false,
                                 dataType:'json',
@@ -507,7 +401,7 @@
                                             }
                                         },
                                         min: 0,
-                                        max: 4500,
+                                        max: 180,
                                         axisLabel: {
                                             formatter: '{value}'
                                         }
@@ -606,8 +500,8 @@
                         }
                     },
                     visualMap: {
-                        min: 0,
-                        max: 1000,
+                        min: 30,
+                        max: 100,
                         left: 'left',
                         top: 'bottom',
                         text: ['高', '低'],
